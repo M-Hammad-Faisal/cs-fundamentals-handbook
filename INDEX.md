@@ -47,13 +47,15 @@ Each concept lives in its own folder with three files:
 | Design patterns | | | | planned |
 
 ## 05 Databases
-| Topic | Status |
-|-------|--------|
-| Relational model and SQL (joins, aggregation, window functions) | planned |
-| Indexes and query plans | planned |
-| Transactions, ACID, isolation levels | planned |
-| Normalization and schema design | planned |
-| NoSQL and when to use it | planned |
+Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.sql).
+
+| Topic | Lesson | Exercises | Summary | Status |
+|-------|--------|-----------|---------|--------|
+| Relational model and SQL (joins, aggregation, window functions, CTEs) | [lesson](05-databases/relational-sql/README.md) | [ex](05-databases/relational-sql/exercises.md) | [sum](05-databases/relational-sql/summary.md) | done |
+| Indexes and query plans | [lesson](05-databases/indexes-query-plans/README.md) | [ex](05-databases/indexes-query-plans/exercises.md) | [sum](05-databases/indexes-query-plans/summary.md) | done |
+| Transactions, ACID, isolation levels | [lesson](05-databases/transactions-acid/README.md) | [ex](05-databases/transactions-acid/exercises.md) | [sum](05-databases/transactions-acid/summary.md) | done |
+| Normalization and schema design | [lesson](05-databases/normalization-schema-design/README.md) | [ex](05-databases/normalization-schema-design/exercises.md) | [sum](05-databases/normalization-schema-design/summary.md) | done |
+| NoSQL and choosing a database | [lesson](05-databases/nosql/README.md) | [ex](05-databases/nosql/exercises.md) | [sum](05-databases/nosql/summary.md) | done |
 
 ## 06 Operating systems
 | Topic | Status |

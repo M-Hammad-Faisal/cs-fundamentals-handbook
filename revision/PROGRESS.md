@@ -40,11 +40,11 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 05 Databases
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| Relational model and SQL | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Indexes and query plans | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Transactions and isolation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Normalization and schema design | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| NoSQL | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Relational model and SQL](../05-databases/relational-sql/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Indexes and query plans](../05-databases/indexes-query-plans/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Transactions and isolation](../05-databases/transactions-acid/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Normalization and schema design](../05-databases/normalization-schema-design/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [NoSQL](../05-databases/nosql/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 06 Operating systems
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
