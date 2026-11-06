@@ -24,7 +24,7 @@ Each concept is a folder holding `README.md` (lesson), `exercises.md` (practice 
 | 00 | [Career path](00-career-path/) | [Software engineering career path, end to end](00-career-path/README.md) |
 | 01 | [Complexity](01-complexity/) | [Big-O and complexity analysis](01-complexity/big-o/README.md) |
 | 02 | [Data structures](02-data-structures/) | [Arrays and strings](02-data-structures/arrays-strings/README.md), [linked lists](02-data-structures/linked-lists/README.md), [stacks and queues](02-data-structures/stacks-queues/README.md), [hash tables](02-data-structures/hash-tables/README.md), [trees](02-data-structures/trees/README.md), [heaps](02-data-structures/heaps/README.md), [tries](02-data-structures/tries/README.md), [graphs](02-data-structures/graphs/README.md) |
-| 03 | [Algorithms](03-algorithms/) | Sorting, searching, recursion, dynamic programming, greedy, graph algorithms |
+| 03 | [Algorithms](03-algorithms/) | [Sorting](03-algorithms/sorting/README.md), [searching](03-algorithms/searching/README.md), [recursion and backtracking](03-algorithms/recursion-backtracking/README.md), [dynamic programming](03-algorithms/dynamic-programming/README.md), [greedy](03-algorithms/greedy/README.md), [advanced graph algorithms](03-algorithms/graph-algorithms/README.md) |
 | 04 | [Object-oriented design](04-oop/) | [OOP principles, inheritance types and SOLID](04-oop/oop-principles/README.md) |
 | 05 | [Databases](05-databases/) | Relational model, SQL, indexes, transactions, normalization, NoSQL |
 | 06 | [Operating systems](06-operating-systems/) | Processes, threads, scheduling, memory, concurrency, file systems |

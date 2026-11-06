@@ -31,14 +31,14 @@ Each concept lives in its own folder with three files:
 | Graphs | [lesson](02-data-structures/graphs/README.md) | [ex](02-data-structures/graphs/exercises.md) | [sum](02-data-structures/graphs/summary.md) | done |
 
 ## 03 Algorithms
-| Topic | Status |
-|-------|--------|
-| Sorting (bubble to merge, quick, heap, counting) | planned |
-| Searching (linear, binary, variants) | planned |
-| Recursion and backtracking | planned |
-| Dynamic programming | planned |
-| Greedy algorithms | planned |
-| Graph algorithms (BFS, DFS, Dijkstra, topological sort) | planned |
+| Topic | Lesson | Exercises | Summary | Status |
+|-------|--------|-----------|---------|--------|
+| Sorting (bubble to merge, quick, heap, counting) | [lesson](03-algorithms/sorting/README.md) | [ex](03-algorithms/sorting/exercises.md) | [sum](03-algorithms/sorting/summary.md) | done |
+| Searching (linear, binary, search on the answer) | [lesson](03-algorithms/searching/README.md) | [ex](03-algorithms/searching/exercises.md) | [sum](03-algorithms/searching/summary.md) | done |
+| Recursion and backtracking | [lesson](03-algorithms/recursion-backtracking/README.md) | [ex](03-algorithms/recursion-backtracking/exercises.md) | [sum](03-algorithms/recursion-backtracking/summary.md) | done |
+| Dynamic programming | [lesson](03-algorithms/dynamic-programming/README.md) | [ex](03-algorithms/dynamic-programming/exercises.md) | [sum](03-algorithms/dynamic-programming/summary.md) | done |
+| Greedy algorithms | [lesson](03-algorithms/greedy/README.md) | [ex](03-algorithms/greedy/exercises.md) | [sum](03-algorithms/greedy/summary.md) | done |
+| Advanced graph algorithms (Bellman-Ford, MST, A*, SCC) | [lesson](03-algorithms/graph-algorithms/README.md) | [ex](03-algorithms/graph-algorithms/exercises.md) | [sum](03-algorithms/graph-algorithms/summary.md) | done |
 
 ## 04 Object-oriented design
 | Topic | Lesson | Exercises | Summary | Status |

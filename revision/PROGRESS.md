@@ -24,12 +24,12 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 03 Algorithms
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| Sorting | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Searching | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Recursion and backtracking | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Dynamic programming | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Greedy | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Graph algorithms | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Sorting](../03-algorithms/sorting/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Searching](../03-algorithms/searching/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Recursion and backtracking](../03-algorithms/recursion-backtracking/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Dynamic programming](../03-algorithms/dynamic-programming/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Greedy](../03-algorithms/greedy/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Advanced graph algorithms](../03-algorithms/graph-algorithms/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 04 Object-oriented design
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
