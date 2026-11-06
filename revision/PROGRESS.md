@@ -1,0 +1,85 @@
+# Progress Tracker
+
+Tick items as you finish them. Add dates so the [spaced schedule](schedule.md) works.
+
+Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = scheduled reviews.
+
+## 01 Complexity
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| [Big-O](../01-complexity/big-o/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 02 Data structures
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Arrays and strings | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Linked lists | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Stacks and queues | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Hash tables | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Trees | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Heaps | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Tries | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Graphs | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 03 Algorithms
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Sorting | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Searching | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Recursion and backtracking | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dynamic programming | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Greedy | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Graph algorithms | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 04 Object-oriented design
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| [OOP principles](../04-oop/oop-principles/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Design patterns | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 05 Databases
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Relational model and SQL | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Indexes and query plans | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Transactions and isolation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Normalization and schema design | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| NoSQL | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 06 Operating systems
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Processes and threads | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Scheduling | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Memory management | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Concurrency and synchronization | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| File systems and I/O | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 07 Networking
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| OSI and TCP/IP | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| DNS and HTTP | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| TLS and security basics | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Load balancing and CDNs | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 08 Modern Python
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Typing and dataclasses | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Async and concurrency | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Newer language features | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Performance and profiling | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 09 Interview playbook
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Problem-solving patterns | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| System design basics | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## Mistake log
+Write down anything you got wrong and the fix. Review weekly.
+
+| Date | Topic | What I got wrong | Correct idea |
+|------|-------|------------------|--------------|
+|      |       |                  |              |
