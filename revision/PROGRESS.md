@@ -12,14 +12,14 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 02 Data structures
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| Arrays and strings | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Linked lists | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Stacks and queues | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Hash tables | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Trees | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Heaps | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Tries | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Graphs | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Arrays and strings](../02-data-structures/arrays-strings/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Linked lists](../02-data-structures/linked-lists/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Stacks and queues](../02-data-structures/stacks-queues/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Hash tables](../02-data-structures/hash-tables/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Trees](../02-data-structures/trees/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Heaps](../02-data-structures/heaps/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Tries](../02-data-structures/tries/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Graphs](../02-data-structures/graphs/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 03 Algorithms
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

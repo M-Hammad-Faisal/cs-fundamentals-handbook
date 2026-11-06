@@ -19,16 +19,16 @@ Each concept lives in its own folder with three files:
 | Big-O and complexity analysis | [lesson](01-complexity/big-o/README.md) | [ex](01-complexity/big-o/exercises.md) | [sum](01-complexity/big-o/summary.md) | done |
 
 ## 02 Data structures
-| Topic | Status |
-|-------|--------|
-| Arrays and strings | planned |
-| Linked lists (singly, doubly, circular) | planned |
-| Stacks and queues (deque, priority queue) | planned |
-| Hash tables | planned |
-| Trees (binary, BST, balanced) | planned |
-| Heaps | planned |
-| Tries | planned |
-| Graphs | planned |
+| Topic | Lesson | Exercises | Summary | Status |
+|-------|--------|-----------|---------|--------|
+| Arrays and strings | [lesson](02-data-structures/arrays-strings/README.md) | [ex](02-data-structures/arrays-strings/exercises.md) | [sum](02-data-structures/arrays-strings/summary.md) | done |
+| Linked lists | [lesson](02-data-structures/linked-lists/README.md) | [ex](02-data-structures/linked-lists/exercises.md) | [sum](02-data-structures/linked-lists/summary.md) | done |
+| Stacks and queues | [lesson](02-data-structures/stacks-queues/README.md) | [ex](02-data-structures/stacks-queues/exercises.md) | [sum](02-data-structures/stacks-queues/summary.md) | done |
+| Hash tables | [lesson](02-data-structures/hash-tables/README.md) | [ex](02-data-structures/hash-tables/exercises.md) | [sum](02-data-structures/hash-tables/summary.md) | done |
+| Trees (binary, BST, balanced) | [lesson](02-data-structures/trees/README.md) | [ex](02-data-structures/trees/exercises.md) | [sum](02-data-structures/trees/summary.md) | done |
+| Heaps and priority queues | [lesson](02-data-structures/heaps/README.md) | [ex](02-data-structures/heaps/exercises.md) | [sum](02-data-structures/heaps/summary.md) | done |
+| Tries | [lesson](02-data-structures/tries/README.md) | [ex](02-data-structures/tries/exercises.md) | [sum](02-data-structures/tries/summary.md) | done |
+| Graphs | [lesson](02-data-structures/graphs/README.md) | [ex](02-data-structures/graphs/exercises.md) | [sum](02-data-structures/graphs/summary.md) | done |
 
 ## 03 Algorithms
 | Topic | Status |
