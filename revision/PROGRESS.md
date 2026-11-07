@@ -31,7 +31,15 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 01 Complexity
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| [Big-O](../01-complexity/big-o/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [What is an algorithm?](../01-complexity/01-what-is-an-algorithm.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Counting steps and growth](../01-complexity/02-counting-steps-and-growth.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Big-O, Omega and Theta](../01-complexity/03-big-o-omega-theta.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Analyzing loops and recursion](../01-complexity/04-analyzing-loops-and-recursion.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Space complexity](../01-complexity/05-space-complexity.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Best, average, worst and amortized analysis](../01-complexity/06-cases-and-amortized-analysis.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Complexity of Python's built-in operations](../01-complexity/07-python-operations-cheat-sheet.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Beyond Big-O: constants, caches, P vs NP](../01-complexity/08-beyond-big-o.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Big-O quick reference](../01-complexity/big-o/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 02 Data structures
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

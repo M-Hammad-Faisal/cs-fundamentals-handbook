@@ -32,9 +32,19 @@ One topic per file; each file has a plain-English explanation, runnable code, pr
 | [Software engineering career path, end to end](00-career-path/README.md) | done |
 
 ## 01 Complexity
-| Topic | Lesson | Exercises | Summary | Status |
-|-------|--------|-----------|---------|--------|
-| Big-O and complexity analysis | [lesson](01-complexity/big-o/README.md) | [ex](01-complexity/big-o/exercises.md) | [sum](01-complexity/big-o/summary.md) | done |
+Overview and learning path: [01-complexity/README.md](01-complexity/README.md). Every lesson has practice with solutions and a self-check.
+
+| Topic | Lesson | Status |
+|-------|--------|--------|
+| What is an algorithm? | [lesson](01-complexity/01-what-is-an-algorithm.md) | done |
+| Counting steps and growth | [lesson](01-complexity/02-counting-steps-and-growth.md) | done |
+| Big-O, Omega and Theta | [lesson](01-complexity/03-big-o-omega-theta.md) | done |
+| Analyzing loops and recursion | [lesson](01-complexity/04-analyzing-loops-and-recursion.md) | done |
+| Space complexity | [lesson](01-complexity/05-space-complexity.md) | done |
+| Best, average, worst and amortized analysis | [lesson](01-complexity/06-cases-and-amortized-analysis.md) | done |
+| Complexity of Python's built-in operations | [lesson](01-complexity/07-python-operations-cheat-sheet.md) | done |
+| Beyond Big-O: constants, caches, P vs NP | [lesson](01-complexity/08-beyond-big-o.md) | done |
+| Big-O quick reference (lesson, exercises, summary) | [lesson](01-complexity/big-o/README.md) · [ex](01-complexity/big-o/exercises.md) · [sum](01-complexity/big-o/summary.md) | done |
 
 ## 02 Data structures
 | Topic | Lesson | Exercises | Summary | Status |

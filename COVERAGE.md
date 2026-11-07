@@ -32,8 +32,8 @@ This page records an honest audit of the handbook: what is deep, what is thin, w
 ## Plan (waves)
 
 1. **Wave 0 (this page)**: audit and quality bar.
-2. **Wave 1**: `00-start-here` and `00-foundations` (computer basics, math, Python fundamentals, command line and Git, setup, glossary).
-3. **Wave 2**: expand `01-complexity` into a nested, beginner-friendly sequence.
+2. **Wave 1 (done)**: `00-start-here` and `00-foundations` (computer basics, math, Python fundamentals, command line and Git, setup, glossary).
+3. **Wave 2 (done)**: `01-complexity` expanded into eight beginner-friendly lessons.
 4. **Wave 3**: split and deepen `02-data-structures` (one file per structure and variant).
 5. **Wave 4**: split and deepen `03-algorithms` (one file per algorithm).
 6. **Wave 5**: deepen `06-operating-systems`.
