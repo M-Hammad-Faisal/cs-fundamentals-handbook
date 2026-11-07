@@ -58,10 +58,10 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 07 Networking
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| OSI and TCP/IP | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| DNS and HTTP | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| TLS and security basics | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Load balancing and CDNs | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [OSI and TCP/IP](../07-networking/tcp-ip-osi/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [DNS and HTTP](../07-networking/dns-http/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [TLS and security basics](../07-networking/tls-security/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Load balancing and CDNs](../07-networking/load-balancing-cdn/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 08 Modern Python
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

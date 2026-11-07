@@ -28,7 +28,7 @@ Each concept is a folder holding `README.md` (lesson), `exercises.md` (practice 
 | 04 | [Object-oriented design](04-oop/) | [OOP principles, inheritance types and SOLID](04-oop/oop-principles/README.md) |
 | 05 | [Databases](05-databases/) | [Relational model and SQL](05-databases/relational-sql/README.md), [indexes and query plans](05-databases/indexes-query-plans/README.md), [transactions and ACID](05-databases/transactions-acid/README.md), [normalization and schema design](05-databases/normalization-schema-design/README.md), [NoSQL](05-databases/nosql/README.md) |
 | 06 | [Operating systems](06-operating-systems/) | [Processes and threads](06-operating-systems/processes-threads/README.md), [cpu scheduling](06-operating-systems/scheduling/README.md), [memory management and virtual memory](06-operating-systems/memory-virtual-memory/README.md), [concurrency, locks and deadlocks](06-operating-systems/concurrency-deadlocks/README.md), [file systems and i/o](06-operating-systems/file-systems-io/README.md) |
-| 07 | [Networking](07-networking/) | OSI and TCP/IP, DNS, HTTP, TLS, load balancing |
+| 07 | [Networking](07-networking/) | [OSI and TCP/IP](07-networking/tcp-ip-osi/README.md), [DNS and HTTP](07-networking/dns-http/README.md), [TLS and security](07-networking/tls-security/README.md), [load balancing and CDNs](07-networking/load-balancing-cdn/README.md) |
 | 08 | [Modern Python](08-modern-python/) | Typing, dataclasses, async, pattern matching, performance |
 | 09 | [Interview playbook](09-interview-playbook/) | Problem-solving patterns and system design basics |
 | | [Revision](revision/) | [Spaced schedule](revision/schedule.md) and [progress tracker](revision/PROGRESS.md) |

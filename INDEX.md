@@ -67,12 +67,12 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | File systems and I/O | [lesson](06-operating-systems/file-systems-io/README.md) | [ex](06-operating-systems/file-systems-io/exercises.md) | [sum](06-operating-systems/file-systems-io/summary.md) | done |
 
 ## 07 Networking
-| Topic | Status |
-|-------|--------|
-| OSI and TCP/IP models | planned |
-| DNS and HTTP | planned |
-| TLS and security basics | planned |
-| Load balancing and CDNs | planned |
+| Topic | Lesson | Exercises | Summary | Status |
+|-------|--------|-----------|---------|--------|
+| OSI and TCP/IP models | [lesson](07-networking/tcp-ip-osi/README.md) | [ex](07-networking/tcp-ip-osi/exercises.md) | [sum](07-networking/tcp-ip-osi/summary.md) | done |
+| DNS and HTTP | [lesson](07-networking/dns-http/README.md) | [ex](07-networking/dns-http/exercises.md) | [sum](07-networking/dns-http/summary.md) | done |
+| TLS and security basics | [lesson](07-networking/tls-security/README.md) | [ex](07-networking/tls-security/exercises.md) | [sum](07-networking/tls-security/summary.md) | done |
+| Load balancing, CDNs and resilience | [lesson](07-networking/load-balancing-cdn/README.md) | [ex](07-networking/load-balancing-cdn/exercises.md) | [sum](07-networking/load-balancing-cdn/summary.md) | done |
 
 ## 08 Modern Python
 | Topic | Status |
