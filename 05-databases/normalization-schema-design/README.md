@@ -1,5 +1,11 @@
 # Normalization and Schema Design
 
+## Detailed lesson (start here if you are new)
+
+- [Normalization lab](01-normalization-lab.md): see the update/insert/delete anomalies, find functional dependencies with SQL, decompose to 3NF, prove it is lossless, many-to-many, when to denormalize
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **Normalization** organizes tables so that each fact is stored **once**, in the right place. It removes redundancy and prevents the bugs that redundancy causes. **Schema design** is the wider craft of choosing tables, keys, types, and constraints so the database stays correct as it grows.
