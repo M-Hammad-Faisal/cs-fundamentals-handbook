@@ -1,9 +1,12 @@
 # Object-oriented design
 
-A seven-part path from the basics of classes to design patterns. Read in order the first time.
+A path from your first class to design patterns. Read in order the first time.
+
+**New to classes?** Start with [OOP from scratch](00-oop-from-scratch.md): classes, objects, `self`, a small bank and library built step by step, the four pillars in one example each, practice and self-check. Everything below assumes you have read it. (The examples need **Python 3.10 or newer**: some use `match` and `X | None`; see [setup](../00-foundations/setup/README.md).)
 
 | # | Topic | Lesson |
 |---|-------|--------|
+| 0 | OOP from scratch (start here) | [lesson](00-oop-from-scratch.md) |
 | 1 | Classes and objects in depth | [lesson](classes-objects/README.md) · [exercises](classes-objects/exercises.md) · [summary](classes-objects/summary.md) |
 | 2 | Encapsulation and abstraction | [lesson](encapsulation-abstraction/README.md) · [exercises](encapsulation-abstraction/exercises.md) · [summary](encapsulation-abstraction/summary.md) |
 | 3 | Inheritance, MRO and multiple inheritance | [lesson](inheritance-mro/README.md) · [exercises](inheritance-mro/exercises.md) · [summary](inheritance-mro/summary.md) |

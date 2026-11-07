@@ -42,3 +42,10 @@ This page records an honest audit of the handbook: what is deep, what is thin, w
 9. **Wave 8**: final cross-link, glossary, index and revision-tracker pass.
 
 Status of each wave is recorded in the [index](INDEX.md).
+
+
+## OOP audit (after Wave 4)
+
+- Design patterns (25 files): at the quality bar (prerequisites, runnable code, practice, check yourself).
+- Six core topics (classes, encapsulation, inheritance, polymorphism, composition, SOLID): thorough single lessons with separate exercises; added a beginner on-ramp, [OOP from scratch](04-oop/00-oop-from-scratch.md).
+- All 50 OOP files pass under Python 3.10+ (two blocks need `match` and `X | None`; the handbook states Python 3.10+ in setup).
