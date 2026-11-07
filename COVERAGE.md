@@ -67,7 +67,7 @@ These were named in the original audit and are **not** yet written as dedicated 
 
 | Area | Still to write |
 |------|----------------|
-| 03 Algorithms | stand-alone divide-and-conquer lesson, string algorithms (Rabin-Karp, Z-function, suffix arrays), number theory (primes, modular arithmetic, fast exponentiation, GCD) as a lesson |
+| 03 Algorithms | stand-alone divide-and-conquer lesson (number theory and string algorithms are now written) |
 | 04 OOP | UML and class-diagram guide |
 | 05 Databases | a "what is a database" overview with ER modeling, window functions and CTEs as their own hands-on lesson (they are covered in the quick reference), PostgreSQL-specific features |
 | 06 Operating systems | boot and bootloader in more depth, segmentation, a threads-and-GIL lab, containers and namespaces |

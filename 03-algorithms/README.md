@@ -13,7 +13,9 @@ An **algorithm** is a precise recipe for solving a problem. This part teaches th
 | 3 | [Recursion and backtracking](recursion-backtracking/README.md) | [recursion](recursion-backtracking/01-recursion-fundamentals.md), [backtracking](recursion-backtracking/02-backtracking.md) | solve a smaller copy; try, undo, try again |
 | 4 | [Greedy](greedy/README.md) | [greedy algorithms](greedy/01-greedy-algorithms.md) | take the best-looking choice and never look back |
 | 5 | [Dynamic programming](dynamic-programming/README.md) | [1D](dynamic-programming/01-dp-thinking-and-1d-problems.md), [two sequences and grids](dynamic-programming/02-dp-on-two-sequences-and-grids.md), [advanced](dynamic-programming/03-advanced-dp-patterns.md) | remember subproblem answers |
-| 6 | [Graph algorithms](graph-algorithms/README.md) | [all-pairs and A*](graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [connectivity and flow](graph-algorithms/02-connectivity-scc-and-flow.md) (plus the [graph lessons in Part 02](../02-data-structures/graphs/README.md)) | model relationships as vertices and edges |
+| 6 | [Number theory](number-theory/README.md) | [number theory for programmers](number-theory/01-number-theory-for-programmers.md) | divisibility, remainders, primes |
+| 7 | [String algorithms](string-algorithms/README.md) | [matching, palindromes and suffix arrays](string-algorithms/01-string-matching-and-suffix-structures.md) | search and index text in near-linear time |
+| 8 | [Graph algorithms](graph-algorithms/README.md) | [all-pairs and A*](graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [connectivity and flow](graph-algorithms/02-connectivity-scc-and-flow.md) (plus the [graph lessons in Part 02](../02-data-structures/graphs/README.md)) | model relationships as vertices and edges |
 
 Each folder also has a quick-reference README, `exercises.md` and a one-page `summary.md`.
 
@@ -27,6 +29,8 @@ Each folder also has a quick-reference README, `exercises.md` and a one-page `su
 | "maximum number of non-overlapping...", "schedule", "cover" and a provable local rule | greedy |
 | "number of ways", "minimum cost", "longest", overlapping subproblems | dynamic programming |
 | "shortest path", "connected", "dependencies", "network" | graph algorithms |
+| "modulo 10^9+7", gcd, primes, remainders | [number theory](number-theory/README.md) |
+| Find a pattern or palindrome in text, index a text | [string algorithms](string-algorithms/README.md) |
 | It is a tree or nested structure | recursion |
 
 **When stuck:** (1) write the brute force, (2) find the repeated work or the wasted comparisons, (3) pick the technique that removes them.

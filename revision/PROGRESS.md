@@ -97,6 +97,8 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | Lesson: [Sorting Basics and the Elementary Sorts](../03-algorithms/sorting/01-sorting-basics-and-elementary-sorts.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Merge Sort and Quicksort](../03-algorithms/sorting/02-merge-sort-and-quicksort.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Linear-Time Sorts, Timsort and Choosing a Sort](../03-algorithms/sorting/03-linear-time-sorts-and-timsort.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Number Theory for Programmers](../03-algorithms/number-theory/01-number-theory-for-programmers.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [String Algorithms](../03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 04 Object-oriented design
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (189 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (203 terms in plain words)](GLOSSARY.md) | done |
 | [Coverage audit and roadmap](COVERAGE.md) | done |
 
 ## 00 Foundations
@@ -79,6 +79,8 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 | Recursion and backtracking | [lesson](03-algorithms/recursion-backtracking/README.md) | [ex](03-algorithms/recursion-backtracking/exercises.md) | [sum](03-algorithms/recursion-backtracking/summary.md) | done |
 | Dynamic programming | [lesson](03-algorithms/dynamic-programming/README.md) | [ex](03-algorithms/dynamic-programming/exercises.md) | [sum](03-algorithms/dynamic-programming/summary.md) | done |
 | Greedy algorithms | [lesson](03-algorithms/greedy/README.md) | [ex](03-algorithms/greedy/exercises.md) | [sum](03-algorithms/greedy/summary.md) | done |
+| Number theory (GCD, modular arithmetic, primes, Miller-Rabin) | [lesson](03-algorithms/number-theory/README.md) | | | done |
+| String algorithms (Rabin-Karp, Z-function, Manacher, suffix arrays) | [lesson](03-algorithms/string-algorithms/README.md) | | | done |
 | Advanced graph algorithms (Bellman-Ford, MST, A*, SCC) | [lesson](03-algorithms/graph-algorithms/README.md) | [ex](03-algorithms/graph-algorithms/exercises.md) | [sum](03-algorithms/graph-algorithms/summary.md) | done |
 
 <!-- detailed-lessons:03 -->
@@ -87,9 +89,11 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 - **Dynamic Programming:** [Dynamic Programming: Thinking and 1D Problems](03-algorithms/dynamic-programming/01-dp-thinking-and-1d-problems.md), [DP on Two Sequences, Grids and Knapsack](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md), [Advanced DP Patterns: State Machines, Trees, Bitmasks and Digits](03-algorithms/dynamic-programming/03-advanced-dp-patterns.md)
 - **Advanced Graph Algorithms:** [Shortest Paths Beyond Dijkstra: Floyd-Warshall, A*, 0-1 BFS](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [Connectivity, Strongly Connected Components, Bridges and Max Flow](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Greedy Algorithms:** [Greedy Algorithms](03-algorithms/greedy/01-greedy-algorithms.md)
+- **Number Theory:** [Number Theory for Programmers](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Recursion and Backtracking:** [Recursion Fundamentals](03-algorithms/recursion-backtracking/01-recursion-fundamentals.md), [Backtracking](03-algorithms/recursion-backtracking/02-backtracking.md)
 - **Searching:** [Linear Search and Binary Search](03-algorithms/searching/01-linear-and-binary-search.md), [Binary Search on the Answer and Other Search Techniques](03-algorithms/searching/02-binary-search-on-the-answer.md)
 - **Sorting:** [Sorting Basics and the Elementary Sorts](03-algorithms/sorting/01-sorting-basics-and-elementary-sorts.md), [Merge Sort and Quicksort](03-algorithms/sorting/02-merge-sort-and-quicksort.md), [Linear-Time Sorts, Timsort and Choosing a Sort](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
+- **String Algorithms:** [String Algorithms: Matching, Palindromes and Suffix Arrays](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 <!-- detailed-lessons:03 -->
 
 ## 04 Object-oriented design

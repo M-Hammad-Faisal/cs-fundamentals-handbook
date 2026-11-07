@@ -43,6 +43,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **CAP theorem**: During a network partition a distributed system must choose between consistency and availability. [Learn more](05-databases/nosql/README.md)
 - **CDN**: Content delivery network: servers around the world caching content near users. [Learn more](07-networking/load-balancing-cdn/README.md)
 - **Certificate (TLS)**: A document binding a public key to an identity such as a domain name, signed by a certificate authority. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+- **Chinese remainder theorem**: Remainders modulo pairwise coprime numbers determine a number modulo their product. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Circuit breaker**: A pattern that stops calling a failing dependency for a while so it can recover and callers fail fast. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Class / object**: A class is a blueprint; an object is an instance built from it. [Learn more](04-oop/classes-objects/README.md)
 - **Closure**: A function that remembers variables from the scope where it was created. [Learn more](08-modern-python/generators-functional/README.md)
@@ -58,6 +59,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Context switch**: The OS saving one task's CPU state and loading another's. [Learn more](06-operating-systems/scheduling/README.md)
 - **Convoy effect**: Short jobs stuck waiting behind one long job in a non-preemptive first-come-first-served queue. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
 - **Cookie**: A small piece of data a server asks the browser to store and send back. [Learn more](07-networking/dns-http/README.md)
+- **Coprime**: Two integers whose greatest common divisor is 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Copy-on-write**: Sharing memory pages until one side writes, then copying just that page; makes `fork` cheap. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
 - **Counting sort**: A non-comparison sort that counts occurrences of small integer keys; runs in O(n + k). [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **Coupling / cohesion**: Coupling is how much modules depend on each other; cohesion is how well a module's parts belong together. [Learn more](04-oop/composition-design/README.md)
@@ -84,6 +86,8 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Encapsulation**: Bundling data with the code that works on it and controlling access to protect invariants. [Learn more](04-oop/encapsulation-abstraction/README.md)
 - **Encoding (text)**: The rule that maps characters to bytes (UTF-8, ASCII). [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Enum**: A fixed set of named constants. [Learn more](08-modern-python/dataclasses-enums/README.md)
+- **Euclid's algorithm**: Computes the GCD with repeated remainders: gcd(a, b) = gcd(b, a mod b). [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
+- **Euler's totient**: phi(n): how many numbers from 1 to n are coprime to n; the exponent in Euler's theorem and in RSA. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Event loop**: The scheduler in `asyncio` that runs tasks and resumes them when awaited things finish. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Eventual consistency**: If writes stop, all replicas eventually converge to the same value; reads may be stale until then. [Learn more](05-databases/nosql/01-nosql-lab.md)
 - **Exception**: An error raised during execution that can be caught with `try/except`. [Learn more](08-modern-python/exceptions-logging-testing/README.md)
@@ -93,6 +97,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 - **f-string**: A string literal (`f"...{x}..."`) that embeds expressions. [Learn more](00-foundations/python-fundamentals/01-variables-types-operators.md)
 - **Factory pattern**: A function or method that decides which class to instantiate. [Learn more](04-oop/design-patterns/creational/factory-method.md)
+- **Fast exponentiation**: Computing a^n (mod m) in O(log n) by repeated squaring; Python's `pow(a, n, m)`. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Fenwick tree**: A compact structure for prefix sums with point updates in O(log n) (binary indexed tree). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
 - **Floating point**: The binary format for decimals; most decimal fractions are stored inexactly. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Floyd-Warshall**: A dynamic-programming algorithm for shortest paths between all pairs of vertices in O(V^3). [Learn more](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md)
@@ -145,6 +150,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## L
 
 - **Lambda**: A small anonymous function written inline. [Learn more](00-foundations/python-fundamentals/03-functions.md)
+- **LCP array**: For a suffix array, the length of the common prefix of each pair of adjacent sorted suffixes. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **LCS (longest common subsequence)**: The longest sequence of items appearing in the same order in two sequences (not necessarily adjacent). [Learn more](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md)
 - **Linked list**: Nodes each holding a value and a pointer to the next node. [Learn more](02-data-structures/linked-lists/README.md)
 - **Load balancer**: Spreads requests across several servers and removes unhealthy ones. [Learn more](07-networking/load-balancing-cdn/README.md)
@@ -155,8 +161,11 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## M
 
+- **Manacher's algorithm**: Finds the longest palindromic substring (and all palindrome radii) in linear time. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **Memoization**: Caching a function's results by its arguments to avoid recomputation. [Learn more](03-algorithms/dynamic-programming/README.md)
 - **Merge conflict**: Git cannot automatically combine changes to the same lines; you must resolve it. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
+- **Miller-Rabin test**: A fast probabilistic primality test, deterministic with fixed bases for 64-bit numbers. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
+- **Modular inverse**: For b mod m, the number b^-1 with b * b^-1 = 1 (mod m); exists when gcd(b, m) = 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Monotonic stack**: A stack kept sorted so each element is pushed and popped once; solves next-greater-element problems in O(n). [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **MRO**: Method resolution order: the order in which Python searches base classes for an attribute. [Learn more](04-oop/inheritance-mro/README.md)
 - **MVCC / snapshot isolation**: Each transaction reads its own consistent snapshot of the data, so readers and writers do not block each other. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
@@ -193,6 +202,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## R
 
+- **Rabin-Karp**: String search that compares rolling hashes of windows, verifying matches. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **Race condition**: A bug whose outcome depends on the timing of concurrent operations. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Radix sort**: Sorting numbers digit by digit with a stable sort; effectively linear for fixed-width keys. [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **RAM**: Fast, temporary memory for programs and data in use. [Learn more](00-foundations/computer-basics/how-computers-work.md)
@@ -203,6 +213,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Replication**: Keeping copies of data on several machines. [Learn more](05-databases/nosql/README.md)
 - **REST**: An API style using HTTP methods and URLs to act on resources. [Learn more](07-networking/dns-http/README.md)
 - **Reverse proxy**: A server in front of backends that forwards client requests to them (and may balance, cache or terminate TLS). [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
+- **Rolling hash**: A hash of a sliding window updated in O(1) by removing the old character and adding the new one. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 
 ## S
 
@@ -212,6 +223,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Semaphore**: A counter that allows up to N tasks into a resource at once. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Sharding**: Splitting data across machines by key. [Learn more](05-databases/nosql/README.md)
 - **Shunting-yard algorithm**: Dijkstra's method for converting infix expressions to postfix using an operator stack. [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
+- **Sieve of Eratosthenes**: Finds all primes up to N by crossing out multiples of each prime, in O(N log log N). [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Signal**: A small asynchronous notification sent to a process (SIGTERM, SIGKILL, SIGINT). [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
 - **Socket**: The operating system's handle for one end of a network conversation. [Learn more](07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md)
 - **SOLID**: Five object-oriented design principles: SRP, OCP, LSP, ISP, DIP. [Learn more](04-oop/solid/README.md)
@@ -222,6 +234,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Starvation**: A process or thread that never gets a resource because others always go first; aging is a common cure. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
 - **Strongly connected component**: A maximal set of vertices in a directed graph where every vertex can reach every other. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Subnet / CIDR**: A block of IP addresses defined by a prefix length such as /24. [Learn more](07-networking/tcp-ip-osi/README.md)
+- **Suffix array**: The start positions of all suffixes of a string in sorted order; supports fast substring queries. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **Symbolic link**: A small file containing a path to another file; it can dangle if the target is removed. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **System call**: A controlled request from a user program to the kernel (open, read, fork). [Learn more](06-operating-systems/00-what-is-an-operating-system.md)
 
@@ -265,6 +278,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## Z
 
+- **Z-function**: z[i] is the length of the longest common prefix of a string and its suffix starting at i; computed in O(n). [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **Zombie process**: A child that has exited but whose parent has not yet collected its exit status. [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
 
 [Back to the index](INDEX.md) · [Start here](00-start-here/README.md)
