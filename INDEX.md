@@ -1,8 +1,8 @@
 # Index
 
-The master map of the handbook. Status: **done** = written, **planned** = coming next.
+The master map of the handbook. Every part is written; each part below also lists its **detailed lessons** (step-by-step, with runnable labs).
 
-Each concept lives in its own folder with three files:
+Each topic lives in its own folder with a quick-reference README, numbered detailed lessons, and exercises and summary files:
 
 - `README.md`: the full lesson (concept, internals, code, complexity, two real-world examples, tips).
 - `exercises.md`: practice problems with collapsible solutions.
@@ -12,7 +12,7 @@ Each concept lives in its own folder with three files:
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (126 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (189 terms in plain words)](GLOSSARY.md) | done |
 | [Coverage audit and roadmap](COVERAGE.md) | done |
 
 ## 00 Foundations
@@ -58,6 +58,19 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 | Tries | [lesson](02-data-structures/tries/README.md) | [ex](02-data-structures/tries/exercises.md) | [sum](02-data-structures/tries/summary.md) | done |
 | Graphs | [lesson](02-data-structures/graphs/README.md) | [ex](02-data-structures/graphs/exercises.md) | [sum](02-data-structures/graphs/summary.md) | done |
 
+<!-- detailed-lessons:02 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Arrays and Strings:** [Arrays: How Data Sits in Memory](02-data-structures/arrays-strings/01-arrays-and-memory.md), [Working with Arrays: Essential Techniques](02-data-structures/arrays-strings/02-array-techniques.md), [Strings in Depth](02-data-structures/arrays-strings/03-strings-in-depth.md)
+- **Graphs:** [Graph Basics: Representations, BFS and DFS](02-data-structures/graphs/01-graph-basics-bfs-dfs.md), [Graph Algorithms: Ordering, Shortest Paths and Spanning Trees](02-data-structures/graphs/02-graph-algorithms.md), [Union-Find (Disjoint Sets) and Kruskal's Algorithm](02-data-structures/graphs/03-union-find.md)
+- **Hash Tables:** [Hash Functions and Collisions](02-data-structures/hash-tables/01-hash-functions-and-collisions.md), [Implementing Hash Tables](02-data-structures/hash-tables/02-implementing-hash-tables.md), [Dict, Set, Hash-Map Patterns, Bloom Filters and Consistent Hashing](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
+- **Heaps and Priority Queues:** [Binary Heaps and Heapsort](02-data-structures/heaps/01-binary-heaps-and-heapsort.md), [Priority Queue Applications](02-data-structures/heaps/02-priority-queue-applications.md)
+- **Linked Lists:** [The Singly Linked List, Built from Scratch](02-data-structures/linked-lists/01-singly-linked-list.md), [Doubly Linked Lists, Circular Lists and the LRU Cache](02-data-structures/linked-lists/02-doubly-and-circular.md), [Linked-List Techniques and Classic Problems](02-data-structures/linked-lists/03-linked-list-techniques.md)
+- **Stacks and Queues:** [Stacks: Last In, First Out](02-data-structures/stacks-queues/01-stacks.md), [Queues, Deques and Priority Queues](02-data-structures/stacks-queues/02-queues-deques-priority-queues.md), [Stack and Queue Applications](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
+- **Trees:** [Binary Trees and Traversals](02-data-structures/trees/01-binary-trees-and-traversals.md), [Binary Search Trees](02-data-structures/trees/02-binary-search-trees.md), [Balanced Trees: AVL, Red-Black and B-Trees](02-data-structures/trees/03-balanced-trees-avl.md), [Segment Trees and Fenwick Trees](02-data-structures/trees/04-segment-and-fenwick-trees.md)
+- **Tries (Prefix Trees):** [Tries (Prefix Trees)](02-data-structures/tries/01-tries.md)
+<!-- detailed-lessons:02 -->
+
 ## 03 Algorithms
 | Topic | Lesson | Exercises | Summary | Status |
 |-------|--------|-----------|---------|--------|
@@ -67,6 +80,17 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 | Dynamic programming | [lesson](03-algorithms/dynamic-programming/README.md) | [ex](03-algorithms/dynamic-programming/exercises.md) | [sum](03-algorithms/dynamic-programming/summary.md) | done |
 | Greedy algorithms | [lesson](03-algorithms/greedy/README.md) | [ex](03-algorithms/greedy/exercises.md) | [sum](03-algorithms/greedy/summary.md) | done |
 | Advanced graph algorithms (Bellman-Ford, MST, A*, SCC) | [lesson](03-algorithms/graph-algorithms/README.md) | [ex](03-algorithms/graph-algorithms/exercises.md) | [sum](03-algorithms/graph-algorithms/summary.md) | done |
+
+<!-- detailed-lessons:03 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Dynamic Programming:** [Dynamic Programming: Thinking and 1D Problems](03-algorithms/dynamic-programming/01-dp-thinking-and-1d-problems.md), [DP on Two Sequences, Grids and Knapsack](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md), [Advanced DP Patterns: State Machines, Trees, Bitmasks and Digits](03-algorithms/dynamic-programming/03-advanced-dp-patterns.md)
+- **Advanced Graph Algorithms:** [Shortest Paths Beyond Dijkstra: Floyd-Warshall, A*, 0-1 BFS](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [Connectivity, Strongly Connected Components, Bridges and Max Flow](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
+- **Greedy Algorithms:** [Greedy Algorithms](03-algorithms/greedy/01-greedy-algorithms.md)
+- **Recursion and Backtracking:** [Recursion Fundamentals](03-algorithms/recursion-backtracking/01-recursion-fundamentals.md), [Backtracking](03-algorithms/recursion-backtracking/02-backtracking.md)
+- **Searching:** [Linear Search and Binary Search](03-algorithms/searching/01-linear-and-binary-search.md), [Binary Search on the Answer and Other Search Techniques](03-algorithms/searching/02-binary-search-on-the-answer.md)
+- **Sorting:** [Sorting Basics and the Elementary Sorts](03-algorithms/sorting/01-sorting-basics-and-elementary-sorts.md), [Merge Sort and Quicksort](03-algorithms/sorting/02-merge-sort-and-quicksort.md), [Linear-Time Sorts, Timsort and Choosing a Sort](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
+<!-- detailed-lessons:03 -->
 
 ## 04 Object-oriented design
 | Topic | Lesson | Exercises | Summary | Status |
@@ -82,6 +106,12 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 | Structural patterns (7): Adapter, Decorator, Proxy, Facade, Composite, Bridge, Flyweight | [overview](04-oop/design-patterns/structural/README.md) | one file per pattern, with exercises | [cheat sheet](04-oop/design-patterns/structural/README.md) | done |
 | Behavioral patterns (12): Strategy, Observer, Command, State, Template Method, Iterator, Chain of Responsibility, Mediator, Memento, Visitor, Interpreter, Null Object | [overview](04-oop/design-patterns/behavioral/README.md) | one file per pattern, with exercises | [cheat sheet](04-oop/design-patterns/behavioral/README.md) | done |
 
+<!-- detailed-lessons:04 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Start here:** [OOP From Scratch: Your First Classes](04-oop/00-oop-from-scratch.md)
+<!-- detailed-lessons:04 -->
+
 ## 05 Databases
 Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.sql).
 
@@ -93,6 +123,16 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | Normalization and schema design | [lesson](05-databases/normalization-schema-design/README.md) | [ex](05-databases/normalization-schema-design/exercises.md) | [sum](05-databases/normalization-schema-design/summary.md) | done |
 | NoSQL and choosing a database | [lesson](05-databases/nosql/README.md) | [ex](05-databases/nosql/exercises.md) | [sum](05-databases/nosql/summary.md) | done |
 
+<!-- detailed-lessons:05 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Indexes and Query Plans:** [Indexes Lab: Speed, Query Plans and Trade-offs](05-databases/indexes-query-plans/01-indexes-lab.md)
+- **Normalization and Schema Design:** [Normalization Lab: From a Messy Table to a Clean Schema](05-databases/normalization-schema-design/01-normalization-lab.md)
+- **NoSQL and Choosing a Database:** [NoSQL Lab: Key-Value, Documents, Search and Replication](05-databases/nosql/01-nosql-lab.md)
+- **The Relational Model and SQL:** [SQL First Steps (with Python and SQLite)](05-databases/relational-sql/01-sql-first-steps.md), [Aggregation and Joins Lab](05-databases/relational-sql/02-aggregation-and-joins-lab.md)
+- **Transactions, ACID and Isolation:** [Transactions Lab: ACID, Concurrency and Lost Updates](05-databases/transactions-acid/01-transactions-lab.md)
+<!-- detailed-lessons:05 -->
+
 ## 06 Operating systems
 | Topic | Lesson | Exercises | Summary | Status |
 |-------|--------|-----------|---------|--------|
@@ -102,6 +142,17 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | Concurrency, locks and deadlocks | [lesson](06-operating-systems/concurrency-deadlocks/README.md) | [ex](06-operating-systems/concurrency-deadlocks/exercises.md) | [sum](06-operating-systems/concurrency-deadlocks/summary.md) | done |
 | File systems and I/O | [lesson](06-operating-systems/file-systems-io/README.md) | [ex](06-operating-systems/file-systems-io/exercises.md) | [sum](06-operating-systems/file-systems-io/summary.md) | done |
 
+<!-- detailed-lessons:06 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Start here:** [What Is an Operating System?](06-operating-systems/00-what-is-an-operating-system.md)
+- **Concurrency, Synchronization and Deadlocks:** [Race Conditions and Synchronization](06-operating-systems/concurrency-deadlocks/01-race-conditions-and-synchronization.md), [Deadlock: Detection, Prevention and Avoidance](06-operating-systems/concurrency-deadlocks/02-deadlock.md)
+- **File Systems and I/O:** [File Systems in Depth: Inodes, Links, Permissions and Durability](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
+- **Memory Management and Virtual Memory:** [Virtual Memory: Paging and Address Translation](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md), [Page Replacement Algorithms](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
+- **Processes and Threads:** [Processes in Practice: fork, exec, pipes, signals and concurrency models](06-operating-systems/processes-threads/01-processes-in-practice.md)
+- **CPU Scheduling:** [CPU Scheduling Algorithms: A Hands-On Simulator](06-operating-systems/scheduling/01-scheduling-simulator.md)
+<!-- detailed-lessons:06 -->
+
 ## 07 Networking
 | Topic | Lesson | Exercises | Summary | Status |
 |-------|--------|-----------|---------|--------|
@@ -109,6 +160,15 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | DNS and HTTP | [lesson](07-networking/dns-http/README.md) | [ex](07-networking/dns-http/exercises.md) | [sum](07-networking/dns-http/summary.md) | done |
 | TLS and security basics | [lesson](07-networking/tls-security/README.md) | [ex](07-networking/tls-security/exercises.md) | [sum](07-networking/tls-security/summary.md) | done |
 | Load balancing, CDNs and resilience | [lesson](07-networking/load-balancing-cdn/README.md) | [ex](07-networking/load-balancing-cdn/exercises.md) | [sum](07-networking/load-balancing-cdn/summary.md) | done |
+
+<!-- detailed-lessons:07 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **DNS and HTTP:** [HTTP from Scratch: Requests, Responses, Caching and a Tiny Server](07-networking/dns-http/01-http-from-scratch.md), [DNS in Depth: Wire Format, a Toy Server, Caching and Resolution](07-networking/dns-http/02-dns-in-depth.md)
+- **Load Balancing, Proxies, CDNs and Resilience:** [Load Balancing and Resilience Lab](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
+- **The Network Stack:** [Packets, Addressing and Subnets (with Runnable Labs)](07-networking/tcp-ip-osi/01-packets-addressing-and-subnets.md), [Sockets Lab: TCP and UDP from Scratch](07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md)
+- **TLS and Security Basics:** [Cryptography and TLS Lab: Hashes, Keys, Certificates and Web Attacks](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+<!-- detailed-lessons:07 -->
 
 ## 08 Modern Python
 | Topic | Lesson | Exercises | Summary | Status |

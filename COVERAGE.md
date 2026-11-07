@@ -39,7 +39,7 @@ This page records an honest audit of the handbook: what is deep, what is thin, w
 6. **Wave 5 (done)**: deepen `06-operating-systems`.
 7. **Wave 6 (done)**: deepen `07-networking`.
 8. **Wave 7 (done)**: deepen `05-databases`.
-9. **Wave 8**: final cross-link, glossary, index and revision-tracker pass.
+9. **Wave 8 (done)**: final cross-link, glossary (189 terms), index (detailed lessons listed per part), revision tracker (a row per lesson) and root README pass.
 
 Status of each wave is recorded in the [index](INDEX.md).
 
@@ -49,3 +49,31 @@ Status of each wave is recorded in the [index](INDEX.md).
 - Design patterns (25 files): at the quality bar (prerequisites, runnable code, practice, check yourself).
 - Six core topics (classes, encapsulation, inheritance, polymorphism, composition, SOLID): thorough single lessons with separate exercises; added a beginner on-ramp, [OOP from scratch](04-oop/00-oop-from-scratch.md).
 - All 50 OOP files pass under Python 3.10+ (two blocks need `match` and `X | None`; the handbook states Python 3.10+ in setup).
+
+## Final status
+
+**What exists now.** 276 pages (about 58,000 lines, 1,743 Python examples). Every part from foundations to the interview playbook is written. Parts 02 to 07 have a quick-reference README per topic **plus numbered detailed lessons** (56 of them, many are hands-on labs), and 04 has a beginner on-ramp.
+
+**How it was verified.**
+
+- Every page was run through a code-block runner on Python 3.15 (and the lessons require Python 3.10+). **263 of 276 pages run cleanly.**
+- The remaining 13 pages are not broken; they contain illustrative sketches that assume context: cheat-sheet snippets with placeholder variables (`words`, `nums`, `r.set(...)`), exercise solutions that call helpers defined in the matching lesson (`fifo`, `round_robin`, `qps`, `first_true`), or a script that expects a command-line argument. With the lesson code loaded, those exercise solutions run.
+- Output comments in the newer lessons were compared with real output; many were corrected during this pass. Links were checked across the whole repository (0 broken), and a privacy check was run before every push.
+- The labs use only the standard library, SQLite and (for the TLS lab) the `openssl` command; no internet access is needed.
+
+## Known gaps (honest list)
+
+These were named in the original audit and are **not** yet written as dedicated lessons:
+
+| Area | Still to write |
+|------|----------------|
+| 03 Algorithms | stand-alone divide-and-conquer lesson, string algorithms (Rabin-Karp, Z-function, suffix arrays), number theory (primes, modular arithmetic, fast exponentiation, GCD) as a lesson |
+| 04 OOP | UML and class-diagram guide |
+| 05 Databases | a "what is a database" overview with ER modeling, window functions and CTEs as their own hands-on lesson (they are covered in the quick reference), PostgreSQL-specific features |
+| 06 Operating systems | boot and bootloader in more depth, segmentation, a threads-and-GIL lab, containers and namespaces |
+| 07 Networking | routing protocols (BGP/OSPF) in depth, WebSockets and REST design lessons, HTTP/2 and HTTP/3 internals, network debugging with `tcpdump`/Wireshark |
+| 08 Modern Python | a bridge lesson from Python fundamentals |
+| 09 Interview playbook | worked problem walkthroughs by pattern with timed practice |
+| All parts | per-topic `exercises.md` and `summary.md` were written before the detailed lessons and could be refreshed to match them |
+
+Contributions and ideas for any of these are welcome.

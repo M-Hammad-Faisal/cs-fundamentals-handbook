@@ -10,25 +10,31 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **ACID**: Atomicity, Consistency, Isolation, Durability: the guarantees of a database transaction. [Learn more](05-databases/transactions-acid/README.md)
 - **Algorithm**: A finite, step-by-step procedure that solves a problem. [Learn more](01-complexity/big-o/README.md)
 - **Amortized cost**: The average cost per operation over a long sequence, even if a single operation is occasionally expensive (for example appending to a dynamic array). [Learn more](01-complexity/big-o/README.md)
+- **Anti-join**: Rows of one table that have no match in another, found with `LEFT JOIN ... WHERE b.id IS NULL` or `NOT EXISTS`. [Learn more](05-databases/relational-sql/02-aggregation-and-joins-lab.md)
 - **API**: Application Programming Interface: the set of operations a piece of software offers to other programs. [Learn more](07-networking/dns-http/README.md)
 - **Argument / parameter**: A parameter is a name in a function definition; an argument is the value passed when calling it. [Learn more](00-foundations/python-fundamentals/03-functions.md)
 - **Array**: A sequence of items stored contiguously in memory, accessed by index (Python's `list` is a dynamic array). [Learn more](02-data-structures/arrays-strings/README.md)
 - **ASCII**: An early character encoding of 128 characters; the first part of Unicode. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Async / await**: Syntax for cooperative concurrency on one thread: a task pauses at `await` while others run. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Atomic operation**: An operation that happens completely or not at all, with no visible middle state. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
+- **Avalanche effect**: A tiny change to a hash function's input changes about half the output bits. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 
 ## B
 
 - **B-tree**: A balanced tree with many keys per node, used by databases and file systems for indexes. [Learn more](05-databases/indexes-query-plans/README.md)
 - **Backtracking**: Building a solution step by step and undoing a step when it leads nowhere. [Learn more](03-algorithms/recursion-backtracking/README.md)
+- **Banker's algorithm**: A deadlock-avoidance method that grants a resource request only if the system stays in a safe state. [Learn more](06-operating-systems/concurrency-deadlocks/02-deadlock.md)
 - **Base case**: The simplest case of a recursive function, which stops the recursion. [Learn more](03-algorithms/recursion-backtracking/README.md)
+- **Belady's anomaly**: Giving a FIFO page-replacement policy more frames can produce more page faults. [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **BFS (breadth-first search)**: Graph traversal that visits nodes level by level using a queue; finds shortest paths in unweighted graphs. [Learn more](02-data-structures/graphs/README.md)
 - **Big-O**: Notation describing how an algorithm's cost grows with input size, ignoring constants. [Learn more](01-complexity/big-o/README.md)
 - **Binary search**: Finding an item in sorted data by repeatedly halving the search range; O(log n). [Learn more](03-algorithms/searching/README.md)
 - **Binary tree**: A tree in which each node has at most two children. [Learn more](02-data-structures/trees/README.md)
 - **Bit / byte**: A bit is 0 or 1; a byte is 8 bits. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Blocking call**: A call that makes the caller wait until it finishes. [Learn more](08-modern-python/async-concurrency/README.md)
+- **Bloom filter**: A compact structure that says an item is definitely absent or probably present, with no false negatives. [Learn more](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
 - **Branch (Git)**: A movable pointer to a commit, used for a separate line of development. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
+- **Bridge (graph)**: An edge whose removal disconnects a graph; a single point of failure. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Bytecode**: The intermediate instructions Python compiles source code into and its virtual machine executes. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 
 ## C
@@ -36,18 +42,28 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Cache**: Fast storage for recently or frequently used data to avoid slower work. [Learn more](09-interview-playbook/system-design-basics/README.md)
 - **CAP theorem**: During a network partition a distributed system must choose between consistency and availability. [Learn more](05-databases/nosql/README.md)
 - **CDN**: Content delivery network: servers around the world caching content near users. [Learn more](07-networking/load-balancing-cdn/README.md)
+- **Certificate (TLS)**: A document binding a public key to an identity such as a domain name, signed by a certificate authority. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+- **Circuit breaker**: A pattern that stops calling a failing dependency for a while so it can recover and callers fail fast. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Class / object**: A class is a blueprint; an object is an instance built from it. [Learn more](04-oop/classes-objects/README.md)
 - **Closure**: A function that remembers variables from the scope where it was created. [Learn more](08-modern-python/generators-functional/README.md)
 - **Code point**: The number Unicode assigns to a character. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
+- **Collision (hash)**: Two different keys that produce the same hash slot; every hash table needs a plan for them. [Learn more](02-data-structures/hash-tables/01-hash-functions-and-collisions.md)
 - **Commit (Git)**: A snapshot of the project with a message, author and pointer to its parent commit(s). [Learn more](00-foundations/command-line-and-git/git-basics.md)
 - **Complexity**: How much time or memory an algorithm needs as the input grows. [Learn more](01-complexity/big-o/README.md)
+- **Composite index**: A database index on several columns, usable for queries on its leading columns (leftmost-prefix rule). [Learn more](05-databases/indexes-query-plans/01-indexes-lab.md)
 - **Composition**: Building behavior by holding other objects (has-a) instead of inheriting (is-a). [Learn more](04-oop/composition-design/README.md)
 - **Concurrency**: Structuring a program so several tasks make progress during overlapping time. [Learn more](08-modern-python/async-concurrency/README.md)
+- **Consistent hashing**: Placing keys and servers on a ring so adding or removing a server moves only a small share of keys. [Learn more](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
 - **Context manager**: An object used with `with` that guarantees setup and cleanup (files, locks). [Learn more](04-oop/polymorphism-dunder/README.md)
 - **Context switch**: The OS saving one task's CPU state and loading another's. [Learn more](06-operating-systems/scheduling/README.md)
+- **Convoy effect**: Short jobs stuck waiting behind one long job in a non-preemptive first-come-first-served queue. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
 - **Cookie**: A small piece of data a server asks the browser to store and send back. [Learn more](07-networking/dns-http/README.md)
+- **Copy-on-write**: Sharing memory pages until one side writes, then copying just that page; makes `fork` cheap. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
+- **Counting sort**: A non-comparison sort that counts occurrences of small integer keys; runs in O(n + k). [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **Coupling / cohesion**: Coupling is how much modules depend on each other; cohesion is how well a module's parts belong together. [Learn more](04-oop/composition-design/README.md)
+- **Covering index**: An index that contains every column a query needs, so the table is never read. [Learn more](05-databases/indexes-query-plans/01-indexes-lab.md)
 - **CPU**: The processor that executes instructions. [Learn more](00-foundations/computer-basics/how-computers-work.md)
+- **Critical section**: Code that touches shared data and must not run in two threads at once. [Learn more](06-operating-systems/concurrency-deadlocks/01-race-conditions-and-synchronization.md)
 
 ## D
 
@@ -57,24 +73,31 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Dependency injection**: Passing an object the things it needs instead of letting it build them. [Learn more](04-oop/composition-design/README.md)
 - **DFS (depth-first search)**: Graph traversal that goes as deep as possible before backtracking, using recursion or a stack. [Learn more](02-data-structures/graphs/README.md)
 - **Dictionary**: A mapping from keys to values with O(1) average lookup (a hash table). [Learn more](02-data-structures/hash-tables/README.md)
+- **Diffie-Hellman**: A key-exchange method that lets two parties agree on a shared secret over a public channel. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Dijkstra's algorithm**: Finds shortest paths from a source in a graph with non-negative edge weights. [Learn more](03-algorithms/graph-algorithms/README.md)
 - **DNS**: Domain Name System: translates names like example.com into IP addresses. [Learn more](07-networking/dns-http/README.md)
 - **Dynamic programming**: Solving problems by combining solutions of overlapping subproblems, storing results. [Learn more](03-algorithms/dynamic-programming/README.md)
 
 ## E
 
+- **Edit distance**: The minimum number of insertions, deletions and substitutions that turn one string into another. [Learn more](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md)
 - **Encapsulation**: Bundling data with the code that works on it and controlling access to protect invariants. [Learn more](04-oop/encapsulation-abstraction/README.md)
 - **Encoding (text)**: The rule that maps characters to bytes (UTF-8, ASCII). [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Enum**: A fixed set of named constants. [Learn more](08-modern-python/dataclasses-enums/README.md)
 - **Event loop**: The scheduler in `asyncio` that runs tasks and resumes them when awaited things finish. [Learn more](08-modern-python/async-concurrency/README.md)
+- **Eventual consistency**: If writes stop, all replicas eventually converge to the same value; reads may be stale until then. [Learn more](05-databases/nosql/01-nosql-lab.md)
 - **Exception**: An error raised during execution that can be caught with `try/except`. [Learn more](08-modern-python/exceptions-logging-testing/README.md)
+- **Exchange argument**: A proof technique showing a greedy choice can replace part of an optimal solution without making it worse. [Learn more](03-algorithms/greedy/01-greedy-algorithms.md)
 
 ## F
 
 - **f-string**: A string literal (`f"...{x}..."`) that embeds expressions. [Learn more](00-foundations/python-fundamentals/01-variables-types-operators.md)
 - **Factory pattern**: A function or method that decides which class to instantiate. [Learn more](04-oop/design-patterns/creational/factory-method.md)
+- **Fenwick tree**: A compact structure for prefix sums with point updates in O(log n) (binary indexed tree). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
 - **Floating point**: The binary format for decimals; most decimal fractions are stored inexactly. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
+- **Floyd-Warshall**: A dynamic-programming algorithm for shortest paths between all pairs of vertices in O(V^3). [Learn more](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md)
 - **Foreign key**: A column that references the primary key of another table. [Learn more](05-databases/relational-sql/README.md)
+- **fsync**: A call that forces buffered file data to be written to disk before returning. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Function**: A named reusable block of code that takes parameters and may return a value. [Learn more](00-foundations/python-fundamentals/03-functions.md)
 
 ## G
@@ -88,10 +111,13 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## H
 
+- **Hard link**: Another directory entry (name) pointing to the same inode as an existing file. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Hash function**: Maps data of any size to a fixed-size number; the same input always gives the same output. [Learn more](02-data-structures/hash-tables/README.md)
 - **Hash table**: A structure using a hash function to store key-value pairs with O(1) average access. [Learn more](02-data-structures/hash-tables/README.md)
 - **Heap (data structure)**: A tree-based structure that gives quick access to the minimum or maximum (priority queue). [Learn more](02-data-structures/heaps/README.md)
 - **Heap (memory)**: The region of memory where objects live until they are no longer referenced. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
+- **Heapify**: Turning an array into a heap in place in O(n) by sifting nodes down from the last parent. [Learn more](02-data-structures/heaps/01-binary-heaps-and-heapsort.md)
+- **HMAC**: A hash-based message authentication code: a tag only holders of the shared secret key can create or verify. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **HTTP / HTTPS**: The request-response protocol of the web; HTTPS adds TLS encryption. [Learn more](07-networking/dns-http/README.md)
 
 ## I
@@ -100,28 +126,40 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Immutable / mutable**: Immutable objects cannot be changed after creation; mutable ones can. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Index (database)**: A structure (usually a B-tree) that speeds up lookups at the cost of slower writes. [Learn more](05-databases/indexes-query-plans/README.md)
 - **Inheritance**: A class reusing and specializing another (is-a). [Learn more](04-oop/inheritance-mro/README.md)
+- **Inode**: The file-system record holding a file's metadata and block locations (not its name). [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Interface**: The set of operations something offers, without saying how they work. [Learn more](04-oop/encapsulation-abstraction/README.md)
+- **Inverted index**: A map from each word to the documents that contain it; the core of search engines. [Learn more](05-databases/nosql/01-nosql-lab.md)
 - **IP address**: The numeric address of a host on a network (IPv4 32 bits, IPv6 128 bits). [Learn more](07-networking/tcp-ip-osi/README.md)
 - **Iterator / iterable**: An iterable can produce an iterator; an iterator yields values one by one with `next`. [Learn more](04-oop/design-patterns/behavioral/iterator.md)
 
 ## J
 
 - **JOIN (SQL)**: Combining rows from two tables based on a related column. [Learn more](05-databases/relational-sql/README.md)
+- **Journaling**: Logging intended changes first so a file system or database can recover consistently after a crash. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **JSON**: A text format for structured data (objects, arrays, strings, numbers). [Learn more](00-foundations/python-fundamentals/05-files-modules-errors.md)
+
+## K
+
+- **Kernel**: The always-running core of the operating system, in privileged mode, managing CPU, memory and devices. [Learn more](06-operating-systems/00-what-is-an-operating-system.md)
 
 ## L
 
 - **Lambda**: A small anonymous function written inline. [Learn more](00-foundations/python-fundamentals/03-functions.md)
+- **LCS (longest common subsequence)**: The longest sequence of items appearing in the same order in two sequences (not necessarily adjacent). [Learn more](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md)
 - **Linked list**: Nodes each holding a value and a pointer to the next node. [Learn more](02-data-structures/linked-lists/README.md)
 - **Load balancer**: Spreads requests across several servers and removes unhealthy ones. [Learn more](07-networking/load-balancing-cdn/README.md)
+- **Load factor**: Items divided by slots in a hash table; resizing keeps it bounded so lookups stay O(1). [Learn more](02-data-structures/hash-tables/01-hash-functions-and-collisions.md)
 - **Lock / mutex**: A tool that lets only one thread at a time into a critical section. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Logarithm**: The inverse of an exponent: how many times a number can be halved (log2). [Learn more](00-foundations/math-for-cs/exponents-and-logarithms.md)
+- **Lost update**: Two read-modify-write cycles overwrite each other so one change disappears. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## M
 
 - **Memoization**: Caching a function's results by its arguments to avoid recomputation. [Learn more](03-algorithms/dynamic-programming/README.md)
 - **Merge conflict**: Git cannot automatically combine changes to the same lines; you must resolve it. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
+- **Monotonic stack**: A stack kept sorted so each element is pushed and popped once; solves next-greater-element problems in O(n). [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **MRO**: Method resolution order: the order in which Python searches base classes for an attribute. [Learn more](04-oop/inheritance-mro/README.md)
+- **MVCC / snapshot isolation**: Each transaction reads its own consistent snapshot of the data, so readers and writers do not block each other. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## N
 
@@ -132,10 +170,14 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 - **OOP**: Object-oriented programming: organizing code as objects with state and behavior. [Learn more](04-oop/README.md)
 - **Operating system**: Software that manages hardware and shares it between programs. [Learn more](00-foundations/computer-basics/how-computers-work.md)
+- **Optimistic concurrency**: Proceed without locks and detect conflicts at write time (for example with a version number), then retry. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## P
 
 - **Page fault**: The CPU trap when a needed memory page is not currently mapped; the OS loads it. [Learn more](06-operating-systems/memory-virtual-memory/README.md)
+- **Page replacement**: The policy that chooses which in-memory page to evict when a new page is needed (FIFO, LRU, Clock). [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
+- **Page table**: The structure mapping a process's virtual pages to physical frames. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
+- **Pipe**: A one-way kernel buffer connecting the output of one process to the input of another. [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
 - **Polymorphism**: The same call doing the right thing for different object types. [Learn more](04-oop/polymorphism-dunder/README.md)
 - **Primary key**: A column (or set) that uniquely identifies each row in a table. [Learn more](05-databases/relational-sql/README.md)
 - **Priority queue**: A queue where the highest-priority item leaves first (usually a heap). [Learn more](02-data-structures/heaps/README.md)
@@ -146,36 +188,57 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## Q
 
 - **Queue**: A first-in, first-out collection. [Learn more](02-data-structures/stacks-queues/README.md)
+- **Quickselect**: Finding the k-th smallest item in average O(n) by partitioning only one side. [Learn more](03-algorithms/sorting/02-merge-sort-and-quicksort.md)
+- **Quorum**: Reading from R and writing to W of N replicas; if R + W > N a read always overlaps the latest write. [Learn more](05-databases/nosql/01-nosql-lab.md)
 
 ## R
 
 - **Race condition**: A bug whose outcome depends on the timing of concurrent operations. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
+- **Radix sort**: Sorting numbers digit by digit with a stable sort; effectively linear for fixed-width keys. [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **RAM**: Fast, temporary memory for programs and data in use. [Learn more](00-foundations/computer-basics/how-computers-work.md)
+- **Rate limiter**: A mechanism (token bucket, sliding window) that caps how many requests a client may make over time. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Recursion**: A function calling itself on a smaller input until a base case. [Learn more](03-algorithms/recursion-backtracking/README.md)
 - **Reference**: A name or pointer that refers to an object in memory. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **REPL**: Read-Eval-Print Loop: the interactive Python prompt. [Learn more](00-foundations/setup/README.md)
 - **Replication**: Keeping copies of data on several machines. [Learn more](05-databases/nosql/README.md)
 - **REST**: An API style using HTTP methods and URLs to act on resources. [Learn more](07-networking/dns-http/README.md)
+- **Reverse proxy**: A server in front of backends that forwards client requests to them (and may balance, cache or terminate TLS). [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 
 ## S
 
+- **Salt**: Random data added to each password before hashing so equal passwords hash differently and precomputed tables fail. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Scheduler**: The OS component that decides which task runs on the CPU next. [Learn more](06-operating-systems/scheduling/README.md)
+- **Segment tree**: A tree storing answers for ranges, supporting range queries and updates in O(log n). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
 - **Semaphore**: A counter that allows up to N tasks into a resource at once. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Sharding**: Splitting data across machines by key. [Learn more](05-databases/nosql/README.md)
+- **Shunting-yard algorithm**: Dijkstra's method for converting infix expressions to postfix using an operator stack. [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
+- **Signal**: A small asynchronous notification sent to a process (SIGTERM, SIGKILL, SIGINT). [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
+- **Socket**: The operating system's handle for one end of a network conversation. [Learn more](07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md)
 - **SOLID**: Five object-oriented design principles: SRP, OCP, LSP, ISP, DIP. [Learn more](04-oop/solid/README.md)
 - **SQL**: Structured Query Language for relational databases. [Learn more](05-databases/relational-sql/README.md)
+- **SQL injection**: An attack where user input changes the meaning of a SQL query; prevented with parameterized queries. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Stack (call stack)**: Memory holding the frames of function calls in progress. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Stack (data structure)**: A last-in, first-out collection. [Learn more](02-data-structures/stacks-queues/README.md)
+- **Starvation**: A process or thread that never gets a resource because others always go first; aging is a common cure. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
+- **Strongly connected component**: A maximal set of vertices in a directed graph where every vertex can reach every other. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Subnet / CIDR**: A block of IP addresses defined by a prefix length such as /24. [Learn more](07-networking/tcp-ip-osi/README.md)
+- **Symbolic link**: A small file containing a path to another file; it can dangle if the target is removed. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
+- **System call**: A controlled request from a user program to the kernel (open, read, fork). [Learn more](06-operating-systems/00-what-is-an-operating-system.md)
 
 ## T
 
 - **TCP / UDP**: TCP is reliable and ordered; UDP is fast and best-effort. [Learn more](07-networking/tcp-ip-osi/README.md)
+- **Thrashing**: A system spending most of its time moving pages between disk and memory because working sets exceed RAM. [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Thread**: A unit of execution inside a process sharing its memory. [Learn more](06-operating-systems/processes-threads/README.md)
+- **Timsort**: Python's stable hybrid sort (merge sort plus insertion sort) that is O(n) on already-sorted runs. [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
+- **TLB (translation lookaside buffer)**: A small fast cache of recent virtual-to-physical page translations. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
 - **TLS**: Transport Layer Security: encrypts and authenticates connections (HTTPS). [Learn more](07-networking/tls-security/README.md)
+- **Token bucket**: A rate limiter that refills tokens at a steady rate and spends one per request, allowing short bursts. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
+- **Topological sort**: An ordering of a directed acyclic graph's vertices in which every edge points forward. [Learn more](02-data-structures/graphs/02-graph-algorithms.md)
 - **Transaction**: A group of database operations that succeed or fail as one unit. [Learn more](05-databases/transactions-acid/README.md)
 - **Tree**: A hierarchy of nodes with one root and child nodes. [Learn more](02-data-structures/trees/README.md)
 - **Trie**: A tree storing strings by shared prefixes. [Learn more](02-data-structures/tries/README.md)
+- **TTL (time to live)**: How long a cached record (DNS answer, cache entry) may be reused before it expires. [Learn more](07-networking/dns-http/02-dns-in-depth.md)
 - **Tuple**: An immutable ordered collection. [Learn more](00-foundations/python-fundamentals/04-strings-lists-dicts-sets.md)
 - **Type hint**: An annotation describing intended types, checked by tools but not enforced at runtime. [Learn more](08-modern-python/typing-hints/README.md)
 
@@ -194,5 +257,14 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## W
 
 - **WebSocket**: A persistent two-way connection between browser and server. [Learn more](07-networking/dns-http/README.md)
+- **Write skew**: Two transactions read overlapping data and make different writes that together break a rule, undetected by snapshot isolation. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
+
+## X
+
+- **XSS (cross-site scripting)**: Injecting script into a page by putting unescaped user input into HTML; prevented by output escaping and CSP. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+
+## Z
+
+- **Zombie process**: A child that has exited but whose parent has not yet collected its exit status. [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
 
 [Back to the index](INDEX.md) · [Start here](00-start-here/README.md)

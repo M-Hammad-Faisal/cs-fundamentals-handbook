@@ -52,6 +52,28 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Heaps](../02-data-structures/heaps/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Tries](../02-data-structures/tries/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Graphs](../02-data-structures/graphs/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Arrays](../02-data-structures/arrays-strings/01-arrays-and-memory.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Working with Arrays](../02-data-structures/arrays-strings/02-array-techniques.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Strings in Depth](../02-data-structures/arrays-strings/03-strings-in-depth.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Graph Basics](../02-data-structures/graphs/01-graph-basics-bfs-dfs.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Graph Algorithms](../02-data-structures/graphs/02-graph-algorithms.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Union-Find](../02-data-structures/graphs/03-union-find.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Hash Functions and Collisions](../02-data-structures/hash-tables/01-hash-functions-and-collisions.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Implementing Hash Tables](../02-data-structures/hash-tables/02-implementing-hash-tables.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Dict, Set, Hash-Map Patterns, Bloom Filters and Consistent Hashing](../02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Binary Heaps and Heapsort](../02-data-structures/heaps/01-binary-heaps-and-heapsort.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Priority Queue Applications](../02-data-structures/heaps/02-priority-queue-applications.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [The Singly Linked List, Built from Scratch](../02-data-structures/linked-lists/01-singly-linked-list.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Doubly Linked Lists, Circular Lists and the LRU Cache](../02-data-structures/linked-lists/02-doubly-and-circular.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Linked-List Techniques and Classic Problems](../02-data-structures/linked-lists/03-linked-list-techniques.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Stacks](../02-data-structures/stacks-queues/01-stacks.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Queues, Deques and Priority Queues](../02-data-structures/stacks-queues/02-queues-deques-priority-queues.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Stack and Queue Applications](../02-data-structures/stacks-queues/03-stack-and-queue-applications.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Binary Trees and Traversals](../02-data-structures/trees/01-binary-trees-and-traversals.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Binary Search Trees](../02-data-structures/trees/02-binary-search-trees.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Balanced Trees](../02-data-structures/trees/03-balanced-trees-avl.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Segment Trees and Fenwick Trees](../02-data-structures/trees/04-segment-and-fenwick-trees.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Tries](../02-data-structures/tries/01-tries.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 03 Algorithms
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
@@ -62,6 +84,19 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Dynamic programming](../03-algorithms/dynamic-programming/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Greedy](../03-algorithms/greedy/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Advanced graph algorithms](../03-algorithms/graph-algorithms/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Dynamic Programming](../03-algorithms/dynamic-programming/01-dp-thinking-and-1d-problems.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [DP on Two Sequences, Grids and Knapsack](../03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Advanced DP Patterns](../03-algorithms/dynamic-programming/03-advanced-dp-patterns.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Shortest Paths Beyond Dijkstra](../03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Connectivity, Strongly Connected Components, Bridges and Max Flow](../03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Greedy Algorithms](../03-algorithms/greedy/01-greedy-algorithms.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Recursion Fundamentals](../03-algorithms/recursion-backtracking/01-recursion-fundamentals.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Backtracking](../03-algorithms/recursion-backtracking/02-backtracking.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Linear Search and Binary Search](../03-algorithms/searching/01-linear-and-binary-search.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Binary Search on the Answer and Other Search Techniques](../03-algorithms/searching/02-binary-search-on-the-answer.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Sorting Basics and the Elementary Sorts](../03-algorithms/sorting/01-sorting-basics-and-elementary-sorts.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Merge Sort and Quicksort](../03-algorithms/sorting/02-merge-sort-and-quicksort.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Linear-Time Sorts, Timsort and Choosing a Sort](../03-algorithms/sorting/03-linear-time-sorts-and-timsort.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 04 Object-oriented design
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
@@ -97,6 +132,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Behavioral: Visitor](../04-oop/design-patterns/behavioral/visitor.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Behavioral: Interpreter](../04-oop/design-patterns/behavioral/interpreter.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Behavioral: Null Object](../04-oop/design-patterns/behavioral/null-object.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [OOP From Scratch](../04-oop/00-oop-from-scratch.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 05 Databases
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
@@ -106,6 +142,12 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Transactions and isolation](../05-databases/transactions-acid/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Normalization and schema design](../05-databases/normalization-schema-design/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [NoSQL](../05-databases/nosql/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Indexes Lab](../05-databases/indexes-query-plans/01-indexes-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Normalization Lab](../05-databases/normalization-schema-design/01-normalization-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [NoSQL Lab](../05-databases/nosql/01-nosql-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [SQL First Steps](../05-databases/relational-sql/01-sql-first-steps.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Aggregation and Joins Lab](../05-databases/relational-sql/02-aggregation-and-joins-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Transactions Lab](../05-databases/transactions-acid/01-transactions-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 06 Operating systems
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
@@ -115,6 +157,14 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Memory management](../06-operating-systems/memory-virtual-memory/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Concurrency and synchronization](../06-operating-systems/concurrency-deadlocks/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [File systems and I/O](../06-operating-systems/file-systems-io/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [What Is an Operating System?](../06-operating-systems/00-what-is-an-operating-system.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Race Conditions and Synchronization](../06-operating-systems/concurrency-deadlocks/01-race-conditions-and-synchronization.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Deadlock](../06-operating-systems/concurrency-deadlocks/02-deadlock.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [File Systems in Depth](../06-operating-systems/file-systems-io/01-file-systems-in-depth.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Virtual Memory](../06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Page Replacement Algorithms](../06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Processes in Practice](../06-operating-systems/processes-threads/01-processes-in-practice.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [CPU Scheduling Algorithms](../06-operating-systems/scheduling/01-scheduling-simulator.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 07 Networking
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
@@ -123,6 +173,12 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [DNS and HTTP](../07-networking/dns-http/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [TLS and security basics](../07-networking/tls-security/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Load balancing and CDNs](../07-networking/load-balancing-cdn/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [HTTP from Scratch](../07-networking/dns-http/01-http-from-scratch.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [DNS in Depth](../07-networking/dns-http/02-dns-in-depth.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Load Balancing and Resilience Lab](../07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Packets, Addressing and Subnets](../07-networking/tcp-ip-osi/01-packets-addressing-and-subnets.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Sockets Lab](../07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Cryptography and TLS Lab](../07-networking/tls-security/01-cryptography-and-tls-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 08 Modern Python
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
