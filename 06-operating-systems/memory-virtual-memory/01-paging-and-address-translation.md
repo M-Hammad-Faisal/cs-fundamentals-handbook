@@ -227,7 +227,7 @@ At a 99% hit rate paging costs only about 2% extra. (With a 4-level table the pe
 
 Pages need not all be in RAM. A page table entry can say **not present**. When the program touches such a page, the MMU raises a **page fault** and the kernel decides:
 
-1. **Valid but not loaded yet** (first touch of a file-backed or zero page, or swapped out): find a free frame (evicting another page if needed: the page replacement policy), read the data from disk, update the table, **restart the instruction**.
+1. **Valid but not loaded yet** (first touch of a file-backed or zero page, or swapped out): find a free frame (evicting another page if needed, see [page replacement](02-page-replacement-algorithms.md)), read the data from disk, update the table, **restart the instruction**.
 2. **Invalid** (null pointer, address outside any mapping): send `SIGSEGV`, the process dies.
 3. **Copy-on-write**: a write to a shared read-only page; copy the frame, then allow the write.
 
@@ -346,4 +346,4 @@ print(os.sysconf("SC_PAGE_SIZE"))                                    # 4096 (163
 
 </details>
 
-[Back to memory management](README.md) · Next: page replacement algorithms (coming next)
+[Back to memory management](README.md) · Next: [page replacement algorithms](02-page-replacement-algorithms.md)

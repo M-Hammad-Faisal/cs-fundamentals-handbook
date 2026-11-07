@@ -1,8 +1,9 @@
 # Memory Management and Virtual Memory
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons (start here if you are new)
 
 - [Paging and address translation](01-paging-and-address-translation.md): pages, frames, page tables, TLB, page faults, with a runnable MMU
+- [Page replacement algorithms](02-page-replacement-algorithms.md): FIFO, LRU, Optimal, Clock, Belady's anomaly, working sets, thrashing
 
 The rest of this page is the quick reference.
 
