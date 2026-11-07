@@ -1,5 +1,11 @@
 # File Systems and I/O
 
+## Detailed lesson (start here if you are new)
+
+- [File systems in depth](01-file-systems-in-depth.md): a runnable inode-based file system, links, permissions, durability (fsync, atomic rename, journaling), I/O models
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **file system** turns raw disk blocks into named files in directories. The OS exposes it through a small, uniform API (`open`, `read`, `write`, `close`) that also works for pipes, sockets and devices: "everything is a file" on Unix.
