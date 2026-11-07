@@ -83,12 +83,16 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | Load balancing, CDNs and resilience | [lesson](07-networking/load-balancing-cdn/README.md) | [ex](07-networking/load-balancing-cdn/exercises.md) | [sum](07-networking/load-balancing-cdn/summary.md) | done |
 
 ## 08 Modern Python
-| Topic | Status |
-|-------|--------|
-| Typing and dataclasses | planned |
-| Async and concurrency | planned |
-| Recent language features | planned |
-| Performance and profiling | planned |
+| Topic | Lesson | Exercises | Summary | Status |
+|-------|--------|-----------|---------|--------|
+| Type hints and static typing | [lesson](08-modern-python/typing-hints/README.md) | [ex](08-modern-python/typing-hints/exercises.md) | [sum](08-modern-python/typing-hints/summary.md) | done |
+| Dataclasses, NamedTuple and enums | [lesson](08-modern-python/dataclasses-enums/README.md) | [ex](08-modern-python/dataclasses-enums/exercises.md) | [sum](08-modern-python/dataclasses-enums/summary.md) | done |
+| Iterators, generators, comprehensions and functional tools | [lesson](08-modern-python/generators-functional/README.md) | [ex](08-modern-python/generators-functional/exercises.md) | [sum](08-modern-python/generators-functional/summary.md) | done |
+| Concurrency: threads, processes and asyncio | [lesson](08-modern-python/async-concurrency/README.md) | [ex](08-modern-python/async-concurrency/exercises.md) | [sum](08-modern-python/async-concurrency/summary.md) | done |
+| Modern language features (3.8 to 3.14) | [lesson](08-modern-python/modern-syntax/README.md) | [ex](08-modern-python/modern-syntax/exercises.md) | [sum](08-modern-python/modern-syntax/summary.md) | done |
+| Performance, profiling and memory | [lesson](08-modern-python/performance-profiling/README.md) | [ex](08-modern-python/performance-profiling/exercises.md) | [sum](08-modern-python/performance-profiling/summary.md) | done |
+| Exceptions, logging and testing | [lesson](08-modern-python/exceptions-logging-testing/README.md) | [ex](08-modern-python/exceptions-logging-testing/exercises.md) | [sum](08-modern-python/exceptions-logging-testing/summary.md) | done |
+| Packaging, environments and tooling | [lesson](08-modern-python/packaging-tooling/README.md) | [ex](08-modern-python/packaging-tooling/exercises.md) | [sum](08-modern-python/packaging-tooling/summary.md) | done |
 
 ## 09 Interview playbook
 | Topic | Status |

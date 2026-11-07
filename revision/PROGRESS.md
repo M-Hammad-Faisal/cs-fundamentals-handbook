@@ -95,10 +95,14 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 08 Modern Python
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| Typing and dataclasses | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Async and concurrency | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Newer language features | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Performance and profiling | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Type hints and static typing](../08-modern-python/typing-hints/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Dataclasses, NamedTuple and enums](../08-modern-python/dataclasses-enums/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Iterators, generators, comprehensions and functional tools](../08-modern-python/generators-functional/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Concurrency: threads, processes and asyncio](../08-modern-python/async-concurrency/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Modern language features (3.8 to 3.14)](../08-modern-python/modern-syntax/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Performance, profiling and memory](../08-modern-python/performance-profiling/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Exceptions, logging and testing](../08-modern-python/exceptions-logging-testing/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Packaging, environments and tooling](../08-modern-python/packaging-tooling/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 09 Interview playbook
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
