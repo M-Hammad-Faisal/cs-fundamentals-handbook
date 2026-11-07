@@ -107,8 +107,10 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 09 Interview playbook
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| Problem-solving patterns | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| System design basics | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Problem-solving patterns](../09-interview-playbook/problem-solving-patterns/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [System design basics](../09-interview-playbook/system-design-basics/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Rapid-fire Python and CS questions](../09-interview-playbook/python-and-cs-rapid-fire/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral interviews, hiring process and 12-week plan](../09-interview-playbook/behavioral-and-process/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## Mistake log
 Write down anything you got wrong and the fix. Review weekly.
