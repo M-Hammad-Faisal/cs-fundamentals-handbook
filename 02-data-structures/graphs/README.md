@@ -1,5 +1,13 @@
 # Graphs
 
+## Detailed lessons (start here if you are new)
+
+1. [Graph basics, BFS and DFS](01-graph-basics-bfs-dfs.md): representations, traversals, grids, cycles
+2. [Graph algorithms](02-graph-algorithms.md): topological sort, Dijkstra, Bellman-Ford, Prim
+3. [Union-find and Kruskal](03-union-find.md): disjoint sets, spanning trees, connectivity
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **graph** is a set of **vertices** (nodes) connected by **edges**. It models anything made of things and relationships: cities and roads, people and friendships, web pages and links, tasks and dependencies.
