@@ -1,5 +1,11 @@
 # Greedy Algorithms
 
+## Detailed lesson (start here if you are new)
+
+- [Greedy algorithms in depth](01-greedy-algorithms.md): exchange argument, interval scheduling, knapsack, jump game, and where greedy fails
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **greedy algorithm** builds a solution step by step, always taking the choice that looks **best right now**, and never reconsidering. It is fast and simple, but it is correct only for problems with the right structure.
