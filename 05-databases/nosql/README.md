@@ -1,5 +1,11 @@
 # NoSQL and Choosing a Database
 
+## Detailed lesson (start here if you are new)
+
+- [NoSQL lab](01-nosql-lab.md): a key-value store with TTL and LRU, documents (embed vs reference), an inverted-index search engine, quorums and CAP
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **NoSQL** ("not only SQL") covers databases that do not use the classic relational table model. They appeared because some workloads strain relational databases: enormous scale across many machines, very high write rates, flexible or rapidly changing data shapes, and access patterns that are simpler than SQL's full power.

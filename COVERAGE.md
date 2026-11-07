@@ -38,7 +38,7 @@ This page records an honest audit of the handbook: what is deep, what is thin, w
 5. **Wave 4 (done)**: split and deepen `03-algorithms` (one file per algorithm).
 6. **Wave 5 (done)**: deepen `06-operating-systems`.
 7. **Wave 6 (done)**: deepen `07-networking`.
-8. **Wave 7**: deepen `05-databases`.
+8. **Wave 7 (done)**: deepen `05-databases`.
 9. **Wave 8**: final cross-link, glossary, index and revision-tracker pass.
 
 Status of each wave is recorded in the [index](INDEX.md).
