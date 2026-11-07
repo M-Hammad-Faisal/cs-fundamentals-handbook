@@ -1,5 +1,14 @@
 # Trees
 
+## Detailed lessons (start here if you are new)
+
+1. [Binary trees and traversals](01-binary-trees-and-traversals.md): vocabulary, preorder/inorder/postorder/level-order, classic questions
+2. [Binary search trees](02-binary-search-trees.md): search, insert, delete, validation, range queries
+3. [Balanced trees](03-balanced-trees-avl.md): rotations, a full AVL tree, red-black trees, B-trees
+4. [Segment and Fenwick trees](04-segment-and-fenwick-trees.md): range queries with updates in `O(log n)`
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **tree** is a hierarchical structure of **nodes** connected by edges, with no cycles. One node is the **root**; every other node has exactly one **parent**. Nodes with no children are **leaves**.
