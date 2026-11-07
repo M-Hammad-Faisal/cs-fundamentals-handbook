@@ -1,5 +1,13 @@
 # Linked Lists
 
+## Detailed lessons (start here if you are new)
+
+1. [Singly linked list](01-singly-linked-list.md): nodes, operations, traces
+2. [Doubly and circular lists](02-doubly-and-circular.md): sentinels, Josephus, LRU cache
+3. [Linked list techniques](03-linked-list-techniques.md): dummy node, reversal, Floyd cycle detection, merging
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **linked list** stores elements in separate **nodes**. Each node holds a value and a **pointer** (reference) to the next node. Nodes can live anywhere in memory; the pointers connect them.

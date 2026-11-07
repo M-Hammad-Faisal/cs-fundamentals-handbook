@@ -1,5 +1,13 @@
 # Arrays and Strings
 
+## Detailed lessons (start here if you are new)
+
+1. [Arrays and memory](01-arrays-and-memory.md): addresses, static vs dynamic arrays, how `list` grows
+2. [Array techniques](02-array-techniques.md): two pointers, sliding window, prefix sums, Kadane, binary search
+3. [Strings in depth](03-strings-in-depth.md): immutability, Unicode, anagrams, KMP, regex
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 An **array** stores elements in **contiguous memory**, so the element at index `i` lives at `base_address + i * element_size`. That arithmetic is why indexing is `O(1)`: the computer jumps straight to the address with no searching.

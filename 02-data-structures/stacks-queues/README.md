@@ -1,5 +1,13 @@
 # Stacks and Queues
 
+## Detailed lessons (start here if you are new)
+
+1. [Stacks](01-stacks.md): array and linked stacks, brackets, undo/redo, DFS
+2. [Queues, deques and priority queues](02-queues-deques-priority-queues.md): ring buffer, `deque`, `heapq`, BFS
+3. [Stack and queue applications](03-stack-and-queue-applications.md): shunting-yard, monotonic stack and deque, simulations
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 Both are **restricted-access sequences**: you only touch the ends, which gives a clear contract and `O(1)` operations.
