@@ -21,6 +21,7 @@ Each concept is a folder holding `README.md` (lesson), `exercises.md` (practice 
 
 | # | Part | Chapters |
 |---|------|----------|
+| 00 | [Foundations](00-foundations/) | [Setup](00-foundations/setup/README.md), [computer basics](00-foundations/computer-basics/README.md), [math for CS](00-foundations/math-for-cs/README.md), [Python fundamentals](00-foundations/python-fundamentals/README.md), [command line and Git](00-foundations/command-line-and-git/README.md) |
 | 00 | [Career path](00-career-path/) | [Software engineering career path, end to end](00-career-path/README.md) |
 | 01 | [Complexity](01-complexity/) | [Big-O and complexity analysis](01-complexity/big-o/README.md) |
 | 02 | [Data structures](02-data-structures/) | [Arrays and strings](02-data-structures/arrays-strings/README.md), [linked lists](02-data-structures/linked-lists/README.md), [stacks and queues](02-data-structures/stacks-queues/README.md), [hash tables](02-data-structures/hash-tables/README.md), [trees](02-data-structures/trees/README.md), [heaps](02-data-structures/heaps/README.md), [tries](02-data-structures/tries/README.md), [graphs](02-data-structures/graphs/README.md) |

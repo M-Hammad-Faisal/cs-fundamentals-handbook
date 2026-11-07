@@ -8,6 +8,24 @@ Each concept lives in its own folder with three files:
 - `exercises.md`: practice problems with collapsible solutions.
 - `summary.md`: a one-page recap for quick revision.
 
+## Start here
+| Page | Status |
+|------|--------|
+| [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
+| [Glossary (126 terms in plain words)](GLOSSARY.md) | done |
+| [Coverage audit and roadmap](COVERAGE.md) | done |
+
+## 00 Foundations
+One topic per file; each file has a plain-English explanation, runnable code, practice with solutions and a self-check.
+
+| Section | Lessons | Status |
+|---------|---------|--------|
+| [Setup](00-foundations/setup/README.md) | Python, editor, Git, virtual environments, first tested project | done |
+| [Computer basics](00-foundations/computer-basics/README.md) | [How a computer runs programs](00-foundations/computer-basics/how-computers-work.md), [binary and data representation](00-foundations/computer-basics/binary-and-data-representation.md), [memory, stack and heap](00-foundations/computer-basics/memory-stack-heap.md) | done |
+| [Math for CS](00-foundations/math-for-cs/README.md) | [Exponents and logarithms](00-foundations/math-for-cs/exponents-and-logarithms.md), [logic, sets and proofs](00-foundations/math-for-cs/logic-sets-proofs.md), [counting and probability](00-foundations/math-for-cs/counting-and-probability.md), [sums and recurrences](00-foundations/math-for-cs/sums-and-recurrences.md) | done |
+| [Python fundamentals](00-foundations/python-fundamentals/README.md) | [Variables and types](00-foundations/python-fundamentals/01-variables-types-operators.md), [control flow](00-foundations/python-fundamentals/02-control-flow.md), [functions](00-foundations/python-fundamentals/03-functions.md), [collections](00-foundations/python-fundamentals/04-strings-lists-dicts-sets.md), [files, modules and errors](00-foundations/python-fundamentals/05-files-modules-errors.md), [debugging and testing](00-foundations/python-fundamentals/06-debugging-and-testing.md), [classes: first look](00-foundations/python-fundamentals/07-classes-first-look.md) | done |
+| [Command line and Git](00-foundations/command-line-and-git/README.md) | [Terminal](00-foundations/command-line-and-git/terminal-basics.md), [Git basics](00-foundations/command-line-and-git/git-basics.md), [branches and merging](00-foundations/command-line-and-git/git-branches-and-merging.md), [undo and history](00-foundations/command-line-and-git/git-undo-and-history.md), [GitHub collaboration](00-foundations/command-line-and-git/github-collaboration.md) | done |
+
 ## 00 Career path
 | Page | Status |
 |------|--------|

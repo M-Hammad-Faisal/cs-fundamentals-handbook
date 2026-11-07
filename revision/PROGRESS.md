@@ -4,6 +4,30 @@ Tick items as you finish them. Add dates so the [spaced schedule](schedule.md) w
 
 Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = scheduled reviews.
 
+## 00 Foundations
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| [Setup](../00-foundations/setup/README.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [How a computer runs programs](../00-foundations/computer-basics/how-computers-work.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Binary and data representation](../00-foundations/computer-basics/binary-and-data-representation.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Memory, stack and heap](../00-foundations/computer-basics/memory-stack-heap.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Exponents and logarithms](../00-foundations/math-for-cs/exponents-and-logarithms.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Logic, sets and proofs](../00-foundations/math-for-cs/logic-sets-proofs.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Counting and probability](../00-foundations/math-for-cs/counting-and-probability.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Sums and recurrences](../00-foundations/math-for-cs/sums-and-recurrences.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 1: variables and types](../00-foundations/python-fundamentals/01-variables-types-operators.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 2: control flow](../00-foundations/python-fundamentals/02-control-flow.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 3: functions](../00-foundations/python-fundamentals/03-functions.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 4: collections](../00-foundations/python-fundamentals/04-strings-lists-dicts-sets.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 5: files, modules, errors](../00-foundations/python-fundamentals/05-files-modules-errors.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 6: debugging and testing](../00-foundations/python-fundamentals/06-debugging-and-testing.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Python 7: classes first look](../00-foundations/python-fundamentals/07-classes-first-look.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Terminal basics](../00-foundations/command-line-and-git/terminal-basics.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Git basics](../00-foundations/command-line-and-git/git-basics.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Git branches and merging](../00-foundations/command-line-and-git/git-branches-and-merging.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Git undo and history](../00-foundations/command-line-and-git/git-undo-and-history.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [GitHub collaboration](../00-foundations/command-line-and-git/github-collaboration.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
 ## 01 Complexity
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
