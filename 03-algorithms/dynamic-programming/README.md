@@ -1,5 +1,13 @@
 # Dynamic Programming
 
+## Detailed lessons (start here if you are new)
+
+1. [DP thinking and 1D problems](01-dp-thinking-and-1d-problems.md): memoization vs tabulation, the five-step method, stairs, robber, coins, LIS
+2. [DP on two sequences and grids](02-dp-on-two-sequences-and-grids.md): LCS, edit distance, knapsack, grid paths, reconstruction
+3. [Advanced DP patterns](03-advanced-dp-patterns.md): state machines, tree DP, bitmask DP, digit DP
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **Dynamic programming (DP)** solves a problem by breaking it into **overlapping subproblems**, solving each one **once**, and reusing the stored answers. It turns many exponential recursions into polynomial time.
