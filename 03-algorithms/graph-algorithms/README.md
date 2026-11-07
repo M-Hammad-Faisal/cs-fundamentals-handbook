@@ -1,5 +1,14 @@
 # Advanced Graph Algorithms
 
+## Detailed lessons (start here if you are new)
+
+Start with the [graphs lessons in Part 02](../../02-data-structures/graphs/README.md) (BFS/DFS, Dijkstra, topological sort, MST, union-find), then:
+
+1. [All-pairs and heuristic shortest paths](01-all-pairs-and-heuristic-shortest-paths.md): Floyd-Warshall, A*, 0-1 BFS
+2. [Connectivity, SCC and flow](02-connectivity-scc-and-flow.md): Kosaraju, bridges, Euler paths, max flow, matching
+
+The rest of this page is the quick reference.
+
 This chapter builds on [graphs](../../02-data-structures/graphs/README.md), which covers representations, BFS, DFS, cycle detection, topological sort, basic Dijkstra and Union-Find. Here we add the algorithms you meet next: shortest paths with negative weights, all-pairs paths, minimum spanning trees, A\*, connectivity analysis, and a few classic problems.
 
 ## 1. Choosing a shortest-path algorithm

@@ -1,12 +1,44 @@
-# Algorithms
+# Part 03: Algorithms
 
-| Topic | Lesson |
-|-------|--------|
-| Sorting (bubble to merge, quick, heap, counting) | [lesson](sorting/README.md) · [exercises](sorting/exercises.md) · [summary](sorting/summary.md) |
-| Searching (linear, binary, search on the answer) | [lesson](searching/README.md) · [exercises](searching/exercises.md) · [summary](searching/summary.md) |
-| Recursion and backtracking | [lesson](recursion-backtracking/README.md) · [exercises](recursion-backtracking/exercises.md) · [summary](recursion-backtracking/summary.md) |
-| Dynamic programming | [lesson](dynamic-programming/README.md) · [exercises](dynamic-programming/exercises.md) · [summary](dynamic-programming/summary.md) |
-| Greedy algorithms | [lesson](greedy/README.md) · [exercises](greedy/exercises.md) · [summary](greedy/summary.md) |
-| Advanced graph algorithms (Bellman-Ford, MST, A*, SCC) | [lesson](graph-algorithms/README.md) · [exercises](graph-algorithms/exercises.md) · [summary](graph-algorithms/summary.md) |
+An **algorithm** is a precise recipe for solving a problem. This part teaches the families of algorithms that cover most of what you will meet in interviews and real software, each with step-by-step traces, runnable Python (checked against brute force where possible), practice problems and self-checks.
+
+**Prerequisites:** [Part 01 complexity](../01-complexity/README.md) (Big-O) and [Part 02 data structures](../02-data-structures/README.md). Many algorithms here are built from those structures (heaps for Dijkstra, stacks for DFS, hash maps for counting).
+
+## Reading order
+
+| # | Topic | Detailed lessons | The big idea |
+|---|-------|------------------|--------------|
+| 1 | [Sorting](sorting/README.md) | [elementary](sorting/01-sorting-basics-and-elementary-sorts.md), [merge and quick](sorting/02-merge-sort-and-quicksort.md), [linear-time and Timsort](sorting/03-linear-time-sorts-and-timsort.md) | put things in order; `n log n` is the comparison limit |
+| 2 | [Searching](searching/README.md) | [binary search](searching/01-linear-and-binary-search.md), [on the answer](searching/02-binary-search-on-the-answer.md) | halve the possibilities each step |
+| 3 | [Recursion and backtracking](recursion-backtracking/README.md) | [recursion](recursion-backtracking/01-recursion-fundamentals.md), [backtracking](recursion-backtracking/02-backtracking.md) | solve a smaller copy; try, undo, try again |
+| 4 | [Greedy](greedy/README.md) | [greedy algorithms](greedy/01-greedy-algorithms.md) | take the best-looking choice and never look back |
+| 5 | [Dynamic programming](dynamic-programming/README.md) | [1D](dynamic-programming/01-dp-thinking-and-1d-problems.md), [two sequences and grids](dynamic-programming/02-dp-on-two-sequences-and-grids.md), [advanced](dynamic-programming/03-advanced-dp-patterns.md) | remember subproblem answers |
+| 6 | [Graph algorithms](graph-algorithms/README.md) | [all-pairs and A*](graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [connectivity and flow](graph-algorithms/02-connectivity-scc-and-flow.md) (plus the [graph lessons in Part 02](../02-data-structures/graphs/README.md)) | model relationships as vertices and edges |
+
+Each folder also has a quick-reference README, `exercises.md` and a one-page `summary.md`.
+
+## Which technique fits my problem?
+
+| The problem says... | Try |
+|---------------------|-----|
+| "sort", "order", "k-th", "top k" | sorting, heap, quickselect |
+| "sorted array", "minimum x such that...", "maximum min distance" | binary search (on the array or on the answer) |
+| "all combinations/permutations/subsets", "place so that no conflict" | backtracking |
+| "maximum number of non-overlapping...", "schedule", "cover" and a provable local rule | greedy |
+| "number of ways", "minimum cost", "longest", overlapping subproblems | dynamic programming |
+| "shortest path", "connected", "dependencies", "network" | graph algorithms |
+| It is a tree or nested structure | recursion |
+
+**When stuck:** (1) write the brute force, (2) find the repeated work or the wasted comparisons, (3) pick the technique that removes them.
+
+## A study routine
+
+1. Read a lesson and **run every example**; predict the output first.
+2. Close the page and **re-implement the algorithm from memory**.
+3. Do the practice problems; only then open the solutions.
+4. Test your implementation against a **brute force** on random small inputs (the lessons show how).
+5. Revisit the "Check yourself" questions after a day.
+
+Next: [Part 04: Object-oriented programming](../04-oop/README.md)
 
 Back to the [index](../INDEX.md).
