@@ -1,5 +1,13 @@
 # Sorting
 
+## Detailed lessons (start here if you are new)
+
+1. [Sorting basics and elementary sorts](01-sorting-basics-and-elementary-sorts.md): vocabulary, stability, bubble, selection, insertion
+2. [Merge sort and quicksort](02-merge-sort-and-quicksort.md): divide and conquer, pivots, quickselect, inversions
+3. [Linear-time sorts and Timsort](03-linear-time-sorts-and-timsort.md): counting, radix, bucket, choosing a sort
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **Sorting** arranges items in a defined order. It matters far beyond "show a sorted list": sorted data enables binary search, fast duplicate detection, merging, grouping, and many other algorithms.
