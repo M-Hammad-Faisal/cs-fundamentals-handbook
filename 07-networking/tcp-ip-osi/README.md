@@ -1,5 +1,12 @@
 # The Network Stack: OSI, TCP/IP, IP Addressing, TCP and UDP
 
+## Detailed lessons (start here if you are new)
+
+1. [Packets, addressing and subnets](01-packets-addressing-and-subnets.md): build real IP/UDP/TCP headers, checksums, CIDR, subnetting, routing
+2. [Sockets lab: TCP and UDP](02-sockets-tcp-udp-lab.md): echo and chat servers, framing, UDP loss, timeouts, connection states
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 Network communication is split into **layers**, each solving one problem and hiding its details from the layer above. A layer on the sender wraps the data from the layer above in its own header (**encapsulation**); the receiver unwraps in reverse.
