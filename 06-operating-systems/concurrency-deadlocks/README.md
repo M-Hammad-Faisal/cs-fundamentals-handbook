@@ -1,5 +1,12 @@
 # Concurrency, Synchronization and Deadlocks
 
+## Detailed lessons (start here if you are new)
+
+1. [Race conditions and synchronization](01-race-conditions-and-synchronization.md): locks, semaphores, events, condition variables, producer-consumer, readers-writers
+2. [Deadlock](02-deadlock.md): Coffman conditions, lock ordering, detection, Banker's algorithm, dining philosophers
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **Concurrency** means several tasks make progress during overlapping time (possibly interleaved on one core). **Parallelism** means they literally run at the same instant on different cores. Both create the same hazard: tasks touching **shared mutable state** in an unpredictable order.
