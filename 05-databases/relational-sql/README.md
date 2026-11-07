@@ -1,5 +1,12 @@
 # The Relational Model and SQL
 
+## Detailed lessons (start here if you are new)
+
+1. [SQL first steps](01-sql-first-steps.md): create, insert, select, filter, NULL, constraints, using SQLite from Python
+2. [Aggregation and joins lab](02-aggregation-and-joins-lab.md): GROUP BY/HAVING, inner/left/self joins, anti-joins, the join-multiplication pitfall
+
+The rest of this page is the quick reference (including CTEs and window functions).
+
 All examples use the dataset in [`../sample-data.sql`](../sample-data.sql) (departments, employees, customers, orders, order items). Load it into SQLite and run every query yourself:
 
 ```bash

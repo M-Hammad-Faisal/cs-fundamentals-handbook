@@ -1,5 +1,11 @@
 # Transactions, ACID and Isolation
 
+## Detailed lesson (start here if you are new)
+
+- [Transactions lab](01-transactions-lab.md): ACID with two real connections, isolation and snapshots, lost updates and three fixes, savepoints, durability, idempotency, isolation levels
+
+The rest of this page is the quick reference.
+
 A runnable companion, [`demo_transactions.py`](demo_transactions.py), demonstrates rollback, a lost update, and two fixes using SQLite. Run it with `python3 demo_transactions.py`.
 
 ## 1. The concept
