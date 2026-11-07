@@ -58,13 +58,13 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | NoSQL and choosing a database | [lesson](05-databases/nosql/README.md) | [ex](05-databases/nosql/exercises.md) | [sum](05-databases/nosql/summary.md) | done |
 
 ## 06 Operating systems
-| Topic | Status |
-|-------|--------|
-| Processes and threads | planned |
-| CPU scheduling | planned |
-| Memory management and virtual memory | planned |
-| Concurrency, locks and deadlocks | planned |
-| File systems and I/O | planned |
+| Topic | Lesson | Exercises | Summary | Status |
+|-------|--------|-----------|---------|--------|
+| Processes and threads | [lesson](06-operating-systems/processes-threads/README.md) | [ex](06-operating-systems/processes-threads/exercises.md) | [sum](06-operating-systems/processes-threads/summary.md) | done |
+| CPU scheduling | [lesson](06-operating-systems/scheduling/README.md) | [ex](06-operating-systems/scheduling/exercises.md) | [sum](06-operating-systems/scheduling/summary.md) | done |
+| Memory management and virtual memory | [lesson](06-operating-systems/memory-virtual-memory/README.md) | [ex](06-operating-systems/memory-virtual-memory/exercises.md) | [sum](06-operating-systems/memory-virtual-memory/summary.md) | done |
+| Concurrency, locks and deadlocks | [lesson](06-operating-systems/concurrency-deadlocks/README.md) | [ex](06-operating-systems/concurrency-deadlocks/exercises.md) | [sum](06-operating-systems/concurrency-deadlocks/summary.md) | done |
+| File systems and I/O | [lesson](06-operating-systems/file-systems-io/README.md) | [ex](06-operating-systems/file-systems-io/exercises.md) | [sum](06-operating-systems/file-systems-io/summary.md) | done |
 
 ## 07 Networking
 | Topic | Status |

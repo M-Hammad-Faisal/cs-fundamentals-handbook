@@ -49,11 +49,11 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 06 Operating systems
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| Processes and threads | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Scheduling | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Memory management | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Concurrency and synchronization | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| File systems and I/O | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Processes and threads](../06-operating-systems/processes-threads/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Scheduling](../06-operating-systems/scheduling/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Memory management](../06-operating-systems/memory-virtual-memory/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Concurrency and synchronization](../06-operating-systems/concurrency-deadlocks/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [File systems and I/O](../06-operating-systems/file-systems-io/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 07 Networking
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
