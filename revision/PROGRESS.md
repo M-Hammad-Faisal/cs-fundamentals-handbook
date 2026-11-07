@@ -40,9 +40,31 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Polymorphism and the Python data model (dunder methods)](../04-oop/polymorphism-dunder/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Composition, delegation, coupling and object design](../04-oop/composition-design/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [SOLID and other design principles](../04-oop/solid/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| [Design patterns I: creational](../04-oop/patterns-creational/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| [Design patterns II: structural](../04-oop/patterns-structural/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| [Design patterns III: behavioral](../04-oop/patterns-behavioral/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Creational: Singleton](../04-oop/design-patterns/creational/singleton.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Creational: Factory Method](../04-oop/design-patterns/creational/factory-method.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Creational: Abstract Factory](../04-oop/design-patterns/creational/abstract-factory.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Creational: Builder](../04-oop/design-patterns/creational/builder.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Creational: Prototype](../04-oop/design-patterns/creational/prototype.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Creational: Object Pool](../04-oop/design-patterns/creational/object-pool.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Adapter](../04-oop/design-patterns/structural/adapter.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Decorator](../04-oop/design-patterns/structural/decorator.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Proxy](../04-oop/design-patterns/structural/proxy.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Facade](../04-oop/design-patterns/structural/facade.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Composite](../04-oop/design-patterns/structural/composite.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Bridge](../04-oop/design-patterns/structural/bridge.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Structural: Flyweight](../04-oop/design-patterns/structural/flyweight.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Strategy](../04-oop/design-patterns/behavioral/strategy.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Observer](../04-oop/design-patterns/behavioral/observer.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Command](../04-oop/design-patterns/behavioral/command.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: State](../04-oop/design-patterns/behavioral/state.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Template Method](../04-oop/design-patterns/behavioral/template-method.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Iterator](../04-oop/design-patterns/behavioral/iterator.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Chain of Responsibility](../04-oop/design-patterns/behavioral/chain-of-responsibility.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Mediator](../04-oop/design-patterns/behavioral/mediator.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Memento](../04-oop/design-patterns/behavioral/memento.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Visitor](../04-oop/design-patterns/behavioral/visitor.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Interpreter](../04-oop/design-patterns/behavioral/interpreter.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Behavioral: Null Object](../04-oop/design-patterns/behavioral/null-object.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 05 Databases
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

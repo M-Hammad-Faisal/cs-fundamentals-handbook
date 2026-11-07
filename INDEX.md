@@ -49,9 +49,10 @@ Each concept lives in its own folder with three files:
 | Polymorphism and the Python data model (dunder methods) | [lesson](04-oop/polymorphism-dunder/README.md) | [ex](04-oop/polymorphism-dunder/exercises.md) | [sum](04-oop/polymorphism-dunder/summary.md) | done |
 | Composition, delegation, coupling and object design | [lesson](04-oop/composition-design/README.md) | [ex](04-oop/composition-design/exercises.md) | [sum](04-oop/composition-design/summary.md) | done |
 | SOLID and other design principles | [lesson](04-oop/solid/README.md) | [ex](04-oop/solid/exercises.md) | [sum](04-oop/solid/summary.md) | done |
-| Design patterns I: creational | [lesson](04-oop/patterns-creational/README.md) | [ex](04-oop/patterns-creational/exercises.md) | [sum](04-oop/patterns-creational/summary.md) | done |
-| Design patterns II: structural | [lesson](04-oop/patterns-structural/README.md) | [ex](04-oop/patterns-structural/exercises.md) | [sum](04-oop/patterns-structural/summary.md) | done |
-| Design patterns III: behavioral | [lesson](04-oop/patterns-behavioral/README.md) | [ex](04-oop/patterns-behavioral/exercises.md) | [sum](04-oop/patterns-behavioral/summary.md) | done |
+| Design patterns: plain-English guide (what is GoF?), glossary, chooser | [guide](04-oop/design-patterns/README.md) | in each pattern file | [chooser table](04-oop/design-patterns/README.md) | done |
+| Creational patterns (6): Singleton, Factory Method, Abstract Factory, Builder, Prototype, Object Pool | [overview](04-oop/design-patterns/creational/README.md) | one file per pattern, with exercises | [cheat sheet](04-oop/design-patterns/creational/README.md) | done |
+| Structural patterns (7): Adapter, Decorator, Proxy, Facade, Composite, Bridge, Flyweight | [overview](04-oop/design-patterns/structural/README.md) | one file per pattern, with exercises | [cheat sheet](04-oop/design-patterns/structural/README.md) | done |
+| Behavioral patterns (12): Strategy, Observer, Command, State, Template Method, Iterator, Chain of Responsibility, Mediator, Memento, Visitor, Interpreter, Null Object | [overview](04-oop/design-patterns/behavioral/README.md) | one file per pattern, with exercises | [cheat sheet](04-oop/design-patterns/behavioral/README.md) | done |
 
 ## 05 Databases
 Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.sql).

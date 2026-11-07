@@ -71,7 +71,7 @@ Report(JsonFormat(), dest).run(rows)
 print(dest.sent)      # ['1,2\n3,4', '[{"a": 1, "b": 2}, {"a": 3, "b": 4}]']
 ```
 
-This is the **Strategy** pattern ([behavioral patterns](../patterns-behavioral/README.md)). Two formats and N destinations need 2 + N small classes, not 2 x N.
+This is the **Strategy** pattern ([behavioral patterns](../design-patterns/behavioral/strategy.md)). Two formats and N destinations need 2 + N small classes, not 2 x N.
 
 ### Automatic delegation with `__getattr__`
 
