@@ -12,6 +12,7 @@ How computers talk to each other, from bits on a wire to a web page in your brow
 | 2 | DNS and HTTP | [lesson](dns-http/README.md) | [HTTP from scratch](dns-http/01-http-from-scratch.md) · [DNS in depth](dns-http/02-dns-in-depth.md) |
 | 3 | TLS and security basics | [lesson](tls-security/README.md) | [cryptography and TLS lab](tls-security/01-cryptography-and-tls-lab.md) |
 | 4 | Load balancing, CDNs and resilience | [lesson](load-balancing-cdn/README.md) | [load balancing and resilience lab](load-balancing-cdn/01-load-balancing-and-resilience-lab.md) |
+| 5 | APIs and real-time communication | [overview](apis-realtime/README.md) | [REST, SSE and WebSockets lab](apis-realtime/01-rest-apis-and-websockets-lab.md) |
 
 Each topic folder also has `exercises.md` and a one-page `summary.md`.
 
@@ -20,7 +21,7 @@ Each topic folder also has `exercises.md` and a one-page `summary.md`.
 1. **DNS** turns `example.com` into an IP address (cache first, then the resolver walks root, TLD and authoritative servers). [DNS in depth](dns-http/02-dns-in-depth.md)
 2. Your OS opens a **TCP connection** to that IP on port 443: the three-way handshake. [packets](tcp-ip-osi/01-packets-addressing-and-subnets.md), [sockets](tcp-ip-osi/02-sockets-tcp-udp-lab.md)
 3. **TLS** negotiates keys and verifies the server's certificate. [TLS lab](tls-security/01-cryptography-and-tls-lab.md)
-4. Your browser sends an **HTTP request**; a CDN or load balancer answers or forwards it to an app server. [HTTP](dns-http/01-http-from-scratch.md), [load balancing](load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
+4. Your browser sends an **HTTP request** (often to a [REST API](apis-realtime/01-rest-apis-and-websockets-lab.md), sometimes upgrading to a WebSocket); a CDN or load balancer answers or forwards it to an app server. [HTTP](dns-http/01-http-from-scratch.md), [load balancing](load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 5. The response comes back (maybe cached), the connection is reused for the next request.
 
 Every packet on the way is wrapped in headers (HTTP inside TLS inside TCP inside IP inside Ethernet) and routed hop by hop by routers using longest-prefix matching.

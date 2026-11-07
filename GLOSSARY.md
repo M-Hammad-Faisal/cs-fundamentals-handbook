@@ -130,6 +130,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## I
 
 - **Idempotent**: An operation that has the same effect whether done once or many times. [Learn more](07-networking/dns-http/README.md)
+- **IDOR (insecure direct object reference)**: Letting a user access another user's data just by changing an id in a URL, because ownership is not checked. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **Immutable / mutable**: Immutable objects cannot be changed after creation; mutable ones can. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Index (database)**: A structure (usually a B-tree) that speeds up lookups at the cost of slower writes. [Learn more](05-databases/indexes-query-plans/README.md)
 - **Inheritance**: A class reusing and specializing another (is-a). [Learn more](04-oop/inheritance-mro/README.md)
@@ -188,6 +189,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Page fault**: The CPU trap when a needed memory page is not currently mapped; the OS loads it. [Learn more](06-operating-systems/memory-virtual-memory/README.md)
 - **Page replacement**: The policy that chooses which in-memory page to evict when a new page is needed (FIFO, LRU, Clock). [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Page table**: The structure mapping a process's virtual pages to physical frames. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
+- **Pagination**: Returning a large collection in pages (offset/page or cursor/keyset) instead of all at once. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **Pipe**: A one-way kernel buffer connecting the output of one process to the input of another. [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
 - **Polymorphism**: The same call doing the right thing for different object types. [Learn more](04-oop/polymorphism-dunder/README.md)
 - **Primary key**: A column (or set) that uniquely identifies each row in a table. [Learn more](05-databases/relational-sql/README.md)
@@ -224,6 +226,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Scheduler**: The OS component that decides which task runs on the CPU next. [Learn more](06-operating-systems/scheduling/README.md)
 - **Segment tree**: A tree storing answers for ranges, supporting range queries and updates in O(log n). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
 - **Semaphore**: A counter that allows up to N tasks into a resource at once. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
+- **Server-Sent Events (SSE)**: A one-way stream of text events from server to browser over a long-lived HTTP response. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **Sharding**: Splitting data across machines by key. [Learn more](05-databases/nosql/README.md)
 - **Shunting-yard algorithm**: Dijkstra's method for converting infix expressions to postfix using an operator stack. [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **Sieve of Eratosthenes**: Finds all primes up to N by crossing out multiples of each prime, in O(N log log N). [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
@@ -272,6 +275,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## W
 
+- **Webhook**: An HTTP request one system sends to a URL another system registered, to notify it of an event. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **WebSocket**: A persistent two-way connection between browser and server. [Learn more](07-networking/dns-http/README.md)
 - **Window function**: A function computed over related rows (a window) that keeps every row, such as `RANK()` or a running `SUM`. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Write skew**: Two transactions read overlapping data and make different writes that together break a rule, undetected by snapshot isolation. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)

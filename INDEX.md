@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (207 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (211 terms in plain words)](GLOSSARY.md) | done |
 | [Coverage audit and roadmap](COVERAGE.md) | done |
 
 ## 00 Foundations
@@ -164,10 +164,12 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | DNS and HTTP | [lesson](07-networking/dns-http/README.md) | [ex](07-networking/dns-http/exercises.md) | [sum](07-networking/dns-http/summary.md) | done |
 | TLS and security basics | [lesson](07-networking/tls-security/README.md) | [ex](07-networking/tls-security/exercises.md) | [sum](07-networking/tls-security/summary.md) | done |
 | Load balancing, CDNs and resilience | [lesson](07-networking/load-balancing-cdn/README.md) | [ex](07-networking/load-balancing-cdn/exercises.md) | [sum](07-networking/load-balancing-cdn/summary.md) | done |
+| APIs and real-time (REST, SSE, WebSockets) | [lesson](07-networking/apis-realtime/README.md) | | | done |
 
 <!-- detailed-lessons:07 -->
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
+- **APIs and Real-Time Communication:** [REST APIs, Server-Sent Events and WebSockets: A Hands-On Lab](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **DNS and HTTP:** [HTTP from Scratch: Requests, Responses, Caching and a Tiny Server](07-networking/dns-http/01-http-from-scratch.md), [DNS in Depth: Wire Format, a Toy Server, Caching and Resolution](07-networking/dns-http/02-dns-in-depth.md)
 - **Load Balancing, Proxies, CDNs and Resilience:** [Load Balancing and Resilience Lab](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **The Network Stack:** [Packets, Addressing and Subnets (with Runnable Labs)](07-networking/tcp-ip-osi/01-packets-addressing-and-subnets.md), [Sockets Lab: TCP and UDP from Scratch](07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md)
