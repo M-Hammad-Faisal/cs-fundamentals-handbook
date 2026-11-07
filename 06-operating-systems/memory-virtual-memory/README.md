@@ -1,5 +1,11 @@
 # Memory Management and Virtual Memory
 
+## Detailed lesson (start here if you are new)
+
+- [Paging and address translation](01-paging-and-address-translation.md): pages, frames, page tables, TLB, page faults, with a runnable MMU
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 Every process believes it owns a large, private, contiguous block of memory. That illusion is **virtual memory**. The OS and the CPU's **MMU** (memory management unit) translate each **virtual address** into a **physical address** in RAM, on every access.
