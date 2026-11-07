@@ -1,5 +1,12 @@
 # Searching
 
+## Detailed lessons (start here if you are new)
+
+1. [Linear and binary search](01-linear-and-binary-search.md): invariants, boundaries, `bisect`, rotated arrays, matrices
+2. [Binary search on the answer](02-binary-search-on-the-answer.md): feasibility templates, classic problems, other searches
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **Searching** finds an item, or its position, in a collection. The right method depends on how the data is organized.
