@@ -1,5 +1,11 @@
 # Load Balancing, Proxies, CDNs and Resilience
 
+## Detailed lesson (start here if you are new)
+
+- [Load balancing and resilience lab](01-load-balancing-and-resilience-lab.md): a working reverse proxy, balancing strategies, health checks, retries, circuit breakers, rate limiters, CDN caching
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 One server has a capacity and a failure rate. To handle more traffic and survive failures, you run **many servers** behind a **load balancer (LB)** that spreads requests, removes unhealthy servers, and gives clients a single address.
