@@ -1,5 +1,11 @@
 # TLS and Security Basics
 
+## Detailed lesson (start here if you are new)
+
+- [Cryptography and TLS lab](01-cryptography-and-tls-lab.md): hashes, HMAC, password storage, Diffie-Hellman, RSA, a real TLS handshake, SQL injection, XSS, timing attacks
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 Plain TCP is readable and modifiable by anyone on the path. **TLS** (Transport Layer Security, the "S" in HTTPS) adds three guarantees on top of a connection:
