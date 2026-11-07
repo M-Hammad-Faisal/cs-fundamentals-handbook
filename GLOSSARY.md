@@ -66,6 +66,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Covering index**: An index that contains every column a query needs, so the table is never read. [Learn more](05-databases/indexes-query-plans/01-indexes-lab.md)
 - **CPU**: The processor that executes instructions. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 - **Critical section**: Code that touches shared data and must not run in two threads at once. [Learn more](06-operating-systems/concurrency-deadlocks/01-race-conditions-and-synchronization.md)
+- **CTE (common table expression)**: A named temporary result defined with `WITH` and used by the query that follows. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 
 ## D
 
@@ -107,6 +108,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## G
 
+- **Gaps and islands**: Finding runs of consecutive values, for example by grouping on value minus row number. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Garbage collection**: Automatic freeing of memory for objects no longer referenced. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Generator**: A function using `yield` that produces values lazily, one at a time. [Learn more](08-modern-python/generators-functional/README.md)
 - **GIL**: Global Interpreter Lock: lets only one thread run Python bytecode at a time in CPython. [Learn more](08-modern-python/async-concurrency/README.md)
@@ -208,6 +210,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **RAM**: Fast, temporary memory for programs and data in use. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 - **Rate limiter**: A mechanism (token bucket, sliding window) that caps how many requests a client may make over time. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Recursion**: A function calling itself on a smaller input until a base case. [Learn more](03-algorithms/recursion-backtracking/README.md)
+- **Recursive CTE**: A CTE that refers to itself (anchor plus recursive step) to walk hierarchies or generate sequences. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Reference**: A name or pointer that refers to an object in memory. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **REPL**: Read-Eval-Print Loop: the interactive Python prompt. [Learn more](00-foundations/setup/README.md)
 - **Replication**: Keeping copies of data on several machines. [Learn more](05-databases/nosql/README.md)
@@ -270,6 +273,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## W
 
 - **WebSocket**: A persistent two-way connection between browser and server. [Learn more](07-networking/dns-http/README.md)
+- **Window function**: A function computed over related rows (a window) that keeps every row, such as `RANK()` or a running `SUM`. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Write skew**: Two transactions read overlapping data and make different writes that together break a rule, undetected by snapshot isolation. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## X

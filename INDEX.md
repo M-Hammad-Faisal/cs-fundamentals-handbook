@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (203 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (207 terms in plain words)](GLOSSARY.md) | done |
 | [Coverage audit and roadmap](COVERAGE.md) | done |
 
 ## 00 Foundations
