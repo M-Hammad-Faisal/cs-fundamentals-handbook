@@ -1,5 +1,11 @@
 # CPU Scheduling
 
+## Detailed lesson (start here if you are new)
+
+- [CPU scheduling hands-on simulator](01-scheduling-simulator.md): metrics, FCFS/SJF/SRTF/RR/priority, aging, MLFQ, CFS, with runnable code
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 The **scheduler** decides which ready process or thread gets the CPU next, and for how long. With more runnable tasks than cores, this choice determines responsiveness, throughput and fairness.

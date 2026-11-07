@@ -1,5 +1,7 @@
 # Operating systems
 
+**Start here:** [What is an operating system?](00-what-is-an-operating-system.md) (kernel, user vs kernel mode, system calls, boot).
+
 | Topic | Lesson |
 |-------|--------|
 | Processes and threads | [lesson](processes-threads/README.md) · [exercises](processes-threads/exercises.md) · [summary](processes-threads/summary.md) |
