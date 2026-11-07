@@ -13,7 +13,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
 | [Glossary (211 terms in plain words)](GLOSSARY.md) | done |
-| [Coverage audit and roadmap](COVERAGE.md) | done |
+| [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
 One topic per file; each file has a plain-English explanation, runnable code, practice with solutions and a self-check.
