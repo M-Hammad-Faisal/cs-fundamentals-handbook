@@ -1,5 +1,12 @@
 # Recursion and Backtracking
 
+## Detailed lessons (start here if you are new)
+
+1. [Recursion fundamentals](01-recursion-fundamentals.md): base case, call stack, memoization, tail calls, recursion to loops
+2. [Backtracking](02-backtracking.md): choose/explore/un-choose, subsets, permutations, N-Queens, Sudoku, pruning
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 **Recursion** solves a problem by having a function call itself on a smaller version of the same problem. Every recursive solution has two parts:
