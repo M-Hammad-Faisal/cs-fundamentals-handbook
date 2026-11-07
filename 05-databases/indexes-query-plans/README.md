@@ -1,5 +1,11 @@
 # Indexes and Query Plans
 
+## Detailed lesson (start here if you are new)
+
+- [Indexes lab](01-indexes-lab.md): measure a 4,000x speedup, read query plans, composite and covering indexes, why indexes get ignored, partial indexes, write costs
+
+The rest of this page is the quick reference.
+
 This chapter has a runnable companion: [`demo_indexes.py`](demo_indexes.py) builds a 200,000-row table and shows the plans and timings quoted below. Run it with `python3 demo_indexes.py`.
 
 ## 1. The concept
