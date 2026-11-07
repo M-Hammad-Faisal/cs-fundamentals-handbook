@@ -1,5 +1,12 @@
 # Heaps and Priority Queues
 
+## Detailed lessons (start here if you are new)
+
+1. [Binary heaps and heapsort](01-binary-heaps-and-heapsort.md): sift-up/down, heapify, `heapq`, heapsort
+2. [Priority queue applications](02-priority-queue-applications.md): top-k, running median, k-way merge, Dijkstra, Huffman
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **heap** is a complete binary tree that satisfies the **heap property**:

@@ -1,5 +1,11 @@
 # Tries (Prefix Trees)
 
+## Detailed lesson (start here if you are new)
+
+- [Tries in depth](01-tries.md): insert/search/delete, autocomplete, word search, radix and bit tries
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **trie** (pronounced "try") is a tree where each edge represents a **character** and each path from the root spells a **prefix**. Words that share a prefix share the same path, so common beginnings are stored only once.
