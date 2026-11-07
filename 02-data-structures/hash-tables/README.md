@@ -1,5 +1,13 @@
 # Hash Tables
 
+## Detailed lessons (start here if you are new)
+
+1. [Hash functions and collisions](01-hash-functions-and-collisions.md): hashing, the birthday paradox, load factor
+2. [Implementing hash tables](02-implementing-hash-tables.md): chaining, linear probing, tombstones, resizing
+3. [Dict, set, patterns, Bloom filters and consistent hashing](03-dict-set-internals-and-bloom-filters.md)
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **hash table** maps **keys** to **values** with `O(1)` average lookup, insert and delete. Python's `dict` and `set` are hash tables.
