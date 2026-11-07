@@ -203,6 +203,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [System design basics](../09-interview-playbook/system-design-basics/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Rapid-fire Python and CS questions](../09-interview-playbook/python-and-cs-rapid-fire/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Behavioral interviews, hiring process and 12-week plan](../09-interview-playbook/behavioral-and-process/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Ten Worked Interview Problems](../09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## Mistake log
 Write down anything you got wrong and the fix. Review weekly.

@@ -73,7 +73,7 @@ These were named in the original audit and are **not** yet written as dedicated 
 | 06 Operating systems | boot and bootloader in more depth, segmentation, a threads-and-GIL lab, containers and namespaces |
 | 07 Networking | routing protocols (BGP/OSPF) in depth, HTTP/2 and HTTP/3 internals (REST design and WebSockets are now written), network debugging with `tcpdump`/Wireshark |
 | 08 Modern Python | a bridge lesson from Python fundamentals |
-| 09 Interview playbook | worked problem walkthroughs by pattern with timed practice |
+| 09 Interview playbook | more worked walkthroughs (ten are written; add graph, DP-on-strings and design-pattern rounds) |
 | All parts | per-topic `exercises.md` and `summary.md` were written before the detailed lessons and could be refreshed to match them |
 
 Contributions and ideas for any of these are welcome.

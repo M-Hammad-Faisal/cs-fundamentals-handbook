@@ -194,7 +194,14 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | Problem-solving patterns (16 patterns with templates) | [lesson](09-interview-playbook/problem-solving-patterns/README.md) | [ex](09-interview-playbook/problem-solving-patterns/exercises.md) | [sum](09-interview-playbook/problem-solving-patterns/summary.md) | done |
 | System design basics (framework, estimation, building blocks, worked designs) | [lesson](09-interview-playbook/system-design-basics/README.md) | [ex](09-interview-playbook/system-design-basics/exercises.md) | [sum](09-interview-playbook/system-design-basics/summary.md) | done |
 | Rapid-fire Python and CS questions | [lesson](09-interview-playbook/python-and-cs-rapid-fire/README.md) | [ex](09-interview-playbook/python-and-cs-rapid-fire/exercises.md) | [sum](09-interview-playbook/python-and-cs-rapid-fire/summary.md) | done |
+| Worked problems (ten walkthroughs with randomized tests) | [lesson](09-interview-playbook/worked-problems/README.md) | | | done |
 | Behavioral interviews, hiring process and 12-week plan | [lesson](09-interview-playbook/behavioral-and-process/README.md) | [ex](09-interview-playbook/behavioral-and-process/exercises.md) | [sum](09-interview-playbook/behavioral-and-process/summary.md) | done |
+
+<!-- detailed-lessons:09 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Worked problems:** [Ten Worked Interview Problems](09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md)
+<!-- detailed-lessons:09 -->
 
 ## Revision tools
 | Page | Purpose |

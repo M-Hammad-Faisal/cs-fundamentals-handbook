@@ -17,7 +17,7 @@ Code is in Python 3.10+ unless a lesson says otherwise.
 |------------|------------|
 | New to programming or CS | [Start here](00-start-here/README.md), then [Foundations](00-foundations/README.md) and [OOP from scratch](04-oop/00-oop-from-scratch.md) |
 | A student following a course | work through the parts in order: complexity, data structures, algorithms, OOP, then databases, OS, networking |
-| Preparing for interviews | [Problem-solving patterns](09-interview-playbook/problem-solving-patterns/README.md), [system design basics](09-interview-playbook/system-design-basics/README.md), the [12-week plan](09-interview-playbook/behavioral-and-process/README.md), plus the [glossary](GLOSSARY.md) |
+| Preparing for interviews | [Problem-solving patterns](09-interview-playbook/problem-solving-patterns/README.md), [ten worked problems](09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md), [system design basics](09-interview-playbook/system-design-basics/README.md), the [12-week plan](09-interview-playbook/behavioral-and-process/README.md), plus the [glossary](GLOSSARY.md) |
 | Looking up one idea | the [glossary](GLOSSARY.md) (every term links to the lesson that teaches it) or the [index](INDEX.md) |
 
 ## Contents

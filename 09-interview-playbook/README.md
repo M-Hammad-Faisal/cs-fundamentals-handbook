@@ -7,11 +7,12 @@ Everything you need to turn the handbook's knowledge into offers: a method and p
 | 1 | Problem-solving patterns (16 patterns with templates) | [lesson](problem-solving-patterns/README.md) · [exercises](problem-solving-patterns/exercises.md) · [summary](problem-solving-patterns/summary.md) |
 | 2 | System design basics (framework, estimation, building blocks, worked designs) | [lesson](system-design-basics/README.md) · [exercises](system-design-basics/exercises.md) · [summary](system-design-basics/summary.md) |
 | 3 | Rapid-fire Python and CS questions | [lesson](python-and-cs-rapid-fire/README.md) · [exercises](python-and-cs-rapid-fire/exercises.md) · [summary](python-and-cs-rapid-fire/summary.md) |
-| 4 | Behavioral interviews, hiring process and 12-week plan | [lesson](behavioral-and-process/README.md) · [exercises](behavioral-and-process/exercises.md) · [summary](behavioral-and-process/summary.md) |
+| 4 | Worked problems (ten full walkthroughs, tested against brute force) | [overview](worked-problems/README.md) · [ten worked problems](worked-problems/01-ten-worked-interview-problems.md) |
+| 5 | Behavioral interviews, hiring process and 12-week plan | [lesson](behavioral-and-process/README.md) · [exercises](behavioral-and-process/exercises.md) · [summary](behavioral-and-process/summary.md) |
 
 ## How to use this part
 
-1. Learn the **method and patterns** first, then drill them with the exercises (name the pattern, state complexity, code, test edge cases).
+1. Learn the **method and patterns** first, then study the [worked problems](worked-problems/01-ten-worked-interview-problems.md) to see the full reasoning loop, then drill with the exercises (name the pattern, state complexity, code, test edge cases).
 2. Do **system design** weekly once the basics are comfortable: practice estimation until it is fast.
 3. Use the **rapid-fire** chapter for daily spaced-repetition: explain one concept aloud in 45 seconds.
 4. Build your **story bank** and resume early; start **mock interviews** by week 6 of the plan.
