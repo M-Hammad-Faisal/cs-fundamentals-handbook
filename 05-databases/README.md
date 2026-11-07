@@ -8,7 +8,7 @@ How applications store, find and protect their data. Every lesson here runs **en
 
 | # | Topic | Quick reference | Hands-on labs |
 |---|-------|-----------------|---------------|
-| 1 | The relational model and SQL | [lesson](relational-sql/README.md) | [SQL first steps](relational-sql/01-sql-first-steps.md) · [aggregation and joins](relational-sql/02-aggregation-and-joins-lab.md) |
+| 1 | The relational model and SQL | [lesson](relational-sql/README.md) | [SQL first steps](relational-sql/01-sql-first-steps.md) · [aggregation and joins](relational-sql/02-aggregation-and-joins-lab.md) · [CTEs and window functions](relational-sql/03-ctes-and-window-functions-lab.md) |
 | 2 | Schema design and normalization | [lesson](normalization-schema-design/README.md) | [normalization lab](normalization-schema-design/01-normalization-lab.md) |
 | 3 | Indexes and query plans | [lesson](indexes-query-plans/README.md) | [indexes lab](indexes-query-plans/01-indexes-lab.md) |
 | 4 | Transactions, ACID and isolation | [lesson](transactions-acid/README.md) | [transactions lab](transactions-acid/01-transactions-lab.md) |

@@ -69,7 +69,7 @@ These were named in the original audit and are **not** yet written as dedicated 
 |------|----------------|
 | 03 Algorithms | stand-alone divide-and-conquer lesson (number theory and string algorithms are now written) |
 | 04 OOP | UML and class-diagram guide |
-| 05 Databases | a "what is a database" overview with ER modeling, window functions and CTEs as their own hands-on lesson (they are covered in the quick reference), PostgreSQL-specific features |
+| 05 Databases | a "what is a database" overview with ER modeling, PostgreSQL-specific features (window functions and CTEs now have their own lab) |
 | 06 Operating systems | boot and bootloader in more depth, segmentation, a threads-and-GIL lab, containers and namespaces |
 | 07 Networking | routing protocols (BGP/OSPF) in depth, WebSockets and REST design lessons, HTTP/2 and HTTP/3 internals, network debugging with `tcpdump`/Wireshark |
 | 08 Modern Python | a bridge lesson from Python fundamentals |

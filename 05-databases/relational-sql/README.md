@@ -4,8 +4,9 @@
 
 1. [SQL first steps](01-sql-first-steps.md): create, insert, select, filter, NULL, constraints, using SQLite from Python
 2. [Aggregation and joins lab](02-aggregation-and-joins-lab.md): GROUP BY/HAVING, inner/left/self joins, anti-joins, the join-multiplication pitfall
+3. [CTEs, recursive queries and window functions lab](03-ctes-and-window-functions-lab.md): ranking, running totals, LAG/LEAD, top-N per group, pivots, set operations, gaps and islands
 
-The rest of this page is the quick reference (including CTEs and window functions).
+The rest of this page is the quick reference.
 
 All examples use the dataset in [`../sample-data.sql`](../sample-data.sql) (departments, employees, customers, orders, order items). Load it into SQLite and run every query yourself:
 

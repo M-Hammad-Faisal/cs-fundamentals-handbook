@@ -133,7 +133,7 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 - **Indexes and Query Plans:** [Indexes Lab: Speed, Query Plans and Trade-offs](05-databases/indexes-query-plans/01-indexes-lab.md)
 - **Normalization and Schema Design:** [Normalization Lab: From a Messy Table to a Clean Schema](05-databases/normalization-schema-design/01-normalization-lab.md)
 - **NoSQL and Choosing a Database:** [NoSQL Lab: Key-Value, Documents, Search and Replication](05-databases/nosql/01-nosql-lab.md)
-- **The Relational Model and SQL:** [SQL First Steps (with Python and SQLite)](05-databases/relational-sql/01-sql-first-steps.md), [Aggregation and Joins Lab](05-databases/relational-sql/02-aggregation-and-joins-lab.md)
+- **The Relational Model and SQL:** [SQL First Steps (with Python and SQLite)](05-databases/relational-sql/01-sql-first-steps.md), [Aggregation and Joins Lab](05-databases/relational-sql/02-aggregation-and-joins-lab.md), [CTEs, Recursive Queries and Window Functions Lab](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Transactions, ACID and Isolation:** [Transactions Lab: ACID, Concurrency and Lost Updates](05-databases/transactions-acid/01-transactions-lab.md)
 <!-- detailed-lessons:05 -->
 
