@@ -1,5 +1,12 @@
 # DNS and HTTP
 
+## Detailed lessons (start here if you are new)
+
+- [HTTP from scratch](01-http-from-scratch.md): raw requests, methods, status codes, headers, keep-alive, caching, cookies, and your own tiny server
+- [DNS in depth](02-dns-in-depth.md): the packet format, a toy DNS server over UDP, TTL caching, the resolution hierarchy
+
+The rest of this page is the quick reference.
+
 ## 1. DNS: the internet's phone book
 
 **DNS** turns names (`www.example.com`) into addresses and other data. It is a distributed, hierarchical, heavily cached database, usually over UDP port 53 (TCP for large answers; also DNS over HTTPS/TLS).
