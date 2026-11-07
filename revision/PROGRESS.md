@@ -34,8 +34,15 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 04 Object-oriented design
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
-| [OOP principles](../04-oop/oop-principles/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Design patterns | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Classes and objects in depth](../04-oop/classes-objects/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Encapsulation and abstraction](../04-oop/encapsulation-abstraction/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Inheritance, MRO and multiple inheritance](../04-oop/inheritance-mro/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Polymorphism and the Python data model (dunder methods)](../04-oop/polymorphism-dunder/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Composition, delegation, coupling and object design](../04-oop/composition-design/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [SOLID and other design principles](../04-oop/solid/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Design patterns I: creational](../04-oop/patterns-creational/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Design patterns II: structural](../04-oop/patterns-structural/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [Design patterns III: behavioral](../04-oop/patterns-behavioral/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 05 Databases
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

@@ -43,8 +43,15 @@ Each concept lives in its own folder with three files:
 ## 04 Object-oriented design
 | Topic | Lesson | Exercises | Summary | Status |
 |-------|--------|-----------|---------|--------|
-| OOP principles, inheritance types, SOLID | [lesson](04-oop/oop-principles/README.md) | [ex](04-oop/oop-principles/exercises.md) | [sum](04-oop/oop-principles/summary.md) | done |
-| Design patterns | | | | planned |
+| Classes and objects in depth | [lesson](04-oop/classes-objects/README.md) | [ex](04-oop/classes-objects/exercises.md) | [sum](04-oop/classes-objects/summary.md) | done |
+| Encapsulation and abstraction | [lesson](04-oop/encapsulation-abstraction/README.md) | [ex](04-oop/encapsulation-abstraction/exercises.md) | [sum](04-oop/encapsulation-abstraction/summary.md) | done |
+| Inheritance, MRO and multiple inheritance | [lesson](04-oop/inheritance-mro/README.md) | [ex](04-oop/inheritance-mro/exercises.md) | [sum](04-oop/inheritance-mro/summary.md) | done |
+| Polymorphism and the Python data model (dunder methods) | [lesson](04-oop/polymorphism-dunder/README.md) | [ex](04-oop/polymorphism-dunder/exercises.md) | [sum](04-oop/polymorphism-dunder/summary.md) | done |
+| Composition, delegation, coupling and object design | [lesson](04-oop/composition-design/README.md) | [ex](04-oop/composition-design/exercises.md) | [sum](04-oop/composition-design/summary.md) | done |
+| SOLID and other design principles | [lesson](04-oop/solid/README.md) | [ex](04-oop/solid/exercises.md) | [sum](04-oop/solid/summary.md) | done |
+| Design patterns I: creational | [lesson](04-oop/patterns-creational/README.md) | [ex](04-oop/patterns-creational/exercises.md) | [sum](04-oop/patterns-creational/summary.md) | done |
+| Design patterns II: structural | [lesson](04-oop/patterns-structural/README.md) | [ex](04-oop/patterns-structural/exercises.md) | [sum](04-oop/patterns-structural/summary.md) | done |
+| Design patterns III: behavioral | [lesson](04-oop/patterns-behavioral/README.md) | [ex](04-oop/patterns-behavioral/exercises.md) | [sum](04-oop/patterns-behavioral/summary.md) | done |
 
 ## 05 Databases
 Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.sql).
