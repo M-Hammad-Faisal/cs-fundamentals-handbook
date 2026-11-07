@@ -1,5 +1,11 @@
 # Processes and Threads
 
+## Detailed lesson (start here if you are new)
+
+- [Processes in practice](01-processes-in-practice.md): fork, exec, zombies, pipes, signals, `subprocess`, threads vs processes vs asyncio
+
+The rest of this page is the quick reference.
+
 ## 1. The concept
 
 A **program** is a file on disk. A **process** is a running instance of it: its own **address space** (code, heap, stack, globals), open files, and an entry in the OS process table. A **thread** is a unit of execution *inside* a process. Threads of one process share the address space and open files, but each has its own stack, registers and program counter.
