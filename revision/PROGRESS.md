@@ -154,6 +154,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | Lesson: [Aggregation and Joins Lab](../05-databases/relational-sql/02-aggregation-and-joins-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Transactions Lab](../05-databases/transactions-acid/01-transactions-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [CTEs, Recursive Queries and Window Functions Lab](../05-databases/relational-sql/03-ctes-and-window-functions-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [PostgreSQL-Specific Features](../05-databases/postgresql/01-postgresql-specific-features.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 06 Operating systems
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

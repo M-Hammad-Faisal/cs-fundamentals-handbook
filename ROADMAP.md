@@ -18,6 +18,7 @@ Where the handbook stands and what could come next. Readers can ignore this page
 - Every page was run through a code-block runner on Python 3.15 (and the lessons require Python 3.10+). At the last full check, **263 of 276 pages ran cleanly**; pages added since were each run when written.
 - The remaining 13 pages are not broken; they contain illustrative sketches that assume context: cheat-sheet snippets with placeholder variables (`words`, `nums`, `r.set(...)`), exercise solutions that call helpers defined in the matching lesson (`fifo`, `round_robin`, `qps`, `first_true`), or a script that expects a command-line argument. With the lesson code loaded, those exercise solutions run.
 - Output comments in the newer lessons were compared with real output, and many were corrected along the way. Links were checked across the whole repository (0 broken), and a privacy check was run before every push.
+- **Exception:** the [PostgreSQL features lesson](05-databases/postgresql/01-postgresql-specific-features.md) contains SQL that was written from the documentation and **not executed**, because no PostgreSQL server was available. It says so at the top.
 - The labs use only the standard library, SQLite and (for the TLS lab) the `openssl` command; no internet access is needed.
 
 ## Known gaps (honest list)
@@ -27,7 +28,7 @@ Not yet written as dedicated lessons:
 | Area | Still to write |
 |------|----------------|
 | 03 Algorithms | (none: divide and conquer, number theory and string algorithms are written) |
-| 05 Databases | PostgreSQL-specific features (the "what is a database" and ER-modeling overview, and the window-functions lab, are written) |
+| 05 Databases | none written as dedicated lessons; the PostgreSQL lesson is **unverified** (no server available), so running its SQL and correcting it is a good contribution |
 | 06 Operating systems | (none: boot, segmentation, containers and the threads-and-GIL lab are written) |
 | 07 Networking | none (routing, HTTP/2-3, REST, WebSockets and network debugging are written) |
 | 08 Modern Python | none (bridge lesson written) |

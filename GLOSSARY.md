@@ -41,6 +41,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **BPF**: Berkeley Packet Filter: the kernel-level filter language used by tcpdump capture filters such as `tcp port 80`. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Branch (Git)**: A movable pointer to a commit, used for a separate line of development. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Bridge (graph)**: An edge whose removal disconnects a graph; a single point of failure. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
+- **BRIN index**: A tiny PostgreSQL index storing min and max per block range, effective on huge tables whose values follow physical order. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 - **Bytecode**: The intermediate instructions Python compiles source code into and its virtual machine executes. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 
 ## C
@@ -128,6 +129,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Garbage collection**: Automatic freeing of memory for objects no longer referenced. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Generator**: A function using `yield` that produces values lazily, one at a time. [Learn more](08-modern-python/generators-functional/README.md)
 - **GIL**: Global Interpreter Lock: lets only one thread run Python bytecode at a time in CPython. [Learn more](08-modern-python/async-concurrency/README.md)
+- **GIN index**: PostgreSQL index for values that contain many items (jsonb, arrays, full-text), answering 'which rows contain X'. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 - **Git**: The distributed version-control system used to track and share code history. [Learn more](00-foundations/command-line-and-git/git-basics.md)
 - **GPT (GUID Partition Table)**: A modern disk partition scheme with 64-bit addresses, many partitions, checksums and a backup table. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Graph**: Nodes connected by edges, modeling networks and relationships. [Learn more](02-data-structures/graphs/README.md)
@@ -202,6 +204,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Monotonic stack**: A stack kept sorted so each element is pushed and popped once; solves next-greater-element problems in O(n). [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **MRO**: Method resolution order: the order in which Python searches base classes for an attribute. [Learn more](04-oop/inheritance-mro/README.md)
 - **Multiplexing**: Interleaving frames of many independent streams on a single connection. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
+- **MVCC**: Multi-version concurrency control: updates create new row versions so readers and writers do not block each other; each transaction sees a consistent snapshot. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 - **MVCC / snapshot isolation**: Each transaction reads its own consistent snapshot of the data, so readers and writers do not block each other. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## N
@@ -225,6 +228,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Page replacement**: The policy that chooses which in-memory page to evict when a new page is needed (FIFO, LRU, Clock). [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Page table**: The structure mapping a process's virtual pages to physical frames. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
 - **Pagination**: Returning a large collection in pages (offset/page or cursor/keyset) instead of all at once. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
+- **Partial index**: An index covering only the rows that match a condition, making it smaller and faster for queries on that subset. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 - **Path MTU Discovery**: Finding the largest packet a path carries without fragmentation; breaks when ICMP errors are blocked. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **pcap**: The classic packet-capture file format: a global header followed by per-packet records with timestamps and the raw bytes. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Pipe**: A one-way kernel buffer connecting the output of one process to the input of another. [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
@@ -276,6 +280,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Shunting-yard algorithm**: Dijkstra's method for converting infix expressions to postfix using an operator stack. [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **Sieve of Eratosthenes**: Finds all primes up to N by crossing out multiples of each prime, in O(N log log N). [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Signal**: A small asynchronous notification sent to a process (SIGTERM, SIGKILL, SIGINT). [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
+- **SKIP LOCKED**: A row-locking option that skips rows already locked by other transactions, used to build safe work queues. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 - **Socket**: The operating system's handle for one end of a network conversation. [Learn more](07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md)
 - **SOLID**: Five object-oriented design principles: SRP, OCP, LSP, ISP, DIP. [Learn more](04-oop/solid/README.md)
 - **SQL**: Structured Query Language for relational databases. [Learn more](05-databases/relational-sql/README.md)
@@ -317,9 +322,11 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Unicode / UTF-8**: The universal character set and its most common byte encoding. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Union-find**: A structure tracking which items are in the same group with near-O(1) merges and lookups. [Learn more](09-interview-playbook/problem-solving-patterns/README.md)
 - **Unit test**: An automated test of a small piece of code in isolation. [Learn more](08-modern-python/exceptions-logging-testing/README.md)
+- **Upsert**: Insert a row, or update the existing one if a key conflicts, in one atomic statement (INSERT ... ON CONFLICT). [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 
 ## V
 
+- **VACUUM**: PostgreSQL maintenance that reclaims space from dead row versions left behind by MVCC. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 - **Variable**: A name that refers to a value. [Learn more](00-foundations/python-fundamentals/01-variables-types-operators.md)
 - **Virtual environment**: An isolated Python installation with its own packages for one project. [Learn more](00-foundations/setup/README.md)
 - **Virtual memory**: Each process sees a private address space that the OS maps onto physical memory and disk. [Learn more](06-operating-systems/memory-virtual-memory/README.md)
