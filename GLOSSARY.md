@@ -105,6 +105,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Floating point**: The binary format for decimals; most decimal fractions are stored inexactly. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Floyd-Warshall**: A dynamic-programming algorithm for shortest paths between all pairs of vertices in O(V^3). [Learn more](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md)
 - **Foreign key**: A column that references the primary key of another table. [Learn more](05-databases/relational-sql/README.md)
+- **Free-threaded Python**: An optional CPython build (3.13+) without the GIL, letting threads run Python code in parallel. [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
 - **fsync**: A call that forces buffered file data to be written to disk before returning. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Function**: A named reusable block of code that takes parameters and may return a value. [Learn more](00-foundations/python-fundamentals/03-functions.md)
 
@@ -220,6 +221,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Recursion**: A function calling itself on a smaller input until a base case. [Learn more](03-algorithms/recursion-backtracking/README.md)
 - **Recursive CTE**: A CTE that refers to itself (anchor plus recursive step) to walk hierarchies or generate sequences. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Reference**: A name or pointer that refers to an object in memory. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
+- **Reference counting**: Memory management that frees an object when its count of references drops to zero (CPython's main scheme). [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
 - **REPL**: Read-Eval-Print Loop: the interactive Python prompt. [Learn more](00-foundations/setup/README.md)
 - **Replication**: Keeping copies of data on several machines. [Learn more](05-databases/nosql/README.md)
 - **REST**: An API style using HTTP methods and URLs to act on resources. [Learn more](07-networking/dns-http/README.md)
@@ -256,6 +258,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **TCP / UDP**: TCP is reliable and ordered; UDP is fast and best-effort. [Learn more](07-networking/tcp-ip-osi/README.md)
 - **Thrashing**: A system spending most of its time moving pages between disk and memory because working sets exceed RAM. [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Thread**: A unit of execution inside a process sharing its memory. [Learn more](06-operating-systems/processes-threads/README.md)
+- **Thread-local storage**: Data that each thread sees as its own private copy (`threading.local`). [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
 - **Timsort**: Python's stable hybrid sort (merge sort plus insertion sort) that is O(n) on already-sorted runs. [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **TLB (translation lookaside buffer)**: A small fast cache of recent virtual-to-physical page translations. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
 - **TLS**: Transport Layer Security: encrypts and authenticates connections (HTTPS). [Learn more](07-networking/tls-security/README.md)

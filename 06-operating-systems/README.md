@@ -2,7 +2,7 @@
 
 **Start here:** [What is an operating system?](00-what-is-an-operating-system.md) (kernel, user vs kernel mode, system calls, boot).
 
-**Hands-on deep dives:** [scheduling simulator](scheduling/01-scheduling-simulator.md) · [paging and address translation](memory-virtual-memory/01-paging-and-address-translation.md) · [page replacement](memory-virtual-memory/02-page-replacement-algorithms.md) · [processes in practice](processes-threads/01-processes-in-practice.md) · [synchronization](concurrency-deadlocks/01-race-conditions-and-synchronization.md) · [deadlock](concurrency-deadlocks/02-deadlock.md) · [file systems in depth](file-systems-io/01-file-systems-in-depth.md)
+**Hands-on deep dives:** [scheduling simulator](scheduling/01-scheduling-simulator.md) · [paging and address translation](memory-virtual-memory/01-paging-and-address-translation.md) · [page replacement](memory-virtual-memory/02-page-replacement-algorithms.md) · [processes in practice](processes-threads/01-processes-in-practice.md) · [threads and the GIL](processes-threads/02-threads-and-the-gil-lab.md) · [synchronization](concurrency-deadlocks/01-race-conditions-and-synchronization.md) · [deadlock](concurrency-deadlocks/02-deadlock.md) · [file systems in depth](file-systems-io/01-file-systems-in-depth.md)
 
 | Topic | Lesson |
 |-------|--------|

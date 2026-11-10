@@ -170,6 +170,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | Lesson: [Page Replacement Algorithms](../06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Processes in Practice](../06-operating-systems/processes-threads/01-processes-in-practice.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [CPU Scheduling Algorithms](../06-operating-systems/scheduling/01-scheduling-simulator.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Threads and the GIL Lab](../06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 07 Networking
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

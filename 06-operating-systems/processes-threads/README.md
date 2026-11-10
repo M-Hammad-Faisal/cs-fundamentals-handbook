@@ -1,8 +1,9 @@
 # Processes and Threads
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons (start here if you are new)
 
-- [Processes in practice](01-processes-in-practice.md): fork, exec, zombies, pipes, signals, `subprocess`, threads vs processes vs asyncio
+1. [Processes in practice](01-processes-in-practice.md): fork, exec, zombies, pipes, signals, `subprocess`, threads vs processes vs asyncio
+2. [Threads and the GIL lab](02-threads-and-the-gil-lab.md): when threads help and when they do not, races you can reproduce, free-threaded Python
 
 The rest of this page is the quick reference.
 

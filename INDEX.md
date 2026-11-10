@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (219 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (222 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -156,7 +156,7 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 - **Concurrency, Synchronization and Deadlocks:** [Race Conditions and Synchronization](06-operating-systems/concurrency-deadlocks/01-race-conditions-and-synchronization.md), [Deadlock: Detection, Prevention and Avoidance](06-operating-systems/concurrency-deadlocks/02-deadlock.md)
 - **File Systems and I/O:** [File Systems in Depth: Inodes, Links, Permissions and Durability](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Memory Management and Virtual Memory:** [Virtual Memory: Paging and Address Translation](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md), [Page Replacement Algorithms](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
-- **Processes and Threads:** [Processes in Practice: fork, exec, pipes, signals and concurrency models](06-operating-systems/processes-threads/01-processes-in-practice.md)
+- **Processes and Threads:** [Processes in Practice: fork, exec, pipes, signals and concurrency models](06-operating-systems/processes-threads/01-processes-in-practice.md), [Threads and the GIL Lab](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
 - **CPU Scheduling:** [CPU Scheduling Algorithms: A Hands-On Simulator](06-operating-systems/scheduling/01-scheduling-simulator.md)
 <!-- detailed-lessons:06 -->
 
