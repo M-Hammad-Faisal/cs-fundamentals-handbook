@@ -190,6 +190,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | Lesson: [Sockets Lab](../07-networking/tcp-ip-osi/02-sockets-tcp-udp-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Cryptography and TLS Lab](../07-networking/tls-security/01-cryptography-and-tls-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [REST APIs, Server-Sent Events and WebSockets](../07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Routing Protocols](../07-networking/routing/01-routing-protocols.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 08 Modern Python
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

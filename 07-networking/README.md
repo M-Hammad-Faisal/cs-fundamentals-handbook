@@ -13,6 +13,7 @@ How computers talk to each other, from bits on a wire to a web page in your brow
 | 3 | TLS and security basics | [lesson](tls-security/README.md) | [cryptography and TLS lab](tls-security/01-cryptography-and-tls-lab.md) |
 | 4 | Load balancing, CDNs and resilience | [lesson](load-balancing-cdn/README.md) | [load balancing and resilience lab](load-balancing-cdn/01-load-balancing-and-resilience-lab.md) |
 | 5 | APIs and real-time communication | [overview](apis-realtime/README.md) | [REST, SSE and WebSockets lab](apis-realtime/01-rest-apis-and-websockets-lab.md) |
+| 6 | Routing | [overview](routing/README.md) | [routing protocols: distance vector, link state, BGP](routing/01-routing-protocols.md) |
 
 Each topic folder also has `exercises.md` and a one-page `summary.md`.
 

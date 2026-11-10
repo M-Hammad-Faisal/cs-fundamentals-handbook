@@ -11,12 +11,14 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Algorithm**: A finite, step-by-step procedure that solves a problem. [Learn more](01-complexity/big-o/README.md)
 - **Amortized cost**: The average cost per operation over a long sequence, even if a single operation is occasionally expensive (for example appending to a dynamic array). [Learn more](01-complexity/big-o/README.md)
 - **Anti-join**: Rows of one table that have no match in another, found with `LEFT JOIN ... WHERE b.id IS NULL` or `NOT EXISTS`. [Learn more](05-databases/relational-sql/02-aggregation-and-joins-lab.md)
+- **Anycast**: Announcing the same address from many places so routing delivers each client to the nearest server. [Learn more](07-networking/routing/01-routing-protocols.md)
 - **API**: Application Programming Interface: the set of operations a piece of software offers to other programs. [Learn more](07-networking/dns-http/README.md)
 - **Argument / parameter**: A parameter is a name in a function definition; an argument is the value passed when calling it. [Learn more](00-foundations/python-fundamentals/03-functions.md)
 - **Array**: A sequence of items stored contiguously in memory, accessed by index (Python's `list` is a dynamic array). [Learn more](02-data-structures/arrays-strings/README.md)
 - **ASCII**: An early character encoding of 128 characters; the first part of Unicode. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Async / await**: Syntax for cooperative concurrency on one thread: a task pauses at `await` while others run. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Atomic operation**: An operation that happens completely or not at all, with no visible middle state. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
+- **Autonomous system (AS)**: A network under one administrative control with its own routing policy, identified by an AS number. [Learn more](07-networking/routing/01-routing-protocols.md)
 - **Avalanche effect**: A tiny change to a hash function's input changes about half the output bits. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 
 ## B
@@ -27,6 +29,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Base case**: The simplest case of a recursive function, which stops the recursion. [Learn more](03-algorithms/recursion-backtracking/README.md)
 - **Belady's anomaly**: Giving a FIFO page-replacement policy more frames can produce more page faults. [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **BFS (breadth-first search)**: Graph traversal that visits nodes level by level using a queue; finds shortest paths in unweighted graphs. [Learn more](02-data-structures/graphs/README.md)
+- **BGP (Border Gateway Protocol)**: The path-vector protocol that exchanges routes between autonomous systems and holds the internet together. [Learn more](07-networking/routing/01-routing-protocols.md)
 - **Big-O**: Notation describing how an algorithm's cost grows with input size, ignoring constants. [Learn more](01-complexity/big-o/README.md)
 - **Binary search**: Finding an item in sorted data by repeatedly halving the search range; O(log n). [Learn more](03-algorithms/searching/README.md)
 - **Binary tree**: A tree in which each node has at most two children. [Learn more](02-data-structures/trees/README.md)
@@ -66,6 +69,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Cookie**: A small piece of data a server asks the browser to store and send back. [Learn more](07-networking/dns-http/README.md)
 - **Coprime**: Two integers whose greatest common divisor is 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Copy-on-write**: Sharing memory pages until one side writes, then copying just that page; makes `fork` cheap. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
+- **Count to infinity**: A distance-vector failure where routers keep raising a dead route's cost one step at a time while packets loop. [Learn more](07-networking/routing/01-routing-protocols.md)
 - **Counting sort**: A non-comparison sort that counts occurrences of small integer keys; runs in O(n + k). [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **Coupling / cohesion**: Coupling is how much modules depend on each other; cohesion is how well a module's parts belong together. [Learn more](04-oop/composition-design/README.md)
 - **Covering index**: An index that contains every column a query needs, so the table is never read. [Learn more](05-databases/indexes-query-plans/01-indexes-lab.md)
@@ -84,6 +88,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Dictionary**: A mapping from keys to values with O(1) average lookup (a hash table). [Learn more](02-data-structures/hash-tables/README.md)
 - **Diffie-Hellman**: A key-exchange method that lets two parties agree on a shared secret over a public channel. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Dijkstra's algorithm**: Finds shortest paths from a source in a graph with non-negative edge weights. [Learn more](03-algorithms/graph-algorithms/README.md)
+- **Distance-vector routing**: Routers share their distance tables with neighbors and adopt neighbor distance plus link cost (RIP). [Learn more](07-networking/routing/01-routing-protocols.md)
 - **Divide and conquer**: Solving a problem by splitting it into independent smaller copies, solving them recursively and combining the answers. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **DNS**: Domain Name System: translates names like example.com into IP addresses. [Learn more](07-networking/dns-http/README.md)
 - **Dynamic programming**: Solving problems by combining solutions of overlapping subproblems, storing results. [Learn more](03-algorithms/dynamic-programming/README.md)
@@ -168,6 +173,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Lambda**: A small anonymous function written inline. [Learn more](00-foundations/python-fundamentals/03-functions.md)
 - **LCP array**: For a suffix array, the length of the common prefix of each pair of adjacent sorted suffixes. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **LCS (longest common subsequence)**: The longest sequence of items appearing in the same order in two sequences (not necessarily adjacent). [Learn more](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md)
+- **Link-state routing**: Routers flood descriptions of their own links so each builds the full map and runs Dijkstra (OSPF, IS-IS). [Learn more](07-networking/routing/01-routing-protocols.md)
 - **Linked list**: Nodes each holding a value and a pointer to the next node. [Learn more](02-data-structures/linked-lists/README.md)
 - **Load balancer**: Spreads requests across several servers and removes unhealthy ones. [Learn more](07-networking/load-balancing-cdn/README.md)
 - **Load factor**: Items divided by slots in a hash table; resizing keeps it bounded so lookups stay O(1). [Learn more](02-data-structures/hash-tables/01-hash-functions-and-collisions.md)
@@ -201,6 +207,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **OOP**: Object-oriented programming: organizing code as objects with state and behavior. [Learn more](04-oop/README.md)
 - **Operating system**: Software that manages hardware and shares it between programs. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 - **Optimistic concurrency**: Proceed without locks and detect conflicts at write time (for example with a version number), then retry. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
+- **OSPF**: Open Shortest Path First: a link-state interior routing protocol using areas and cost based on bandwidth. [Learn more](07-networking/routing/01-routing-protocols.md)
 
 ## P
 
@@ -239,6 +246,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **REST**: An API style using HTTP methods and URLs to act on resources. [Learn more](07-networking/dns-http/README.md)
 - **Reverse proxy**: A server in front of backends that forwards client requests to them (and may balance, cache or terminate TLS). [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Rolling hash**: A hash of a sliding window updated in O(1) by removing the old character and adding the new one. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
+- **RPKI**: A system of signed records (ROAs) stating which AS may originate which prefix, used to reject BGP hijacks. [Learn more](07-networking/routing/01-routing-protocols.md)
 
 ## S
 
