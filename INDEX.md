@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (228 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (238 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -154,9 +154,11 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
 - **Start here:** [What Is an Operating System?](06-operating-systems/00-what-is-an-operating-system.md)
+- **Boot and Startup:** [The Boot Process and Bootloaders](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Concurrency, Synchronization and Deadlocks:** [Race Conditions and Synchronization](06-operating-systems/concurrency-deadlocks/01-race-conditions-and-synchronization.md), [Deadlock: Detection, Prevention and Avoidance](06-operating-systems/concurrency-deadlocks/02-deadlock.md)
+- **Containers:** [Containers, Namespaces and cgroups](06-operating-systems/containers/01-containers-and-namespaces.md)
 - **File Systems and I/O:** [File Systems in Depth: Inodes, Links, Permissions and Durability](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
-- **Memory Management and Virtual Memory:** [Virtual Memory: Paging and Address Translation](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md), [Page Replacement Algorithms](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
+- **Memory Management and Virtual Memory:** [Virtual Memory: Paging and Address Translation](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md), [Page Replacement Algorithms](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md), [Segmentation: Memory in Meaningful Pieces](06-operating-systems/memory-virtual-memory/03-segmentation.md)
 - **Processes and Threads:** [Processes in Practice: fork, exec, pipes, signals and concurrency models](06-operating-systems/processes-threads/01-processes-in-practice.md), [Threads and the GIL Lab](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
 - **CPU Scheduling:** [CPU Scheduling Algorithms: A Hands-On Simulator](06-operating-systems/scheduling/01-scheduling-simulator.md)
 <!-- detailed-lessons:06 -->

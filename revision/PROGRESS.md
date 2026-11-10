@@ -172,6 +172,9 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | Lesson: [Processes in Practice](../06-operating-systems/processes-threads/01-processes-in-practice.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [CPU Scheduling Algorithms](../06-operating-systems/scheduling/01-scheduling-simulator.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Threads and the GIL Lab](../06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [The Boot Process and Bootloaders](../06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Containers, Namespaces and cgroups](../06-operating-systems/containers/01-containers-and-namespaces.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Segmentation](../06-operating-systems/memory-virtual-memory/03-segmentation.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 07 Networking
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

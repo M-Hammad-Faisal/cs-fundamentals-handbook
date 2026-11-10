@@ -33,6 +33,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Bit / byte**: A bit is 0 or 1; a byte is 8 bits. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Blocking call**: A call that makes the caller wait until it finishes. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Bloom filter**: A compact structure that says an item is definitely absent or probably present, with no false negatives. [Learn more](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
+- **Bootloader**: A small program (GRUB, Windows Boot Manager) that loads the operating system kernel and initramfs into memory. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Branch (Git)**: A movable pointer to a commit, used for a separate line of development. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Bridge (graph)**: An edge whose removal disconnects a graph; a single point of failure. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Bytecode**: The intermediate instructions Python compiles source code into and its virtual machine executes. [Learn more](00-foundations/computer-basics/how-computers-work.md)
@@ -44,6 +45,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Cardinality**: How many entities on one side of a relationship relate to the other: one-to-one, one-to-many or many-to-many. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **CDN**: Content delivery network: servers around the world caching content near users. [Learn more](07-networking/load-balancing-cdn/README.md)
 - **Certificate (TLS)**: A document binding a public key to an identity such as a domain name, signed by a certificate authority. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+- **cgroup (control group)**: A Linux kernel feature that limits and accounts for the resources (memory, CPU, processes, I/O) used by a group of processes. [Learn more](06-operating-systems/containers/01-containers-and-namespaces.md)
 - **Chinese remainder theorem**: Remainders modulo pairwise coprime numbers determine a number modulo their product. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Circuit breaker**: A pattern that stops calling a failing dependency for a while so it can recover and callers fail fast. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Class / object**: A class is a blueprint; an object is an instance built from it. [Learn more](04-oop/classes-objects/README.md)
@@ -57,6 +59,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Composition**: Building behavior by holding other objects (has-a) instead of inheriting (is-a). [Learn more](04-oop/composition-design/README.md)
 - **Concurrency**: Structuring a program so several tasks make progress during overlapping time. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Consistent hashing**: Placing keys and servers on a ring so adding or removing a server moves only a small share of keys. [Learn more](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
+- **Container**: An ordinary process given an isolated view (namespaces) and resource limits (cgroups) on the shared host kernel, started from an image. [Learn more](06-operating-systems/containers/01-containers-and-namespaces.md)
 - **Context manager**: An object used with `with` that guarantees setup and cleanup (files, locks). [Learn more](04-oop/polymorphism-dunder/README.md)
 - **Context switch**: The OS saving one task's CPU state and loading another's. [Learn more](06-operating-systems/scheduling/README.md)
 - **Convoy effect**: Short jobs stuck waiting behind one long job in a non-preemptive first-come-first-served queue. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
@@ -119,6 +122,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Generator**: A function using `yield` that produces values lazily, one at a time. [Learn more](08-modern-python/generators-functional/README.md)
 - **GIL**: Global Interpreter Lock: lets only one thread run Python bytecode at a time in CPython. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Git**: The distributed version-control system used to track and share code history. [Learn more](00-foundations/command-line-and-git/git-basics.md)
+- **GPT (GUID Partition Table)**: A modern disk partition scheme with 64-bit addresses, many partitions, checksums and a backup table. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Graph**: Nodes connected by edges, modeling networks and relationships. [Learn more](02-data-structures/graphs/README.md)
 - **Greedy algorithm**: Makes the locally best choice at each step, hoping for a global optimum (valid only when provable). [Learn more](03-algorithms/greedy/README.md)
 
@@ -140,6 +144,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Immutable / mutable**: Immutable objects cannot be changed after creation; mutable ones can. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Index (database)**: A structure (usually a B-tree) that speeds up lookups at the cost of slower writes. [Learn more](05-databases/indexes-query-plans/README.md)
 - **Inheritance**: A class reusing and specializing another (is-a). [Learn more](04-oop/inheritance-mro/README.md)
+- **initramfs**: A small temporary root file system loaded into RAM at boot, holding the drivers needed to reach the real root disk. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Inode**: The file-system record holding a file's metadata and block locations (not its name). [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Interface**: The set of operations something offers, without saying how they work. [Learn more](04-oop/encapsulation-abstraction/README.md)
 - **Inverted index**: A map from each word to the documents that contain it; the core of search engines. [Learn more](05-databases/nosql/01-nosql-lab.md)
@@ -174,6 +179,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 - **Manacher's algorithm**: Finds the longest palindromic substring (and all palindrome radii) in linear time. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **Master theorem**: A formula giving the growth of recurrences T(n) = aT(n/b) + n^d by comparing d with log_b a. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
+- **MBR (Master Boot Record)**: The first 512-byte sector of a BIOS boot disk: boot code, a four-entry partition table and the 0x55AA signature. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Memoization**: Caching a function's results by its arguments to avoid recomputation. [Learn more](03-algorithms/dynamic-programming/README.md)
 - **Merge conflict**: Git cannot automatically combine changes to the same lines; you must resolve it. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Mermaid**: A text format for diagrams (class, sequence, state, flow) that renders in GitHub and documentation tools. [Learn more](04-oop/01-uml-and-class-diagrams.md)
@@ -185,6 +191,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## N
 
+- **Namespace (Linux)**: A kernel feature giving a group of processes a private view of a resource such as PIDs, network, mounts or hostname. [Learn more](06-operating-systems/containers/01-containers-and-namespaces.md)
 - **Normalization**: Organizing tables so each fact is stored once, avoiding anomalies. [Learn more](05-databases/normalization-schema-design/README.md)
 - **NoSQL**: Databases that do not use the relational table model (key-value, document, wide-column, graph). [Learn more](05-databases/nosql/README.md)
 
@@ -237,7 +244,9 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 - **Salt**: Random data added to each password before hashing so equal passwords hash differently and precomputed tables fail. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Scheduler**: The OS component that decides which task runs on the CPU next. [Learn more](06-operating-systems/scheduling/README.md)
+- **Secure Boot**: A UEFI feature that checks digital signatures of each boot stage before running it. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **Segment tree**: A tree storing answers for ranges, supporting range queries and updates in O(log n). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
+- **Segmentation**: Dividing a program's memory into variable-size logical segments (code, data, heap, stack), each with a base, a limit and permissions. [Learn more](06-operating-systems/memory-virtual-memory/03-segmentation.md)
 - **Semaphore**: A counter that allows up to N tasks into a resource at once. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Sequence diagram**: A UML diagram showing the ordered messages between objects or services in one scenario. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Server-Sent Events (SSE)**: A one-way stream of text events from server to browser over a long-lived HTTP response. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
@@ -278,6 +287,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## U
 
+- **UEFI**: Modern firmware that reads an EFI System Partition, supports GPT and Secure Boot, and replaces the legacy BIOS. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
 - **UML**: Unified Modeling Language: a standard visual vocabulary for describing software structure and behavior. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Unicode / UTF-8**: The universal character set and its most common byte encoding. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Union-find**: A structure tracking which items are in the same group with near-O(1) merges and lookups. [Learn more](09-interview-playbook/problem-solving-patterns/README.md)

@@ -4,6 +4,7 @@
 
 - [Paging and address translation](01-paging-and-address-translation.md): pages, frames, page tables, TLB, page faults, with a runnable MMU
 - [Page replacement algorithms](02-page-replacement-algorithms.md): FIFO, LRU, Optimal, Clock, Belady's anomaly, working sets, thrashing
+- [Segmentation](03-segmentation.md): base and limit, external fragmentation, segmentation plus paging, x86 descriptors
 
 The rest of this page is the quick reference.
 
