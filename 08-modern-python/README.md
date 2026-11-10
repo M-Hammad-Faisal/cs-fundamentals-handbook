@@ -1,6 +1,6 @@
 # Modern Python
 
-Eight chapters covering the language and tools professional Python developers use every day. Every code example was run on a current Python (3.15) with pytest, mypy and uv where relevant.
+Start with the [bridge from Python fundamentals](00-from-fundamentals-to-modern-python.md), then eight chapters covering the language and tools professional Python developers use every day. Every code example was run on a current Python (3.15) with pytest, mypy and uv where relevant.
 
 | # | Topic | Lesson |
 |---|-------|--------|

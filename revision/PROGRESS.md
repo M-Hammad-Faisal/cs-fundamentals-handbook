@@ -205,6 +205,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Performance, profiling and memory](../08-modern-python/performance-profiling/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Exceptions, logging and testing](../08-modern-python/exceptions-logging-testing/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Packaging, environments and tooling](../08-modern-python/packaging-tooling/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [From Python Fundamentals to Modern Python](../08-modern-python/00-from-fundamentals-to-modern-python.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 09 Interview playbook
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

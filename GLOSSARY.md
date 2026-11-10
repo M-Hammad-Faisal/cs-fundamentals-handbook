@@ -151,6 +151,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## I
 
 - **Idempotent**: An operation that has the same effect whether done once or many times. [Learn more](07-networking/dns-http/README.md)
+- **Idiomatic**: Written the way experienced users of a language normally write it, using its built-in features instead of translating habits from elsewhere. [Learn more](08-modern-python/00-from-fundamentals-to-modern-python.md)
 - **IDOR (insecure direct object reference)**: Letting a user access another user's data just by changing an id in a URL, because ownership is not checked. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **Immutable / mutable**: Immutable objects cannot be changed after creation; mutable ones can. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Index (database)**: A structure (usually a B-tree) that speeds up lookups at the cost of slower writes. [Learn more](05-databases/indexes-query-plans/README.md)

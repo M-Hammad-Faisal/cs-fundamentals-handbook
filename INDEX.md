@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (259 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (260 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -195,6 +195,12 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | Performance, profiling and memory | [lesson](08-modern-python/performance-profiling/README.md) | [ex](08-modern-python/performance-profiling/exercises.md) | [sum](08-modern-python/performance-profiling/summary.md) | done |
 | Exceptions, logging and testing | [lesson](08-modern-python/exceptions-logging-testing/README.md) | [ex](08-modern-python/exceptions-logging-testing/exercises.md) | [sum](08-modern-python/exceptions-logging-testing/summary.md) | done |
 | Packaging, environments and tooling | [lesson](08-modern-python/packaging-tooling/README.md) | [ex](08-modern-python/packaging-tooling/exercises.md) | [sum](08-modern-python/packaging-tooling/summary.md) | done |
+
+<!-- detailed-lessons:08 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Start here:** [From Python Fundamentals to Modern Python](08-modern-python/00-from-fundamentals-to-modern-python.md)
+<!-- detailed-lessons:08 -->
 
 ## 09 Interview playbook
 | Topic | Lesson | Exercises | Summary | Status |
