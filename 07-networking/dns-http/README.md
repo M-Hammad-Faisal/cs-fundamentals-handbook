@@ -4,6 +4,7 @@
 
 - [HTTP from scratch](01-http-from-scratch.md): raw requests, methods, status codes, headers, keep-alive, caching, cookies, and your own tiny server
 - [DNS in depth](02-dns-in-depth.md): the packet format, a toy DNS server over UDP, TTL caching, the resolution hierarchy
+- [HTTP/2 and HTTP/3 internals](03-http2-and-http3-internals.md): frames, multiplexing, HPACK (checked against the RFC), flow control, head-of-line blocking, QUIC, ALPN
 
 The rest of this page is the quick reference.
 

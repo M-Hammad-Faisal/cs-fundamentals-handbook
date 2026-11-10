@@ -9,6 +9,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Abstraction**: Using something through a simple interface while hiding how it works inside. [Learn more](04-oop/encapsulation-abstraction/README.md)
 - **ACID**: Atomicity, Consistency, Isolation, Durability: the guarantees of a database transaction. [Learn more](05-databases/transactions-acid/README.md)
 - **Algorithm**: A finite, step-by-step procedure that solves a problem. [Learn more](01-complexity/big-o/README.md)
+- **ALPN**: Application-Layer Protocol Negotiation: a TLS extension in which client and server agree on the protocol (h2, http/1.1) during the handshake. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
 - **Amortized cost**: The average cost per operation over a long sequence, even if a single operation is occasionally expensive (for example appending to a dynamic array). [Learn more](01-complexity/big-o/README.md)
 - **Anti-join**: Rows of one table that have no match in another, found with `LEFT JOIN ... WHERE b.id IS NULL` or `NOT EXISTS`. [Learn more](05-databases/relational-sql/02-aggregation-and-joins-lab.md)
 - **Anycast**: Announcing the same address from many places so routing delivers each client to the nearest server. [Learn more](07-networking/routing/01-routing-protocols.md)
@@ -136,11 +137,15 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Hard link**: Another directory entry (name) pointing to the same inode as an existing file. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Hash function**: Maps data of any size to a fixed-size number; the same input always gives the same output. [Learn more](02-data-structures/hash-tables/README.md)
 - **Hash table**: A structure using a hash function to store key-value pairs with O(1) average access. [Learn more](02-data-structures/hash-tables/README.md)
+- **Head-of-line blocking**: One slow or lost item delaying everything queued behind it (HTTP/1.1 requests, or TCP bytes shared by all HTTP/2 streams). [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
 - **Heap (data structure)**: A tree-based structure that gives quick access to the minimum or maximum (priority queue). [Learn more](02-data-structures/heaps/README.md)
 - **Heap (memory)**: The region of memory where objects live until they are no longer referenced. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Heapify**: Turning an array into a heap in place in O(n) by sifting nodes down from the last parent. [Learn more](02-data-structures/heaps/01-binary-heaps-and-heapsort.md)
 - **HMAC**: A hash-based message authentication code: a tag only holders of the shared secret key can create or verify. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+- **HPACK**: HTTP/2 header compression using a static table and a per-connection dynamic table instead of repeating header text. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
 - **HTTP / HTTPS**: The request-response protocol of the web; HTTPS adds TLS encryption. [Learn more](07-networking/dns-http/README.md)
+- **HTTP/2**: The binary version of HTTP that multiplexes many streams over one connection with header compression and flow control. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
+- **HTTP/3**: HTTP carried over QUIC (UDP), avoiding TCP head-of-line blocking and merging the TLS handshake into the transport handshake. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
 
 ## I
 
@@ -193,6 +198,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Modular inverse**: For b mod m, the number b^-1 with b * b^-1 = 1 (mod m); exists when gcd(b, m) = 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Monotonic stack**: A stack kept sorted so each element is pushed and popped once; solves next-greater-element problems in O(n). [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **MRO**: Method resolution order: the order in which Python searches base classes for an attribute. [Learn more](04-oop/inheritance-mro/README.md)
+- **Multiplexing**: Interleaving frames of many independent streams on a single connection. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
 - **MVCC / snapshot isolation**: Each transaction reads its own consistent snapshot of the data, so readers and writers do not block each other. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## N
@@ -226,6 +232,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## Q
 
 - **Queue**: A first-in, first-out collection. [Learn more](02-data-structures/stacks-queues/README.md)
+- **QUIC**: A UDP-based transport with built-in TLS 1.3, independent streams, connection IDs and migration, used by HTTP/3. [Learn more](07-networking/dns-http/03-http2-and-http3-internals.md)
 - **Quickselect**: Finding the k-th smallest item in average O(n) by partitioning only one side. [Learn more](03-algorithms/sorting/02-merge-sort-and-quicksort.md)
 - **Quorum**: Reading from R and writing to W of N replicas; if R + W > N a read always overlaps the latest write. [Learn more](05-databases/nosql/01-nosql-lab.md)
 
