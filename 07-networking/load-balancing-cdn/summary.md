@@ -10,3 +10,6 @@
 - Watch p99 latency and error rates; test failures on purpose.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Load Balancing and Resilience Lab](01-load-balancing-and-resilience-lab.md)

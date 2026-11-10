@@ -46,3 +46,6 @@ print(r.recvfrom(100)[0], r.recvfrom(100)[0])    # b'one' b'two'
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Packets, Addressing and Subnets](01-packets-addressing-and-subnets.md) · [Sockets Lab](02-sockets-tcp-udp-lab.md)

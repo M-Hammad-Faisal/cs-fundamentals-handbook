@@ -28,3 +28,6 @@
 - Unintended cycles cause infinite loops.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [The Singly Linked List, Built from Scratch](01-singly-linked-list.md) · [Doubly Linked Lists, Circular Lists and the LRU Cache](02-doubly-and-circular.md) · [Linked-List Techniques and Classic Problems](03-linked-list-techniques.md)

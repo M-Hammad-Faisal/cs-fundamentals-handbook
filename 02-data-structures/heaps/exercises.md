@@ -144,3 +144,6 @@ def reorganize_string(s):
 ```
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Binary Heaps and Heapsort](01-binary-heaps-and-heapsort.md) · [Priority Queue Applications](02-priority-queue-applications.md)

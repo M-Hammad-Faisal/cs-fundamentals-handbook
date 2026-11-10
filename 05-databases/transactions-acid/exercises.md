@@ -83,3 +83,6 @@ def pay(conn, idempotency_key, order_id, amount):
 **10.** T1 transfers A to B and locks A then B; T2 transfers B to A and locks B then A. Each holds one lock and waits for the other. Prevent by (a) always locking accounts in a consistent order (for example, lower id first) regardless of transfer direction, and (b) keeping transactions short, with retry on deadlock errors. Setting a lock timeout also bounds the waiting.
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Transactions Lab](01-transactions-lab.md)

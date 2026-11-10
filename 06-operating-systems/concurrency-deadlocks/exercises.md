@@ -65,3 +65,6 @@ class Limiter:
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Race Conditions and Synchronization](01-race-conditions-and-synchronization.md) · [Deadlock](02-deadlock.md)

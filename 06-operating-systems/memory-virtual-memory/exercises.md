@@ -52,3 +52,6 @@ print(count)
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Virtual Memory](01-paging-and-address-translation.md) · [Page Replacement Algorithms](02-page-replacement-algorithms.md) · [Segmentation](03-segmentation.md)

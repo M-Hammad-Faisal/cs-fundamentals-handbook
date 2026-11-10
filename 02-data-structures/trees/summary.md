@@ -35,3 +35,6 @@
 - Confusing "binary tree" with "binary search tree".
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Binary Trees and Traversals](01-binary-trees-and-traversals.md) · [Binary Search Trees](02-binary-search-trees.md) · [Balanced Trees](03-balanced-trees-avl.md) · [Segment Trees and Fenwick Trees](04-segment-and-fenwick-trees.md)

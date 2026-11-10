@@ -31,3 +31,6 @@
 - Pushing items one by one when `heapify` would be `O(n)`.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Binary Heaps and Heapsort](01-binary-heaps-and-heapsort.md) · [Priority Queue Applications](02-priority-queue-applications.md)

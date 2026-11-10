@@ -95,3 +95,6 @@ print([sw.allow("u", t) for t in (0, 1, 2, 3, 4, 5)], sw.allow("u", 10.5))   # f
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Load Balancing and Resilience Lab](01-load-balancing-and-resilience-lab.md)

@@ -10,3 +10,6 @@
 - **Pitfalls:** lock held across I/O, check-then-act, forgetting `with`, shared state across `await`, daemon threads.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Race Conditions and Synchronization](01-race-conditions-and-synchronization.md) · [Deadlock](02-deadlock.md)

@@ -106,3 +106,6 @@ SELECT name FROM sub;
 **10.** (a) No primary key (`id INTEGER` is not declared `PRIMARY KEY`); (b) `tags TEXT` holds a list, violating 1NF; (c) `price REAL` uses floating point for money; (d) `owner TEXT` should be a foreign key to a users table; (e) `status INTEGER` is a magic number with no lookup or `CHECK`; (f) a generic `data TEXT` blob hides structure, with no types or constraints; (g) no `NOT NULL`, no timestamps, and a vague table name.
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Normalization Lab](01-normalization-lab.md)

@@ -170,3 +170,6 @@ def max_profit_cooldown(prices):
 ```
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Dynamic Programming](01-dp-thinking-and-1d-problems.md) · [DP on Two Sequences, Grids and Knapsack](02-dp-on-two-sequences-and-grids.md) · [Advanced DP Patterns](03-advanced-dp-patterns.md)

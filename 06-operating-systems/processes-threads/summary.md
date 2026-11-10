@@ -9,3 +9,6 @@
 - **Pitfalls:** forking with threads, leaking zombies, running commands through a shell string, sharing mutable state without locks.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Processes in Practice](01-processes-in-practice.md) · [Threads and the GIL Lab](02-threads-and-the-gil-lab.md)

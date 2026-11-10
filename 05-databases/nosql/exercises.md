@@ -81,3 +81,6 @@ print(ring_moved, mod_moved)     # roughly 2,000 (about 1/5) versus roughly 8,00
 **9.** Treat PostgreSQL as the source of truth. Use cache-aside: on a read, check Redis, on a miss read the database and store the value with a TTL; on a write, update the database first, then delete (invalidate) the cache key. A stale cache returns old data until the TTL expires or the key is invalidated, so set TTLs to bound staleness, and never read-modify-write from the cache. For stricter guarantees publish invalidation events (change-data-capture or outbox).
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [NoSQL Lab](01-nosql-lab.md)

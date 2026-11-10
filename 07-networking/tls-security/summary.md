@@ -9,3 +9,6 @@
 - **Never** disable verification, hash passwords with plain SHA-256, or trust client input.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Cryptography and TLS Lab](01-cryptography-and-tls-lab.md)

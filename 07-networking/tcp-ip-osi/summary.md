@@ -9,3 +9,6 @@
 - **Tools:** `ping`, `traceroute`, `ss`, `tcpdump`, Wireshark.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Packets, Addressing and Subnets](01-packets-addressing-and-subnets.md) · [Sockets Lab](02-sockets-tcp-udp-lab.md)

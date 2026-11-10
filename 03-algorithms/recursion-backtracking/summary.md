@@ -31,3 +31,6 @@ Subsets, permutations, combination sum, N-Queens, word search, generate parenthe
 - Exponential blow-up without memoization.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Recursion Fundamentals](01-recursion-fundamentals.md) · [Backtracking](02-backtracking.md)

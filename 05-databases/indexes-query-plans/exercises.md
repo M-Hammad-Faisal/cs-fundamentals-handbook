@@ -72,3 +72,6 @@ With an index on `id` it jumps straight to the next page.
 **10.** No. With 5 rows a scan is as fast as any index seek, and the index only adds write and storage cost. Indexes pay off as tables grow. (Primary and unique constraints still create indexes automatically.)
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Indexes Lab](01-indexes-lab.md)

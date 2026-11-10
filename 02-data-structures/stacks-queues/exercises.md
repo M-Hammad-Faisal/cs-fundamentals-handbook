@@ -140,3 +140,6 @@ class RingBuffer:
 ```
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Stacks](01-stacks.md) · [Queues, Deques and Priority Queues](02-queues-deques-priority-queues.md) · [Stack and Queue Applications](03-stack-and-queue-applications.md)

@@ -31,3 +31,6 @@ Radix/compressed trie · array children (26 slots) · ternary search tree · bin
 - Not normalizing case or Unicode.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Tries](01-tries.md)

@@ -144,3 +144,6 @@ def median_two_sorted(a, b):
 ```
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Linear Search and Binary Search](01-linear-and-binary-search.md) · [Binary Search on the Answer and Other Search Techniques](02-binary-search-on-the-answer.md)

@@ -64,3 +64,6 @@ print(db.execute("SELECT * FROM users WHERE name = ?", (evil,)).fetchall())     
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Cryptography and TLS Lab](01-cryptography-and-tls-lab.md)

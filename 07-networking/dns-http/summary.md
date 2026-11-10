@@ -15,3 +15,6 @@
 - **REST:** resources as URLs, methods as verbs, proper status codes, pagination, versioning.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [HTTP from Scratch](01-http-from-scratch.md) · [DNS in Depth](02-dns-in-depth.md) · [HTTP/2 and HTTP/3 Internals](03-http2-and-http3-internals.md)

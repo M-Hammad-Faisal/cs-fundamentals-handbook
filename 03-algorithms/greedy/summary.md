@@ -31,3 +31,6 @@ Greedy commits to one choice. DP tries all choices per state. If you cannot just
 Sort by the right key · define tie-breaks · use a heap for dynamic candidates · verify with a brute force.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Greedy Algorithms](01-greedy-algorithms.md)

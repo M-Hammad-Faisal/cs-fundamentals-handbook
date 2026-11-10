@@ -62,3 +62,6 @@ Call `serve_once()` in a loop.
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [File Systems in Depth](01-file-systems-in-depth.md)

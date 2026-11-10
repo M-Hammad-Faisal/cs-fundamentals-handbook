@@ -160,3 +160,6 @@ def is_anagram(a, b):
 ```
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Sorting Basics and the Elementary Sorts](01-sorting-basics-and-elementary-sorts.md) · [Merge Sort and Quicksort](02-merge-sort-and-quicksort.md) · [Linear-Time Sorts, Timsort and Choosing a Sort](03-linear-time-sorts-and-timsort.md)

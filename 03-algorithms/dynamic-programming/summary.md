@@ -37,3 +37,6 @@ Interval DP · bitmask DP · digit DP · tree DP · state-machine DP (stocks).
 - Use hashable (tuple) state for `lru_cache`.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Dynamic Programming](01-dp-thinking-and-1d-problems.md) · [DP on Two Sequences, Grids and Knapsack](02-dp-on-two-sequences-and-grids.md) · [Advanced DP Patterns](03-advanced-dp-patterns.md)

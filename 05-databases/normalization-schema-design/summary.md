@@ -33,3 +33,6 @@ CSV in a column · floats for money · no foreign keys · magic numbers · one g
 Entities → relationships → keys → normalize to 3NF → constraints/types → indexes → measure → denormalize if needed.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Normalization Lab](01-normalization-lab.md)

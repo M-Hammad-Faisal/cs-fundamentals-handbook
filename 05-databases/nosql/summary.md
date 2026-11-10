@@ -30,3 +30,6 @@ Start with the access pattern, scale and consistency need. **Default to PostgreS
 Myth "SQL doesn't scale" · no schema ≠ no structure · hot partitions · treating a cache as the source of truth · ignoring where stale reads are unacceptable.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [NoSQL Lab](01-nosql-lab.md)

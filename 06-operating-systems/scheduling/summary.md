@@ -8,3 +8,6 @@
 - **Containers:** CPU limits throttle per period, causing latency spikes.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [CPU Scheduling Algorithms](01-scheduling-simulator.md)

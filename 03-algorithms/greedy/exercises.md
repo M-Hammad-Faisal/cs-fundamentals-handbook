@@ -139,3 +139,6 @@ def greedy_coins(coins, amount):
 ```
 
 </details>
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Greedy Algorithms](01-greedy-algorithms.md)

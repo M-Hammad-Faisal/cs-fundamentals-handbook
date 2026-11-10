@@ -30,3 +30,6 @@
 - Slicing inside recursion copies.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Arrays](01-arrays-and-memory.md) · [Working with Arrays](02-array-techniques.md) · [Strings in Depth](03-strings-in-depth.md)

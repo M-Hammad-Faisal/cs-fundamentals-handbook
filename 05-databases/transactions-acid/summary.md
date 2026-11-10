@@ -41,3 +41,6 @@ Cyclic waiting; the DB aborts a victim. Prevent with consistent lock order and s
 - Retry serialization failures and deadlocks with idempotent code.
 
 [Lesson](README.md) · [Exercises](exercises.md) · [Demo](demo_transactions.py)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Transactions Lab](01-transactions-lab.md)

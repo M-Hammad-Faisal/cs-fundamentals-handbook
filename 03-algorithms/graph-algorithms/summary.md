@@ -32,3 +32,6 @@
 - Recursion limits in big DFS-based algorithms.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Shortest Paths Beyond Dijkstra](01-all-pairs-and-heuristic-shortest-paths.md) · [Connectivity, Strongly Connected Components, Bridges and Max Flow](02-connectivity-scc-and-flow.md)

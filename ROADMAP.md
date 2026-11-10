@@ -33,6 +33,6 @@ Not yet written as dedicated lessons:
 | 07 Networking | none (routing, HTTP/2-3, REST, WebSockets and network debugging are written) |
 | 08 Modern Python | none (bridge lesson written) |
 | 09 Interview playbook | none (sixteen worked problems written, including graph, string DP and design-pattern rounds) |
-| All parts | per-topic `exercises.md` and `summary.md` were written before the detailed lessons and could be refreshed to match them |
+| All parts | none (each topic's `exercises.md` and `summary.md` now link to its detailed lessons; their own content predates those lessons and is still valid) |
 
 Contributions and ideas for any of these are welcome.

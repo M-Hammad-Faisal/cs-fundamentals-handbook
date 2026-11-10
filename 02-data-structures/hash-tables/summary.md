@@ -26,3 +26,6 @@
 - `hash()` is not stable across runs and not secure.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Hash Functions and Collisions](01-hash-functions-and-collisions.md) · [Implementing Hash Tables](02-implementing-hash-tables.md) · [Dict, Set, Hash-Map Patterns, Bloom Filters and Consistent Hashing](03-dict-set-internals-and-bloom-filters.md)

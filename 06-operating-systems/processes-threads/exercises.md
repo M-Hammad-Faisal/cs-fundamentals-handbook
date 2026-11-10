@@ -59,3 +59,6 @@ for fn, n in ((io, 10), (cpu, 4)):
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Processes in Practice](01-processes-in-practice.md) · [Threads and the GIL Lab](02-threads-and-the-gil-lab.md)

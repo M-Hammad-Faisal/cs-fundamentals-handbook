@@ -38,3 +38,6 @@ GET /app.js HTTP/1.1\r\nHost: example.com\r\nIf-None-Match: "8c1f2"\r\nAccept-En
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [HTTP from Scratch](01-http-from-scratch.md) · [DNS in Depth](02-dns-in-depth.md) · [HTTP/2 and HTTP/3 Internals](03-http2-and-http3-internals.md)

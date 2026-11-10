@@ -36,3 +36,6 @@ DDL (`CREATE/ALTER/DROP`) · DML (`INSERT/UPDATE/DELETE`) · DQL (`SELECT`) · T
 - Money: integers or `DECIMAL`, not floats.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [SQL First Steps](01-sql-first-steps.md) · [Aggregation and Joins Lab](02-aggregation-and-joins-lab.md) · [CTEs, Recursive Queries and Window Functions Lab](03-ctes-and-window-functions-lab.md)

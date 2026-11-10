@@ -35,3 +35,6 @@ for q in (1, 2, 4, 100):
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [CPU Scheduling Algorithms](01-scheduling-simulator.md)

@@ -11,3 +11,6 @@
 - **Pitfalls:** deleted-but-open files, check-then-open races, `/tmp` symlink attacks, assuming NFS behaves like local disk.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [File Systems in Depth](01-file-systems-in-depth.md)
