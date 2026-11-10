@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (260 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (264 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -214,7 +214,7 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 <!-- detailed-lessons:09 -->
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
-- **Worked problems:** [Ten Worked Interview Problems](09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md)
+- **Worked Problems:** [Ten Worked Interview Problems (with the Thinking, Not Just the Code)](09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md), [Worked Problems, Part 2: Graphs, String DP and Design-Pattern Rounds](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
 <!-- detailed-lessons:09 -->
 
 ## Revision tools

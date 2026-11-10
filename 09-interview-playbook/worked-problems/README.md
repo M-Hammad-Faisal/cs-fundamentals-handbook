@@ -5,6 +5,7 @@ Full walkthroughs of classic interview problems, written the way a strong candid
 ## Detailed lesson
 
 - [Ten worked interview problems](01-ten-worked-interview-problems.md): Two Sum, longest unique substring, merge intervals, valid parentheses, top K frequent, number of islands, course schedule, coin change, LRU cache, rotated-array search. Every solution is randomly tested against a brute-force or independent implementation.
+- [Graphs, string DP and design-pattern rounds](02-graph-string-dp-and-design-rounds.md): word ladder (BFS), network delay (Dijkstra), cycle detection, edit distance, longest common subsequence, longest palindromic substring, and Strategy, Observer and State design rounds. Each is tested against an independent slow solution.
 
 ## The loop
 

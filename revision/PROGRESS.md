@@ -215,6 +215,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Rapid-fire Python and CS questions](../09-interview-playbook/python-and-cs-rapid-fire/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Behavioral interviews, hiring process and 12-week plan](../09-interview-playbook/behavioral-and-process/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Ten Worked Interview Problems](../09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Worked Problems, Part 2](../09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## Mistake log
 Write down anything you got wrong and the fix. Review weekly.

@@ -186,6 +186,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Load factor**: Items divided by slots in a hash table; resizing keeps it bounded so lookups stay O(1). [Learn more](02-data-structures/hash-tables/01-hash-functions-and-collisions.md)
 - **Lock / mutex**: A tool that lets only one thread at a time into a critical section. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Logarithm**: The inverse of an exponent: how many times a number can be halved (log2). [Learn more](00-foundations/math-for-cs/exponents-and-logarithms.md)
+- **Longest common subsequence**: The longest sequence of characters that appears in both strings in the same order, not necessarily adjacent. [Learn more](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
 - **Lost update**: Two read-modify-write cycles overwrite each other so one change disappears. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## M
@@ -211,6 +212,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## O
 
+- **Observer pattern**: One event source notifies any number of subscribed listeners without knowing who they are. [Learn more](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
 - **OLTP / OLAP**: OLTP: many small transactional reads and writes; OLAP: few large analytical scans and aggregates. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **OOP**: Object-oriented programming: organizing code as objects with state and behavior. [Learn more](04-oop/README.md)
 - **Operating system**: Software that manages hardware and shares it between programs. [Learn more](00-foundations/computer-basics/how-computers-work.md)
@@ -281,6 +283,8 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Stack (call stack)**: Memory holding the frames of function calls in progress. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Stack (data structure)**: A last-in, first-out collection. [Learn more](02-data-structures/stacks-queues/README.md)
 - **Starvation**: A process or thread that never gets a resource because others always go first; aging is a common cure. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
+- **State pattern**: An object delegates behavior to a current state object and switches states as events occur, instead of branching on a flag everywhere. [Learn more](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
+- **Strategy pattern**: Putting an interchangeable algorithm behind an interface so the caller can swap it without changing its own code. [Learn more](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
 - **Strongly connected component**: A maximal set of vertices in a directed graph where every vertex can reach every other. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Subnet / CIDR**: A block of IP addresses defined by a prefix length such as /24. [Learn more](07-networking/tcp-ip-osi/README.md)
 - **Suffix array**: The start positions of all suffixes of a string in sorted order; supports fast substring queries. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
