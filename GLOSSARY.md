@@ -41,6 +41,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 - **Cache**: Fast storage for recently or frequently used data to avoid slower work. [Learn more](09-interview-playbook/system-design-basics/README.md)
 - **CAP theorem**: During a network partition a distributed system must choose between consistency and availability. [Learn more](05-databases/nosql/README.md)
+- **Cardinality**: How many entities on one side of a relationship relate to the other: one-to-one, one-to-many or many-to-many. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **CDN**: Content delivery network: servers around the world caching content near users. [Learn more](07-networking/load-balancing-cdn/README.md)
 - **Certificate (TLS)**: A document binding a public key to an identity such as a domain name, signed by a certificate authority. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Chinese remainder theorem**: Remainders modulo pairwise coprime numbers determine a number modulo their product. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
@@ -72,6 +73,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## D
 
 - **Dataclass**: A class whose boilerplate (`__init__`, `__repr__`, `__eq__`) is generated from annotated fields. [Learn more](08-modern-python/dataclasses-enums/README.md)
+- **DBMS (database management system)**: Software that stores, queries and protects a database (PostgreSQL, MySQL, SQLite). [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **Deadlock**: Tasks waiting on each other forever, none able to proceed. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Decorator**: A function that wraps another to add behavior (`@decorator`); also a structural design pattern. [Learn more](04-oop/design-patterns/structural/decorator.md)
 - **Dependency injection**: Passing an object the things it needs instead of letting it build them. [Learn more](04-oop/composition-design/README.md)
@@ -89,6 +91,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Encapsulation**: Bundling data with the code that works on it and controlling access to protect invariants. [Learn more](04-oop/encapsulation-abstraction/README.md)
 - **Encoding (text)**: The rule that maps characters to bytes (UTF-8, ASCII). [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Enum**: A fixed set of named constants. [Learn more](08-modern-python/dataclasses-enums/README.md)
+- **ER diagram**: An entity-relationship diagram: entities, their attributes and the relationships and cardinalities between them. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **Euclid's algorithm**: Computes the GCD with repeated remainders: gcd(a, b) = gcd(b, a mod b). [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Euler's totient**: phi(n): how many numbers from 1 to n are coprime to n; the exponent in Euler's theorem and in RSA. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Event loop**: The scheduler in `asyncio` that runs tasks and resumes them when awaited things finish. [Learn more](08-modern-python/async-concurrency/README.md)
@@ -148,6 +151,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **JOIN (SQL)**: Combining rows from two tables based on a related column. [Learn more](05-databases/relational-sql/README.md)
 - **Journaling**: Logging intended changes first so a file system or database can recover consistently after a crash. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **JSON**: A text format for structured data (objects, arrays, strings, numbers). [Learn more](00-foundations/python-fundamentals/05-files-modules-errors.md)
+- **Junction table**: A table with foreign keys to two tables that implements a many-to-many relationship (and holds the relationship's own attributes). [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 
 ## K
 
@@ -186,6 +190,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## O
 
+- **OLTP / OLAP**: OLTP: many small transactional reads and writes; OLAP: few large analytical scans and aggregates. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **OOP**: Object-oriented programming: organizing code as objects with state and behavior. [Learn more](04-oop/README.md)
 - **Operating system**: Software that manages hardware and shares it between programs. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 - **Optimistic concurrency**: Proceed without locks and detect conflicts at write time (for example with a version number), then retry. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
@@ -286,6 +291,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## W
 
+- **Weak entity**: An entity that cannot be identified without its parent; its key includes the parent's key. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **Webhook**: An HTTP request one system sends to a URL another system registered, to notify it of an event. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **WebSocket**: A persistent two-way connection between browser and server. [Learn more](07-networking/dns-http/README.md)
 - **Window function**: A function computed over related rows (a window) that keeps every row, such as `RANK()` or a running `SUM`. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)

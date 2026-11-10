@@ -141,6 +141,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 ## 05 Databases
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
 |-------|------|----|----|----|----|----|----|
+| Lesson: [What Is a Database](../05-databases/00-what-is-a-database-and-er-modeling.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Relational model and SQL](../05-databases/relational-sql/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Indexes and query plans](../05-databases/indexes-query-plans/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Transactions and isolation](../05-databases/transactions-acid/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |

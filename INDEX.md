@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (222 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (228 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -133,6 +133,7 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 <!-- detailed-lessons:05 -->
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
+- **Start here:** [What Is a Database? And How to Model One (ER Diagrams)](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **Indexes and Query Plans:** [Indexes Lab: Speed, Query Plans and Trade-offs](05-databases/indexes-query-plans/01-indexes-lab.md)
 - **Normalization and Schema Design:** [Normalization Lab: From a Messy Table to a Clean Schema](05-databases/normalization-schema-design/01-normalization-lab.md)
 - **NoSQL and Choosing a Database:** [NoSQL Lab: Key-Value, Documents, Search and Replication](05-databases/nosql/01-nosql-lab.md)

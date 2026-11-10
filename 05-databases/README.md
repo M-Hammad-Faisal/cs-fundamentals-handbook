@@ -4,12 +4,16 @@ How applications store, find and protect their data. Every lesson here runs **en
 
 **Prerequisites:** [Python basics](../00-foundations/python-fundamentals/README.md) and [data structures](../02-data-structures/README.md) (hash tables and B-trees explain a lot of database behavior). The shared dataset used by several lessons is [sample-data.sql](sample-data.sql).
 
+## Start here
+
+[What is a database? And how to model one (ER diagrams)](00-what-is-a-database-and-er-modeling.md): why databases exist, the modeling process, ER diagrams, turning them into tables, and enforcing the design with constraints.
+
 ## Reading order
 
 | # | Topic | Quick reference | Hands-on labs |
 |---|-------|-----------------|---------------|
 | 1 | The relational model and SQL | [lesson](relational-sql/README.md) | [SQL first steps](relational-sql/01-sql-first-steps.md) · [aggregation and joins](relational-sql/02-aggregation-and-joins-lab.md) · [CTEs and window functions](relational-sql/03-ctes-and-window-functions-lab.md) |
-| 2 | Schema design and normalization | [lesson](normalization-schema-design/README.md) | [normalization lab](normalization-schema-design/01-normalization-lab.md) |
+| 2 | Schema design and normalization | [lesson](normalization-schema-design/README.md) | [ER modeling](00-what-is-a-database-and-er-modeling.md) · [normalization lab](normalization-schema-design/01-normalization-lab.md) |
 | 3 | Indexes and query plans | [lesson](indexes-query-plans/README.md) | [indexes lab](indexes-query-plans/01-indexes-lab.md) |
 | 4 | Transactions, ACID and isolation | [lesson](transactions-acid/README.md) | [transactions lab](transactions-acid/01-transactions-lab.md) |
 | 5 | NoSQL and choosing a database | [lesson](nosql/README.md) | [NoSQL lab](nosql/01-nosql-lab.md) |
