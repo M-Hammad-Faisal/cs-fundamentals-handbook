@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (253 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (259 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -176,6 +176,7 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
 - **APIs and Real-Time Communication:** [REST APIs, Server-Sent Events and WebSockets: A Hands-On Lab](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
+- **Network Debugging:** [Network Debugging and Packet Capture (tcpdump, Wireshark and Python)](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **DNS and HTTP:** [HTTP from Scratch: Requests, Responses, Caching and a Tiny Server](07-networking/dns-http/01-http-from-scratch.md), [DNS in Depth: Wire Format, a Toy Server, Caching and Resolution](07-networking/dns-http/02-dns-in-depth.md), [HTTP/2 and HTTP/3 Internals](07-networking/dns-http/03-http2-and-http3-internals.md)
 - **Load Balancing, Proxies, CDNs and Resilience:** [Load Balancing and Resilience Lab](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Routing:** [Routing Protocols: Distance Vector, Link State and BGP](07-networking/routing/01-routing-protocols.md)

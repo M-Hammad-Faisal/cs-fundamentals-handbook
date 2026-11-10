@@ -38,6 +38,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Blocking call**: A call that makes the caller wait until it finishes. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Bloom filter**: A compact structure that says an item is definitely absent or probably present, with no false negatives. [Learn more](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
 - **Bootloader**: A small program (GRUB, Windows Boot Manager) that loads the operating system kernel and initramfs into memory. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
+- **BPF**: Berkeley Packet Filter: the kernel-level filter language used by tcpdump capture filters such as `tcp port 80`. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Branch (Git)**: A movable pointer to a commit, used for a separate line of development. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Bridge (graph)**: An edge whose removal disconnects a graph; a single point of failure. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Bytecode**: The intermediate instructions Python compiles source code into and its virtual machine executes. [Learn more](00-foundations/computer-basics/how-computers-work.md)
@@ -221,6 +222,8 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Page replacement**: The policy that chooses which in-memory page to evict when a new page is needed (FIFO, LRU, Clock). [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Page table**: The structure mapping a process's virtual pages to physical frames. [Learn more](06-operating-systems/memory-virtual-memory/01-paging-and-address-translation.md)
 - **Pagination**: Returning a large collection in pages (offset/page or cursor/keyset) instead of all at once. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
+- **Path MTU Discovery**: Finding the largest packet a path carries without fragmentation; breaks when ICMP errors are blocked. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
+- **pcap**: The classic packet-capture file format: a global header followed by per-packet records with timestamps and the raw bytes. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Pipe**: A one-way kernel buffer connecting the output of one process to the input of another. [Learn more](06-operating-systems/processes-threads/01-processes-in-practice.md)
 - **Polymorphism**: The same call doing the right thing for different object types. [Learn more](04-oop/polymorphism-dunder/README.md)
 - **Primary key**: A column (or set) that uniquely identifies each row in a table. [Learn more](05-databases/relational-sql/README.md)
@@ -251,6 +254,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **REPL**: Read-Eval-Print Loop: the interactive Python prompt. [Learn more](00-foundations/setup/README.md)
 - **Replication**: Keeping copies of data on several machines. [Learn more](05-databases/nosql/README.md)
 - **REST**: An API style using HTTP methods and URLs to act on resources. [Learn more](07-networking/dns-http/README.md)
+- **Retransmission**: A TCP segment sent again because its acknowledgment did not arrive in time; a sign of packet loss. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Reverse proxy**: A server in front of backends that forwards client requests to them (and may balance, cache or terminate TLS). [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Rolling hash**: A hash of a sliding window updated in O(1) by removing the old character and adding the new one. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
 - **RPKI**: A system of signed records (ROAs) stating which AS may originate which prefix, used to reject BGP hijacks. [Learn more](07-networking/routing/01-routing-protocols.md)
@@ -285,6 +289,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## T
 
 - **TCP / UDP**: TCP is reliable and ordered; UDP is fast and best-effort. [Learn more](07-networking/tcp-ip-osi/README.md)
+- **tcpdump**: Command-line packet capture and analysis tool; reads and writes pcap files. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Thrashing**: A system spending most of its time moving pages between disk and memory because working sets exceed RAM. [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Thread**: A unit of execution inside a process sharing its memory. [Learn more](06-operating-systems/processes-threads/README.md)
 - **Thread-local storage**: Data that each thread sees as its own private copy (`threading.local`). [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
@@ -320,6 +325,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Webhook**: An HTTP request one system sends to a URL another system registered, to notify it of an event. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **WebSocket**: A persistent two-way connection between browser and server. [Learn more](07-networking/dns-http/README.md)
 - **Window function**: A function computed over related rows (a window) that keeps every row, such as `RANK()` or a running `SUM`. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
+- **Wireshark**: Graphical packet analyzer that dissects protocols, follows streams and flags problems such as retransmissions. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Write skew**: Two transactions read overlapping data and make different writes that together break a rule, undetected by snapshot isolation. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
 
 ## X

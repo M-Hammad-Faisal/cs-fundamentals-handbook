@@ -9,7 +9,7 @@ How computers talk to each other, from bits on a wire to a web page in your brow
 | # | Topic | Quick reference | Hands-on labs |
 |---|-------|-----------------|---------------|
 | 1 | The network stack: OSI, TCP/IP, IP addressing, TCP vs UDP | [lesson](tcp-ip-osi/README.md) | [packets, addressing and subnets](tcp-ip-osi/01-packets-addressing-and-subnets.md) · [sockets: TCP and UDP](tcp-ip-osi/02-sockets-tcp-udp-lab.md) |
-| 2 | DNS and HTTP | [lesson](dns-http/README.md) | [HTTP from scratch](dns-http/01-http-from-scratch.md) · [DNS in depth](dns-http/02-dns-in-depth.md) · [HTTP/2 and HTTP/3](dns-http/03-http2-and-http3-internals.md) |
+| 2 | DNS and HTTP | [lesson](dns-http/README.md) | [HTTP from scratch](dns-http/01-http-from-scratch.md) · [DNS in depth](dns-http/02-dns-in-depth.md) · [HTTP/2 and HTTP/3](dns-http/03-http2-and-http3-internals.md) · [Network debugging](debugging/01-network-debugging-and-packet-capture.md) |
 | 3 | TLS and security basics | [lesson](tls-security/README.md) | [cryptography and TLS lab](tls-security/01-cryptography-and-tls-lab.md) |
 | 4 | Load balancing, CDNs and resilience | [lesson](load-balancing-cdn/README.md) | [load balancing and resilience lab](load-balancing-cdn/01-load-balancing-and-resilience-lab.md) |
 | 5 | APIs and real-time communication | [overview](apis-realtime/README.md) | [REST, SSE and WebSockets lab](apis-realtime/01-rest-apis-and-websockets-lab.md) |
