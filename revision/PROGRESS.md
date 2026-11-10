@@ -99,6 +99,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | Lesson: [Linear-Time Sorts, Timsort and Choosing a Sort](../03-algorithms/sorting/03-linear-time-sorts-and-timsort.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Number Theory for Programmers](../03-algorithms/number-theory/01-number-theory-for-programmers.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [String Algorithms](../03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Divide and Conquer](../03-algorithms/divide-and-conquer/01-divide-and-conquer.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 04 Object-oriented design
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

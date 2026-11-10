@@ -12,6 +12,7 @@ An **algorithm** is a precise recipe for solving a problem. This part teaches th
 | 2 | [Searching](searching/README.md) | [binary search](searching/01-linear-and-binary-search.md), [on the answer](searching/02-binary-search-on-the-answer.md) | halve the possibilities each step |
 | 3 | [Recursion and backtracking](recursion-backtracking/README.md) | [recursion](recursion-backtracking/01-recursion-fundamentals.md), [backtracking](recursion-backtracking/02-backtracking.md) | solve a smaller copy; try, undo, try again |
 | 4 | [Greedy](greedy/README.md) | [greedy algorithms](greedy/01-greedy-algorithms.md) | take the best-looking choice and never look back |
+| 4b | [Divide and conquer](divide-and-conquer/README.md) | [divide and conquer](divide-and-conquer/01-divide-and-conquer.md) | independent subproblems, the Master theorem |
 | 5 | [Dynamic programming](dynamic-programming/README.md) | [1D](dynamic-programming/01-dp-thinking-and-1d-problems.md), [two sequences and grids](dynamic-programming/02-dp-on-two-sequences-and-grids.md), [advanced](dynamic-programming/03-advanced-dp-patterns.md) | remember subproblem answers |
 | 6 | [Number theory](number-theory/README.md) | [number theory for programmers](number-theory/01-number-theory-for-programmers.md) | divisibility, remainders, primes |
 | 7 | [String algorithms](string-algorithms/README.md) | [matching, palindromes and suffix arrays](string-algorithms/01-string-matching-and-suffix-structures.md) | search and index text in near-linear time |
@@ -29,6 +30,7 @@ Each folder also has a quick-reference README, `exercises.md` and a one-page `su
 | "maximum number of non-overlapping...", "schedule", "cover" and a provable local rule | greedy |
 | "number of ways", "minimum cost", "longest", overlapping subproblems | dynamic programming |
 | "shortest path", "connected", "dependencies", "network" | graph algorithms |
+| a problem splits into independent halves; "recurrence", "Master theorem" | [divide and conquer](divide-and-conquer/README.md) |
 | "modulo 10^9+7", gcd, primes, remainders | [number theory](number-theory/README.md) |
 | Find a pattern or palindrome in text, index a text | [string algorithms](string-algorithms/README.md) |
 | It is a tree or nested structure | recursion |

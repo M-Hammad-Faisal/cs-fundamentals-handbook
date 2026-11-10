@@ -78,6 +78,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Dictionary**: A mapping from keys to values with O(1) average lookup (a hash table). [Learn more](02-data-structures/hash-tables/README.md)
 - **Diffie-Hellman**: A key-exchange method that lets two parties agree on a shared secret over a public channel. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **Dijkstra's algorithm**: Finds shortest paths from a source in a graph with non-negative edge weights. [Learn more](03-algorithms/graph-algorithms/README.md)
+- **Divide and conquer**: Solving a problem by splitting it into independent smaller copies, solving them recursively and combining the answers. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **DNS**: Domain Name System: translates names like example.com into IP addresses. [Learn more](07-networking/dns-http/README.md)
 - **Dynamic programming**: Solving problems by combining solutions of overlapping subproblems, storing results. [Learn more](03-algorithms/dynamic-programming/README.md)
 
@@ -148,6 +149,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## K
 
+- **Karatsuba algorithm**: A divide-and-conquer multiplication using three half-size products instead of four, in O(n^1.585). [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **Kernel**: The always-running core of the operating system, in privileged mode, managing CPU, memory and devices. [Learn more](06-operating-systems/00-what-is-an-operating-system.md)
 
 ## L
@@ -165,6 +167,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## M
 
 - **Manacher's algorithm**: Finds the longest palindromic substring (and all palindrome radii) in linear time. [Learn more](03-algorithms/string-algorithms/01-string-matching-and-suffix-structures.md)
+- **Master theorem**: A formula giving the growth of recurrences T(n) = aT(n/b) + n^d by comparing d with log_b a. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **Memoization**: Caching a function's results by its arguments to avoid recomputation. [Learn more](03-algorithms/dynamic-programming/README.md)
 - **Merge conflict**: Git cannot automatically combine changes to the same lines; you must resolve it. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Miller-Rabin test**: A fast probabilistic primality test, deterministic with fixed bases for 64-bit numbers. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
@@ -211,6 +214,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Radix sort**: Sorting numbers digit by digit with a stable sort; effectively linear for fixed-width keys. [Learn more](03-algorithms/sorting/03-linear-time-sorts-and-timsort.md)
 - **RAM**: Fast, temporary memory for programs and data in use. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 - **Rate limiter**: A mechanism (token bucket, sliding window) that caps how many requests a client may make over time. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
+- **Recurrence relation**: An equation expressing a quantity (such as an algorithm's running time) in terms of smaller inputs. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **Recursion**: A function calling itself on a smaller input until a base case. [Learn more](03-algorithms/recursion-backtracking/README.md)
 - **Recursive CTE**: A CTE that refers to itself (anchor plus recursive step) to walk hierarchies or generate sequences. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Reference**: A name or pointer that refers to an object in memory. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)

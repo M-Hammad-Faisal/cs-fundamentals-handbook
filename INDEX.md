@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (211 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (215 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -77,6 +77,7 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 | Sorting (bubble to merge, quick, heap, counting) | [lesson](03-algorithms/sorting/README.md) | [ex](03-algorithms/sorting/exercises.md) | [sum](03-algorithms/sorting/summary.md) | done |
 | Searching (linear, binary, search on the answer) | [lesson](03-algorithms/searching/README.md) | [ex](03-algorithms/searching/exercises.md) | [sum](03-algorithms/searching/summary.md) | done |
 | Recursion and backtracking | [lesson](03-algorithms/recursion-backtracking/README.md) | [ex](03-algorithms/recursion-backtracking/exercises.md) | [sum](03-algorithms/recursion-backtracking/summary.md) | done |
+| Divide and conquer (Master theorem, Karatsuba, closest pair) | [lesson](03-algorithms/divide-and-conquer/README.md) | | | done |
 | Dynamic programming | [lesson](03-algorithms/dynamic-programming/README.md) | [ex](03-algorithms/dynamic-programming/exercises.md) | [sum](03-algorithms/dynamic-programming/summary.md) | done |
 | Greedy algorithms | [lesson](03-algorithms/greedy/README.md) | [ex](03-algorithms/greedy/exercises.md) | [sum](03-algorithms/greedy/summary.md) | done |
 | Number theory (GCD, modular arithmetic, primes, Miller-Rabin) | [lesson](03-algorithms/number-theory/README.md) | | | done |
@@ -86,6 +87,7 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 <!-- detailed-lessons:03 -->
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
+- **Divide and Conquer:** [Divide and Conquer](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **Dynamic Programming:** [Dynamic Programming: Thinking and 1D Problems](03-algorithms/dynamic-programming/01-dp-thinking-and-1d-problems.md), [DP on Two Sequences, Grids and Knapsack](03-algorithms/dynamic-programming/02-dp-on-two-sequences-and-grids.md), [Advanced DP Patterns: State Machines, Trees, Bitmasks and Digits](03-algorithms/dynamic-programming/03-advanced-dp-patterns.md)
 - **Advanced Graph Algorithms:** [Shortest Paths Beyond Dijkstra: Floyd-Warshall, A*, 0-1 BFS](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [Connectivity, Strongly Connected Components, Bridges and Max Flow](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **Greedy Algorithms:** [Greedy Algorithms](03-algorithms/greedy/01-greedy-algorithms.md)

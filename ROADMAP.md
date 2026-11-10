@@ -26,7 +26,7 @@ Not yet written as dedicated lessons:
 
 | Area | Still to write |
 |------|----------------|
-| 03 Algorithms | stand-alone divide-and-conquer lesson (number theory and string algorithms are now written) |
+| 03 Algorithms | (none: divide and conquer, number theory and string algorithms are written) |
 | 04 OOP | UML and class-diagram guide |
 | 05 Databases | a "what is a database" overview with ER modeling, PostgreSQL-specific features (window functions and CTEs now have their own lab) |
 | 06 Operating systems | boot and bootloader in more depth, segmentation, a threads-and-GIL lab, containers and namespaces |
