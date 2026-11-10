@@ -136,6 +136,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Behavioral: Interpreter](../04-oop/design-patterns/behavioral/interpreter.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Behavioral: Null Object](../04-oop/design-patterns/behavioral/null-object.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [OOP From Scratch](../04-oop/00-oop-from-scratch.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [UML and Class Diagrams](../04-oop/01-uml-and-class-diagrams.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 05 Databases
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

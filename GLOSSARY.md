@@ -46,6 +46,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Chinese remainder theorem**: Remainders modulo pairwise coprime numbers determine a number modulo their product. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Circuit breaker**: A pattern that stops calling a failing dependency for a while so it can recover and callers fail fast. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Class / object**: A class is a blueprint; an object is an instance built from it. [Learn more](04-oop/classes-objects/README.md)
+- **Class diagram**: A UML diagram of classes, their attributes and methods, and the relationships between them. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Closure**: A function that remembers variables from the scope where it was created. [Learn more](08-modern-python/generators-functional/README.md)
 - **Code point**: The number Unicode assigns to a character. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Collision (hash)**: Two different keys that produce the same hash slot; every hash table needs a plan for them. [Learn more](02-data-structures/hash-tables/01-hash-functions-and-collisions.md)
@@ -170,6 +171,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Master theorem**: A formula giving the growth of recurrences T(n) = aT(n/b) + n^d by comparing d with log_b a. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **Memoization**: Caching a function's results by its arguments to avoid recomputation. [Learn more](03-algorithms/dynamic-programming/README.md)
 - **Merge conflict**: Git cannot automatically combine changes to the same lines; you must resolve it. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
+- **Mermaid**: A text format for diagrams (class, sequence, state, flow) that renders in GitHub and documentation tools. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Miller-Rabin test**: A fast probabilistic primality test, deterministic with fixed bases for 64-bit numbers. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Modular inverse**: For b mod m, the number b^-1 with b * b^-1 = 1 (mod m); exists when gcd(b, m) = 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Monotonic stack**: A stack kept sorted so each element is pushed and popped once; solves next-greater-element problems in O(n). [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
@@ -230,6 +232,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Scheduler**: The OS component that decides which task runs on the CPU next. [Learn more](06-operating-systems/scheduling/README.md)
 - **Segment tree**: A tree storing answers for ranges, supporting range queries and updates in O(log n). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
 - **Semaphore**: A counter that allows up to N tasks into a resource at once. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
+- **Sequence diagram**: A UML diagram showing the ordered messages between objects or services in one scenario. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Server-Sent Events (SSE)**: A one-way stream of text events from server to browser over a long-lived HTTP response. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **Sharding**: Splitting data across machines by key. [Learn more](05-databases/nosql/README.md)
 - **Shunting-yard algorithm**: Dijkstra's method for converting infix expressions to postfix using an operator stack. [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
@@ -267,6 +270,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## U
 
+- **UML**: Unified Modeling Language: a standard visual vocabulary for describing software structure and behavior. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Unicode / UTF-8**: The universal character set and its most common byte encoding. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Union-find**: A structure tracking which items are in the same group with near-O(1) merges and lookups. [Learn more](09-interview-playbook/problem-solving-patterns/README.md)
 - **Unit test**: An automated test of a small piece of code in isolation. [Learn more](08-modern-python/exceptions-logging-testing/README.md)

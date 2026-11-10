@@ -7,6 +7,7 @@ A path from your first class to design patterns. Read in order the first time.
 | # | Topic | Lesson |
 |---|-------|--------|
 | 0 | OOP from scratch (start here) | [lesson](00-oop-from-scratch.md) |
+| 0b | UML and class diagrams (read any time) | [lesson](01-uml-and-class-diagrams.md) |
 | 1 | Classes and objects in depth | [lesson](classes-objects/README.md) · [exercises](classes-objects/exercises.md) · [summary](classes-objects/summary.md) |
 | 2 | Encapsulation and abstraction | [lesson](encapsulation-abstraction/README.md) · [exercises](encapsulation-abstraction/exercises.md) · [summary](encapsulation-abstraction/summary.md) |
 | 3 | Inheritance, MRO and multiple inheritance | [lesson](inheritance-mro/README.md) · [exercises](inheritance-mro/exercises.md) · [summary](inheritance-mro/summary.md) |
@@ -29,6 +30,8 @@ A path from your first class to design patterns. Read in order the first time.
    - [Behavioral](design-patterns/behavioral/README.md): Strategy, Observer, Command, State, Template Method, Iterator, Chain of Responsibility, Mediator, Memento, Visitor, Interpreter, Null Object.
 
    Runnable scripts for every pattern live in the companion repository [design-patterns-python](https://github.com/M-Hammad-Faisal/design-patterns-python).
+
+Drawing your designs: [UML and class diagrams](01-uml-and-class-diagrams.md) (class, sequence and state diagrams in Mermaid, plus a tool that generates a diagram from your code).
 
 Related: [dataclasses, typing and Protocols](../08-modern-python/README.md) for the modern Python tools that make much of this lighter.
 

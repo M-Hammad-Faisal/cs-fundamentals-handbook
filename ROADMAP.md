@@ -27,7 +27,6 @@ Not yet written as dedicated lessons:
 | Area | Still to write |
 |------|----------------|
 | 03 Algorithms | (none: divide and conquer, number theory and string algorithms are written) |
-| 04 OOP | UML and class-diagram guide |
 | 05 Databases | a "what is a database" overview with ER modeling, PostgreSQL-specific features (window functions and CTEs now have their own lab) |
 | 06 Operating systems | boot and bootloader in more depth, segmentation, a threads-and-GIL lab, containers and namespaces |
 | 07 Networking | routing protocols (BGP/OSPF) in depth, HTTP/2 and HTTP/3 internals (REST design and WebSockets are now written), network debugging with `tcpdump`/Wireshark |

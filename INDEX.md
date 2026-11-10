@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (215 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (219 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -116,6 +116,7 @@ Overview and learning path: [01-complexity/README.md](01-complexity/README.md). 
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
 - **Start here:** [OOP From Scratch: Your First Classes](04-oop/00-oop-from-scratch.md)
+- **Also:** [UML and Class Diagrams](04-oop/01-uml-and-class-diagrams.md)
 <!-- detailed-lessons:04 -->
 
 ## 05 Databases
