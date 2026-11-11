@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (308 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (331 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -21,7 +21,7 @@ One topic per file; each file has a plain-English explanation, runnable code, pr
 | Section | Lessons | Status |
 |---------|---------|--------|
 | [Setup](00-foundations/setup/README.md) | Python, editor, Git, virtual environments, first tested project | done |
-| [Computer basics](00-foundations/computer-basics/README.md) | [How a computer runs programs](00-foundations/computer-basics/how-computers-work.md), [binary and data representation](00-foundations/computer-basics/binary-and-data-representation.md), [memory, stack and heap](00-foundations/computer-basics/memory-stack-heap.md) | done |
+| [Computer basics](00-foundations/computer-basics/README.md) | [How a computer runs programs](00-foundations/computer-basics/how-computers-work.md), [binary and data representation](00-foundations/computer-basics/binary-and-data-representation.md), [memory, stack and heap](00-foundations/computer-basics/memory-stack-heap.md), [CPU caches and the memory hierarchy](00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md) | done |
 | [Math for CS](00-foundations/math-for-cs/README.md) | [Exponents and logarithms](00-foundations/math-for-cs/exponents-and-logarithms.md), [logic, sets and proofs](00-foundations/math-for-cs/logic-sets-proofs.md), [counting and probability](00-foundations/math-for-cs/counting-and-probability.md), [sums and recurrences](00-foundations/math-for-cs/sums-and-recurrences.md) | done |
 | [Python fundamentals](00-foundations/python-fundamentals/README.md) | [Variables and types](00-foundations/python-fundamentals/01-variables-types-operators.md), [control flow](00-foundations/python-fundamentals/02-control-flow.md), [functions](00-foundations/python-fundamentals/03-functions.md), [collections](00-foundations/python-fundamentals/04-strings-lists-dicts-sets.md), [files, modules and errors](00-foundations/python-fundamentals/05-files-modules-errors.md), [debugging and testing](00-foundations/python-fundamentals/06-debugging-and-testing.md), [classes: first look](00-foundations/python-fundamentals/07-classes-first-look.md) | done |
 | [Command line and Git](00-foundations/command-line-and-git/README.md) | [Terminal](00-foundations/command-line-and-git/terminal-basics.md), [Git basics](00-foundations/command-line-and-git/git-basics.md), [branches and merging](00-foundations/command-line-and-git/git-branches-and-merging.md), [undo and history](00-foundations/command-line-and-git/git-undo-and-history.md), [GitHub collaboration](00-foundations/command-line-and-git/github-collaboration.md) | done |
@@ -30,6 +30,7 @@ One topic per file; each file has a plain-English explanation, runnable code, pr
 | Page | Status |
 |------|--------|
 | [Software engineering career path, end to end](00-career-path/README.md) | done |
+| [Software engineering practice: reading code, refactoring, reviews, design docs, estimates](00-career-path/02-software-engineering-practice.md) | done |
 
 ## 01 Complexity
 Overview and learning path: [01-complexity/README.md](01-complexity/README.md). Every lesson has practice with solutions and a self-check.
@@ -171,7 +172,7 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 | DNS and HTTP | [lesson](07-networking/dns-http/README.md) | [ex](07-networking/dns-http/exercises.md) | [sum](07-networking/dns-http/summary.md) | done |
 | TLS and security basics | [lesson](07-networking/tls-security/README.md) | [ex](07-networking/tls-security/exercises.md) | [sum](07-networking/tls-security/summary.md) | done |
 | Load balancing, CDNs and resilience | [lesson](07-networking/load-balancing-cdn/README.md) | [ex](07-networking/load-balancing-cdn/exercises.md) | [sum](07-networking/load-balancing-cdn/summary.md) | done |
-| APIs and real-time (REST, SSE, WebSockets) | [lesson](07-networking/apis-realtime/README.md) | | | done |
+| APIs and real-time (REST, SSE, WebSockets) | [lesson](07-networking/apis-realtime/README.md) | [ex](07-networking/apis-realtime/exercises.md) | [sum](07-networking/apis-realtime/summary.md) | done |
 
 <!-- detailed-lessons:07 -->
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
@@ -201,6 +202,14 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
 - **Start here:** [From Python Fundamentals to Modern Python](08-modern-python/00-from-fundamentals-to-modern-python.md)
+- **Backend with FastAPI:** [Building a Web API with FastAPI](08-modern-python/backend-with-fastapi/01-building-a-web-api-with-fastapi.md)
+- **Threads, Processes and Futures:** [Threads, Processes and Futures in Practice](08-modern-python/concurrency/01-threads-processes-and-futures.md)
+- **Data with NumPy and pandas:** [NumPy and pandas Essentials](08-modern-python/data-with-numpy-pandas/01-numpy-and-pandas-essentials.md)
+- **Database Access:** [Database Access from Python: sqlite3, SQLAlchemy ORM and the N+1 Problem](08-modern-python/database-access/01-sqlalchemy-and-database-access.md)
+- **Engineering Workflow:** [Engineering Workflow: Project Layout, Quality Tools, CI, Docker and Publishing](08-modern-python/engineering-workflow/01-ci-docker-pre-commit-and-publishing.md)
+- **Python Internals:** [The Python Data Model and CPython Internals](08-modern-python/internals/01-python-data-model-and-internals.md), [Build a Tiny Interpreter: Tokens, Parser, Evaluator and Bytecode VM](08-modern-python/internals/02-build-a-tiny-interpreter.md)
+- **Standard Library Toolbox:** [The Standard Library Toolbox: Regex, Dates and Time Zones, Subprocesses, Command-Line Tools](08-modern-python/stdlib-toolbox/01-regex-datetime-subprocess-argparse.md)
+- **Testing in Depth:** [Testing in Depth: pytest, Fixtures, Mocking and Property-Based Testing](08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md)
 <!-- detailed-lessons:08 -->
 
 ## 09 Interview playbook

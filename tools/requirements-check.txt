@@ -1,0 +1,10 @@
+# packages needed to run the code blocks of the lessons that use third-party libraries
+pytest
+pytest-cov
+hypothesis
+numpy
+pandas
+fastapi
+httpx
+pydantic
+sqlalchemy

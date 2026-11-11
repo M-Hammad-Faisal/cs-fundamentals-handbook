@@ -6,6 +6,11 @@ Finding out why a connection is slow, refused or flaky: a layer-by-layer method,
 
 - [Network debugging and packet capture](01-network-debugging-and-packet-capture.md): the climb-the-layers method, building and reading a pcap file from scratch, tcpdump and Wireshark filters, reading TCP conversations (retransmissions, resets), timing breakdowns and troubleshooting playbooks
 
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
 ## Quick reference
 
 | Symptom | Likely cause |

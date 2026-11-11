@@ -137,3 +137,7 @@ You can move between tracks. The core CS layer is shared, which is why the first
 3. Log what you finished in [`revision/PROGRESS.md`](../revision/PROGRESS.md).
 4. Review on the spaced schedule in [`revision/schedule.md`](../revision/schedule.md).
 5. Come back to this page every few months to check your stage and adjust.
+
+## 9. Going deeper on the working habits
+
+The technical levels above also need working habits: reading unfamiliar code, refactoring safely, writing commits, reviews and design docs, estimating, handling incidents. See [Software engineering practice](02-software-engineering-practice.md), which ends with a map of what to learn next.

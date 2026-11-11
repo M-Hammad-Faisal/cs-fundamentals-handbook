@@ -1,0 +1,25 @@
+name: Check handbook
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  links-and-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: tools/requirements-check.txt
+      - name: Install packages used by some lessons
+        run: pip install -r tools/requirements-check.txt
+      - name: Check relative links
+        run: python tools/check_links.py
+      - name: Run every code block
+        run: python tools/check_code_blocks.py

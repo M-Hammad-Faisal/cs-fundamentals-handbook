@@ -434,7 +434,7 @@ def timing_breakdown(host, port, path="/"):
     t0 = time.perf_counter()
     address = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)[0][4]       # DNS (loopback: instant)
     marks["dns"] = time.perf_counter() - t0
-    sock = socket.create_connection(address)                                      # TCP handshake
+    sock = socket.create_connection(address[:2])                                  # TCP handshake ([:2] keeps (host, port) for IPv4 and IPv6)
     marks["connect"] = time.perf_counter() - t0
     sock.sendall(f"GET {path} HTTP/1.1\r\nHost: {host}\r\nConnection: close\r\n\r\n".encode())
     marks["request_sent"] = time.perf_counter() - t0
@@ -446,7 +446,7 @@ def timing_breakdown(host, port, path="/"):
     sock.close()
     return marks
 
-m = timing_breakdown("localhost", port)
+m = timing_breakdown("127.0.0.1", port)
 phases = {"dns": m["dns"], "connect": m["connect"] - m["dns"], "server wait (ttfb)": m["first_byte"] - m["request_sent"], "download": m["done"] - m["first_byte"]}
 print({k: f"{v * 1000:.0f} ms" for k, v in phases.items()})
 # {'dns': '7 ms', 'connect': '0 ms', 'server wait (ttfb)': '156 ms', 'download': '0 ms'}       (exact numbers vary) the 150 ms we injected shows up as server wait

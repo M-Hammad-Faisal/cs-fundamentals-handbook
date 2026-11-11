@@ -6,6 +6,11 @@ A container is an ordinary process with a restricted view (namespaces) and restr
 
 - [Containers, namespaces and cgroups](01-containers-and-namespaces.md): namespaces, cgroups, real resource-limit experiments, a jail model, copy-on-write image layers with content addressing, Dockerfile and Docker commands, security
 
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
 ## Quick reference
 
 | Question | Answer |

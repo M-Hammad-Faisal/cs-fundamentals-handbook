@@ -1,0 +1,33 @@
+# Pages whose code blocks are skipped by tools/check_code_blocks.py, one per line.
+# They contain illustrative fragments or deliberate failures. Each has the reason after the #.
+# Prefer fixing a page (or marking a single block with 'python no-run') over adding it here.
+
+00-foundations/setup/README.md  # shows files of a separate small project, not runnable as one script
+01-complexity/04-analyzing-loops-and-recursion.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+02-data-structures/arrays-strings/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+02-data-structures/hash-tables/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+02-data-structures/heaps/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+03-algorithms/searching/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+03-algorithms/sorting/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/behavioral/command.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/behavioral/iterator.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/creational/abstract-factory.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/creational/builder.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/creational/prototype.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/creational/singleton.md  # shows files of a separate small project, not runnable as one script
+04-oop/design-patterns/structural/adapter.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/structural/facade.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/structural/flyweight.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+04-oop/design-patterns/structural/proxy.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+05-databases/nosql/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+05-databases/transactions-acid/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+05-databases/transactions-acid/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+06-operating-systems/memory-virtual-memory/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+06-operating-systems/scheduling/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+07-networking/dns-http/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+08-modern-python/modern-syntax/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+08-modern-python/packaging-tooling/README.md  # shows files of a separate small project, not runnable as one script
+08-modern-python/typing-hints/exercises.md  # deliberate: demonstrates the bug a type checker would catch
+09-interview-playbook/problem-solving-patterns/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
+09-interview-playbook/python-and-cs-rapid-fire/exercises.md  # deliberate: demonstrates an UnboundLocalError
+09-interview-playbook/system-design-basics/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone

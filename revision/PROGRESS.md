@@ -11,6 +11,7 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [How a computer runs programs](../00-foundations/computer-basics/how-computers-work.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Binary and data representation](../00-foundations/computer-basics/binary-and-data-representation.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Memory, stack and heap](../00-foundations/computer-basics/memory-stack-heap.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| [CPU caches and the memory hierarchy](../00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Exponents and logarithms](../00-foundations/math-for-cs/exponents-and-logarithms.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Logic, sets and proofs](../00-foundations/math-for-cs/logic-sets-proofs.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Counting and probability](../00-foundations/math-for-cs/counting-and-probability.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
@@ -207,6 +208,15 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Exceptions, logging and testing](../08-modern-python/exceptions-logging-testing/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | [Packaging, environments and tooling](../08-modern-python/packaging-tooling/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [From Python Fundamentals to Modern Python](../08-modern-python/00-from-fundamentals-to-modern-python.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Building a Web API with FastAPI](../08-modern-python/backend-with-fastapi/01-building-a-web-api-with-fastapi.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Threads, Processes and Futures in Practice](../08-modern-python/concurrency/01-threads-processes-and-futures.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [NumPy and pandas Essentials](../08-modern-python/data-with-numpy-pandas/01-numpy-and-pandas-essentials.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Database Access from Python](../08-modern-python/database-access/01-sqlalchemy-and-database-access.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Engineering Workflow](../08-modern-python/engineering-workflow/01-ci-docker-pre-commit-and-publishing.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [The Python Data Model and CPython Internals](../08-modern-python/internals/01-python-data-model-and-internals.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Build a Tiny Interpreter](../08-modern-python/internals/02-build-a-tiny-interpreter.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [The Standard Library Toolbox](../08-modern-python/stdlib-toolbox/01-regex-datetime-subprocess-argparse.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Testing in Depth](../08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## 09 Interview playbook
 | Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |

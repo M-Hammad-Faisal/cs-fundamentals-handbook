@@ -6,6 +6,11 @@ How programs expose services to each other over HTTP, and how servers push live 
 
 - [REST APIs, SSE and WebSockets lab](01-rest-apis-and-websockets-lab.md): REST design rules, a complete CRUD API with pagination, validation, idempotency keys and ETags, Server-Sent Events, and the WebSocket handshake and frame format implemented by hand
 
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
 ## Quick reference
 
 | Need | Use |

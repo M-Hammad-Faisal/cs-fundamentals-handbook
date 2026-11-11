@@ -6,6 +6,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## A
 
 - **Abstract class**: A class that cannot be instantiated directly; it defines methods that subclasses must provide. [Learn more](04-oop/encapsulation-abstraction/README.md)
+- **Abstract syntax tree**: A tree representing the structure of source code, produced by a parser (the ast module shows Python's). [Learn more](08-modern-python/internals/02-build-a-tiny-interpreter.md)
 - **Abstraction**: Using something through a simple interface while hiding how it works inside. [Learn more](04-oop/encapsulation-abstraction/README.md)
 - **ACID**: Atomicity, Consistency, Isolation, Durability: the guarantees of a database transaction. [Learn more](05-databases/transactions-acid/README.md)
 - **Algorithm**: A finite, step-by-step procedure that solves a problem. [Learn more](01-complexity/big-o/README.md)
@@ -21,6 +22,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Atomic operation**: An operation that happens completely or not at all, with no visible middle state. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Autonomous system (AS)**: A network under one administrative control with its own routing policy, identified by an AS number. [Learn more](07-networking/routing/01-routing-protocols.md)
 - **Avalanche effect**: A tiny change to a hash function's input changes about half the output bits. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
+- **Aware datetime**: A datetime that carries its time zone, so it denotes an unambiguous instant. [Learn more](08-modern-python/stdlib-toolbox/01-regex-datetime-subprocess-argparse.md)
 
 ## B
 
@@ -36,6 +38,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Binary search**: Finding an item in sorted data by repeatedly halving the search range; O(log n). [Learn more](03-algorithms/searching/README.md)
 - **Binary tree**: A tree in which each node has at most two children. [Learn more](02-data-structures/trees/README.md)
 - **Bit / byte**: A bit is 0 or 1; a byte is 8 bits. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
+- **Blameless postmortem**: A written review of an incident that focuses on contributing factors and follow-up actions rather than individuals. [Learn more](00-career-path/02-software-engineering-practice.md)
 - **Blocking call**: A call that makes the caller wait until it finishes. [Learn more](08-modern-python/async-concurrency/README.md)
 - **Bloom filter**: A compact structure that says an item is definitely absent or probably present, with no false negatives. [Learn more](02-data-structures/hash-tables/03-dict-set-internals-and-bloom-filters.md)
 - **Bootloader**: A small program (GRUB, Windows Boot Manager) that loads the operating system kernel and initramfs into memory. [Learn more](06-operating-systems/boot-and-startup/01-boot-process-and-bootloaders.md)
@@ -43,18 +46,21 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Branch (Git)**: A movable pointer to a commit, used for a separate line of development. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Bridge (graph)**: An edge whose removal disconnects a graph; a single point of failure. [Learn more](03-algorithms/graph-algorithms/02-connectivity-scc-and-flow.md)
 - **BRIN index**: A tiny PostgreSQL index storing min and max per block range, effective on huge tables whose values follow physical order. [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
+- **Broadcasting**: NumPy's rule for combining arrays of different compatible shapes without explicit loops. [Learn more](08-modern-python/data-with-numpy-pandas/01-numpy-and-pandas-essentials.md)
 - **Burn rate**: How fast the error budget is being consumed compared with the rate that would use it exactly by the window's end. [Learn more](11-distributed-systems/observability/01-observability-logs-metrics-traces-slos.md)
 - **Bytecode**: The intermediate instructions Python compiles source code into and its virtual machine executes. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 
 ## C
 
 - **Cache**: Fast storage for recently or frequently used data to avoid slower work. [Learn more](09-interview-playbook/system-design-basics/README.md)
+- **Cache line**: The unit (usually 64 bytes) in which memory is moved into the CPU cache. [Learn more](00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md)
 - **Cache stampede**: Many concurrent requests miss an expired hot key at once and overload the database; prevented by single-flight. [Learn more](09-interview-playbook/system-design-basics/03-caching-failure-modes-and-reliability.md)
 - **CAP theorem**: During a network partition a distributed system must choose between consistency and availability. [Learn more](05-databases/nosql/README.md)
 - **Cardinality**: How many entities on one side of a relationship relate to the other: one-to-one, one-to-many or many-to-many. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **CDN**: Content delivery network: servers around the world caching content near users. [Learn more](07-networking/load-balancing-cdn/README.md)
 - **Certificate (TLS)**: A document binding a public key to an identity such as a domain name, signed by a certificate authority. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
 - **cgroup (control group)**: A Linux kernel feature that limits and accounts for the resources (memory, CPU, processes, I/O) used by a group of processes. [Learn more](06-operating-systems/containers/01-containers-and-namespaces.md)
+- **Characterization test**: A test that records what existing code does now, so it can be refactored safely. [Learn more](00-career-path/02-software-engineering-practice.md)
 - **Chinese remainder theorem**: Remainders modulo pairwise coprime numbers determine a number modulo their product. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Circuit breaker**: A pattern that stops calling a failing dependency for a while so it can recover and callers fail fast. [Learn more](07-networking/load-balancing-cdn/01-load-balancing-and-resilience-lab.md)
 - **Class / object**: A class is a blueprint; an object is an instance built from it. [Learn more](04-oop/classes-objects/README.md)
@@ -73,6 +79,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Container**: An ordinary process given an isolated view (namespaces) and resource limits (cgroups) on the shared host kernel, started from an image. [Learn more](06-operating-systems/containers/01-containers-and-namespaces.md)
 - **Context manager**: An object used with `with` that guarantees setup and cleanup (files, locks). [Learn more](04-oop/polymorphism-dunder/README.md)
 - **Context switch**: The OS saving one task's CPU state and loading another's. [Learn more](06-operating-systems/scheduling/README.md)
+- **Continuous integration**: Automatically running checks and tests on every push and pull request on a clean machine. [Learn more](08-modern-python/engineering-workflow/01-ci-docker-pre-commit-and-publishing.md)
 - **Convoy effect**: Short jobs stuck waiting behind one long job in a non-preemptive first-come-first-served queue. [Learn more](06-operating-systems/scheduling/01-scheduling-simulator.md)
 - **Cookie**: A small piece of data a server asks the browser to store and send back. [Learn more](07-networking/dns-http/README.md)
 - **Coprime**: Two integers whose greatest common divisor is 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
@@ -89,11 +96,13 @@ Every important term in the handbook in plain words, with a link to the lesson t
 ## D
 
 - **Dataclass**: A class whose boilerplate (`__init__`, `__repr__`, `__eq__`) is generated from annotated fields. [Learn more](08-modern-python/dataclasses-enums/README.md)
+- **DataFrame**: A pandas table with labelled columns of typed values and an index. [Learn more](08-modern-python/data-with-numpy-pandas/01-numpy-and-pandas-essentials.md)
 - **DBMS (database management system)**: Software that stores, queries and protects a database (PostgreSQL, MySQL, SQLite). [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **Deadlock**: Tasks waiting on each other forever, none able to proceed. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Decorator**: A function that wraps another to add behavior (`@decorator`); also a structural design pattern. [Learn more](04-oop/design-patterns/structural/decorator.md)
 - **Dependency confusion**: An attack where a public package with the same name as an internal one is preferred by the installer. [Learn more](10-security/secrets-and-supply-chain/01-secrets-dependencies-and-hardening.md)
 - **Dependency injection**: Passing an object the things it needs instead of letting it build them. [Learn more](04-oop/composition-design/README.md)
+- **Descriptor**: An object with __get__, __set__ or __delete__ stored on a class; properties, methods and slots are descriptors. [Learn more](08-modern-python/internals/01-python-data-model-and-internals.md)
 - **DFS (depth-first search)**: Graph traversal that goes as deep as possible before backtracking, using recursion or a stack. [Learn more](02-data-structures/graphs/README.md)
 - **Dictionary**: A mapping from keys to values with O(1) average lookup (a hash table). [Learn more](02-data-structures/hash-tables/README.md)
 - **Diffie-Hellman**: A key-exchange method that lets two parties agree on a shared secret over a public channel. [Learn more](07-networking/tls-security/01-cryptography-and-tls-lab.md)
@@ -125,12 +134,14 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Factory pattern**: A function or method that decides which class to instantiate. [Learn more](04-oop/design-patterns/creational/factory-method.md)
 - **Fast exponentiation**: Computing a^n (mod m) in O(log n) by repeated squaring; Python's `pow(a, n, m)`. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Fenwick tree**: A compact structure for prefix sums with point updates in O(log n) (binary indexed tree). [Learn more](02-data-structures/trees/04-segment-and-fenwick-trees.md)
+- **Fixture**: A pytest function that supplies and cleans up what a test needs, injected by parameter name. [Learn more](08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md)
 - **Floating point**: The binary format for decimals; most decimal fractions are stored inexactly. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Floyd-Warshall**: A dynamic-programming algorithm for shortest paths between all pairs of vertices in O(V^3). [Learn more](03-algorithms/graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md)
 - **Foreign key**: A column that references the primary key of another table. [Learn more](05-databases/relational-sql/README.md)
 - **Free-threaded Python**: An optional CPython build (3.13+) without the GIL, letting threads run Python code in parallel. [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
 - **fsync**: A call that forces buffered file data to be written to disk before returning. [Learn more](06-operating-systems/file-systems-io/01-file-systems-in-depth.md)
 - **Function**: A named reusable block of code that takes parameters and may return a value. [Learn more](00-foundations/python-fundamentals/03-functions.md)
+- **Future**: A placeholder for a result a concurrent task will produce; result() returns it or re-raises its exception. [Learn more](08-modern-python/concurrency/01-threads-processes-and-futures.md)
 
 ## G
 
@@ -201,6 +212,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Load balancer**: Spreads requests across several servers and removes unhealthy ones. [Learn more](07-networking/load-balancing-cdn/README.md)
 - **Load factor**: Items divided by slots in a hash table; resizing keeps it bounded so lookups stay O(1). [Learn more](02-data-structures/hash-tables/01-hash-functions-and-collisions.md)
 - **Load shedding**: Rejecting excess requests early to keep latency low for the ones that are accepted. [Learn more](09-interview-playbook/system-design-basics/03-caching-failure-modes-and-reliability.md)
+- **Locality of reference**: The tendency of programs to reuse recent data (temporal) and nearby data (spatial), which caches exploit. [Learn more](00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md)
 - **Lock / mutex**: A tool that lets only one thread at a time into a critical section. [Learn more](06-operating-systems/concurrency-deadlocks/README.md)
 - **Logarithm**: The inverse of an exponent: how many times a number can be halved (log2). [Learn more](00-foundations/math-for-cs/exponents-and-logarithms.md)
 - **Longest common subsequence**: The longest sequence of characters that appears in both strings in the same order, not necessarily adjacent. [Learn more](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
@@ -216,7 +228,9 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Memoization**: Caching a function's results by its arguments to avoid recomputation. [Learn more](03-algorithms/dynamic-programming/README.md)
 - **Merge conflict**: Git cannot automatically combine changes to the same lines; you must resolve it. [Learn more](00-foundations/command-line-and-git/git-branches-and-merging.md)
 - **Mermaid**: A text format for diagrams (class, sequence, state, flow) that renders in GitHub and documentation tools. [Learn more](04-oop/01-uml-and-class-diagrams.md)
+- **Metaclass**: A class whose instances are classes; it controls how a class object is created. [Learn more](08-modern-python/internals/01-python-data-model-and-internals.md)
 - **Miller-Rabin test**: A fast probabilistic primality test, deterministic with fixed bases for 64-bit numbers. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
+- **Mock**: A stand-in object that records how it was used and returns scripted results, replacing a real dependency in a test. [Learn more](08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md)
 - **Modular inverse**: For b mod m, the number b^-1 with b * b^-1 = 1 (mod m); exists when gcd(b, m) = 1. [Learn more](03-algorithms/number-theory/01-number-theory-for-programmers.md)
 - **Monotonic stack**: A stack kept sorted so each element is pushed and popped once; solves next-greater-element problems in O(n). [Learn more](02-data-structures/stacks-queues/03-stack-and-queue-applications.md)
 - **MRO**: Method resolution order: the order in which Python searches base classes for an attribute. [Learn more](04-oop/inheritance-mro/README.md)
@@ -226,6 +240,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 ## N
 
+- **N+1 query problem**: Loading N parent rows and then issuing one extra query per parent for a related object. [Learn more](08-modern-python/database-access/01-sqlalchemy-and-database-access.md)
 - **Namespace (Linux)**: A kernel feature giving a group of processes a private view of a resource such as PIDs, network, mounts or hostname. [Learn more](06-operating-systems/containers/01-containers-and-namespaces.md)
 - **Normalization**: Organizing tables so each fact is stored once, avoiding anomalies. [Learn more](05-databases/normalization-schema-design/README.md)
 - **NoSQL**: Databases that do not use the relational table model (key-value, document, wide-column, graph). [Learn more](05-databases/nosql/README.md)
@@ -237,6 +252,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **OOP**: Object-oriented programming: organizing code as objects with state and behavior. [Learn more](04-oop/README.md)
 - **Operating system**: Software that manages hardware and shares it between programs. [Learn more](00-foundations/computer-basics/how-computers-work.md)
 - **Optimistic concurrency**: Proceed without locks and detect conflicts at write time (for example with a version number), then retry. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
+- **ORM**: Object-relational mapper: a library that maps database tables to classes and generates the SQL. [Learn more](08-modern-python/database-access/01-sqlalchemy-and-database-access.md)
 - **OSPF**: Open Shortest Path First: a link-state interior routing protocol using areas and cost based on bandwidth. [Learn more](07-networking/routing/01-routing-protocols.md)
 
 ## P
@@ -255,8 +271,10 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Primary key**: A column (or set) that uniquely identifies each row in a table. [Learn more](05-databases/relational-sql/README.md)
 - **Priority queue**: A queue where the highest-priority item leaves first (usually a heap). [Learn more](02-data-structures/heaps/README.md)
 - **Process**: A running program with its own address space and resources. [Learn more](06-operating-systems/processes-threads/README.md)
+- **Property-based testing**: Testing that a rule holds for many generated inputs and shrinking failures to a minimal example (Hypothesis). [Learn more](08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md)
 - **Protocol (networking)**: An agreed set of rules for communication (TCP, HTTP, DNS). [Learn more](07-networking/tcp-ip-osi/README.md)
 - **Protocol (Python typing)**: A class describing the methods an object must have, checked structurally. [Learn more](08-modern-python/typing-hints/README.md)
+- **Pydantic model**: A class describing the shape and constraints of data, validating input and shaping output. [Learn more](08-modern-python/backend-with-fastapi/01-building-a-web-api-with-fastapi.md)
 
 ## Q
 
@@ -276,6 +294,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Recurrence relation**: An equation expressing a quantity (such as an algorithm's running time) in terms of smaller inputs. [Learn more](03-algorithms/divide-and-conquer/01-divide-and-conquer.md)
 - **Recursion**: A function calling itself on a smaller input until a base case. [Learn more](03-algorithms/recursion-backtracking/README.md)
 - **Recursive CTE**: A CTE that refers to itself (anchor plus recursive step) to walk hierarchies or generate sequences. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
+- **Recursive descent parser**: A parser with one function per grammar rule, calling each other to build a syntax tree. [Learn more](08-modern-python/internals/02-build-a-tiny-interpreter.md)
 - **ReDoS**: Regular-expression denial of service: a crafted input makes a backtracking regex take exponential time. [Learn more](10-security/web-vulnerabilities/01-owasp-top-ten-in-python.md)
 - **Reference**: A name or pointer that refers to an object in memory. [Learn more](00-foundations/computer-basics/memory-stack-heap.md)
 - **Reference counting**: Memory management that frees an object when its count of references drops to zero (CPython's main scheme). [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
@@ -329,6 +348,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 
 - **TCP / UDP**: TCP is reliable and ordered; UDP is fast and best-effort. [Learn more](07-networking/tcp-ip-osi/README.md)
 - **tcpdump**: Command-line packet capture and analysis tool; reads and writes pcap files. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
+- **Technical debt**: The future cost of shortcuts taken today, which charges interest by slowing later work. [Learn more](00-career-path/02-software-engineering-practice.md)
 - **Thrashing**: A system spending most of its time moving pages between disk and memory because working sets exceed RAM. [Learn more](06-operating-systems/memory-virtual-memory/02-page-replacement-algorithms.md)
 - **Thread**: A unit of execution inside a process sharing its memory. [Learn more](06-operating-systems/processes-threads/README.md)
 - **Thread-local storage**: Data that each thread sees as its own private copy (`threading.local`). [Learn more](06-operating-systems/processes-threads/02-threads-and-the-gil-lab.md)
@@ -344,6 +364,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Tree**: A hierarchy of nodes with one root and child nodes. [Learn more](02-data-structures/trees/README.md)
 - **Trie**: A tree storing strings by shared prefixes. [Learn more](02-data-structures/tries/README.md)
 - **Trust boundary**: A point where data moves from a less-trusted zone to a more-trusted one, where input must be validated. [Learn more](10-security/threat-modeling/01-threat-modeling-and-secure-python.md)
+- **Trusted publishing**: Publishing a package using short-lived OpenID Connect credentials issued to a specific workflow, with no stored token. [Learn more](08-modern-python/engineering-workflow/01-ci-docker-pre-commit-and-publishing.md)
 - **TTL (time to live)**: How long a cached record (DNS answer, cache entry) may be reused before it expires. [Learn more](07-networking/dns-http/02-dns-in-depth.md)
 - **Tuple**: An immutable ordered collection. [Learn more](00-foundations/python-fundamentals/04-strings-lists-dicts-sets.md)
 - **Two-phase commit**: An atomic commit protocol (prepare, then commit) that can block participants if the coordinator fails. [Learn more](11-distributed-systems/transactions/01-idempotency-retries-and-sagas.md)
@@ -356,6 +377,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **UML**: Unified Modeling Language: a standard visual vocabulary for describing software structure and behavior. [Learn more](04-oop/01-uml-and-class-diagrams.md)
 - **Unicode / UTF-8**: The universal character set and its most common byte encoding. [Learn more](00-foundations/computer-basics/binary-and-data-representation.md)
 - **Union-find**: A structure tracking which items are in the same group with near-O(1) merges and lookups. [Learn more](09-interview-playbook/problem-solving-patterns/README.md)
+- **Unit of work**: A session pattern that tracks changed objects and writes them together in one transaction on commit. [Learn more](08-modern-python/database-access/01-sqlalchemy-and-database-access.md)
 - **Unit test**: An automated test of a small piece of code in isolation. [Learn more](08-modern-python/exceptions-logging-testing/README.md)
 - **Upsert**: Insert a row, or update the existing one if a key conflicts, in one atomic statement (INSERT ... ON CONFLICT). [Learn more](05-databases/postgresql/01-postgresql-specific-features.md)
 
@@ -372,6 +394,7 @@ Every important term in the handbook in plain words, with a link to the lesson t
 - **Weak entity**: An entity that cannot be identified without its parent; its key includes the parent's key. [Learn more](05-databases/00-what-is-a-database-and-er-modeling.md)
 - **Webhook**: An HTTP request one system sends to a URL another system registered, to notify it of an event. [Learn more](07-networking/apis-realtime/01-rest-apis-and-websockets-lab.md)
 - **WebSocket**: A persistent two-way connection between browser and server. [Learn more](07-networking/dns-http/README.md)
+- **Wheel**: A pre-built Python package archive that installs by unpacking, without a build step. [Learn more](08-modern-python/engineering-workflow/01-ci-docker-pre-commit-and-publishing.md)
 - **Window function**: A function computed over related rows (a window) that keeps every row, such as `RANK()` or a running `SUM`. [Learn more](05-databases/relational-sql/03-ctes-and-window-functions-lab.md)
 - **Wireshark**: Graphical packet analyzer that dissects protocols, follows streams and flags problems such as retransmissions. [Learn more](07-networking/debugging/01-network-debugging-and-packet-capture.md)
 - **Write skew**: Two transactions read overlapping data and make different writes that together break a rule, undetected by snapshot isolation. [Learn more](05-databases/transactions-acid/01-transactions-lab.md)
