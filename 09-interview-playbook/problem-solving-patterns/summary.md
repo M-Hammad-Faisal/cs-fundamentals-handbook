@@ -1,5 +1,7 @@
 # Problem-Solving Patterns for Coding Interviews: One-Page Summary
 
+## Key facts
+
 **Method (UMPIRE):** Understand (clarify, edge cases) > Match (pattern) > Plan (brute force, then better; state complexity) > Implement (clean, think aloud) > Review (trace examples, edges) > Evaluate (time, space, trade-offs).
 
 **Constraint -> target:** n<=10 O(n!); <=20 O(2^n); <=100 O(n^3); <=1e3 O(n^2); <=1e5 O(n log n); <=1e6 O(n); huge O(log n).
@@ -24,5 +26,13 @@
 | Odd one out, subsets, parity | Bit manipulation | O(n) |
 
 **Pitfalls:** off-by-one at boundaries, copy `path[:]` in backtracking, mark BFS visited on enqueue, recursion limits, unproven greedy, hidden O(n) (`in list`, slicing).
+
+## Pitfalls
+
+- Jumping to code without naming the pattern, or picking one that the constraints rule out (sliding window with negative numbers).
+- Binary search on the answer with a predicate that is not monotonic, or bounds that never converge.
+- BFS that marks nodes visited when dequeued instead of when enqueued (duplicates in the queue).
+- Backtracking that appends the same mutable list to the results instead of a copy.
+- Two pointers on unsorted data.
 
 [Lesson](README.md) · [Exercises](exercises.md)

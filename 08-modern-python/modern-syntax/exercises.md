@@ -1,12 +1,16 @@
 # Modern Python Language Features: Exercises
 
+These problems go with the [Modern Python Language Features lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Format a price list so that names are left-aligned in 10 columns and prices right-aligned with 2 decimals and thousands separators, using one f-string per row.
 2. Write `connect(host, port=5432, /, *, timeout=5, ssl=True)` and show which calls are valid or invalid.
 3. Use `match` to implement `evaluate(expr)` for tuples like `("add", 2, 3)`, `("neg", 5)`, `("mul", ("add", 1, 2), 4)`.
 4. Use `match` with a dataclass hierarchy `Click(x, y)`, `Key(char)`, `Scroll(dy)` to produce a description of each event, with a guard for far-right clicks.
 5. Rewrite this with the walrus operator and explain the benefit:
-   ```python
-   # skip  (question snippet)
+   ```python no-run
+   # a question snippet (not complete code)
    m = pattern.search(text)
    if m:
        print(m.group(1))

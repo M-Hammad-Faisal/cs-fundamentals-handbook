@@ -1,8 +1,69 @@
 # Replication and Sharding: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Replication and Sharding lesson](README.md). Try each one before opening its solution.
 
-## Replication, Quorums and Sharding
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import hashlib
+import bisect, hashlib, statistics
+
+class Leader:
+    def __init__(self):
+        self.log, self.data = [], {}
+    def write(self, key, value):
+        self.log.append((key, value))             # the replication log: an ordered list of changes
+        self.data[key] = value
+
+class Follower:
+    def __init__(self, leader, name):
+        self.leader, self.name, self.applied, self.data = leader, name, 0, {}
+    def catch_up(self, max_entries=None):
+        entries = self.leader.log[self.applied:]
+        if max_entries is not None:
+            entries = entries[:max_entries]
+        for key, value in entries:                # replay the leader's changes in order
+            self.data[key] = value
+        self.applied += len(entries)
+    @property
+    def lag(self):
+        return len(self.leader.log) - self.applied
+
+leader = Leader()
+f1, f2 = Follower(leader, "f1"), Follower(leader, "f2")
+
+def h(s: str) -> int:                              # stable hash (Python's built-in hash() changes between runs)
+    return int(hashlib.md5(s.encode()).hexdigest(), 16)
+
+class Ring:
+    def __init__(self, nodes=(), vnodes=100):
+        self.vnodes, self.points, self.owner = vnodes, [], {}
+        for node in nodes:
+            self.add(node)
+
+    def add(self, node):
+        for i in range(self.vnodes):               # one server = many points on the ring
+            p = h(f"{node}#{i}")
+            bisect.insort(self.points, p)
+            self.owner[p] = node
+
+    def remove(self, node):
+        for i in range(self.vnodes):
+            p = h(f"{node}#{i}")
+            self.points.remove(p)
+            del self.owner[p]
+
+    def lookup(self, key):
+        i = bisect.bisect(self.points, h(key)) % len(self.points)    # first point clockwise (wrap around)
+        return self.owner[self.points[i]]
+
+keys = [f"user:{i}" for i in range(10_000)]
+```
+
+</details>
+
+## Problems
 
 1. In the leader/follower demo, make `f2` catch up fully and print `f2.data`. What invariant makes this safe even if `catch_up` is called repeatedly?
 2. For `N=7`, which `(W, R)` pairs with `W + R = 8` are valid quorums, and which gives the fastest reads?
@@ -14,19 +75,19 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    f2.catch_up()
    print(f2.data, f2.lag)
    # {'name': 'Ada Lovelace', 'city': 'London'} 0
    ```
    Each follower remembers how many log entries it has applied (`applied`), so replays never repeat or skip entries; calling `catch_up` again does nothing once lag is 0.
-2. ```python no-run
+2. ```python
    n = 7
    print([(8 - r, r) for r in range(1, 8)])
    # [(7, 1), (6, 2), (5, 3), (4, 4), (3, 5), (2, 6), (1, 7)]
    ```
    All satisfy `W + R > 7`. `W=7, R=1` gives the fastest reads (but any down replica stops writes).
-3. ```python no-run
+3. ```python
    ring = Ring(["A", "B", "C", "D"], 100)
    before = {k: ring.lookup(k) for k in keys}
    ring.remove("B")
@@ -37,7 +98,7 @@ Try each problem before opening its solution. These are the practice problems of
    ```
    Only keys that were on `B` move, and they spread to the remaining servers.
 4. New rows always have the newest timestamp, so every write goes to the last range. Fix: prefix the key with a hash bucket (`bucket = hash(id) % 16` then `(bucket, timestamp)`) so writes spread over 16 ranges, and query each bucket for a time range (scatter-gather).
-5. ```python no-run
+5. ```python
    def read_your_writes(leader, followers, last_write_position):
        for f in followers:
            if f.applied >= last_write_position:

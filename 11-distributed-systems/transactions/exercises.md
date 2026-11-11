@@ -1,8 +1,25 @@
 # Distributed Transactions and Reliability Patterns: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Distributed Transactions and Reliability Patterns lesson](README.md). Try each one before opening its solution.
 
-## Idempotency, Retries, Circuit Breakers, Sagas and the Outbox
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import random
+
+calls = {"n": 0}
+
+def flaky():
+    calls["n"] += 1
+    if calls["n"] < 4:
+        raise TimeoutError("slow server")
+    return f"succeeded on call {calls['n']}"
+```
+
+</details>
+
+## Problems
 
 1. Make the `retry` function also accept a `deadline` (total seconds budget) and stop retrying when the next sleep would exceed it.
 2. Why is `UPDATE accounts SET balance = balance - 10 WHERE id = 1` not idempotent, and how would you make a money transfer idempotent?
@@ -14,7 +31,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    def retry_with_deadline(fn, budget, base=0.1, rng=None, retryable=(TimeoutError,)):
        rng = rng or random.Random(0)
        spent, n = 0.0, 0

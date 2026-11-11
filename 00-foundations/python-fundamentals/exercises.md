@@ -1,8 +1,157 @@
 # Python Fundamentals: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Python Fundamentals lesson](README.md). Try each one before opening its solution.
 
-## Variables, Types and Operators
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import unittest
+import json
+import csv
+import os, tempfile
+from pathlib import Path
+import sys, importlib, tempfile, textwrap
+
+folder = tempfile.mkdtemp()                       # a throwaway folder so these examples can run anywhere
+path = os.path.join(folder, "notes.txt")
+
+with open(path, "w", encoding="utf-8") as f:      # "w" = write (creates or overwrites)
+    f.write("first line\n")
+    f.write("second line\n")
+    f.writelines(["third line\n", "fourth line\n"])
+
+with open(path, encoding="utf-8") as f:           # "r" = read (the default)
+    whole = f.read()
+
+print(repr(whole[:22]))                           # 'first line\nsecond line\n'
+
+with open(path, encoding="utf-8") as f:
+    for line_number, line in enumerate(f, start=1):      # iterate: reads one line at a time (big-file friendly)
+        print(line_number, line.rstrip("\n"))
+
+with open(path, "a", encoding="utf-8") as f:      # "a" = append to the end
+    f.write("fifth line\n")
+
+with open(path, encoding="utf-8") as f:
+    lines = f.read().splitlines()
+
+print(len(lines), lines[-1])                      # 5 fifth line
+
+
+root = Path(folder)
+p = root / "data" / "report.txt"                  # / joins path parts on any operating system
+p.parent.mkdir(parents=True, exist_ok=True)       # create the folder (and parents) if missing
+p.write_text("hello\n", encoding="utf-8")
+print(p.name, p.stem, p.suffix, p.exists(), p.read_text(encoding="utf-8").strip())    # report.txt report .txt True hello
+print(sorted(x.name for x in root.rglob("*.txt")))                  # ['notes.txt', 'report.txt']
+print(p.stat().st_size, p.is_file(), p.parent.is_dir())             # 6 True True
+
+
+mod_dir = tempfile.mkdtemp()
+Path(mod_dir, "geometry.py").write_text(textwrap.dedent('''
+    """Small geometry helpers."""
+    import math
+
+    def circle_area(radius):
+        return math.pi * radius ** 2
+
+    def rectangle_area(width, height):
+        return width * height
+
+    if __name__ == "__main__":          # runs only when executed directly, NOT when imported
+        print("running as a script")
+
+'''), encoding="utf-8")
+
+sys.path.insert(0, mod_dir)               # make the folder importable (normally your project folder already is)
+geometry = importlib.import_module("geometry")
+print(round(geometry.circle_area(2), 2), geometry.rectangle_area(3, 4))      # 12.57 12
+
+
+def find_max(numbers):
+    best = 0                              # BUG: wrong when all numbers are negative
+    for n in numbers:
+        if n > best:
+            best = n
+    return best
+
+# 1. Reproduce
+print(find_max([3, 9, 2]))                # 9   (works)
+print(find_max([-5, -2, -9]))             # 0   (wrong! the answer should be -2)
+
+# 2. Hypothesis: `best` starts at 0, which is larger than every negative number.
+# 3. Fix: start from the first element (and handle an empty list explicitly).
+
+def find_max_fixed(numbers):
+    if not numbers:
+        raise ValueError("find_max_fixed() needs at least one number")
+    best = numbers[0]
+    for n in numbers[1:]:
+        if n > best:
+            best = n
+    return best
+
+# 4. Regression tests: they would have caught the bug
+assert find_max_fixed([3, 9, 2]) == 9
+assert find_max_fixed([-5, -2, -9]) == -2
+assert find_max_fixed([7]) == 7
+try:
+    find_max_fixed([])
+
+except ValueError:
+    print("empty list rejected; tests pass")
+
+
+class BankAccount:
+    """A simple bank account that cannot go negative."""
+
+    def __init__(self, owner, balance=0):
+        if balance < 0:
+            raise ValueError("opening balance cannot be negative")
+        self.owner = owner
+        self.balance = balance
+        self.history = []                          # each object gets its OWN list
+
+    def deposit(self, amount):
+        if amount <= 0:
+            raise ValueError("deposit must be positive")
+        self.balance += amount
+        self.history.append(("deposit", amount))
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            raise ValueError("withdrawal must be positive")
+        if amount > self.balance:
+            raise ValueError("insufficient funds")
+        self.balance -= amount
+        self.history.append(("withdraw", amount))
+
+    def __str__(self):
+        return f"{self.owner}: balance {self.balance}"
+
+acct = BankAccount("Ayesha", 100)
+acct.deposit(50)
+acct.withdraw(30)
+print(acct)                                        # Ayesha: balance 120
+print(acct.history)                                # [('deposit', 50), ('withdraw', 30)]
+
+try:
+    acct.withdraw(1000)
+
+except ValueError as error:
+    print("rejected:", error)                      # rejected: insufficient funds
+
+other = BankAccount("Bilal")
+other.deposit(10)
+print(acct.balance, other.balance)                 # 120 10      (independent objects)
+```
+
+</details>
+
+## Problems
+
+### Variables, Types and Operators
 
 1. Ask for (simulate) a number of seconds, 4,000, and print it as `HH:MM:SS`.
 2. Swap two variables without a third variable (in two different ways).
@@ -15,7 +164,7 @@ Try each problem before opening its solution. These are the practice problems of
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 seconds = 4000
 hours, rest = divmod(seconds, 3600)
 minutes, secs = divmod(rest, 60)
@@ -23,7 +172,7 @@ print(f"{hours:02d}:{minutes:02d}:{secs:02d}")           # 01:06:40
 ```
 
 **2.**
-```python no-run
+```python
 a, b = 1, 2
 a, b = b, a                       # tuple swap
 a = a + b; b = a - b; a = a - b   # arithmetic swap
@@ -31,18 +180,18 @@ print(a, b)                       # 1 2   (swapped twice, back to the start)
 ```
 
 **3.** `2`, `-3`, `-1`, `512` (`**` associates right-to-left: `3 ** 2 = 9`, `2 ** 9`), `1`.
-```python no-run
+```python
 print(5 // 2, -5 // 2, 5 % -2, 2 ** 3 ** 2, not 0 and 1)
 ```
 
 **4.**
-```python no-run
+```python
 c = 100
 print(f"{c * 9 / 5 + 32:.1f}")           # 212.0
 ```
 
 **5.**
-```python no-run
+```python
 w, h = 7.5, 3.2
 print(f"area={w * h:.2f} perimeter={2 * (w + h):.2f}")     # area=24.00 perimeter=21.40
 ```
@@ -51,7 +200,7 @@ print(f"area={w * h:.2f} perimeter={2 * (w + h):.2f}")     # area=24.00 perimete
 
 </details>
 
-## Making Decisions and Repeating Things
+### Making Decisions and Repeating Things
 
 1. Print the multiplication table of 7 from 1 to 10.
 2. Sum all numbers from 1 to 1000 that are divisible by 3 or 5.
@@ -65,18 +214,18 @@ print(f"area={w * h:.2f} perimeter={2 * (w + h):.2f}")     # area=24.00 perimete
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 for i in range(1, 11):
     print(f"7 x {i:2d} = {7 * i:3d}")
 ```
 
 **2.**
-```python no-run
+```python
 print(sum(n for n in range(1, 1001) if n % 3 == 0 or n % 5 == 0))      # 234168
 ```
 
 **3.**
-```python no-run
+```python
 data = [5, 9, 2, 9, 7]
 largest = second = float("-inf")
 for n in data:
@@ -88,7 +237,7 @@ print(second)                         # 7
 ```
 
 **4.**
-```python no-run
+```python
 text, reversed_text = "python", ""
 for ch in text:
     reversed_text = ch + reversed_text
@@ -96,19 +245,19 @@ print(reversed_text)                  # nohtyp
 ```
 
 **5.**
-```python no-run
+```python
 for i in range(1, 6):
     print(" " * (5 - i) + "*" * i)
 ```
 
 **6.**
-```python no-run
+```python
 sentence = "Programming is fun"
 print(sum(1 for ch in sentence.lower() if ch in "aeiou"))      # 5
 ```
 
 **7.**
-```python no-run
+```python
 secret = 42
 for guess in [10, 90, 42, 50]:
     if guess < secret:
@@ -122,7 +271,7 @@ for guess in [10, 90, 42, 50]:
 
 </details>
 
-## Functions
+### Functions
 
 1. Write `celsius_to_fahrenheit(c)` and test with `assert`.
 2. Write `is_even(n)`, `count_vowels(text)`, and `average(numbers)` (handle an empty list by raising `ValueError`).
@@ -136,14 +285,14 @@ for guess in [10, 90, 42, 50]:
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 def celsius_to_fahrenheit(c):
     return c * 9 / 5 + 32
 assert celsius_to_fahrenheit(100) == 212 and celsius_to_fahrenheit(0) == 32
 ```
 
 **2.**
-```python no-run
+```python
 def is_even(n): return n % 2 == 0
 def count_vowels(text): return sum(1 for ch in text.lower() if ch in "aeiou")
 def average(numbers):
@@ -154,14 +303,14 @@ assert is_even(4) and count_vowels("Python Rocks") == 2 and average([2, 4]) == 3
 ```
 
 **3.**
-```python no-run
+```python
 def clamp(value, low=0, high=100):
     return max(low, min(value, high))
 assert clamp(150) == 100 and clamp(-5) == 0 and clamp(50) == 50 and clamp(5, 10, 20) == 10
 ```
 
 **4.**
-```python no-run
+```python
 import time
 def fib_iter(n):
     a, b = 0, 1
@@ -176,7 +325,7 @@ print(fib_iter(30) == fib_rec(30), slow > fast * 100)     # True True  (the recu
 ```
 
 **5.**
-```python no-run
+```python
 def compose(f, g):
     return lambda x: f(g(x))
 add_one_then_double = compose(lambda x: x * 2, lambda x: x + 1)
@@ -184,7 +333,7 @@ print(add_one_then_double(5))                              # 12
 ```
 
 **6.**
-```python no-run
+```python
 def power_rec(base, exp):
     return 1 if exp == 0 else base * power_rec(base, exp - 1)
 def reverse_rec(text):
@@ -193,7 +342,7 @@ print(power_rec(2, 10), reverse_rec("python"))             # 1024 nohtyp
 ```
 
 **7.**
-```python no-run
+```python
 def append_to(x, lst=None):
     if lst is None:
         lst = []
@@ -203,7 +352,7 @@ def append_to(x, lst=None):
 
 </details>
 
-## Strings, Lists, Tuples, Dictionaries and Sets
+### Strings, Lists, Tuples, Dictionaries and Sets
 
 1. Reverse each word in `"python is fun"` but keep the word order.
 2. Find the three most common letters in a sentence (ignore spaces and case).
@@ -218,12 +367,12 @@ def append_to(x, lst=None):
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 print(" ".join(word[::-1] for word in "python is fun".split()))     # nohtyp si nuf
 ```
 
 **2.**
-```python no-run
+```python
 from collections import Counter
 sentence = "Hello World, hello Python"
 letters = [c for c in sentence.lower() if c.isalpha()]
@@ -231,13 +380,13 @@ print(Counter(letters).most_common(3))               # [('l', 5), ('o', 4), ('h'
 ```
 
 **3.**
-```python no-run
+```python
 a, b = [1, 2, 2, 3, 4], [3, 4, 4, 5]
 print(sorted(set(a) & set(b)), sorted(set(a) ^ set(b)))        # [3, 4] [1, 2, 5]
 ```
 
 **4.**
-```python no-run
+```python
 groups = {}
 for word in ["apple", "avocado", "banana", "blueberry", "cherry"]:
     groups.setdefault(word[0], []).append(word)
@@ -245,20 +394,20 @@ print(groups)       # {'a': ['apple', 'avocado'], 'b': ['banana', 'blueberry'], 
 ```
 
 **5.**
-```python no-run
+```python
 items = [3, 1, 3, 2, 1, 4]
 print(list(dict.fromkeys(items)))                    # [3, 1, 2, 4]   (dicts keep insertion order)
 ```
 
 **6.**
-```python no-run
+```python
 def is_anagram(a, b):
     return sorted(a.replace(" ", "").lower()) == sorted(b.replace(" ", "").lower())
 print(is_anagram("Listen", "Silent"), is_anagram("abc", "abd"))     # True False
 ```
 
 **7.**
-```python no-run
+```python
 def rotate_left(items, k):
     k %= len(items) or 1
     return items[k:] + items[:k]
@@ -266,7 +415,7 @@ print(rotate_left([1, 2, 3, 4, 5], 2))               # [3, 4, 5, 1, 2]
 ```
 
 **8.**
-```python no-run
+```python
 scores = [("ana", 90), ("bo", 85), ("cy", 90)]
 for name, score in sorted(scores, key=lambda t: (-t[1], t[0])):
     print(name, score)                               # ana 90 / cy 90 / bo 85
@@ -274,7 +423,7 @@ for name, score in sorted(scores, key=lambda t: (-t[1], t[0])):
 
 </details>
 
-## Files, Modules and Handling Errors
+### Files, Modules and Handling Errors
 
 1. Write a function that counts the lines, words and characters of a text file.
 2. Read a CSV of products and print the total value (`price x qty`).
@@ -288,7 +437,7 @@ for name, score in sorted(scores, key=lambda t: (-t[1], t[0])):
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 def file_stats(path):
     with open(path, encoding="utf-8") as f:
         text = f.read()
@@ -297,7 +446,7 @@ print(file_stats(path))                               # (5, 10, 57)
 ```
 
 **2.**
-```python no-run
+```python
 products = root / "products.csv"
 products.write_text("name,price,qty\npen,50,10\nbook,300,2\n", encoding="utf-8")
 with open(products, newline="", encoding="utf-8") as f:
@@ -306,14 +455,14 @@ print(total)                                          # 1100.0
 ```
 
 **3.**
-```python no-run
+```python
 data = {"a": [1, 2], "b": {"c": True}}
 (root / "x.json").write_text(json.dumps(data), encoding="utf-8")
 print(json.loads((root / "x.json").read_text(encoding="utf-8")) == data)      # True
 ```
 
 **4.**
-```python no-run
+```python
 def safe_int(text, default=0):
     try:
         return int(text)
@@ -323,7 +472,7 @@ print(safe_int("12"), safe_int("x"), safe_int(None, -1))        # 12 0 -1
 ```
 
 **5.**
-```python no-run
+```python
 def read_or_none(file_path):
     try:
         with open(file_path, encoding="utf-8") as f:
@@ -335,7 +484,7 @@ print(read_or_none(root / "nope.txt"))
 ```
 
 **6.**
-```python no-run
+```python
 Path(mod_dir, "mathutils.py").write_text('''
 def mean(xs): return sum(xs) / len(xs)
 def median(xs):
@@ -347,7 +496,7 @@ print(mathutils.mean([1, 2, 3, 4]), mathutils.median([1, 2, 3, 4]))      # 2.5 2
 ```
 
 **7.** `finally` runs whether the `try` block succeeds, raises or returns, so cleanup is guaranteed:
-```python no-run
+```python
 log = []
 def work():
     try:
@@ -364,10 +513,10 @@ print(log)                                # ['acquire lock', 'release lock']
 
 </details>
 
-## Debugging and Testing Your Code
+### Debugging and Testing Your Code
 
 1. The function below should return the average of positive numbers only but gives wrong results. Debug it and write tests.
-   ```python no-run
+   ```python
    def avg_positive(nums):
        total = 0
        for n in nums:
@@ -384,7 +533,7 @@ print(log)                                # ['acquire lock', 'release lock']
 <summary>Solutions</summary>
 
 **1.** The divisor should be the count of *positive* numbers, not `len(nums)`; also handle "no positives".
-```python no-run
+```python
 def avg_positive(nums):
     positives = [n for n in nums if n > 0]
     if not positives:
@@ -400,7 +549,7 @@ except ValueError:
 ```
 
 **2.**
-```python no-run
+```python
 def is_palindrome(text):
     cleaned = [c.lower() for c in text if c.isalnum()]
     return cleaned == cleaned[::-1]
@@ -412,7 +561,7 @@ for text, expected in [("racecar", True), ("hello", False), ("", True), ("A man,
 **3.** In the debugger, `n = 15`: `n % 15 == 0` is True on the first check so it returns `"FizzBuzz"` immediately; the later checks are never reached.
 
 **4.**
-```python no-run
+```python
 def clamp(value, low, high):
     return max(low, min(value, high))
 
@@ -428,13 +577,13 @@ print(unittest.TextTestRunner(verbosity=0).run(unittest.defaultTestLoader.loadTe
 ```
 
 **5.**
-```python no-run
+```python
 assert find_max_fixed([-5, -2, -9]) == -2      # fails against the original find_max, passes after the fix
 ```
 
 </details>
 
-## Classes and Objects, a First Look
+### Classes and Objects, a First Look
 
 1. Write a `Rectangle` class with `width`, `height`, `area()`, `perimeter()` and a nice `__str__`.
 2. Write a `Counter` class with `increment()`, `reset()` and a `value` attribute; create two counters and show they are independent.
@@ -446,7 +595,7 @@ assert find_max_fixed([-5, -2, -9]) == -2      # fails against the original find
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Rectangle:
     def __init__(self, width, height):
         self.width, self.height = width, height
@@ -458,7 +607,7 @@ print(r, r.area(), r.perimeter())                  # Rectangle(3 x 4) 12 14
 ```
 
 **2.**
-```python no-run
+```python
 class Counter:
     def __init__(self): self.value = 0
     def increment(self): self.value += 1
@@ -469,7 +618,7 @@ print(a.value, b.value)                            # 2 1
 ```
 
 **3.**
-```python no-run
+```python
 class BankAccount2(BankAccount):
     def transfer(self, other, amount):
         self.withdraw(amount)                      # raises if there are insufficient funds
@@ -480,7 +629,7 @@ print(a.balance, b.balance)                        # 60 40
 ```
 
 **4.**
-```python no-run
+```python
 class Stack:
     def __init__(self): self._items = []
     def push(self, x): self._items.append(x)
@@ -492,7 +641,7 @@ print(s.pop(), s.peek(), s.is_empty())             # 2 1 False
 ```
 
 **5.**
-```python no-run
+```python
 class Library:
     def __init__(self): self.titles = []
     def add(self, title): self.titles.append(title)

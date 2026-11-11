@@ -1,6 +1,56 @@
 # Memory Management and Virtual Memory: Exercises
 
-Use the functions from the lesson.
+These problems go with the [Memory Management and Virtual Memory lesson](README.md). Try each one before opening its solution.
+
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+from collections import OrderedDict, deque
+
+def fifo(refs, frames):
+    memory, queue, faults = set(), deque(), 0
+    for page in refs:
+        if page in memory:
+            continue
+        faults += 1
+        if len(memory) == frames:
+            memory.remove(queue.popleft())                 # evict the page that has been here longest
+        memory.add(page); queue.append(page)
+    return faults
+
+def lru(refs, frames):
+    memory, faults = OrderedDict(), 0                      # order = recency, least recent first
+    for page in refs:
+        if page in memory:
+            memory.move_to_end(page)                       # refresh: now most recently used
+            continue
+        faults += 1
+        if len(memory) == frames:
+            memory.popitem(last=False)                     # evict the least recently used
+        memory[page] = True
+    return faults
+
+def optimal(refs, frames):
+    memory, faults = set(), 0
+    for i, page in enumerate(refs):
+        if page in memory:
+            continue
+        faults += 1
+        if len(memory) == frames:
+            def next_use(p):                               # when is p needed next? never = infinity
+                try:
+                    return refs.index(p, i + 1)
+                except ValueError:
+                    return float("inf")
+            memory.remove(max(memory, key=next_use))       # evict the page needed farthest in the future
+        memory.add(page)
+    return faults
+```
+
+</details>
+
+## Problems
 
 1. With 4 KiB pages, split virtual address `20000` into page number and offset. If page 4 maps to frame 12, what is the physical address?
 2. A system has 32-bit virtual addresses and 4 KiB pages. How many pages are in the address space? How large is a single-level page table with 4-byte entries? Why do multi-level tables help?
@@ -38,13 +88,17 @@ print([(f, fifo(refs, f)) for f in range(1, 7)])
 
 **7.**
 ```python
-import mmap, sys
-with open(sys.argv[1], "rb") as f, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as m:
+import mmap, os, tempfile
+path = os.path.join(tempfile.mkdtemp(), "lines.txt")           # a small demo file
+with open(path, "wb") as f:
+    f.write(b"one\ntwo\nthree\n")
+with open(path, "rb") as f, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as m:
     count, pos = 0, m.find(b"\n")
     while pos != -1:
         count += 1
         pos = m.find(b"\n", pos + 1)
 print(count)
+# 3
 ```
 
 **8.** The library's code pages are file-backed and read-only, so the kernel maps the same physical frames into both address spaces. VIRT counts them twice; physical RAM holds them once.

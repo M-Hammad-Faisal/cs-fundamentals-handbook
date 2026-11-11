@@ -1,6 +1,10 @@
 # Dynamic Programming: Exercises
 
-## 1D
+These problems go with the [Dynamic Programming lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### 1D
 1. **Climbing stairs:** ways to climb `n` steps taking 1 or 2 at a time.
 2. **House robber:** maximum loot without robbing adjacent houses.
 3. **Coin change:** fewest coins for an amount (`-1` if impossible). Then count the **number of ways**.
@@ -9,7 +13,7 @@
 6. **Maximum product subarray.**
 7. **Decode ways:** number of ways to decode a digit string (`"12"` = `AB` or `L`).
 
-## 2D
+### 2D
 8. **Unique paths** in an `m x n` grid (moves right or down).
 9. **Minimum path sum** in a grid.
 10. **Longest common subsequence** of two strings.

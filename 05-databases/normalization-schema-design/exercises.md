@@ -1,18 +1,22 @@
 # Normalization and Schema Design: Exercises
 
-## Normalization
+These problems go with the [Normalization and Schema Design lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### Normalization
 1. This table stores `(student_id, course_id, student_name, course_title, instructor, instructor_office, grade)` with key `(student_id, course_id)`. List the functional dependencies, identify the 2NF and 3NF violations, and write a normalized schema.
 2. A `contacts` table has a column `phones` holding `'0300-111, 0321-222'`. Which normal form does it violate? Redesign it.
 3. A table `employee(id, name, department_id, department_name, department_head)`. Which dependency is transitive? Fix it.
 4. Explain why `order_items.unit_price` should be stored even though `products.price` exists.
 
-## Design from requirements
+### Design from requirements
 5. **Library:** members borrow books; each book can have several authors; each author can write several books; a member can borrow many copies over time; track due and return dates. Design tables and keys.
 6. **Blog:** users write posts; posts have tags (many-to-many); users comment on posts; comments can reply to other comments. Design the schema.
 7. **Hospital:** doctors, patients, appointments (a doctor sees one patient per time slot). Add the constraint that prevents double-booking a doctor.
 8. **Hierarchy:** categories nested to any depth (Electronics > Computers > Laptops). Provide the table and a query that lists all descendants of a category.
 
-## Trade-offs
+### Trade-offs
 9. Give two situations where you would deliberately denormalize, and how you would keep the data consistent.
 10. Review this design and list five problems:
 ```sql

@@ -1,5 +1,9 @@
 # Type Hints and Static Typing: Exercises
 
+These problems go with the [Type Hints and Static Typing lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Add type hints to this function and say what mypy would report for `average("abc")`:
    ```python
    def average(numbers):
@@ -7,8 +11,8 @@
    ```
 2. Write `first_or_default(items, default)` that works for any element type and returns the same type. Annotate it with a generic `T`.
 3. This code compiles but crashes at runtime. Which annotation makes the checker catch it, and how do you fix the code?
-   ```python
-   # skip  (this crashes on purpose)
+   ```python no-run
+   # this crashes on purpose
    def find_user(users: dict[str, str], key: str) -> str:
        return users.get(key)
    print(find_user({}, "ana").upper())

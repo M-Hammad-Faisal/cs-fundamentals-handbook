@@ -1,5 +1,9 @@
 # Composition, Delegation, Coupling and Object Design: Exercises
 
+These problems go with the [Composition, Delegation, Coupling and Object Design lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. A `Bird` base class has `fly()`. `Penguin` inherits it and raises an error. Redesign with composition so that flying is an optional capability.
 2. Model an `Employee` who can be a manager, an engineer, a part-timer, or combinations. Show the inheritance explosion, then implement it with composition (roles as parts).
 3. Rewrite `OrderServiceTight` from the lesson with constructor injection and show a test with fakes (no SMTP).

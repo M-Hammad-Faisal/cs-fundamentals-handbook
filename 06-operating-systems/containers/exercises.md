@@ -1,6 +1,10 @@
 # Containers: Exercises
 
-Work through these after [Containers, namespaces and cgroups](01-containers-and-namespaces.md). The code parts need only the standard library; the namespace experiments need Linux (or a Linux container) and are described in words.
+These problems go with the [Containers lesson](README.md). Try each one before opening its solution.
+
+The code parts need only the standard library; the namespace experiments need Linux (or a Linux container) and are described in words.
+
+## Problems
 
 1. **Exit codes.** A container exits with code 137, another with 143, another with 0. Say what each means, and compute the signal name for `137 - 128` in Python.
 2. **Parse cgroup limits.** A cgroup v2 `memory.max` file contains either the word `max` or a number of bytes; `cpu.max` contains `"<quota> <period>"` in microseconds. Write `describe_memory(text)` and `cpus_allowed(text)` returning human-readable results.

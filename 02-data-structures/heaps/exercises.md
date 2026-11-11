@@ -1,6 +1,9 @@
 # Heaps and Priority Queues: Exercises
 
+These problems go with the [Heaps and Priority Queues lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. Return the **k-th largest element** in an unsorted list.
 2. Return the **k most frequent** elements.
 3. **Merge k sorted lists** into one sorted list.

@@ -1,6 +1,6 @@
 # Number Theory: One-Page Summary
 
-## Quick reference
+## Key facts
 
 | Tool | Cost | Python |
 |------|------|--------|
@@ -14,7 +14,15 @@
 
 Used by: [hash tables](../../02-data-structures/hash-tables/01-hash-functions-and-collisions.md), [RSA and TLS](../../07-networking/tls-security/01-cryptography-and-tls-lab.md), [Rabin-Karp](../string-algorithms/01-string-matching-and-suffix-structures.md).
 
-## Questions worth remembering
+## Pitfalls
+
+- Writing `a ** n % m` instead of `pow(a, n, m)`: the first builds a gigantic number.
+- Modular inverse exists only when `gcd(b, m) = 1`; `pow(b, -1, m)` raises `ValueError` otherwise.
+- `%` on negative numbers differs between languages (Python returns a non-negative result for a positive modulus).
+- Trial division up to `n` instead of `sqrt(n)`; using float `sqrt` on big integers (use `math.isqrt`).
+- Forgetting to reduce modulo at every step in other languages, where integers overflow.
+
+## Self-check
 
 - **What does Euclid's algorithm compute and why is it fast?** The GCD of two numbers via `gcd(a, b) = gcd(b, a mod b)`; the numbers shrink by at least half every two steps, so it takes `O(log)` steps.
 - **When does a modular inverse exist, and how do you compute it?** When `gcd(b, m) = 1`; with extended Euclid (coefficient of `b`), or `b^(m-2)` for prime `m` (Fermat).
@@ -22,8 +30,6 @@ Used by: [hash tables](../../02-data-structures/hash-tables/01-hash-functions-an
 - **How does the sieve of Eratosthenes work and what does it cost?** Cross out multiples of each prime up to `sqrt(N)`; the survivors are primes. `O(N log log N)` time, `O(N)` memory.
 - **Why can Miller-Rabin handle numbers trial division cannot?** It tests a property that all primes satisfy and composites almost never do, using modular exponentiation: polynomial in the number of digits, versus `sqrt(n)` for trial division.
 - **Why do we reduce modulo `m` at every step?** It keeps numbers small (bounded by `m`) and gives the same final remainder because `+`, `-`, `*` respect congruence.
-
-Practice problems with solutions are in the **Practice** section of each lesson.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

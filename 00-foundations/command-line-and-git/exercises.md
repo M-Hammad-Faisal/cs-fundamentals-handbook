@@ -1,8 +1,10 @@
 # Command Line and Git: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Command Line and Git lesson](README.md). Try each one before opening its solution.
 
-## The Command Line
+## Problems
+
+### The Command Line
 
 1. Create a folder `practice` with subfolders `a` and `b` using one command; create a file in each.
 2. Write the pipeline to count how many `.py` files exist in a project.
@@ -23,7 +25,7 @@ Try each problem before opening its solution. These are the practice problems of
 **4.** `>` creates or **overwrites** the file; `>>` **appends**. `a && b` runs `b` only if `a` succeeded; `a; b` runs `b` regardless.
 
 **5.**
-```python no-run
+```python
 lines = ["INFO ok", "ERROR disk", "ERROR net", "WARN slow"]
 print(sum(1 for line in lines if "ERROR" in line))          # 2
 ```
@@ -32,7 +34,7 @@ print(sum(1 for line in lines if "ERROR" in line))          # 2
 
 </details>
 
-## Git Basics
+### Git Basics
 
 1. Create a repository, add two files, commit them separately with good messages, and view the history.
 2. Edit a file, use `git diff`, stage it, use `git diff --staged`, then commit.
@@ -69,7 +71,7 @@ git status --short          # only .gitignore appears, the other two are hidden
 
 </details>
 
-## Git Branches, Merging and Resolving Conflicts
+### Git Branches, Merging and Resolving Conflicts
 
 ```text
 git init -q -b main demo && cd demo
@@ -84,7 +86,7 @@ git log --oneline --graph --all
 
 To create and resolve a deliberate conflict: on two branches edit the **same line** of the same file differently, commit both, merge, open the file, remove the markers, `git add`, `git commit`.
 
-## Undoing Mistakes and Rewriting History in Git
+### Undoing Mistakes and Rewriting History in Git
 
 1. Edit a file, then discard the change. Edit again, stage it, then unstage it.
 2. Make a commit with a typo in the message and fix it.
@@ -113,7 +115,7 @@ To create and resolve a deliberate conflict: on two branches edit the **same lin
 
 </details>
 
-## GitHub and Collaborating with Others
+### GitHub and Collaborating with Others
 
 1. Create a GitHub repository, clone it, add a README and push.
 2. Make a feature branch, push it, open a pull request to `main` on your own repo, and merge it using "Squash and merge".

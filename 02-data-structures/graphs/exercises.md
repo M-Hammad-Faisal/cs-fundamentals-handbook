@@ -1,6 +1,9 @@
 # Graphs: Exercises
 
+These problems go with the [Graphs lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. **Number of islands** in a grid of `"1"` (land) and `"0"` (water).
 2. Find the **shortest path** (fewest edges) between two vertices.
 3. **Clone a graph** (deep copy of an undirected graph).

@@ -1,6 +1,9 @@
 # Tries: Exercises
 
+These problems go with the [Tries lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. Implement a `Trie` with `insert`, `search`, and `starts_with`.
 2. Add `words_with_prefix(prefix)` returning all words that start with the prefix, sorted.
 3. Implement a `WordDictionary` where `search` supports `.` as a single-character wildcard.

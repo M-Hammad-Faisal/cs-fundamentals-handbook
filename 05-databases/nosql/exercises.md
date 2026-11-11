@@ -1,6 +1,10 @@
 # NoSQL and Choosing a Database: Exercises
 
-## Choosing
+These problems go with the [NoSQL and Choosing a Database lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### Choosing
 1. Pick the best-fit database family for each and justify it in one sentence:
    - a) Storing login sessions that expire after 30 minutes.
    - b) Bank account balances with transfers between accounts.
@@ -10,12 +14,12 @@
    - f) A CMS where each content type has different fields.
 2. A startup says "let's use MongoDB because we need to scale." What questions would you ask first?
 
-## Modeling
+### Modeling
 3. Model a **blog post with comments** as documents. Decide what to embed and what to reference, and say what would change if a post could get a million comments.
 4. Design a **Cassandra-style table** (partition key and clustering key) for "the latest 50 messages in a chat room".
 5. Show how to store and query a nested `order` JSON document in SQLite using `json_extract`, and index one field.
 
-## Distributed concepts
+### Distributed concepts
 6. With `N = 3` replicas, list `(W, R)` choices that give strong reads, fast writes, and fast reads, and say what each trades off.
 7. Using the `HashRing` from the lesson, compare how many of 10,000 keys move when going from 4 to 5 nodes with consistent hashing versus `hash(key) % N`.
 8. Describe what happens to a CP system and an AP system during a network partition, using a shopping cart and a bank transfer as examples.

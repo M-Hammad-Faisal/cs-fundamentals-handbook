@@ -1,6 +1,6 @@
 # Divide and Conquer: One-Page Summary
 
-## Quick reference
+## Key facts
 
 | Algorithm | Recurrence | Cost |
 |-----------|-----------|------|
@@ -15,7 +15,15 @@
 
 Related: [sorting](../sorting/02-merge-sort-and-quicksort.md), [binary search](../searching/01-linear-and-binary-search.md), [dynamic programming](../dynamic-programming/README.md) (for overlapping subproblems), [number theory](../number-theory/01-number-theory-for-programmers.md).
 
-## Questions worth remembering
+## Pitfalls
+
+- A wrong recurrence (forgetting the cost of combining) leads to the wrong Master theorem case.
+- Unbalanced splits: quicksort degrades to `O(n²)` with bad pivots, so pick the pivot randomly.
+- Slicing inside recursion copies the data: pass indices.
+- Missing base cases and too deep recursion.
+- Using divide and conquer on overlapping subproblems (use DP).
+
+## Self-check
 
 - **What are the three steps of divide and conquer?** Divide into smaller copies of the problem, conquer them recursively (base case directly), combine the answers.
 - **What does the Master theorem say for `T(n) = 2T(n/2) + n`?** `a = 2, b = 2, d = 1`: balanced, so `Θ(n log n)`.
@@ -23,8 +31,6 @@ Related: [sorting](../sorting/02-merge-sort-and-quicksort.md), [binary search](.
 - **What are the three possible locations of the best slice in the maximum-subarray problem?** Entirely in the left half, entirely in the right half, or crossing the middle.
 - **How do you decide between divide and conquer and dynamic programming?** If subproblems are independent, plain divide and conquer; if the same subproblems recur in different branches, cache them (dynamic programming).
 - **Why are divide-and-conquer algorithms easy to parallelize?** The subproblems are independent, so they can be solved on different cores or machines and merged.
-
-Practice problems with solutions are in the **Practice** section of each lesson.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

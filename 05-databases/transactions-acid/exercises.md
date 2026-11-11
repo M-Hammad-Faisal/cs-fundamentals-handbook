@@ -1,6 +1,10 @@
 # Transactions, ACID and Isolation: Exercises
 
-## Concepts
+These problems go with the [Transactions, ACID and Isolation lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### Concepts
 1. Write the transaction for transferring 100 from account A to B. What should happen if the second update fails?
 2. Match each property to its mechanism: Atomicity, Consistency, Isolation, Durability vs undo log, constraints, locks/MVCC, write-ahead log.
 3. For each scenario, name the anomaly:
@@ -11,13 +15,13 @@
    - e) Two doctors both see "2 on call", each takes themselves off, leaving 0.
 4. A database uses MVCC. A long report runs for 10 minutes while orders are inserted. Does the report block the inserts? Will it see them?
 
-## Hands-on
+### Hands-on
 5. Run `demo_transactions.py`. Change fix B so that both clients use `BEGIN IMMEDIATE` and observe the "database is locked" error. How would you handle it in production (hint: timeout and retry)?
 6. Add a `CHECK` constraint to prevent a negative stock count, then write the safe "buy one item" statement and how you verify success from Python.
 7. Implement **optimistic locking** with a `version` column in Python and show that a stale update is rejected.
 8. Write an **idempotent** payment function that can be retried safely using an idempotency key.
 
-## Design
+### Design
 9. Two services each own a database: `orders` and `payments`. Sketch a saga for "place order" with compensating actions for each failure point.
 10. Describe a deadlock between two transfers (A to B and B to A) and give two ways to prevent it.
 
@@ -43,12 +47,17 @@ If the second update fails (constraint, crash, error) execute `ROLLBACK`, which 
 
 **6.**
 ```python
+import sqlite3
+conn = sqlite3.connect(":memory:")
 conn.execute("CREATE TABLE stock (id INTEGER PRIMARY KEY, qty INTEGER NOT NULL CHECK (qty >= 0))")
-cur = conn.execute("UPDATE stock SET qty = qty - 1 WHERE id = ? AND qty > 0", (item_id,))
-if cur.rowcount == 1:
-    ...   # purchase succeeded
-else:
-    ...   # sold out
+conn.execute("INSERT INTO stock VALUES (1, 1)")
+
+def buy_one(item_id):
+    cur = conn.execute("UPDATE stock SET qty = qty - 1 WHERE id = ? AND qty > 0", (item_id,))
+    return "purchased" if cur.rowcount == 1 else "sold out"      # rowcount tells you whether the guarded UPDATE matched a row
+
+print(buy_one(1), buy_one(1))
+# purchased sold out
 ```
 
 **7.**
@@ -61,6 +70,15 @@ def update_price(conn, product_id, new_price, expected_version):
     )
     if cur.rowcount == 0:
         raise RuntimeError("Conflict: row was changed by someone else, re-read and retry")
+
+conn.execute("CREATE TABLE products (id INTEGER PRIMARY KEY, price REAL, version INTEGER NOT NULL DEFAULT 1)")
+conn.execute("INSERT INTO products (id, price) VALUES (1, 10.0)")
+update_price(conn, 1, 12.0, expected_version=1)                 # succeeds, version becomes 2
+try:
+    update_price(conn, 1, 15.0, expected_version=1)             # stale: still holds version 1
+except RuntimeError as e:
+    print(e)
+# Conflict: row was changed by someone else, re-read and retry
 ```
 A second writer holding the old `expected_version` matches 0 rows and is rejected.
 
@@ -76,6 +94,10 @@ def pay(conn, idempotency_key, order_id, amount):
         return "charged"
     except sqlite3.IntegrityError:
         return "already processed"                      # a retry: do nothing, return the same result
+
+conn.execute("CREATE TABLE payments (idempotency_key TEXT UNIQUE, order_id INTEGER, amount REAL)")
+print(pay(conn, "key-1", 7, 9.99), pay(conn, "key-1", 7, 9.99))
+# charged already processed
 ```
 
 **9.** Steps: (1) create order as `PENDING` in the orders DB; (2) reserve stock; (3) charge payment; (4) mark order `CONFIRMED`. Compensations: if (3) fails, release the reserved stock and mark the order `CANCELLED`; if (4) fails after charging, issue a refund and release stock. Each step and compensation must be idempotent and retried until it succeeds; publish events through an outbox so messages are not lost.

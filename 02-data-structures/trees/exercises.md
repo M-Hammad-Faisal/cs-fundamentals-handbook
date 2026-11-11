@@ -1,5 +1,7 @@
 # Trees: Exercises
 
+These problems go with the [Trees lesson](README.md). Try each one before opening its solution.
+
 Use this node and helper for testing:
 
 ```python
@@ -26,6 +28,7 @@ def from_list(vals):
 ```
 
 ## Problems
+
 1. Compute the **maximum depth** of a binary tree.
 2. **Invert** a binary tree.
 3. Check if two trees are **identical**.

@@ -1,8 +1,8 @@
 # Consensus: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Consensus lesson](README.md). Try each one before opening its solution.
 
-## Consensus and Raft
+## Problems
 
 1. How many failures can 7 nodes tolerate? What is the minimum number of votes to elect a leader?
 2. In experiment 1, print each node's `term`. Why are they all equal after recovery?

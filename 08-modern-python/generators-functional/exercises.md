@@ -1,5 +1,9 @@
 # Iterators, Generators, Comprehensions and Functional Tools: Exercises
 
+These problems go with the [Iterators, Generators, Comprehensions and Functional Tools lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Rewrite as comprehensions: (a) squares of the odd numbers below 20; (b) a dict mapping each word to its length for words longer than 3 letters; (c) the flattened list of a list of lists of ints.
 2. Write a generator `fibonacci()` (infinite) and use `itertools.islice` to take the first 12 values and `takewhile` to take those under 100.
 3. Write `read_in_chunks(f, size)` and `grep(lines, word)` generators and combine them into a pipeline that counts matching lines in a file object without loading it all.

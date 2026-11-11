@@ -1,11 +1,15 @@
 # Arrays and Strings: Exercises
 
-## Warm-up
+These problems go with the [Arrays and Strings lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### Warm-up
 1. Reverse a list in place without using `reverse()` or slicing.
 2. Return the second largest distinct value in a list in `O(n)`.
 3. Rotate a list right by `k` positions in `O(n)` time.
 
-## Core
+### Core
 4. **Two sum (unsorted).** Return indices of two numbers adding to a target in `O(n)`.
 5. **Remove duplicates from a sorted list in place** and return the new length.
 6. **Product of array except self** without using division, in `O(n)`.
@@ -14,7 +18,7 @@
 9. **Maximum subarray sum** (Kadane).
 10. **Merge two sorted lists** into one sorted list in `O(n + m)`.
 
-## Stretch
+### Stretch
 11. **Container with most water:** given heights, find two lines that hold the most water (two pointers).
 12. **Subarray sum equals k** (prefix sums plus a dictionary).
 13. **Longest palindromic substring** in `O(n²)` by expanding around centers.

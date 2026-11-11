@@ -1,5 +1,9 @@
 # Exceptions, Logging and Testing: Exercises
 
+These problems go with the [Exceptions, Logging and Testing lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Write `safe_divide(a, b)` that returns `None` for division by zero, raises `TypeError` for non-numbers, and logs a warning in the zero case. Use `else`/`finally` correctly.
 2. Create an exception hierarchy `AppError > (ValidationError, NotFoundError, PermissionDenied)` and a function that raises each. Catch the whole family in one handler and one member in another.
 3. Convert a low-level error into a domain error with `raise ... from e` and show that the cause is preserved.

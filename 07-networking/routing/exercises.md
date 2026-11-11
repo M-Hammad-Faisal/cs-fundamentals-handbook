@@ -1,8 +1,81 @@
 # Routing: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Routing lesson](README.md). Try each one before opening its solution.
 
-## Routing Protocols
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+LINKS = {("A", "B"): 1, ("B", "C"): 2, ("A", "D"): 5, ("C", "D"): 1, ("D", "E"): 3, ("C", "E"): 4}
+
+def neighbors_of(links):
+    adj = {}
+    for (a, b), cost in links.items():
+        adj.setdefault(a, {})[b] = cost
+        adj.setdefault(b, {})[a] = cost
+    return adj
+
+INF = 16                                                # RIP's "infinity": 16 hops means unreachable
+
+def distance_vector(links, max_rounds=50):
+    adj = neighbors_of(links)
+    table = {r: {r: (0, None)} for r in adj}             # router -> destination -> (cost, next hop)
+    for rounds in range(1, max_rounds + 1):
+        snapshot = {r: dict(t) for r, t in table.items()}    # everybody sends the table they had at the start of the round
+        changed = False
+        for r in adj:
+            for n, w in adj[r].items():
+                for dest, (c, _) in snapshot[n].items():
+                    new = w + c
+                    if new < table[r].get(dest, (INF * 100, None))[0]:
+                        table[r][dest] = (new, n)
+                        changed = True
+        if not changed:
+            return table, rounds                         # converged: a full round without any update
+    return table, max_rounds
+
+CUSTOMER, PEER, PROVIDER = "customer", "peer", "provider"       # how a route was learned (relative to the receiving AS)
+RANK = {CUSTOMER: 3, PEER: 2, PROVIDER: 1, "origin": 4}         # local preference: customer > peer > provider
+
+class Internet:
+    def __init__(self, customer_of=(), peers=()):
+        self.rel = {}                                            # rel[a][b] = what b is TO a ("customer", "peer", "provider")
+        for cust, prov in customer_of:
+            self.rel.setdefault(cust, {})[prov] = PROVIDER
+            self.rel.setdefault(prov, {})[cust] = CUSTOMER
+        for a, b in peers:
+            self.rel.setdefault(a, {})[b] = PEER
+            self.rel.setdefault(b, {})[a] = PEER
+
+    def propagate(self, origin):
+        """Return {asn: (path, learned_from)} after BGP converges for a prefix originated by `origin`."""
+        best = {origin: ((origin,), "origin")}
+        changed = True
+        while changed:
+            changed = False
+            for sender in list(best):
+                path, learned_from = best[sender]
+                for receiver, role_of_receiver in self.rel[sender].items():
+                    # EXPORT rule (sender's side): customer/own routes go to everyone; peer/provider routes go to customers only
+                    if learned_from not in (CUSTOMER, "origin") and role_of_receiver != CUSTOMER:
+                        continue
+                    if receiver in path:
+                        continue                                # LOOP PREVENTION: my own AS is already in the path
+                    candidate = ((receiver,) + path, self.rel[receiver][sender])      # prepend myself; how I learned it = what the sender is to me
+                    current = best.get(receiver)
+                    # SELECTION: higher local-pref first, then shorter AS path, then lowest neighbor AS number as a tie-break
+                    key = lambda route: (-RANK[route[1]], len(route[0]), route[0][1] if len(route[0]) > 1 else 0)
+                    if current is None or key(candidate) < key(current):
+                        best[receiver] = candidate
+                        changed = True
+        return best
+
+net = Internet(customer_of=[(3, 1), (7, 1), (4, 2), (5, 3), (5, 4)], peers=[(1, 2)])
+```
+
+</details>
+
+## Problems
 
 1. Run `distance_vector` after removing the `D-E` link. Which destinations become unreachable from `E`, if any, and how does the table at `A` change for `E`?
 2. In the three-router chain `A - B - C` (cost 1 each), how many rounds does count-to-infinity take with `infinity = 16`? Why does poison reverse stop it immediately?
@@ -16,7 +89,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    no_de = {k: v for k, v in LINKS.items() if k != ("D", "E")}
    table, rounds = distance_vector(no_de)
    print(table["E"], rounds)
@@ -26,13 +99,13 @@ Try each problem before opening its solution. These are the practice problems of
    `E` is still reachable (through `C`, cost 4): nothing becomes unreachable. `A`'s route to `E` is unchanged (cost 7 via `B`), because `A` never used the `D-E` link.
 2. The costs grow by two per round (A: 2, 4, 6, ... and B: 3, 5, 7, ...), so reaching 16 takes **8 rounds** in our simulation, with a loop the whole time. With poison reverse, A tells B "C costs 16 (unreachable)" because A's route to C goes through B, so B immediately learns C is gone and the loop never forms.
 3. Because the same LSA may arrive over several paths and routers must tell **new from old**: a higher sequence number means newer information; equal or lower is a duplicate to drop (this also stops flooding loops).
-4. ```python no-run
+4. ```python
    net8 = Internet(customer_of=[(3, 1), (7, 1), (4, 2), (5, 3), (5, 4), (8, 2)], peers=[(1, 2)])
    routes8 = net8.propagate(origin=8)
    print(list(routes8[5][0]), routes8[5][1])             # [5, 4, 2, 8] provider
    ```
    AS5 hears AS8 via AS4 (`[5,4,2,8]`, length 4) and via AS3 (`[5,3,1,2,8]`, length 5): both from providers, so the shorter one through AS4 wins.
-5. ```python no-run
+5. ```python
    def valley_free(path, net):
        phase = "up"                                        # going up through providers
        peers_used = 0

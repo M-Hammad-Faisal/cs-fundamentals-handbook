@@ -1,5 +1,7 @@
 # Linked Lists: Exercises
 
+These problems go with the [Linked Lists lesson](README.md). Try each one before opening its solution.
+
 Use this node for all problems:
 
 ```python
@@ -28,6 +30,7 @@ def to_list(head):
 ```
 
 ## Problems
+
 1. Reverse a singly linked list iteratively, then recursively.
 2. Find the middle node (return the second middle for even length).
 3. Detect a cycle; then return the node where the cycle starts.

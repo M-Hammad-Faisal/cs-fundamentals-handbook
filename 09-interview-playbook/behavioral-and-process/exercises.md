@@ -1,5 +1,9 @@
 # Behavioral Interviews, the Hiring Process and Your Preparation Plan: Exercises
 
+These problems go with the [Behavioral Interviews, the Hiring Process and Your Preparation Plan lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Write your 60-second pitch using the present, past, future structure. Time yourself and trim to 75 seconds maximum.
 2. Write eight STAR stories (one per theme in the table). For each include one number and one lesson.
 3. Rewrite these weak resume bullets into strong, quantified ones (invent plausible numbers and mark them as examples):

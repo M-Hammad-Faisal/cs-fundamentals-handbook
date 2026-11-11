@@ -1,10 +1,8 @@
 # Setting Up Your Computer for This Handbook: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Setting Up Your Computer for This Handbook lesson](README.md). Try each one before opening its solution.
 
-## Setting Up Your Computer for This Handbook
-
-Answer each question, then check yourself.
+## Problems
 
 1. How do you check which Python version is running?
 2. Why use a virtual environment for every project?

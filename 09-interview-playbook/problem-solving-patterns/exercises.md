@@ -1,6 +1,31 @@
 # Problem-Solving Patterns for Coding Interviews: Exercises
 
+These problems go with the [Problem-Solving Patterns for Coding Interviews lesson](README.md). Try each one before opening its solution.
+
 For each exercise: **name the pattern first**, state brute-force and optimized complexity, then code it and test with edge cases. The functions from the lesson (`ListNode`, `TreeNode`, `UnionFind`, ...) are available.
+
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+def first_true(lo, hi, ok):
+    """Smallest x in [lo, hi] with ok(x) True, assuming ok is False...False True...True."""
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if ok(mid):
+            hi = mid                                     # mid might be the answer: keep it
+        else:
+            lo = mid + 1
+    return lo
+
+class TreeNode:
+    def __init__(self, val, left=None, right=None):
+        self.val, self.left, self.right = val, left, right
+```
+
+</details>
+
+## Problems
 
 1. **Container with most water.** Given heights, pick two lines forming the container holding the most water (`min(h[i], h[j]) * (j - i)`).
 2. **Longest repeating character replacement.** Longest substring you can turn into one repeated letter with at most `k` replacements.

@@ -1,17 +1,23 @@
 # The Relational Model and SQL: One-Page Summary
 
-## Model
+## Key facts
+
+### Model
+
 - Tables of rows and typed columns. **PK** identifies a row; **FK** references another table; **unique**, **composite**, **surrogate** vs **natural** keys.
 - Relationships: 1-to-many (FK on the many side), many-to-many (junction table), 1-to-1 (FK + unique).
 - Constraints (`NOT NULL`, `UNIQUE`, `CHECK`, `FOREIGN KEY`) enforce integrity in the database.
 
-## Statement groups
+### Statement groups
+
 DDL (`CREATE/ALTER/DROP`) · DML (`INSERT/UPDATE/DELETE`) · DQL (`SELECT`) · TCL (`BEGIN/COMMIT/ROLLBACK`) · DCL (`GRANT/REVOKE`).
 
-## SELECT evaluation order
+### SELECT evaluation order
+
 `FROM/JOIN → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → LIMIT`
 
-## Cheat sheet
+### Cheat sheet
+
 | Need | Use |
 |------|-----|
 | Filter rows / groups | `WHERE` / `HAVING` |
@@ -27,6 +33,7 @@ DDL (`CREATE/ALTER/DROP`) · DML (`INSERT/UPDATE/DELETE`) · DQL (`SELECT`) · T
 | Reusable query | `VIEW` (materialized view stores results) |
 
 ## Pitfalls
+
 - `= NULL` never matches; `NOT IN` with `NULL` returns nothing (use `NOT EXISTS`).
 - Joining one-to-many before `SUM` inflates totals.
 - `LEFT JOIN` + `WHERE` on the right table acts like an inner join.

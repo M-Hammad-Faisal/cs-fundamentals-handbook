@@ -1,5 +1,7 @@
 # TLS and Security Basics: One-Page Summary
 
+## Key facts
+
 - **TLS** = confidentiality + integrity + authentication over TCP/QUIC.
 - **Primitives:** hash (fingerprint), HMAC (keyed authentication), symmetric AEAD (AES-GCM, ChaCha20), asymmetric (signatures, key exchange), password hashing (scrypt/bcrypt/Argon2, salted). Never invent crypto; compare with `compare_digest`.
 - **TLS 1.3 handshake:** 1 RTT; ephemeral ECDHE gives **forward secrecy**; server certificate + signature prove identity; then symmetric encryption.
@@ -7,6 +9,14 @@
 - **Threats and fixes:** MITM (TLS, HSTS), SQL injection (parameterize), XSS (escape, CSP, HttpOnly), CSRF (SameSite, tokens), SSRF (allow-lists), weak auth (hashing, MFA, rate limits), leaked secrets.
 - **AuthN vs AuthZ:** check authorization server-side on every request. OAuth = delegated access; OIDC = identity.
 - **Never** disable verification, hash passwords with plain SHA-256, or trust client input.
+
+## Pitfalls
+
+- Turning off certificate verification (`verify=False`) "to make it work".
+- Encrypting without authenticating the peer: skipping the hostname check allows a man-in-the-middle.
+- Rolling your own cryptography, reusing a nonce, or using unauthenticated modes.
+- Fast hashes for passwords; comparing MACs or tokens with `==`.
+- Letting certificates expire, or serving an incomplete chain.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

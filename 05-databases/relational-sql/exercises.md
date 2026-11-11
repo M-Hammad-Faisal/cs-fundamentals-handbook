@@ -1,32 +1,36 @@
 # The Relational Model and SQL: Exercises
 
+These problems go with the [The Relational Model and SQL lesson](README.md). Try each one before opening its solution.
+
 Load [`../sample-data.sql`](../sample-data.sql) and write each query yourself before opening the solution. Tables: `departments`, `employees`, `customers`, `orders`, `order_items`.
 
-## Basics
+## Problems
+
+### Basics
 1. List the names and salaries of employees earning more than 5000, highest first.
 2. List employees hired in 2020 or later, with their hire year.
 3. Count employees per department (include only departments with at least 2).
 4. Show employees who have **no** department.
 
-## Joins
+### Joins
 5. Show each employee with their department name (including employees without one).
 6. Show each employee with their manager's name (managers may be `NULL`).
 7. List customers who have **never** placed an order.
 8. Show every department and how many employees it has, including empty ones (Legal).
 
-## Aggregation and subqueries
+### Aggregation and subqueries
 9. Compute total revenue (`quantity * unit_price`) for **shipped** orders only.
 10. Find customers whose total shipped revenue exceeds 500.
 11. Find employees earning more than the average salary of **their own department**.
 12. Find the second highest distinct salary.
 
-## Window functions and CTEs
+### Window functions and CTEs
 13. Rank employees by salary within each department, with ties sharing a rank.
 14. For each order, show the order total and the running total ordered by date.
 15. Show the highest-paid employee in each department using a window function.
 16. Using a recursive CTE, list everyone under Amina with their depth in the hierarchy.
 
-## Design
+### Design
 17. Write the `CREATE TABLE` statement for a `payments` table linked to `orders`, with sensible types and constraints (positive amount, required order).
 18. Explain why `SELECT department_id, name, COUNT(*) FROM employees GROUP BY department_id` is invalid in standard SQL.
 

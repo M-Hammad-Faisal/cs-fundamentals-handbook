@@ -1,6 +1,9 @@
 # Sorting: Exercises
 
+These problems go with the [Sorting lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. Implement **insertion sort**, **merge sort** and **quick sort** from scratch.
 2. **Merge intervals:** merge all overlapping intervals.
 3. **Sort colors** (0, 1, 2) in one pass with `O(1)` space.

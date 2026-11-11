@@ -1,12 +1,14 @@
 # Stacks and Queues: One-Page Summary
 
-## Facts
+## Key facts
+
 - **Stack** = LIFO (`push`, `pop`, `peek`). In Python: a `list`.
 - **Queue** = FIFO (`enqueue`, `dequeue`). In Python: `collections.deque`.
 - **Deque** = both ends `O(1)`. **Priority queue** = best item first (heap).
 - All core operations are `O(1)`.
 
-## Patterns
+### Patterns
+
 - **Balanced brackets / parsing:** stack.
 - **Undo/redo, DFS, call stack:** stack.
 - **BFS, job queues, schedulers:** queue.
@@ -16,6 +18,7 @@
 - **Ring buffer:** fixed array with modulo wraparound.
 
 ## Pitfalls
+
 - `list.pop(0)` is `O(n)`; use `deque`.
 - Popping or peeking an empty structure.
 - Unbounded queues exhaust memory; bound them.

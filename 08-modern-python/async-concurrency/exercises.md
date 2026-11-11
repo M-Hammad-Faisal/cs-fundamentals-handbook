@@ -1,5 +1,9 @@
 # Concurrency in Python: Exercises
 
+These problems go with the [Concurrency in Python lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Use `ThreadPoolExecutor` to "download" 10 URLs (each `time.sleep(0.1)`) and show total time is about 0.1 to 0.2 s, not 1 s.
 2. Show that threads do not speed up CPU-bound pure Python: time `cpu_task(n)` four times sequentially versus in four threads.
 3. Write an `async` function `fetch(name, delay)` and run five of them with `asyncio.gather`; then with a `TaskGroup`. Show the timing difference from running them one after another.

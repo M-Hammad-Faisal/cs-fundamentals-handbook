@@ -1,5 +1,9 @@
 # Processes and Threads: Exercises
 
+These problems go with the [Processes and Threads lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. A parent calls `fork()` and both processes then run `print("hi")`. How many lines print? What if `fork()` is called twice in a row?
 2. Write a program that forks a child; the child computes `sum(range(1000))` and sends it to the parent through a pipe; the parent prints it.
 3. Explain what a zombie is and write code that creates one briefly, then reaps it.

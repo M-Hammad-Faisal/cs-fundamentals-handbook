@@ -1,5 +1,7 @@
 # Modern Python Language Features: One-Page Summary
 
+## Key facts
+
 | Version | Know these |
 |---------|-----------|
 | 3.8 | walrus `:=`, positional-only `/`, `f"{x=}"` |
@@ -16,5 +18,13 @@
 - **Exceptions:** groups + `except*` for concurrent errors; notes for context.
 - **Stdlib:** `pathlib`, `tomllib`, `zoneinfo`, `secrets`, `functools.cache`, `itertools.batched`.
 - **Practice:** target your oldest supported version (`requires-python`), test several, adopt syntax when the minimum allows.
+
+## Pitfalls
+
+- `match` is structural matching, not a `switch`: a bare name in a `case` captures instead of comparing, so use dotted names or literals; there is no fall-through.
+- Walrus (`:=`) used where it hurts readability, or without needed parentheses.
+- `zip` silently stops at the shortest input unless you pass `strict=True`.
+- Positional-only and keyword-only markers added to a public function break existing callers.
+- `except*` is only for `ExceptionGroup`.
 
 [Lesson](README.md) · [Exercises](exercises.md)

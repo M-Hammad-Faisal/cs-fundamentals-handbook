@@ -1,5 +1,9 @@
 # TLS and Security Basics: Exercises
 
+These problems go with the [TLS and Security Basics lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Compute SHA-256 of `"abc"` and show that changing one character changes the whole digest. Why is a hash not encryption?
 2. Implement `sign(secret, body)` and `verify(secret, body, tag)` for webhooks using HMAC-SHA256 and a constant-time comparison.
 3. Store and check a password with `hashlib.scrypt`: generate a salt, derive a hash, verify a login attempt.

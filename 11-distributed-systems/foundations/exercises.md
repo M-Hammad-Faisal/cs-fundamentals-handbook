@@ -1,8 +1,43 @@
 # Foundations of Distributed Systems: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Foundations of Distributed Systems lesson](README.md). Try each one before opening its solution.
 
-## Failures, Time and Clocks in Distributed Systems
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import random
+
+class Network:
+    """Delivers messages with random loss, delay and duplication, deterministically (seeded)."""
+    def __init__(self, seed=0, loss=0.0, max_delay=3, duplicate=0.0):
+        self.rng = random.Random(seed)
+        self.loss, self.max_delay, self.duplicate = loss, max_delay, duplicate
+        self.now = 0
+        self.in_flight = []                       # (deliver_at, order, dst, msg)
+        self.counter = 0
+        self.log = []
+
+    def send(self, src, dst, msg):
+        copies = 2 if self.rng.random() < self.duplicate else 1
+        for _ in range(copies):
+            if self.rng.random() < self.loss:
+                self.log.append(("LOST", self.now, src, dst, msg))
+                continue
+            self.counter += 1
+            self.in_flight.append((self.now + self.rng.randint(1, self.max_delay), self.counter, dst, msg))
+
+    def tick(self):
+        """Advance one time step and return the messages delivered now, as (dst, msg)."""
+        self.now += 1
+        due = sorted(m for m in self.in_flight if m[0] <= self.now)
+        self.in_flight = [m for m in self.in_flight if m[0] > self.now]
+        return [(dst, msg) for _, _, dst, msg in due]
+```
+
+</details>
+
+## Problems
 
 1. Run the network with `loss=0` and `duplicate=0`: can messages still arrive out of order? Why?
 2. Add a `retransmit` experiment: keep sending `msg1` every tick until the receiver has seen it. How many copies does the receiver get on average, and what must the receiver do about duplicates?
@@ -14,7 +49,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    net2 = Network(seed=1, loss=0, max_delay=3, duplicate=0)
    for n in range(1, 6):
        net2.send("A", "B", n)
@@ -28,7 +63,7 @@ Try each problem before opening its solution. These are the practice problems of
 2. The receiver gets about as many copies as the network lets through; it must **deduplicate** (remember ids it has processed) so processing is idempotent.
 3. A event t=1; A send t=2; B receive t=3 (max(0,2)+1); B event t=4.
 4. `vc_compare({'a':2,'b':1}, {'a':2,'b':3})` is `before`; `vc_compare({'a':1,'b':2}, {'a':2,'b':1})` is `concurrent`.
-5. ```python no-run
+5. ```python
    import re
    def merge_carts(x: str, y: str) -> str:
        items = lambda s: set(re.findall(r"\[(.*)\]", s)[0].replace(" ", "").split(","))

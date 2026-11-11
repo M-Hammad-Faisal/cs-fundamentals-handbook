@@ -1,6 +1,22 @@
 # Design Patterns: One-Page Summary
 
-## Questions worth remembering
+## Key facts
+
+- **Three families:** *creational* (how objects are made: singleton, factory method, abstract factory, builder, prototype, object pool); *structural* (how objects are composed: adapter, bridge, composite, decorator, facade, flyweight, proxy); *behavioral* (how objects cooperate: chain of responsibility, command, interpreter, iterator, mediator, memento, null object, observer, state, strategy, template method, visitor).
+- **Pick by the problem:** a ladder of `if`s choosing an algorithm is Strategy; behaviour that depends on state is State; notify many listeners is Observer; add behaviour without subclassing is Decorator; an incompatible interface is Adapter; a simple front for a messy subsystem is Facade; undo, queue or log actions is Command; a tree of parts is Composite; step-by-step construction is Builder; control or delay access is Proxy.
+- **Look-alikes:** Strategy is chosen by the caller, State changes itself; Decorator adds behaviour while Proxy controls access (same interface); Adapter converts one interface while Facade simplifies many.
+- **Python shortcuts:** plain functions often replace Strategy and Command, generators replace Iterator, `@decorators` and wrappers replace Decorator, a module is already a singleton, `dataclass` helps with Builder and Prototype, duck typing replaces interface hierarchies.
+- **Guiding rule:** prefer composition over inheritance, and add a pattern only when you can name the pain it removes.
+
+## Pitfalls
+
+- Starting from a pattern instead of from a problem; extra classes with no benefit.
+- Singleton as hidden global state that makes tests depend on each other.
+- Observers that are never unsubscribed (memory leaks, surprise callbacks).
+- Deep inheritance chains where composition would do.
+- A "Factory" that only calls a constructor.
+
+## Self-check
 
 - **How does a request move along the chain?** Each handler either handles it or passes it to the next handler.
 - **What does it mean to "turn a request into an object"?** Represent the action (what to do, and with which arguments) as an object you can store, pass around, queue, log or reverse.
@@ -14,8 +30,6 @@
 - **What does Strategy replace?** A conditional ladder choosing between algorithms; the algorithms become interchangeable objects.
 - **What does the template method fix and what can subclasses change?** It fixes the order of the algorithm's steps; subclasses override individual steps.
 - **What does Visitor let you add without modifying element classes?** New operations over a class hierarchy.
-
-Practice problems with solutions are in the exercises page and in the **Practice** section of each lesson.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

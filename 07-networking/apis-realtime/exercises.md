@@ -1,6 +1,8 @@
 # APIs and Real-Time Communication: Exercises
 
-Work through these after the [REST APIs, SSE and WebSockets lab](01-rest-apis-and-websockets-lab.md). Each exercise is small enough to solve with the standard library; try it before opening the solution.
+These problems go with the [APIs and Real-Time Communication lesson](README.md). Try each one before opening its solution.
+
+## Problems
 
 1. **Cursor pagination.** Write `paginate(items, limit, after_id=None)` for a list of dicts sorted by `id`. It returns `(page, next_cursor)`, where `next_cursor` is the id to pass as `after_id` for the next page, or `None` on the last page. Why is this more reliable than `?page=3` when items are being added?
 2. **Validate a request body.** Write `validate_user(body)` returning a list of error strings for a `POST /users` body that must contain `name` (non-empty string, at most 50 characters) and `age` (integer between 0 and 150). An empty list means valid.

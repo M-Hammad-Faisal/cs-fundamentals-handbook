@@ -1,20 +1,26 @@
 # Dynamic Programming: One-Page Summary
 
-## When to use
+## Key facts
+
+### When to use
+
 - **Optimal substructure** + **overlapping subproblems**.
 - Clues: "minimum/maximum", "number of ways", "possible?", "longest/shortest", decisions depending on earlier choices.
 
-## Styles
+### Styles
+
 | Top-down | Bottom-up |
 |----------|-----------|
 | Recursion + cache (`lru_cache`) | Fill table small → large |
 | Computes only needed states | No recursion limit; easy space optimization |
 
-## Recipe
+### Recipe
+
 1. State (what does `dp[...]` mean?) 2. Recurrence 3. Base cases 4. Order 5. Answer + space optimization.
 Complexity = **#states × work per state**.
 
-## Classics and recurrences
+### Classics and recurrences
+
 | Problem | Recurrence |
 |---------|-----------|
 | Climb stairs / Fibonacci | `dp[i] = dp[i-1] + dp[i-2]` |
@@ -27,14 +33,24 @@ Complexity = **#states × work per state**.
 | 0/1 knapsack | `dp[w] = max(dp[w], dp[w-wt] + val)`, capacity **downward** |
 | Unbounded knapsack / coin ways | capacity **upward** |
 
-## Shapes
+### Shapes
+
 Interval DP · bitmask DP · digit DP · tree DP · state-machine DP (stocks).
 
-## Tips
+### Tips
+
 - Brute-force recursion → find repeats → memoize.
 - Keep only needed rows to cut space.
 - Reconstruct solutions with parent pointers.
 - Use hashable (tuple) state for `lru_cache`.
+
+## Pitfalls
+
+- A state that is missing a dimension, wrong base cases, or an iteration order that reads values not yet computed.
+- Memoising with unhashable arguments; hitting the recursion limit on deep recursion.
+- Off-by-one table sizes (`n + 1`).
+- Using DP when greedy or BFS is enough, or when subproblems do not overlap.
+- Returning the optimal value when the problem asks for the path.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

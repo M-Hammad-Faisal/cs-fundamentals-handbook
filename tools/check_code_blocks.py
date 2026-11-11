@@ -8,6 +8,10 @@ How a page is checked
     * Blocks are executed top to bottom in ONE shared namespace, like a notebook (each page is a fresh process).
     * Code is dedented first, so solutions indented inside numbered lists work.
     * A block opened with ```python no-run is skipped (fragments and illustrative code).
+    * A page with the line "<!-- run: isolated -->" holds independent solutions that reuse names (design patterns). Each
+      "### Heading" group is paired with the lesson named after it ("Command Pattern" -> command.md); every solution block runs
+      in a fresh namespace after that lesson's code and the group's own question code (blocks that fail there are fragments and
+      are ignored as context).
     * Pages that contain blocks starting with "# file: name.py" describe a small project: those files are written
       to a temporary folder and pytest is run there instead of executing the blocks one by one.
     * tools/known-sketches.txt lists pages that are skipped on purpose, one per line, with the reason after a "#".
@@ -45,6 +49,8 @@ def known_sketches():
 def run_one(page: Path) -> int:
     """Execute a single page in this process; return 0 on success."""
     source = page.read_text()
+    if "<!-- run: isolated -->" in source:
+        return run_isolated(page, source)
     blocks = FENCE.findall(source)
     if any(FILE_MARK.match(b) for b in blocks):
         return run_project_page(blocks)
@@ -59,6 +65,34 @@ def run_one(page: Path) -> int:
             print(f"FAILED in block {index}", file=sys.stderr)
             return 1
     return 0
+
+
+ANY_FENCE = re.compile(r"```python(?: no-run)?\n(.*?)```", re.S)
+
+
+def run_isolated(page: Path, source: str) -> int:
+    lessons = {p.stem: p for p in page.parent.rglob("*.md") if p.name not in ("README.md", "exercises.md", "summary.md")}
+    failures = 0
+    for group in re.split(r"^### ", source, flags=re.M)[1:]:
+        title = group.split("\n", 1)[0].strip()
+        lesson = lessons.get(re.sub(r"\s+pattern$", "", title.lower()).replace(" ", "-"))
+        before, _, after = group.partition("<summary>Solutions</summary>")
+        context = [textwrap.dedent(b) for b in (ANY_FENCE.findall(lesson.read_text()) if lesson else [])]
+        context += [textwrap.dedent(b) for b in ANY_FENCE.findall(before.split("<details>")[0])]
+        for index, block in enumerate(FENCE.findall(after)):
+            namespace = {"__name__": "__lesson__"}
+            for part in context:
+                try:
+                    exec(compile(part, f"{title}#context", "exec", dont_inherit=True), namespace)
+                except BaseException:
+                    pass
+            try:
+                exec(compile(textwrap.dedent(block), f"{title}#solution{index}", "exec", dont_inherit=True), namespace)
+            except Exception:
+                traceback.print_exc()
+                print(f"FAILED: {title}, solution block {index}", file=sys.stderr)
+                failures += 1
+    return 1 if failures else 0
 
 
 def run_project_page(blocks):

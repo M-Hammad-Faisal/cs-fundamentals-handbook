@@ -1,5 +1,9 @@
 # File Systems and I/O: Exercises
 
+These problems go with the [File Systems and I/O lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Create a file, make a hard link and a symlink to it, delete the original name, and explain what still works and why.
 2. Write `atomic_write(path, data)` and explain what could go wrong without `fsync` and without the rename.
 3. Write a function that counts lines in a multi-gigabyte file using constant memory.

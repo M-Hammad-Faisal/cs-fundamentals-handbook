@@ -1,18 +1,20 @@
 # Rapid-Fire Python and CS Questions: Exercises
 
-## A. Predict the output (then run it)
+These problems go with the [Rapid-Fire Python and CS Questions lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### A. Predict the output (then run it)
 
 1.
-```python
-# skip
+```python no-run
 def f(n, acc=[]):
     acc.append(n)
     return len(acc)
 print(f(1), f(2), f(3))
 ```
 2.
-```python
-# skip
+```python no-run
 a = [1, 2, 3]
 b = a[:]
 b.append(4)
@@ -21,8 +23,7 @@ c.append(5)
 print(a, b, c)
 ```
 3.
-```python
-# skip
+```python no-run
 x = 10
 def g():
     print(x)
@@ -30,25 +31,21 @@ def g():
 g()
 ```
 4.
-```python
-# skip
+```python no-run
 print([i * j for i in range(3) for j in range(i)])
 ```
 5.
-```python
-# skip
+```python no-run
 d = {"a": 1}
 for k in d:
     d[k + "x"] = 0
 ```
 6.
-```python
-# skip
+```python no-run
 print(sorted(["b", "a", "C", "B"]), sorted(["b", "a", "C", "B"], key=str.lower))
 ```
 7.
-```python
-# skip
+```python no-run
 class A:
     def hello(self): return "A"
 class B(A):
@@ -60,19 +57,16 @@ class D(B, C):
 print(D().hello())
 ```
 8.
-```python
-# skip
+```python no-run
 print(any([]), all([]), sum([]), max([], default="none"))
 ```
 9.
-```python
-# skip
+```python no-run
 t = (1, [2, 3])
 t[1] += [4]
 ```
 10.
-```python
-# skip
+```python no-run
 import copy
 a = {"k": [1]}
 b = dict(a)
@@ -81,7 +75,7 @@ a["k"].append(2)
 print(b, c)
 ```
 
-## B. Answer out loud in under 45 seconds (compare with the model answers)
+### B. Answer out loud in under 45 seconds (compare with the model answers)
 
 11. What is the difference between a process and a thread? When would you pick each in Python?
 12. Explain how a hash map works and what happens on a collision.

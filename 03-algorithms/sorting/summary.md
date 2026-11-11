@@ -1,9 +1,13 @@
 # Sorting: One-Page Summary
 
-## Properties
+## Key facts
+
+### Properties
+
 **Stable** (equal items keep order) · **in place** (`O(1)` extra) · **comparison-based** (`Ω(n log n)` worst case) · **adaptive** (fast on nearly sorted).
 
-## Algorithms
+### Algorithms
+
 | Algorithm | Avg | Worst | Space | Stable | Notes |
 |-----------|-----|-------|-------|--------|-------|
 | Bubble / insertion | `O(n²)` | `O(n²)` | `O(1)` | Yes | Insertion is great for small or nearly sorted data |
@@ -14,7 +18,8 @@
 | **Timsort** (Python) | `O(n log n)` | `O(n log n)` | `O(n)` | Yes | `O(n)` on sorted input |
 | Counting / radix / bucket | `O(n + k)` | | | Yes | Small integer ranges |
 
-## Tricks
+### Tricks
+
 - `sorted(x, key=...)`, `list.sort()` (returns `None`), negate numbers to reverse one key.
 - **Quickselect** for k-th element in average `O(n)`; heap for top-K.
 - **Sort then sweep/two pointers** (intervals, meeting rooms, 3-sum).
@@ -22,6 +27,7 @@
 - Merge sort counts **inversions**.
 
 ## Pitfalls
+
 - `x = a.sort()` gives `None`.
 - Mixed types raise `TypeError`.
 - Naive quicksort pivots on sorted input.

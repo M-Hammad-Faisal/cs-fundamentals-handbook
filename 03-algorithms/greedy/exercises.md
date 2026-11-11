@@ -1,6 +1,9 @@
 # Greedy Algorithms: Exercises
 
+These problems go with the [Greedy Algorithms lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. **Activity selection:** maximum number of non-overlapping intervals.
 2. **Erase overlap intervals:** minimum intervals to remove so the rest do not overlap.
 3. **Jump game:** can you reach the last index?

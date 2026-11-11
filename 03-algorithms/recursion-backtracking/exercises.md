@@ -1,13 +1,17 @@
 # Recursion and Backtracking: Exercises
 
-## Recursion
+These problems go with the [Recursion and Backtracking lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
+### Recursion
 1. Compute the **sum of digits** of a non-negative integer recursively.
 2. Check whether a string is a **palindrome** recursively.
 3. Compute `x ** n` in `O(log n)` using **fast exponentiation**.
 4. **Flatten** an arbitrarily nested list (`[1, [2, [3]]]` becomes `[1, 2, 3]`).
 5. **Tower of Hanoi:** return the list of moves for `n` disks.
 
-## Backtracking
+### Backtracking
 6. Generate all **subsets** of a list of distinct integers.
 7. Generate all **subsets** when the list may contain duplicates (no duplicate subsets).
 8. Generate all **permutations** of distinct integers.

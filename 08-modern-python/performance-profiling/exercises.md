@@ -1,5 +1,9 @@
 # Performance, Profiling and Memory: Exercises
 
+These problems go with the [Performance, Profiling and Memory lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Use `timeit` to compare building a list of squares with a `for`/`append` loop, a list comprehension and `map`. Which wins, and by roughly how much?
 2. Profile this function with `cProfile`, find the bottleneck and fix it. Show both versions give the same answer:
    ```python

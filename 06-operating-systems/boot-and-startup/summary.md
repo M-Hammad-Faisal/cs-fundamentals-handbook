@@ -1,6 +1,6 @@
 # Boot and Startup: One-Page Summary
 
-## Quick reference
+## Key facts
 
 | Stage | Does | Examples |
 |-------|------|----------|
@@ -9,7 +9,15 @@
 | Kernel | memory, drivers, scheduler, mount root | Linux, NT, XNU |
 | Init (PID 1) | start services in dependency order | systemd, launchd |
 
-## Questions worth remembering
+## Pitfalls
+
+- Overwriting the MBR or EFI partition, or editing the bootloader without a rescue plan.
+- Mixing up BIOS/MBR and UEFI/GPT layouts; Secure Boot rejecting an unsigned kernel or module.
+- Blaming the kernel when the initramfs cannot find the root device (wrong UUID).
+- Service units with missing dependencies or ordering.
+- Not reading `journalctl -b` and `dmesg` first.
+
+## Self-check
 
 - **List the stages from power-on to a login prompt.** Firmware (POST, find boot device), bootloader, kernel (and initramfs), init/service manager (PID 1), services and login.
 - **What is in the first 512 bytes of a BIOS boot disk?** The MBR: 446 bytes of boot code, a 64-byte table of four partition entries and the 2-byte `55 AA` signature.
@@ -17,8 +25,6 @@
 - **What is the initramfs for?** A small temporary root file system in RAM containing the drivers and scripts needed to find, unlock and mount the real root file system.
 - **What does PID 1 do, and how does systemd start things faster than sequential scripts?** It is the first user process; it starts all services and adopts orphans. systemd builds a dependency graph and starts independent units in parallel.
 - **How does measured boot detect a tampered bootloader?** Each stage's hash is folded into a TPM register with `H(old || H(component))`; changing any component (or the order) changes the final value, which no longer matches the expected fingerprint.
-
-Practice problems with solutions are in the **Practice** section of each lesson.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

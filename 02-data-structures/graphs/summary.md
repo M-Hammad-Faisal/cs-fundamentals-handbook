@@ -1,17 +1,20 @@
 # Graphs: One-Page Summary
 
-## Facts
+## Key facts
+
 - Vertices + edges. Directed/undirected, weighted/unweighted, cyclic/acyclic (DAG).
 - **Adjacency list** `O(V + E)` (default, sparse); **matrix** `O(V²)` (dense, `O(1)` edge check).
 
-## Traversal
+### Traversal
+
 | | BFS | DFS |
 |---|-----|-----|
 | Structure | Queue | Stack / recursion |
 | Finds | Shortest path (unweighted) | Cycles, components, topological order |
 | Time / space | `O(V + E)` / `O(V)` | `O(V + E)` / `O(V)` |
 
-## Algorithms
+### Algorithms
+
 | Problem | Algorithm | Time |
 |---------|-----------|------|
 | Shortest path, non-negative weights | Dijkstra (heap) | `O((V+E) log V)` |
@@ -21,7 +24,8 @@
 | Connectivity, Kruskal | Union-Find | ~`O(α(n))` per op |
 | Minimum spanning tree | Kruskal / Prim | `O(E log E)` |
 
-## Patterns
+### Patterns
+
 - Grids are graphs (4 or 8 neighbours).
 - Multi-source BFS (rotting oranges).
 - Mark visited on enqueue.
@@ -30,6 +34,7 @@
 - Model state as the vertex when needed.
 
 ## Pitfalls
+
 - Dijkstra with negative edges.
 - Recursive DFS depth limits.
 - Forgetting disconnected components.

@@ -1,8 +1,14 @@
 # Design Patterns: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Design Patterns lesson](README.md). Try each one before opening its solution.
 
-## Chain of Responsibility Pattern
+Pattern solutions reuse class names (for example `Add` appears in the Command and Visitor answers), so each solution is a separate program that builds on the matching pattern lesson; CI runs every block on its own.
+
+<!-- run: isolated -->
+
+## Problems
+
+### Chain of Responsibility Pattern
 
 1. Implement an expense approval chain with limits 100, 1000, 10000.
 2. Add a "log everything" handler that logs and always passes on.
@@ -12,7 +18,7 @@ Try each problem before opening its solution. These are the practice problems of
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Approver:
     def __init__(self, name, limit, next_approver=None):
         self.name, self.limit, self.next = name, limit, next_approver
@@ -27,19 +33,21 @@ print(chain.approve(50), "|", chain.approve(5000), "|", chain.approve(50000))
 ```
 
 **2.**
-```python no-run
+```python
 def audit(next_fn, sink):
     def handler(req):
         sink.append(req)
         return next_fn(req)
     return handler
+def view(req):
+    return f"200 secret page {req['path']}"
 seen = []
 app2 = audit(view, seen)
 app2({"path": "/z"}); print(seen)
 ```
 
 **3.**
-```python no-run
+```python
 import time
 def timing(next_fn, sink):
     def handler(req):
@@ -64,7 +72,7 @@ print(errors(timing(boom, durations))({}), errors(timing(view, durations))({"pat
 
 </details>
 
-## Command Pattern
+### Command Pattern
 
 1. Implement a `Calculator` with `Add` and `Multiply` commands supporting undo/redo.
 2. Add a `MacroCommand` that is undone in reverse.
@@ -74,7 +82,7 @@ print(errors(timing(boom, durations))({}), errors(timing(view, durations))({"pat
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Calc:
     def __init__(self): self.value = 0
 class Add:
@@ -85,6 +93,14 @@ class Mul:
     def __init__(self, c, n): self.c, self.n, self.prev = c, n, None
     def execute(self): self.prev = self.c.value; self.c.value *= self.n
     def undo(self): self.c.value = self.prev
+class History:
+    def __init__(self): self.done, self.undone = [], []
+    def run(self, cmd):
+        cmd.execute(); self.done.append(cmd); self.undone.clear()
+    def undo(self):
+        cmd = self.done.pop(); cmd.undo(); self.undone.append(cmd)
+    def redo(self):
+        cmd = self.undone.pop(); cmd.execute(); self.done.append(cmd)
 calc, hist = Calc(), History()
 hist.run(Add(calc, 5)); hist.run(Mul(calc, 3)); print(calc.value)          # 15
 hist.undo(); print(calc.value); hist.undo(); print(calc.value); hist.redo(); print(calc.value)   # 5 0 5
@@ -93,7 +109,7 @@ hist.undo(); print(calc.value); hist.undo(); print(calc.value); hist.redo(); pri
 **2.** See `MacroCommand` in the lesson (its `undo` loops `reversed(self.commands)`).
 
 **3.**
-```python no-run
+```python
 def run_with_retries(command, attempts=3):
     for n in range(1, attempts + 1):
         try:
@@ -111,7 +127,7 @@ print(run_with_retries(flaky), len(tries))                                  # ok
 
 </details>
 
-## Interpreter Pattern
+### Interpreter Pattern
 
 1. Add `Not` and a `Less` operator to the rule engine.
 2. Extend the parser to support unary minus (`-x + 3`).
@@ -121,7 +137,7 @@ print(run_with_retries(flaky), len(tries))                                  # ok
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Not(Expression):
     def __init__(self, operand): self.operand = operand
     def interpret(self, ctx): return not self.operand.interpret(ctx)
@@ -133,7 +149,7 @@ print(r.interpret({"age": 10, "country": "PK"}), r.interpret({"age": 10, "countr
 ```
 
 **2.**
-```python no-run
+```python
 class Parser2(Parser):
     def factor(self):
         if self.peek() == "-":
@@ -147,7 +163,7 @@ print(Parser2("-x + 3").expr().interpret({"x": 5}))             # -2
 
 </details>
 
-## Iterator Pattern
+### Iterator Pattern
 
 1. Write a generator `chunks(path, size)` that yields file contents in blocks.
 2. Create an iterable `Range2(start, stop, step)` that supports multiple loops.
@@ -157,7 +173,7 @@ print(Parser2("-x + 3").expr().interpret({"x": 5}))             # -2
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 import tempfile, os
 def chunks(path, size):
     with open(path, "rb") as f:
@@ -168,7 +184,7 @@ print(list(chunks(p, 4)))                               # [b'abcd', b'efgh', b'i
 ```
 
 **2.**
-```python no-run
+```python
 class Range2:
     def __init__(self, start, stop, step=1): self.start, self.stop, self.step = start, stop, step
     def __iter__(self):
@@ -181,14 +197,14 @@ print(list(r), list(r))                                 # [0, 3, 6, 9] [0, 3, 6,
 ```
 
 **3.**
-```python no-run
+```python
 it = iter([1, 2, 3, 4])
 print(list(zip(it, it)))                                # [(1, 2), (3, 4)]  (both arguments advance the SAME iterator)
 ```
 
 </details>
 
-## Mediator Pattern
+### Mediator Pattern
 
 1. Extend `ChatRoom` with a `leave()` method and a mute list.
 2. Build a `SignupForm` mediator: when "type" is "company", show a "company name" field; "Submit" enabled only if email is present and terms accepted.
@@ -198,7 +214,7 @@ print(list(zip(it, it)))                                # [(1, 2), (3, 4)]  (bot
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class ChatRoom2(ChatRoom):
     def __init__(self):
         super().__init__()
@@ -216,7 +232,7 @@ r.muted.clear(); a.say("hello"); r.leave(b); a.say("x"); print(b.inbox)    # ['a
 ```
 
 **2.**
-```python no-run
+```python
 class SignupForm:
     def __init__(self):
         self.type, self.email, self.terms = "person", "", False
@@ -235,7 +251,7 @@ print(f.company_field_visible, f.submit_enabled)        # True True
 
 </details>
 
-## Memento Pattern
+### Memento Pattern
 
 1. Add `redo()` to the `Editor` (keep a second stack).
 2. Implement save points for a game `Player` (`hp`, `inventory` list) and show restoring after dying.
@@ -245,7 +261,7 @@ print(f.company_field_visible, f.submit_enabled)        # True True
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Editor2(Editor):
     def __init__(self, max_history=10):
         super().__init__(max_history)
@@ -264,7 +280,7 @@ e2 = Editor2(); e2.type("a"); e2.type("b"); e2.undo(); print(e2.doc.text); e2.re
 ```
 
 **2.**
-```python no-run
+```python
 class Player:
     def __init__(self): self.hp, self.inventory = 100, ["sword"]
     def save(self): return copy.deepcopy((self.hp, self.inventory))
@@ -278,7 +294,7 @@ p.load(save); print(p.hp, p.inventory)                  # 100 ['sword']
 
 </details>
 
-## Null Object Pattern
+### Null Object Pattern
 
 1. Make a `NoDiscount` strategy and a `Checkout` that works with or without a discount.
 2. Write `find_user(name)` returning a `GuestUser` null object, and a `greet(user)` with no `None` check.
@@ -288,7 +304,7 @@ p.load(save); print(p.hp, p.inventory)                  # 100 ['sword']
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class PercentOff:
     def __init__(self, pct): self.pct = pct
     def apply(self, price): return price * (1 - self.pct / 100)
@@ -302,7 +318,7 @@ print(Checkout().total(100), Checkout(PercentOff(25)).total(100))      # 100 75.
 ```
 
 **2.**
-```python no-run
+```python
 USERS = {"ana": "Ana"}
 class GuestUser:
     display = "Guest"
@@ -318,7 +334,7 @@ print(greet(find_user("ana")), greet(find_user("zed")))                # Hello, 
 
 </details>
 
-## Observer Pattern
+### Observer Pattern
 
 1. Build a `Thermostat` that notifies observers only when the temperature crosses a threshold.
 2. Add priorities so higher-priority observers are called first.
@@ -328,7 +344,7 @@ print(greet(find_user("ana")), greet(find_user("zed")))                # Hello, 
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Thermostat:
     def __init__(self, threshold):
         self.threshold, self.temp, self.subs = threshold, 20, []
@@ -346,7 +362,7 @@ print(seen)                                                   # [30, 10]
 ```
 
 **2.**
-```python no-run
+```python
 class PriorityEmitter:
     def __init__(self): self.handlers = []
     def subscribe(self, fn, priority=0):
@@ -361,7 +377,7 @@ pe.emit(); print(order)                                       # ['high', 'low']
 ```
 
 **3.**
-```python no-run
+```python
 class OnceEmitter(EventEmitter):
     def once(self, event, handler):
         def wrapper(*a):
@@ -375,7 +391,7 @@ print(hits)                                                   # [1]
 
 </details>
 
-## State Pattern
+### State Pattern
 
 1. Model a traffic light with state classes, then with a transition table.
 2. Add a `refund` event to the order that is only allowed from `shipped` (table version).
@@ -385,7 +401,7 @@ print(hits)                                                   # [1]
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Light:
     def __init__(self): self.state = Red()
     def next(self): self.state = self.state.next()
@@ -402,7 +418,7 @@ print(table_seq)
 ```
 
 **2.**
-```python no-run
+```python
 TRANSITIONS[("shipped", "refund")] = "refunded"
 o = SimpleOrder()
 for e in ("pay", "ship", "refund"): o.handle(e)
@@ -420,7 +436,7 @@ cancelled       cancelled
 
 </details>
 
-## Strategy Pattern
+### Strategy Pattern
 
 1. Implement price strategies `Regular`, `Student` (20% off), `Bulk` (10% off for quantity >= 10) as classes and as a dictionary of functions.
 2. Implement text compression strategies `NoCompression` and `Reverse` (silly) and a `Sender` that uses either.
@@ -430,7 +446,7 @@ cancelled       cancelled
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Regular:
     def total(self, price, qty): return price * qty
 class Student:
@@ -444,7 +460,7 @@ print(FUNCS["bulk"](10, 10))
 ```
 
 **2.**
-```python no-run
+```python
 class NoCompression:
     def pack(self, text): return text
 class Reverse:
@@ -456,7 +472,7 @@ print(Sender(NoCompression()).send("abc"), Sender(Reverse()).send("abc"))     # 
 ```
 
 **3.**
-```python no-run
+```python
 RATES = {"standard": lambda w: 5 + w, "express": lambda w: 15 + 2.5 * w, "overnight": lambda w: 30 + 4 * w}
 def shipping_cost2(method, weight):
     try:
@@ -468,7 +484,7 @@ print(shipping_cost2("express", 2))                                           # 
 
 </details>
 
-## Template Method Pattern
+### Template Method Pattern
 
 1. Write a `Beverage` template with `boil_water`, `brew`, `pour`, `add_condiments` (hook); implement `Tea` and `Coffee`.
 2. Add a hook `should_cache()` to `DataPipeline` that skips `load` when false.
@@ -478,7 +494,7 @@ print(shipping_cost2("express", 2))                                           # 
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Beverage(ABC):
     def prepare(self):
         steps = ["boil water", self.brew(), "pour in cup"]
@@ -501,7 +517,7 @@ print(Tea().prepare(), Coffee().prepare())
 ```
 
 **2.**
-```python no-run
+```python
 class CachedPipeline(DataPipeline):
     def should_cache(self): return True
     def run(self):
@@ -516,7 +532,7 @@ print(Demo().run())
 
 </details>
 
-## Visitor Pattern
+### Visitor Pattern
 
 1. Add a `Neg` node (unary minus) and update `Evaluator`, `Printer`, `DepthCounter`. Note what you had to edit.
 2. Write a visitor that collects all `Num` values in an expression.
@@ -526,7 +542,7 @@ print(Demo().run())
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Neg:
     def __init__(self, operand): self.operand = operand
     def accept(self, visitor): return visitor.visit_neg(self)
@@ -539,7 +555,7 @@ print(e2.accept(Printer()), "=", e2.accept(Evaluator()), "depth", e2.accept(Dept
 Adding a node type forced edits to **every visitor**: the visitor trade-off.
 
 **2.**
-```python no-run
+```python
 class NumCollector:
     def __init__(self): self.values = []
     def visit_num(self, n): self.values.append(n.value)
@@ -549,7 +565,7 @@ nc = NumCollector(); expr.accept(nc); print(nc.values)                # [2, 3, 4
 ```
 
 **3.**
-```python no-run
+```python
 @singledispatch
 def simplify(node): return node
 @simplify.register
@@ -569,7 +585,7 @@ print(Printer().visit_num(Num(7)), simplify(Mul(Add(Num(5), Num(0)), Num(1))).ac
 
 </details>
 
-## Abstract Factory Pattern
+### Abstract Factory Pattern
 
 1. Build `WindowsFactory`/`MacFactory` creating `Button` and `Scrollbar`, and a `settings_panel(factory)` function.
 2. Add a `HighContrastFactory` family without editing `build_form`.
@@ -579,7 +595,7 @@ print(Printer().visit_num(Num(7)), simplify(Mul(Add(Num(5), Num(0)), Num(1))).ac
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class WinButton:    render = lambda self: "win-button"
 class WinScrollbar: render = lambda self: "win-scrollbar"
 class MacButton:    render = lambda self: "mac-button"
@@ -595,7 +611,7 @@ print(settings_panel(WindowsFactory()), settings_panel(MacFactory()))
 ```
 
 **2.**
-```python no-run
+```python
 class HcButton(Button):
     def render(self): return "hc-button"
 class HcCheckbox(Checkbox):
@@ -607,7 +623,7 @@ print(build_form(HighContrastFactory()))           # build_form unchanged
 ```
 
 **3.**
-```python no-run
+```python
 class RecordingFactory(ThemeFactory):
     def __init__(self): self.created = []
     def create_button(self): self.created.append("button"); return LightButton()
@@ -617,7 +633,7 @@ rf = RecordingFactory(); build_form(rf); print(rf.created)    # ['button', 'chec
 
 </details>
 
-## Builder Pattern
+### Builder Pattern
 
 1. Write `QueryBuilder` with `select(*cols)`, `from_(table)`, `where(cond)`, `limit(n)` and `build()` returning a SQL string. Require `from_`.
 2. Make a dataclass with `__post_init__` that rejects `limit < 0`.
@@ -627,7 +643,7 @@ rf = RecordingFactory(); build_form(rf); print(rf.created)    # ['button', 'chec
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class QueryBuilder:
     def __init__(self):
         self._cols, self._table, self._wheres, self._limit = ["*"], None, [], None
@@ -647,7 +663,7 @@ print(QueryBuilder().select("id", "name").from_("users").where("age > 18").limit
 ```
 
 **2.**
-```python no-run
+```python
 @dataclass
 class Page:
     limit: int = 10
@@ -658,7 +674,7 @@ except ValueError as e: print(e)
 ```
 
 **3.**
-```python no-run
+```python
 class ReusableBuilder(PizzaBuilder):
     def build(self):
         pizza = super().build()
@@ -670,7 +686,7 @@ print(rb.topping("a").build(), rb.build())            # second pizza has no topp
 
 </details>
 
-## Factory Method Pattern
+### Factory Method Pattern
 
 1. Write `shape_from_dict({"type": "circle", "r": 2})` using a registry decorator `@register("circle")`.
 2. Create a factory returning different `Notifier` objects (`email`, `sms`) and raising a helpful error for unknown names.
@@ -680,7 +696,7 @@ print(rb.topping("a").build(), rb.build())            # second pizza has no topp
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 import math
 SHAPES = {}
 def register(name):
@@ -708,7 +724,7 @@ print(round(shape_from_dict({"type": "circle", "r": 2}).area(), 2), shape_from_d
 ```
 
 **2.**
-```python no-run
+```python
 class EmailNotifier:
     def send(self, to, msg): return f"email {to}: {msg}"
 class SmsNotifier:
@@ -726,7 +742,7 @@ except ValueError as e:
 ```
 
 **3.**
-```python no-run
+```python
 def export(data, fmt):
     return Exporter.create(fmt).export(data)       # no if/elif ladder
 print(export("x", "pdf"))                          # pdf:x
@@ -734,7 +750,7 @@ print(export("x", "pdf"))                          # pdf:x
 
 </details>
 
-## Object Pool Pattern
+### Object Pool Pattern
 
 1. Add a `max_uses` limit so each pooled connection is replaced after 3 uses.
 2. Add a health check: if `conn.alive` is false when returned, replace it with a new one.
@@ -744,7 +760,7 @@ print(export("x", "pdf"))                          # pdf:x
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class ReplacingPool(Pool):
     def __init__(self, size, max_uses=3):
         super().__init__(size)
@@ -762,7 +778,7 @@ print(rp.uses)
 (In production you would close the old connection and put a fresh one back when the count hits `max_uses`.)
 
 **2.**
-```python no-run
+```python
 class HealthyPool(Pool):
     @contextmanager
     def acquire(self, timeout=1.0):
@@ -782,7 +798,7 @@ with hp.acquire() as c2:
 
 </details>
 
-## Prototype Pattern
+### Prototype Pattern
 
 1. Show the shallow-copy bug with a list-of-lists and fix it.
 2. Write `__deepcopy__` for a class that holds a large shared `texture` string (do not copy it) and a mutable `stats` dict (copy it).
@@ -792,7 +808,7 @@ with hp.acquire() as c2:
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 grid = [[0, 0], [0, 0]]
 bad = copy.copy(grid); bad[0][0] = 9
 print(grid)                                         # [[9, 0], [0, 0]]  (shared inner list)
@@ -802,7 +818,7 @@ print(grid)                                         # [[0, 0], [0, 0]]
 ```
 
 **2.**
-```python no-run
+```python
 class Sprite:
     def __init__(self, texture, stats):
         self.texture, self.stats = texture, stats
@@ -814,14 +830,14 @@ print(a.stats, b.texture is a.texture)              # {'hp': 1} True
 ```
 
 **3.**
-```python no-run
+```python
 variants = [replace(base, port=p) for p in (81, 82, 83)]
 print([v.port for v in variants])                   # [81, 82, 83]
 ```
 
 </details>
 
-## Singleton Pattern
+### Singleton Pattern
 
 1. Make a `Counter` singleton with `increment()` and show two names share the count.
 2. Prove the `__new__` version is safe with 20 threads creating instances.
@@ -831,7 +847,7 @@ print([v.port for v in variants])                   # [81, 82, 83]
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Counter(Singleton):
     def __init__(self):
         if not hasattr(self, "n"):
@@ -845,7 +861,7 @@ print(a.n, a is b)                                 # 2 True
 ```
 
 **2.**
-```python no-run
+```python
 import threading
 seen = set()
 def make():
@@ -857,7 +873,7 @@ print(len(seen))                                   # 1
 ```
 
 **3.**
-```python no-run
+```python
 class Logger:
     def __init__(self): self.lines = []
     def log(self, msg): self.lines.append(msg)
@@ -873,7 +889,7 @@ print(fake, logger.lines)                          # ['processing x'] []
 
 </details>
 
-## Adapter Pattern
+### Adapter Pattern
 
 1. Adapt a `LegacyPrinter.print_text(s)` to a `Printer.print(doc)` interface where `doc` has `.title` and `.body`.
 2. Write an adapter so an `XmlWeather.get()` returning `"<t>21</t>"` fits `WeatherSource.temperature() -> float`.
@@ -883,7 +899,7 @@ print(fake, logger.lines)                          # ['processing x'] []
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class LegacyPrinter:
     def print_text(self, s): return f"PRINTED: {s}"
 class DocPrinter:
@@ -895,7 +911,7 @@ print(DocPrinter(LegacyPrinter()).print(Doc("T", "B")))
 ```
 
 **2.**
-```python no-run
+```python
 import re
 class XmlWeather:
     def get(self): return "<t>21</t>"
@@ -909,7 +925,7 @@ print(WeatherAdapter(XmlWeather()).temperature())       # 21.0
 
 </details>
 
-## Bridge Pattern
+### Bridge Pattern
 
 1. Add a `Triangle` shape and a `CanvasRenderer` to the example without editing existing shapes or renderers (other than interface additions).
 2. Build a `RemoteControl`/`Device` bridge with `Tv` and `Radio` devices and `BasicRemote`/`AdvancedRemote` (with `mute()`).
@@ -919,7 +935,7 @@ print(WeatherAdapter(XmlWeather()).temperature())       # 21.0
 <summary>Solutions</summary>
 
 **1.** (renderer interface grows by one method):
-```python no-run
+```python
 class CanvasRenderer(Renderer):
     def circle(self, r): return f"canvas.arc({r})"
     def square(self, side): return f"canvas.rect({side})"
@@ -927,7 +943,7 @@ print(Circle(CanvasRenderer(), 1).draw(), Square(CanvasRenderer(), 2).draw())
 ```
 
 **2.**
-```python no-run
+```python
 class Device:
     def __init__(self): self.volume = 10
 class Tv(Device):    name = "TV"
@@ -944,7 +960,7 @@ print(BasicRemote(Tv()).volume_up(), AdvancedRemote(Radio()).mute())
 
 </details>
 
-## Composite Pattern
+### Composite Pattern
 
 1. Add `count_files()` and `find(name)` to the `Folder`/`File` classes.
 2. Model an organization chart where `Employee` and `Manager` both have `salary_cost()` (a manager includes reports).
@@ -954,7 +970,7 @@ print(BasicRemote(Tv()).volume_up(), AdvancedRemote(Radio()).mute())
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class File2(File):
     def count_files(self): return 1
     def find(self, name): return self if self.name == name else None
@@ -971,7 +987,7 @@ print(r.count_files(), r.find("b").size())              # 2 2
 ```
 
 **2.**
-```python no-run
+```python
 class Employee:
     def __init__(self, name, salary): self.name, self.salary = name, salary
     def salary_cost(self): return self.salary
@@ -983,7 +999,7 @@ print(boss.salary_cost())                               # 240
 ```
 
 **3.**
-```python no-run
+```python
 def walk(root):
     stack, out = [root], []
     while stack:
@@ -996,7 +1012,7 @@ print(walk(Tree("a", Tree("b", Tree("d")), Tree("c"))))  # ['a', 'b', 'd', 'c']
 
 </details>
 
-## Decorator Pattern
+### Decorator Pattern
 
 1. Write `@cache_with_ttl(seconds)` with an injectable clock so expiry is testable.
 2. Add a `@validate_positive` decorator that raises `ValueError` if any positive-number argument is `<= 0`.
@@ -1006,7 +1022,7 @@ print(walk(Tree("a", Tree("b", Tree("d")), Tree("c"))))  # ['a', 'b', 'd', 'c']
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 def cache_with_ttl(seconds, clock=time.monotonic):
     def decorator(fn):
         store = {}
@@ -1031,7 +1047,7 @@ print(calls)                                            # [2, 2]
 ```
 
 **2.**
-```python no-run
+```python
 def validate_positive(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
@@ -1049,7 +1065,7 @@ except ValueError as e: print(e)
 ```
 
 **3.**
-```python no-run
+```python
 class PlainText:
     def __init__(self, s): self.s = s
     def render(self): return self.s
@@ -1064,7 +1080,7 @@ print(Bold(Italic(PlainText("hi"))).render())          # <b><i>hi</i></b>
 
 </details>
 
-## Facade Pattern
+### Facade Pattern
 
 1. Build a `HomeTheater` facade with `watch_movie(title)` and `end_movie()` over `Amplifier`, `Projector`, `Lights`, `Player`. Verify call order.
 2. Write a `report(path)` facade that reads a CSV, computes totals and returns text, using three small helper classes.
@@ -1074,7 +1090,7 @@ print(Bold(Italic(PlainText("hi"))).render())          # <b><i>hi</i></b>
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 log = []
 class Amplifier:
     def on(self): log.append("amp on")
@@ -1099,7 +1115,7 @@ print(log)
 ```
 
 **2.**
-```python no-run
+```python
 import csv, io
 class Reader:
     def rows(self, text): return list(csv.DictReader(io.StringIO(text)))
@@ -1116,7 +1132,7 @@ print(ReportFacade().report("name,amount\na,1.5\nb,2.25"))     # TOTAL: 3.75
 
 </details>
 
-## Flyweight Pattern
+### Flyweight Pattern
 
 1. Build a `Style` flyweight factory keyed by `(font, size, bold)` and 100,000 characters; show only a few `Style` objects exist.
 2. Make a flyweight immutable using a `frozen=True` dataclass and show that mutation fails.
@@ -1126,7 +1142,7 @@ print(ReportFacade().report("name,amount\na,1.5\nb,2.25"))     # TOTAL: 3.75
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Style:
     __slots__ = ("font", "size", "bold")
     def __init__(self, font, size, bold): self.font, self.size, self.bold = font, size, bold
@@ -1140,7 +1156,7 @@ print(len(StyleFactory.cache))                          # 4  (a few distinct sty
 ```
 
 **2.**
-```python no-run
+```python
 from dataclasses import dataclass
 @dataclass(frozen=True)
 class FrozenStyle:
@@ -1157,7 +1173,7 @@ except Exception as e:
 
 </details>
 
-## Proxy Pattern
+### Proxy Pattern
 
 1. Build a lazy proxy for a `Database` that connects only when the first `query` runs.
 2. Add a rate-limit proxy that allows at most 3 calls, then raises.
@@ -1167,7 +1183,7 @@ except Exception as e:
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 class Database:
     def __init__(self): print("connecting...")
     def query(self, sql): return f"result of {sql}"
@@ -1182,7 +1198,7 @@ print(db.query("SELECT 1"))                             # connecting... / result
 ```
 
 **2.**
-```python no-run
+```python
 class RateLimited:
     def __init__(self, target, limit): self.target, self.limit, self.n = target, limit, 0
     def query(self, sql):
@@ -1196,7 +1212,7 @@ except RuntimeError as e: print(e)
 ```
 
 **3.**
-```python no-run
+```python
 class CountingProxy2(CountingProxy):
     def __len__(self): return len(self._target)
 print(len(CountingProxy2([1, 2, 3])))                   # 3

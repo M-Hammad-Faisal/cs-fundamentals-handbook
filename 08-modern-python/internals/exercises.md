@@ -1,8 +1,266 @@
 # Python Internals: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Python Internals lesson](README.md). Try each one before opening its solution.
 
-## The Python Data Model and CPython Internals
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import re
+from dataclasses import dataclass
+import operator
+
+@dataclass
+class Token:
+    kind: str       # NUMBER, NAME, KEYWORD, OP or END
+    text: str
+
+KEYWORDS = {"let", "print", "if", "else", "while"}
+TOKEN_RE = re.compile(r"\s*(?:(?P<NUMBER>\d+(?:\.\d+)?)|(?P<NAME>[A-Za-z_]\w*)|(?P<OP>\*\*|<=|>=|==|!=|[-+*/%<>=(){};]))")
+
+def tokenize(source: str) -> list[Token]:
+    tokens, pos = [], 0
+    while pos < len(source):
+        if source[pos:].strip() == "":
+            break
+        m = TOKEN_RE.match(source, pos)
+        if not m:
+            raise SyntaxError(f"unexpected character {source[pos:].lstrip()[0]!r}")
+        kind, text = m.lastgroup, m.group(m.lastgroup)
+        if kind == "NAME" and text in KEYWORDS:
+            kind = "KEYWORD"
+        tokens.append(Token(kind, text))
+        pos = m.end()
+    tokens.append(Token("END", ""))
+    return tokens
+
+@dataclass
+class Num:    value: float
+
+@dataclass
+class Var:    name: str
+
+@dataclass
+class BinOp:  op: str; left: object; right: object
+
+@dataclass
+class Neg:    operand: object
+
+@dataclass
+class Let:    name: str; value: object
+
+@dataclass
+class Assign: name: str; value: object
+
+@dataclass
+class Print:  value: object
+
+@dataclass
+class If:     cond: object; then: list; otherwise: list
+
+@dataclass
+class While:  cond: object; body: list
+
+class Parser:
+    def __init__(self, tokens):
+        self.tokens, self.i = tokens, 0
+
+    def peek(self):
+        return self.tokens[self.i]
+    def advance(self):
+        tok = self.tokens[self.i]
+        self.i += 1
+        return tok
+    def at(self, text):
+        return self.peek().text == text and self.peek().kind in ("OP", "KEYWORD")
+    def expect(self, text):
+        if not self.at(text):
+            raise SyntaxError(f"expected {text!r} but found {self.peek().text!r}")
+        return self.advance()
+
+    def program(self):
+        stmts = []
+        while self.peek().kind != "END":
+            stmts.append(self.statement())
+        return stmts
+
+    def block(self):
+        self.expect("{")
+        stmts = []
+        while not self.at("}"):
+            stmts.append(self.statement())
+        self.expect("}")
+        return stmts
+
+    def statement(self):
+        if self.at("let"):
+            self.advance(); name = self.advance().text; self.expect("=")
+            value = self.expr(); self.expect(";")
+            return Let(name, value)
+        if self.at("print"):
+            self.advance(); value = self.expr(); self.expect(";")
+            return Print(value)
+        if self.at("if"):
+            self.advance(); cond = self.expr(); then = self.block(); otherwise = []
+            if self.at("else"):
+                self.advance(); otherwise = self.block()
+            return If(cond, then, otherwise)
+        if self.at("while"):
+            self.advance(); cond = self.expr()
+            return While(cond, self.block())
+        if self.peek().kind == "NAME":
+            name = self.advance().text; self.expect("=")
+            value = self.expr(); self.expect(";")
+            return Assign(name, value)
+        raise SyntaxError(f"unexpected {self.peek().text!r}")
+
+    def expr(self):                                       # comparison
+        left = self.sum()
+        for op in ("<=", ">=", "==", "!=", "<", ">"):
+            if self.at(op):
+                self.advance()
+                return BinOp(op, left, self.sum())
+        return left
+
+    def sum(self):
+        node = self.term()
+        while self.at("+") or self.at("-"):
+            op = self.advance().text
+            node = BinOp(op, node, self.term())           # left-associative: (a - b) - c
+        return node
+
+    def term(self):
+        node = self.unary()
+        while self.at("*") or self.at("/") or self.at("%"):
+            op = self.advance().text
+            node = BinOp(op, node, self.unary())
+        return node
+
+    def unary(self):
+        if self.at("-"):
+            self.advance()
+            return Neg(self.unary())
+        return self.power()
+
+    def power(self):
+        base = self.atom()
+        if self.at("**"):
+            self.advance()
+            return BinOp("**", base, self.unary())        # right-associative: 2 ** 3 ** 2 = 2 ** 9
+        return base
+
+    def atom(self):
+        tok = self.advance()
+        if tok.kind == "NUMBER":
+            return Num(float(tok.text) if "." in tok.text else int(tok.text))
+        if tok.kind == "NAME":
+            return Var(tok.text)
+        if tok.text == "(":
+            node = self.expr()
+            self.expect(")")
+            return node
+        raise SyntaxError(f"unexpected {tok.text!r}")
+
+def parse(source):
+    return Parser(tokenize(source)).program()
+
+BINARY = {"+": operator.add, "-": operator.sub, "*": operator.mul, "/": operator.truediv, "%": operator.mod, "**": operator.pow,
+          "<": operator.lt, ">": operator.gt, "<=": operator.le, ">=": operator.ge, "==": operator.eq, "!=": operator.ne}
+
+factorial = """
+let n = 10; let result = 1;
+while n > 1 { result = result * n; n = n - 1; }
+print result;
+"""
+
+@dataclass
+class Instr:
+    op: str
+    arg: object = None
+    def __repr__(self):
+        return f"{self.op} {self.arg}" if self.arg is not None else self.op
+
+class Compiler:
+    def __init__(self):
+        self.code = []
+    def emit(self, op, arg=None):
+        self.code.append(Instr(op, arg))
+        return len(self.code) - 1                         # index of the instruction just emitted
+
+    def expr(self, node):
+        if isinstance(node, Num):
+            self.emit("PUSH", node.value)
+        elif isinstance(node, Var):
+            self.emit("LOAD", node.name)
+        elif isinstance(node, Neg):
+            self.expr(node.operand); self.emit("NEG")
+        elif isinstance(node, BinOp):
+            self.expr(node.left); self.expr(node.right)   # postfix: both operands, then the operator
+            self.emit(node.op)
+
+    def stmts(self, stmts):
+        for s in stmts:
+            if isinstance(s, (Let, Assign)):
+                self.expr(s.value); self.emit("STORE", s.name)
+            elif isinstance(s, Print):
+                self.expr(s.value); self.emit("PRINT")
+            elif isinstance(s, If):
+                self.expr(s.cond)
+                jump_false = self.emit("JUMP_IF_FALSE", None)       # target patched below
+                self.stmts(s.then)
+                jump_end = self.emit("JUMP", None)
+                self.code[jump_false].arg = len(self.code)           # false branch starts here
+                self.stmts(s.otherwise)
+                self.code[jump_end].arg = len(self.code)
+            elif isinstance(s, While):
+                start = len(self.code)
+                self.expr(s.cond)
+                jump_false = self.emit("JUMP_IF_FALSE", None)
+                self.stmts(s.body)
+                self.emit("JUMP", start)                              # back to re-test the condition
+                self.code[jump_false].arg = len(self.code)
+
+def compile_program(source):
+    c = Compiler()
+    c.stmts(parse(source))
+    return c.code
+
+class VM:
+    def __init__(self, code):
+        self.code, self.stack, self.env, self.output = code, [], {}, []
+
+    def run(self):
+        pc = 0
+        while pc < len(self.code):
+            ins = self.code[pc]
+            pc += 1
+            op = ins.op
+            if op == "PUSH":
+                self.stack.append(ins.arg)
+            elif op == "LOAD":
+                self.stack.append(self.env[ins.arg])
+            elif op == "STORE":
+                self.env[ins.arg] = self.stack.pop()
+            elif op == "NEG":
+                self.stack.append(-self.stack.pop())
+            elif op == "PRINT":
+                self.output.append(self.stack.pop())
+            elif op == "JUMP":
+                pc = ins.arg
+            elif op == "JUMP_IF_FALSE":
+                if not self.stack.pop():
+                    pc = ins.arg
+            else:                                              # binary operator
+                right, left = self.stack.pop(), self.stack.pop()
+                self.stack.append(BINARY[op](left, right))
+        return self.output
+```
+
+</details>
+
+## Problems
+
+### The Python Data Model and CPython Internals
 
 1. Write a descriptor `Typed(expected_type)` that raises `TypeError` unless the value has that type, and use it for a `Person` with `name: str` and `age: int`.
 2. Show with `sys.getrefcount` how the count changes when you put an object in a list and then remove it.
@@ -14,7 +272,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    class Typed:
        def __init__(self, expected_type):
            self.expected_type = expected_type
@@ -39,7 +297,7 @@ Try each problem before opening its solution. These are the practice problems of
    # 36
    # expected int, got str
    ```
-2. ```python no-run
+2. ```python
    import sys
    obj = object()
    before = sys.getrefcount(obj)
@@ -50,7 +308,7 @@ Try each problem before opening its solution. These are the practice problems of
    print(during - before, after - before)
    # 1 0
    ```
-3. ```python no-run
+3. ```python
    import gc, weakref
    class Parent:
        pass
@@ -63,7 +321,7 @@ Try each problem before opening its solution. These are the practice problems of
    print(gc.collect())
    # 0
    ```
-4. ```python no-run
+4. ```python
    class Task:
        def __init_subclass__(cls, **kw):
            super().__init_subclass__(**kw)
@@ -78,7 +336,7 @@ Try each problem before opening its solution. These are the practice problems of
        print(e)
    # Bad must define run()
    ```
-5. ```python no-run
+5. ```python
    import dis
    names = [i.opname for i in dis.get_instructions(lambda a, b: a + b)]
    print(names.count("BINARY_OP"))
@@ -89,7 +347,7 @@ Try each problem before opening its solution. These are the practice problems of
 
 </details>
 
-## Build a Tiny Interpreter
+### Build a Tiny Interpreter
 
 1. Add the `and`, `or` and `not` operators (with precedence lower than comparisons, `not` binding tighter than `and`, and `and` tighter than `or`).
 2. Add `else if` support by letting `else` be followed by an `if` statement.
@@ -101,7 +359,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    # grammar: expr := orexpr ; orexpr := andexpr {"or" andexpr}; andexpr := notexpr {"and" notexpr};
    #          notexpr := "not" notexpr | comparison
    # Add "and", "or", "not" to KEYWORDS and the tokenizer; rename the old `expr` method to `comparison`;
@@ -109,13 +367,13 @@ Try each problem before opening its solution. These are the practice problems of
    # Because `and` and `or` must short-circuit, handle them in Interpreter.evaluate before evaluating the right operand,
    # and compile them with JUMP_IF_FALSE.
    ```
-2. ```python no-run
+2. ```python
    # in Parser.statement, inside the `if` branch:
    #     if self.at("else"):
    #         self.advance()
    #         otherwise = [self.statement()] if self.at("if") else self.block()
    ```
-3. ```python no-run
+3. ```python
    # in VM.run, LOAD branch:
    #     if ins.arg not in self.env: raise NameError(f"undefined variable {ins.arg!r}")
    try:
@@ -124,13 +382,13 @@ Try each problem before opening its solution. These are the practice problems of
        print("ZeroDivisionError:", e)
    # ZeroDivisionError: division by zero
    ```
-4. ```python no-run
+4. ```python
    # in Compiler.expr, BinOp branch, before emitting:
    #     if isinstance(node.left, Num) and isinstance(node.right, Num):
    #         self.emit("PUSH", BINARY[node.op](node.left.value, node.right.value)); return
    ```
    (Folding nested constants needs the fold applied recursively, bottom-up.)
-5. ```python no-run
+5. ```python
    class CountingVM(VM):
        def run(self):
            self.steps = 0

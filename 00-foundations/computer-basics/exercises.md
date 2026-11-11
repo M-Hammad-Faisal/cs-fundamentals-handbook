@@ -1,8 +1,72 @@
 # Computer Basics: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Computer Basics lesson](README.md). Try each one before opening its solution.
 
-## How a Computer Runs Your Program
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+from collections import OrderedDict
+
+def to_twos_complement(value, bits=8):
+    return format(value & ((1 << bits) - 1), f"0{bits}b")      # mask to `bits` bits
+
+class Cache:
+    """A set-associative cache with LRU replacement. Addresses are byte addresses."""
+    def __init__(self, size=32 * 1024, line=64, ways=8):
+        self.line, self.ways = line, ways
+        self.sets = size // (line * ways)
+        self.data = [OrderedDict() for _ in range(self.sets)]
+        self.hits = self.misses = 0
+
+    def access(self, addr):
+        line_no = addr // self.line                      # which 64-byte line holds this byte
+        s, tag = line_no % self.sets, line_no // self.sets
+        ways = self.data[s]
+        if tag in ways:
+            ways.move_to_end(tag)                        # hit: now the most recently used
+            self.hits += 1
+        else:
+            self.misses += 1                             # miss: fetch the line from the next level
+            ways[tag] = True
+            if len(ways) > self.ways:
+                ways.popitem(last=False)                 # evict the least recently used line
+
+    @property
+    def hit_rate(self):
+        return self.hits / (self.hits + self.misses)
+
+def run(program, trace=False):
+    """A toy CPU. Each instruction is a tuple such as ("LOAD", "A", 5)."""
+    registers = {"A": 0, "B": 0, "C": 0}
+    pc = 0                                       # program counter: index of the next instruction
+    while pc < len(program):
+        op, *args = program[pc]                  # FETCH the instruction and DECODE it into parts
+        if trace:
+            print(f"pc={pc} {program[pc]} registers={registers}")
+        if op == "LOAD":                         # EXECUTE: put a constant into a register
+            registers[args[0]] = args[1]
+        elif op == "ADD":                        # ADD dest src: dest = dest + src
+            registers[args[0]] += registers[args[1]]
+        elif op == "SUB":
+            registers[args[0]] -= registers[args[1]]
+        elif op == "MUL":
+            registers[args[0]] *= registers[args[1]]
+        elif op == "JNZ":                        # jump if the register is not zero (how loops work)
+            if registers[args[0]] != 0:
+                pc = args[1]
+                continue
+        elif op == "HALT":
+            break
+        pc += 1                                  # move on to the next instruction
+    return registers
+```
+
+</details>
+
+## Problems
+
+### How a Computer Runs Your Program
 
 1. Extend the toy CPU with a `MUL` instruction and compute `4 * 5` by repeated addition using the loop pattern.
 2. Using the memory-layer table, estimate how many times slower reading from SSD is than RAM.
@@ -13,7 +77,7 @@ Try each problem before opening its solution. These are the practice problems of
 <summary>Solutions</summary>
 
 **1.** Multiply `4 * 5` by repeated addition: keep the total in `A`, add a register holding 4 five times.
-```python no-run
+```python
 # registers: A = total, B = counter (5), C = the constant 1, X = the amount to add (4)
 repeated_addition = [
     ("LOAD", "A", 0),      # total = 0
@@ -33,7 +97,7 @@ print(run([("LOAD", "A", 4), ("LOAD", "B", 5), ("MUL", "A", "B"), ("HALT",)])["A
 **2.** About 100 microseconds / 100 ns = 1,000 times slower.
 
 **3.**
-```python no-run
+```python
 import dis
 def f(items):
     total = 0
@@ -49,7 +113,7 @@ print([o for o in ops if "JUMP" in o or "FOR_ITER" in o or "POP_JUMP" in o][:5])
 
 </details>
 
-## Binary, Hexadecimal and How Data Is Stored
+### Binary, Hexadecimal and How Data Is Stored
 
 1. Convert 200 to binary and hex by hand, then check with Python.
 2. Write `count_ones(n)` (number of 1 bits) without `bin`.
@@ -63,12 +127,12 @@ print([o for o in ops if "JUMP" in o or "FOR_ITER" in o or "POP_JUMP" in o][:5])
 <summary>Solutions</summary>
 
 **1.** 200 = 128 + 64 + 8 = `11001000` = `0xC8`.
-```python no-run
+```python
 print(f"{200:b}", f"{200:X}", bin(200), hex(200))        # 11001000 C8 0b11001000 0xc8
 ```
 
 **2.**
-```python no-run
+```python
 def count_ones(n):
     count = 0
     while n:
@@ -79,29 +143,29 @@ print(count_ones(0b101101), count_ones(255), count_ones(0))     # 4 8 0
 ```
 
 **3.** `1010 ^ 0110 = 1100` = 12; `5 << 3 = 5 * 8 = 40`.
-```python no-run
+```python
 print(0b1010 ^ 0b0110, 5 << 3)                  # 12 40
 ```
 
 **4.** 20 = `00010100`; flip = `11101011`; add 1 = `11101100`.
-```python no-run
+```python
 print(to_twos_complement(-20))                  # 11101100
 ```
 
 **5.** `ï` takes 2 bytes in UTF-8 and the other 4 letters take 1 byte each: 5 characters, 6 bytes.
-```python no-run
+```python
 print(len("naïve"), len("naïve".encode("utf-8")))           # 5 6
 ```
 
 **6.**
-```python no-run
+```python
 def perm_string(bits):
     return ("r" if bits & 4 else "-") + ("w" if bits & 2 else "-") + ("x" if bits & 1 else "-")
 print(perm_string(7), perm_string(5), perm_string(4), perm_string(0))     # rwx r-x r-- ---
 ```
 
 **7.**
-```python no-run
+```python
 from decimal import Decimal
 print(Decimal("0.1") + Decimal("0.2"))           # 0.3
 print((10 + 20) / 100)                           # 0.3  (10 and 20 are cents: store money as integers)
@@ -109,7 +173,7 @@ print((10 + 20) / 100)                           # 0.3  (10 and 20 are cents: st
 
 </details>
 
-## Variables, Memory, the Stack and the Heap
+### Variables, Memory, the Stack and the Heap
 
 1. Predict and then run: `a = [1, 2]; b = a; b += [3]; c = a + [4]; print(a, b, c)`.
 2. Write a function that reverses a list **in place** and another that returns a **new** reversed list. Show the difference with `is`.
@@ -121,13 +185,13 @@ print((10 + 20) / 100)                           # 0.3  (10 and 20 are cents: st
 <summary>Solutions</summary>
 
 **1.**
-```python no-run
+```python
 a = [1, 2]; b = a; b += [3]; c = a + [4]
 print(a, b, c)               # [1, 2, 3] [1, 2, 3] [1, 2, 3, 4]   (+= mutates in place; + builds a new list)
 ```
 
 **2.**
-```python no-run
+```python
 def reverse_in_place(items):
     items.reverse()
     return items
@@ -140,7 +204,7 @@ print(reverse_in_place(nums) is nums, reversed_copy(nums) is nums)       # True 
 ```
 
 **3.**
-```python no-run
+```python
 def factorial_rec(n):
     return 1 if n <= 1 else n * factorial_rec(n - 1)
 
@@ -160,7 +224,7 @@ except RecursionError:
 **4.** At the moment of the error: `main` at the bottom, then `a`, `b`, `c` on top; the traceback prints them from `main` down to `c`, and the exception travels back down the stack until a `try/except` catches it.
 
 **5.**
-```python no-run
+```python
 s1 = "".join(["py", "thon"]); s2 = "python"
 print(s1 == s2, s1 is s2)                       # True False   (equal values, different objects)
 x = None
@@ -169,7 +233,7 @@ print(x is None)                                # True   (use `is` for None, Tru
 
 </details>
 
-## CPU Caches and the Memory Hierarchy
+### CPU Caches and the Memory Hierarchy
 
 1. Change the cache in the simulator to 64 KB with 4 ways. Re-run the 16 KB and 64 KB double-read experiment. What changes and why?
 2. Predict, then measure with the simulator, the hit rate for the column-major traversal if the matrix were only 32 by 32 (8 KB total). Why is it so much better than for 256 by 256?
@@ -181,7 +245,7 @@ print(x is None)                                # True   (use `is` for None, Tru
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    for kb in (16, 64):
        c = Cache(size=64 * 1024, ways=4)
        for repetition in range(2):
@@ -192,7 +256,7 @@ print(x is None)                                # True   (use `is` for None, Tru
    # 64 KB block twice: 93.8%
    ```
    With a 64 KB cache both blocks now fit, so the second pass hits entirely for both (the cache size, not the algorithm, decided the result).
-2. ```python no-run
+2. ```python
    def column_major_small(n):
        for j in range(n):
            for i in range(n):

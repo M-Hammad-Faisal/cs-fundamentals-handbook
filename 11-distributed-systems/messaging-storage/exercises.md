@@ -1,8 +1,45 @@
 # Messaging and Storage: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Messaging and Storage lesson](README.md). Try each one before opening its solution.
 
-## Logs, Queues and LSM Trees
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import hashlib
+
+class Log:
+    """An append-only log. Each record gets the next offset; records are never changed."""
+    def __init__(self):
+        self.records = []
+    def append(self, record) -> int:
+        self.records.append(record)
+        return len(self.records) - 1                 # the offset of the new record
+    def read(self, offset: int, max_records: int = 10):
+        return list(enumerate(self.records[offset:offset + max_records], start=offset))
+
+def partition_for(key: str, n_partitions: int) -> int:
+    return int(hashlib.md5(key.encode()).hexdigest(), 16) % n_partitions
+
+class Topic:
+    def __init__(self, n_partitions):
+        self.partitions = [Log() for _ in range(n_partitions)]
+    def publish(self, key, value):
+        p = partition_for(key, len(self.partitions))
+        offset = self.partitions[p].append((key, value))
+        return p, offset
+
+def assign(partitions: int, consumers: list[str]) -> dict:
+    """Round-robin partition assignment inside a consumer group."""
+    plan = {c: [] for c in consumers}
+    for p in range(partitions):
+        plan[consumers[p % len(consumers)]].append(p)
+    return plan
+```
+
+</details>
+
+## Problems
 
 1. Add `Log.read_from_key(key)` that returns all records for a key. How would you make it efficient at scale?
 2. In `demo("process-first")`, make the handler idempotent so the final processed list has no duplicates (use a set of seen offsets).
@@ -14,7 +51,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    def read_from_key(log, key):
        return [(off, rec) for off, rec in log.read(0, len(log.records)) if rec[0] == key]
    t = Topic(4)
@@ -25,7 +62,7 @@ Try each problem before opening its solution. These are the practice problems of
    # 7
    ```
    Scanning is O(n); at scale keep a key-to-offsets index per partition (or key your partitions so one consumer owns the key and builds its own state).
-2. ```python no-run
+2. ```python
    def idempotent_demo():
        log = Log()
        for r in ["a", "b", "c", "d"]:
@@ -42,7 +79,7 @@ Try each problem before opening its solution. These are the practice problems of
    print(idempotent_demo())
    # ['a', 'b', 'c', 'd']
    ```
-3. ```python no-run
+3. ```python
    print(assign(8, [f"c{i}" for i in range(8)]) == {f"c{i}": [i] for i in range(8)}, [len(v) for v in assign(8, [f"c{i}" for i in range(12)]).values()])
    # True [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
    ```

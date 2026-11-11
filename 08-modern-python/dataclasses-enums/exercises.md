@@ -1,5 +1,9 @@
 # Dataclasses, NamedTuple and Enums: Exercises
 
+These problems go with the [Dataclasses, NamedTuple and Enums lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Convert this class to a dataclass and list what was generated:
    ```python
    class Item:

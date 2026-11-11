@@ -1,5 +1,9 @@
 # SOLID Principles and Other Design Principles: Exercises
 
+These problems go with the [SOLID Principles and Other Design Principles lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. **SRP:** split this class and explain the reasons to change:
    ```python
    class Employee:

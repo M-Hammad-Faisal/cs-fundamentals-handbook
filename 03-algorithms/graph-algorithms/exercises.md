@@ -1,6 +1,9 @@
 # Advanced Graph Algorithms: Exercises
 
+These problems go with the [Advanced Graph Algorithms lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. **Bellman-Ford:** shortest distances from a source with possibly negative edges; return `None` for a negative cycle.
 2. **Floyd-Warshall:** all-pairs shortest paths.
 3. **Network delay / cheapest path:** Dijkstra from a source on a weighted directed graph.

@@ -1,5 +1,7 @@
 # Containers: One-Page Summary
 
+## Key facts
+
 - A **container** is an ordinary process (tree) with a restricted view and restricted resources, started from a layered image. It shares the host kernel, so it starts in milliseconds.
 - **Namespaces** limit what it **sees**: PID (processes), NET (network), MNT (mounts), UTS (hostname), IPC, USER (user ids).
 - **cgroups** limit what it **uses**: memory, CPU, process count, I/O. Over the memory limit: the process is killed (exit code 137, `OOMKilled`).
@@ -8,6 +10,15 @@
 - **Everyday commands:** `docker build -t name .`, `docker run --rm -p 8080:80 name`, `docker ps`, `docker logs`, `docker exec -it id sh`, `docker stop`.
 - **Security:** a container is **not** a VM-grade boundary. Run as non-root, drop capabilities, read-only root filesystem, pin and scan base images, never bake secrets into layers, keep the host kernel patched.
 - **Container versus VM:** shared kernel and fast start versus own kernel behind a hypervisor and stronger isolation.
+
+## Pitfalls
+
+- Treating a container as a VM-grade security boundary: avoid root, `--privileged` and mounting the Docker socket.
+- Baking secrets into image layers or `ENV` (they show in `docker history`).
+- Copying the whole source before installing dependencies, which defeats the layer cache.
+- No memory limit (the host can run out), or ignoring exit code 137 (killed for memory).
+- Keeping data in the writable layer: it disappears with the container, use a volume.
+- Using the `latest` tag.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

@@ -1,6 +1,9 @@
 # Hash Tables: Exercises
 
+These problems go with the [Hash Tables lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. Return `True` if a list contains any duplicate.
 2. Find the first non-repeating character in a string.
 3. Two sum, returning indices, in one pass.

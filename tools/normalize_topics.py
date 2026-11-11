@@ -4,6 +4,8 @@ For each topic folder (a folder with a README.md inside a numbered part):
   * summary.md   - created if missing: the README's "Quick reference" plus the self-check questions and answers of its lessons
   * exercises.md - created if missing: the "Practice" sections (questions and collapsible solutions) of its lessons
   * titles and footers of exercises.md / summary.md are normalised
+  * exercises.md: intro line, "## Problems" with optional "### group" headings, collapsible setup and solutions
+  * summary.md: "## Key facts", "## Pitfalls", then an optional "## Self-check" (checked in --check mode)
   * README.md gets the standard "Detailed lessons" and "Practice and review" sections (and a "Quick reference" if it has none)
 
     python tools/normalize_topics.py           # apply
@@ -99,16 +101,14 @@ def build_summary(topic, title):
     qr = quick_reference(readme)
     out = [f"# {title}: One-Page Summary", ""]
     if qr:
-        out += ["## Quick reference", "", qr, ""]
+        out += ["## Key facts", "", qr, ""]
     if pairs:
-        out += ["## Questions worth remembering", ""] + [f"- **{q}** {a}" for q, a in pairs[:12]] + [""]
-    out += ["Practice problems with solutions are in the exercises page and in the **Practice** section of each lesson."]
+        out += ["## Self-check", ""] + [f"- **{q}** {a}" for q, a in pairs[:12]] + [""]
     return "\n".join(out)
 
 
 def build_exercises(topic, title):
-    out = [f"# {title}: Exercises", "",
-           "Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.", ""]
+    out = [f"# {title}: Exercises", "", "## Problems", ""]
     sources = lessons_of(topic) or [topic / "README.md"]
     if not any(section(f.read_text(), "Practice") for f in sources):
         sources = [topic / "README.md"]
@@ -118,15 +118,112 @@ def build_exercises(topic, title):
         if body:
             found = True
             body = body.replace("```python\n", "```python no-run\n")      # solutions rely on code from the lesson and were run there
-            out += [f"## {short(h1(f))}", "", body, ""]
+            out += [f"### {short(h1(f))}", "", body, ""]
     if not found:                                                       # tutorials without a Practice section: use the self-check as exercises
         for f in sources:
             pairs = check_pairs(f.read_text())
             if pairs:
-                out += [f"## {short(h1(f))}", "", "Answer each question, then check yourself.", ""]
+                out += [f"### {short(h1(f))}", ""]
                 out += [f"{i}. {q}" for i, (q, _) in enumerate(pairs, 1)]
                 out += ["", "<details>", "<summary>Answers</summary>", ""] + [f"{i}. {a}" for i, (_, a) in enumerate(pairs, 1)] + ["", "</details>", ""]
     return "\n".join(out)
+
+
+BOILERPLATE = [
+    r"Try each (?:problem|one) before opening (?:its|the) solution\.",
+    r"These are the practice problems of this topic's lessons, collected in one place\.",
+    r"Write the answer and the reasoning\.",
+    r"Work through these after (?:the )?\[[^\]]*\]\([^)]*\)\.",
+    r"Each exercise is small enough to solve with the standard library; try it before opening the solution\.",
+    r"Answer each question, then check yourself\.",
+    r"These problems go with the \[[^\]]*\]\(README\.md\)\.",
+]
+START = re.compile(r"^(## |### |\d+\. |\*\*[A-Z]?\d)", re.M)
+
+
+def outside_fences(lines):
+    """Yield (index, line, in_fence) so heading logic ignores code."""
+    fence = False
+    for i, line in enumerate(lines):
+        if line.startswith("```"):
+            fence = not fence
+            yield i, line, True
+        else:
+            yield i, line, fence
+
+
+def normalise_exercises(text, title):
+    head, _, rest = text.partition("\n")
+    footer_at = rest.find("\n[Lesson](")
+    footer = rest[footer_at:] if footer_at >= 0 else ""
+    body = rest[:footer_at] if footer_at >= 0 else rest
+    body = body.replace("\n## Problems\n", "\n", 1) if body.lstrip().startswith("## Problems") or "\n## Problems\n" in body else body
+    first = START.search(body)
+    region, questions = (body[:first.start()], body[first.start():]) if first else (body, "")
+    setups = re.findall(r"<details>\n<summary>Setup.*?</details>", region, re.S)
+    region = re.sub(r"<details>\n<summary>Setup.*?</details>", "", region, flags=re.S)
+    for pattern in BOILERPLATE:
+        region = re.sub(pattern, "", region)
+    extra = re.sub(r"[ \t]+\n", "\n", region).strip()
+    extra = re.sub(r"\n{3,}", "\n\n", extra)
+    intro = f"These problems go with the [{title} lesson](README.md). Try each one before opening its solution."
+    if extra:
+        intro += "\n\n" + extra
+    lines = questions.split("\n")
+    h2 = [i for i, l, f in outside_fences(lines) if not f and l.startswith("## ")]
+    if len(h2) == 1:
+        del lines[h2[0]]
+    else:
+        for i in h2:
+            lines[i] = "#" + lines[i]
+    questions = re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip("\n")
+    questions = re.sub(r"([^\n])\n(\*\*\d+\.\*\*)", r"\1\n\n\2", questions)
+    out = [head, "", intro, ""]
+    for block in setups:
+        out += [block, ""]
+    out += ["## Problems", "", questions]
+    return "\n".join(out).rstrip("\n") + "\n" + footer.rstrip("\n") + "\n"
+
+
+RENAME = {"Facts": "Key facts", "Quick reference": "Key facts", "Questions worth remembering": "Self-check"}
+LAST = ("Pitfalls", "Self-check")          # every summary ends with these, in this order; everything else is a key fact
+
+
+def split_sections(body):
+    """Return (preface, [(title, content), ...]) split at '## ' headings that are outside code fences."""
+    lines = body.split("\n")
+    marks = [i for i, line, fence in outside_fences(lines) if not fence and line.startswith("## ")]
+    preface = "\n".join(lines[:marks[0]]) if marks else body
+    sections = []
+    for n, i in enumerate(marks):
+        end = marks[n + 1] if n + 1 < len(marks) else len(lines)
+        sections.append((RENAME.get(lines[i][3:].strip(), lines[i][3:].strip()), "\n".join(lines[i + 1:end]).strip("\n")))
+    return preface.strip("\n"), sections
+
+
+def normalise_summary(text):
+    """One shape for every summary: '## Key facts', then '## Pitfalls' (optional), then '## Self-check' (optional)."""
+    head, _, rest = text.partition("\n")
+    footer_at = rest.find("\n[Lesson](")
+    footer = rest[footer_at:] if footer_at >= 0 else ""
+    body = rest[:footer_at] if footer_at >= 0 else rest
+    body = re.sub(r"\n+Practice problems with solutions are in the[^\n]*", "", body)
+    preface, sections = split_sections(body)
+    facts = [c for t, c in sections if t == "Key facts"]
+    others = [(t, c) for t, c in sections if t != "Key facts" and t not in LAST]
+    key = [preface] if preface else []
+    key += facts
+    if others and (len(others) > 1 or key):
+        key += [f"### {t}\n\n{c}" for t, c in others]
+    elif others:
+        key += [others[0][1]]
+    key_text = "\n\n".join(k for k in key if k)
+    out = [head, ""] + (["## Key facts", "", key_text] if key_text else [])
+    for name in LAST:
+        content = "\n\n".join(c for t, c in sections if t == name)
+        if content:
+            out += ["", f"## {name}", "", content]
+    return "\n".join(out).rstrip("\n") + "\n" + footer.rstrip("\n") + "\n"
 
 
 def normalise_readme(topic):
@@ -164,14 +261,22 @@ def main():
             text = p.read_text()
             kind = "One-Page Summary" if name == "summary.md" else "Exercises"
             text = re.sub(r"\A# .*", f"# {title}: {kind}", text, count=1)
+            text = normalise_exercises(text, title) if name == "exercises.md" else normalise_summary(text)
             other = "exercises.md" if name == "summary.md" else "summary.md"
             links = f"[Lesson](README.md) · [{label}]({other})"
             write(p, normalise_footer(text, links, deeper))
         normalise_readme(topic)
+    empty = []
+    for t in topics():
+        text = (t / "summary.md").read_text()
+        for needed in ("## Key facts", "## Pitfalls"):
+            if needed not in text:
+                empty.append(t.relative_to(ROOT).as_posix())
+                print(f"summary has no '{needed}' section:", empty[-1])
     if "--check" in sys.argv:
         for c in changed:
             print("would change:", c)
-        return 1 if changed else 0
+        return 1 if changed or empty else 0
     print(len(changed), "files written")
     return 0
 

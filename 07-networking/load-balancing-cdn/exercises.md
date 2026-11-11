@@ -1,5 +1,9 @@
 # Load Balancing, Proxies, CDNs and Resilience: Exercises
 
+These problems go with the [Load Balancing, Proxies, CDNs and Resilience lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Simulate 1,000 requests with random durations against round robin and least connections. Which gives a more even maximum load, and why?
 2. Implement **power of two choices** and compare its imbalance with random assignment.
 3. Add a half-open state with a cool-down to `CircuitBreaker`.

@@ -1,5 +1,7 @@
 # Packaging, Environments and Developer Tooling: One-Page Summary
 
+## Key facts
+
 - **Imports:** module = `.py`; package = directory (+ `__init__.py`); search via `sys.path`, cached in `sys.modules`; `__main__.py` for `python -m pkg`; avoid circular imports and `import *`.
 - **Virtual environments:** one per project (`python -m venv .venv` or `uv`); never commit `.venv`; never `sudo pip`.
 - **`pyproject.toml`:** build system, metadata, `requires-python`, dependencies, extras (`[project.optional-dependencies]`), scripts (entry points), tool config. **`src/` layout** + `pip install -e .`.
@@ -9,5 +11,13 @@
 - **Config:** environment variables (`Settings.from_env`), fail fast on required values, never commit secrets, `.env.example`.
 - **Quality:** ruff (lint + format), mypy/pyright, pytest + coverage, pre-commit, tox/nox, **CI** on several Python versions.
 - **Ship:** `python -m build` -> wheel + sdist -> TestPyPI -> PyPI (trusted publishing); apps -> Docker (lock file first, slim base, non-root, no secrets in images).
+
+## Pitfalls
+
+- `sudo pip install` and global installs; committing `.venv`.
+- Circular imports and `from x import *`.
+- Unpinned applications, or libraries that pin too tightly.
+- Secrets in config files or Docker layers; no `.env.example`.
+- Publishing without installing the built wheel in a clean environment; forgetting `requires-python`.
 
 [Lesson](README.md) · [Exercises](exercises.md)

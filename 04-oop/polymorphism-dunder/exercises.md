@@ -1,5 +1,9 @@
 # Polymorphism and the Python Data Model: Exercises
 
+These problems go with the [Polymorphism and the Python Data Model lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Refactor this to remove the type checks using polymorphism:
    ```python
    def pay(employee):

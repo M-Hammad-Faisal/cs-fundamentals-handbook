@@ -1,5 +1,38 @@
 # DNS and HTTP: Exercises
 
+These problems go with the [DNS and HTTP lesson](README.md). Try each one before opening its solution.
+
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import struct
+
+def encode_name(name: str) -> bytes:
+    out = b""
+    for label in name.rstrip(".").split("."):
+        out += bytes([len(label)]) + label.encode()
+    return out + b"\x00"
+
+def build_query(name, qtype=1, ident=0xBEEF):                    # qtype 1 = A, 28 = AAAA, 15 = MX, 16 = TXT, 5 = CNAME
+    header = struct.pack("!HHHHHH", ident, 0x0100, 1, 0, 0, 0)  # flags 0x0100: "recursion desired"
+    return header + encode_name(name) + struct.pack("!HH", qtype, 1)       # class 1 = IN (Internet)
+
+def parse_name(data, off):
+    labels = []
+    while True:
+        n = data[off]
+        if n == 0: return ".".join(labels), off + 1
+        if n & 0xC0 == 0xC0:
+            ptr = ((n & 0x3F) << 8) | data[off + 1]
+            return ".".join(labels + [parse_name(data, ptr)[0]]), off + 2
+        labels.append(data[off+1:off+1+n].decode()); off += 1 + n
+```
+
+</details>
+
+## Problems
+
 1. Use `build_query` to make a query for `mail.example.org` and decode the labels back with `parse_name`.
 2. Explain the difference between a recursive resolver and an authoritative server.
 3. A site sets `Cache-Control: max-age=31536000` on `app.js` and you deploy a fix. Users still see the old file. What went wrong and how do you prevent it?

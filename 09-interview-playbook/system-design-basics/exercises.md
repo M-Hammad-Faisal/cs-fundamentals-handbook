@@ -1,21 +1,83 @@
 # System Design Basics: Exercises
 
+These problems go with the [System Design Basics lesson](README.md). Try each one before opening its solution.
+
 The helpers from the lesson (`qps`, `storage`, `human_bytes`, `servers_needed`, `bandwidth_mbps`, `LRUCache`, `TokenBucket`, `Snowflake`, `base62_encode`, `series`, `parallel`) are available.
 
-## Estimation
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+from collections import OrderedDict
+
+def qps(requests_per_day, peak_factor=2):
+    """Average and peak requests per second."""
+    average = requests_per_day / 86_400
+    return round(average), round(average * peak_factor)
+
+def storage(records_per_day, bytes_per_record, years=1, replication=3):
+    """Raw bytes for N years, including replicas."""
+    return records_per_day * bytes_per_record * 365 * years * replication
+
+def human_bytes(n):
+    for unit in ("B", "KB", "MB", "GB", "TB", "PB"):
+        if n < 1000:
+            return f"{n:.1f} {unit}"
+        n /= 1000
+    return f"{n:.1f} EB"
+
+def servers_needed(peak_qps, qps_per_server, headroom=0.5):
+    """Servers so that each runs at most `headroom` of its capacity (spare room for failures/spikes)."""
+    import math
+    return math.ceil(peak_qps / (qps_per_server * headroom))
+
+def bandwidth_mbps(qps_value, bytes_per_response):
+    return qps_value * bytes_per_response * 8 / 1_000_000
+
+def series(*avail): 
+    out = 1.0
+    for a in avail: out *= a
+    return out
+
+def parallel(*avail):
+    fail = 1.0
+    for a in avail: fail *= (1 - a)
+    return 1 - fail
+
+class LRUCache:
+    """O(1) get and put with a hash map + doubly linked list (OrderedDict gives both)."""
+    def __init__(self, capacity):
+        self.capacity, self.data = capacity, OrderedDict()
+    def get(self, key):
+        if key not in self.data:
+            return None
+        self.data.move_to_end(key)                        # mark as most recently used
+        return self.data[key]
+    def put(self, key, value):
+        self.data[key] = value
+        self.data.move_to_end(key)
+        if len(self.data) > self.capacity:
+            self.data.popitem(last=False)                 # evict the least recently used
+```
+
+</details>
+
+## Problems
+
+### Estimation
 
 1. A photo app has 50 million DAU; each user uploads 0.5 photos per day (2 MB each) and views 40 photos per day (200 KB thumbnails). Estimate upload QPS, view QPS, daily and 5-year storage (with 3 replicas), and peak egress bandwidth (peak = 3x average).
 2. A service must achieve 99.95% availability. What is the maximum downtime per month? If it depends on three serial components of 99.99% each, does it meet the target? What if you replicate the weakest one (99.9%) twice?
 3. A chat app has 10 million concurrent WebSocket connections. If one gateway server handles 100,000 connections, how many servers (with 50% headroom)? Memory per connection is 20 KB: total RAM for connections?
 
-## Building blocks (code)
+### Building blocks (code)
 
 4. Implement `SlidingWindowRateLimiter(limit, window_seconds, clock)` allowing `limit` requests per rolling window per user. Test it with a fake clock.
 5. Add **TTL** support to `LRUCache` (entries expire after N seconds, with an injectable clock).
 6. Implement a **consistent-hash ring** with virtual nodes and show that adding a fourth server moves roughly a quarter of the keys.
 7. Write a Bloom filter (`add`, `might_contain`) using k hash functions over a bit array; measure its false-positive rate for 1,000 items.
 
-## Design prompts (write the outline: requirements, estimates, API, data model, architecture, deep dive, trade-offs)
+### Design prompts (write the outline: requirements, estimates, API, data model, architecture, deep dive, trade-offs)
 
 8. Design a **rate limiter** service used by many API servers.
 9. Design a **notification system** (email/SMS/push) that never double-sends.

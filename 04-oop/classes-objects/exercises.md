@@ -1,5 +1,9 @@
 # Classes and Objects in Depth: Exercises
 
+These problems go with the [Classes and Objects in Depth lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Without running it, predict the output, then explain:
    ```python
    a = [1, 2]; b = a; c = a[:]

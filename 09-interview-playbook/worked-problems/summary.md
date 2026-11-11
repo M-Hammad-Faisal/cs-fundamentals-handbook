@@ -1,6 +1,21 @@
 # Worked Problems: One-Page Summary
 
-## Questions worth remembering
+## Key facts
+
+- **The loop for every problem:** restate and clarify, work an example and edge cases, state the brute force and its cost, name the pattern that improves it, code it, trace an example by hand, state time and space.
+- **Pattern to problem:** hash map (Two Sum, `O(n)`); sliding window (longest substring without repeats, `O(n)`); sort first (Merge Intervals, `O(n log n)`); stack (Valid Parentheses); heap or counting (Top K, `O(n log k)`); BFS or DFS on a grid (Number of Islands); topological sort (Course Schedule, `O(V+E)`); dynamic programming (Coin Change, Edit Distance, LCS); hash map plus linked list (LRU Cache, `O(1)` operations); binary search on a rotated array (`O(log n)`).
+- **Graph rounds:** BFS gives shortest paths when every step costs 1 (Word Ladder); Dijkstra for weighted edges (`O((V+E) log V)`); cycle detection in a directed graph with DFS and three colours.
+- **Design rounds:** Strategy swaps an algorithm, Observer notifies listeners, State changes behaviour with the state.
+
+## Pitfalls
+
+- Coding before clarifying the input, size limits and edge cases.
+- Missing the empty input, a single element, duplicates and negative numbers.
+- Off-by-one errors in binary search bounds and window edges.
+- Changing the caller's input without saying so; not stating complexity out loud.
+- Going silent: interviewers grade the reasoning you share.
+
+## Self-check
 
 - **What are the eight steps of the interview loop?** Clarify, example, brute force, bottleneck, pattern, code, analyze, test.
 - **Why state the brute force first?** It is a correct baseline, shows you understand the problem, exposes the bottleneck to attack, and gives you a fallback and a tester.
@@ -14,8 +29,6 @@
 - **State the edit-distance recurrence and its base cases.** Equal last characters: `dp[i-1][j-1]`; otherwise `1 + min(delete, insert, substitute)`; `dp[i][0] = i`, `dp[0][j] = j`.
 - **What is the relationship between LCS and edit distance?** With only insertions and deletions the distance is `n + m - 2 * LCS`.
 - **Why expanding around centers for palindromes, and what is the complexity?** Every palindrome has a center (2n-1 choices); expanding is `O(n)` per center, `O(n^2)` total, with constant space.
-
-Practice problems with solutions are in the **Practice** section of each lesson.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

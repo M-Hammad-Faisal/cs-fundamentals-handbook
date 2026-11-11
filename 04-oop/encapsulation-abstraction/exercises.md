@@ -1,5 +1,9 @@
 # Encapsulation and Abstraction: Exercises
 
+These problems go with the [Encapsulation and Abstraction lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Build `Rectangle` with `width` and `height` properties that reject non-positive values, plus a read-only `area`. Write tests showing invalid values are rejected in `__init__` too.
 2. A class exposes `self.items` (a list) publicly. Show a bug this allows, then redesign it so callers cannot corrupt the invariant "no duplicates".
 3. Explain what is wrong with this and fix it using a property:

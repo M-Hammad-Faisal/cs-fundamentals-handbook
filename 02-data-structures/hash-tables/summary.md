@@ -1,15 +1,18 @@
 # Hash Tables: One-Page Summary
 
-## Facts
+## Key facts
+
 - Key → hash → slot. Average `O(1)` insert, lookup, delete; worst `O(n)`.
 - Python `dict` (ordered since 3.7) and `set` are hash tables.
 - Keys must be **hashable** (immutable). Equal objects must hash equally.
 - **Collisions:** chaining or open addressing. **Load factor** triggers resize and rehash.
 
-## Toolkit
+### Toolkit
+
 `dict.get`, `setdefault`, `defaultdict`, `Counter`, `set` operations (`&`, `|`, `-`).
 
-## Patterns
+### Patterns
+
 - **Frequency counting** (`Counter`).
 - **Complement lookup** (two sum).
 - **Grouping by key** (anagrams).
@@ -19,6 +22,7 @@
 - **Consistent hashing** for distributed key placement.
 
 ## Pitfalls
+
 - Mutable keys (`list`) are unhashable.
 - `d[key]` raises `KeyError`; use `get`.
 - Mutating a dict while iterating.

@@ -21,13 +21,4 @@
 04-oop/design-patterns/structural/proxy.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
 05-databases/nosql/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
 05-databases/transactions-acid/README.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
-05-databases/transactions-acid/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
-06-operating-systems/memory-virtual-memory/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
-06-operating-systems/scheduling/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
-07-networking/dns-http/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
-08-modern-python/modern-syntax/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
 08-modern-python/packaging-tooling/README.md  # shows files of a separate small project, not runnable as one script
-08-modern-python/typing-hints/exercises.md  # deliberate: demonstrates the bug a type checker would catch
-09-interview-playbook/problem-solving-patterns/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone
-09-interview-playbook/python-and-cs-rapid-fire/exercises.md  # deliberate: demonstrates an UnboundLocalError
-09-interview-playbook/system-design-basics/exercises.md  # a fragment: uses names defined in the surrounding lesson text, not runnable alone

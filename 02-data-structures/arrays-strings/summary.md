@@ -1,11 +1,13 @@
 # Arrays and Strings: One-Page Summary
 
-## Facts
+## Key facts
+
 - Arrays are contiguous; index = `base + i * size`, so access is `O(1)`.
 - Python `list` is a dynamic array of pointers. Append is amortized `O(1)`; insert/delete at the front is `O(n)`.
 - Strings are immutable. Build with `"".join(parts)`, never repeated `+=`.
 
-## Costs
+### Costs
+
 | Operation | Cost |
 |-----------|------|
 | Index | `O(1)` |
@@ -14,7 +16,8 @@
 | Search unsorted / sorted | `O(n)` / `O(log n)` |
 | Slice | `O(k)` (copy) |
 
-## Techniques
+### Techniques
+
 - **Two pointers:** sorted input or converging ends.
 - **Sliding window:** contiguous subarray/substring with a running value.
 - **Prefix sums:** `O(1)` range sums after `O(n)` build.
@@ -23,6 +26,7 @@
 - **Kadane:** `cur = max(x, cur + x)`.
 
 ## Pitfalls
+
 - Off-by-one; slices are half-open.
 - `[[0]*m]*n` shares rows.
 - Shallow vs deep copy.

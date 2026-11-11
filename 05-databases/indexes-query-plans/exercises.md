@@ -1,15 +1,19 @@
 # Indexes and Query Plans: Exercises
 
+These problems go with the [Indexes and Query Plans lesson](README.md). Try each one before opening its solution.
+
 Use [`demo_indexes.py`](demo_indexes.py) as a playground, or any SQLite database.
 
-## Hands-on
+## Problems
+
+### Hands-on
 1. Run `demo_indexes.py`. Record the plan and time for query 1 and query 2. How many times faster is the indexed lookup?
 2. Create a table with 100,000 rows and a `status` column that has only two values. Add an index on `status`. Does the plan use it for `WHERE status = 'a'`? Why or why not?
 3. With an index on `(country, age)`, write three queries: one that uses both columns, one that uses only the first, and one that **cannot** use it. Confirm each with `EXPLAIN QUERY PLAN`.
 4. Show that `WHERE lower(email) = 'x'` does not use an index on `email`. Then fix it with an **expression index**.
 5. Make `SELECT country, age FROM users WHERE country = 'PK' AND age > 70` use a **covering index** and show the plan.
 
-## Design
+### Design
 6. A table `orders(id, customer_id, status, ordered_on, total)` serves these frequent queries. Propose a minimal set of indexes:
    - A: `WHERE customer_id = ? ORDER BY ordered_on DESC LIMIT 20`
    - B: `WHERE status = 'pending' AND ordered_on < ?`

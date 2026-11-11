@@ -1,6 +1,49 @@
 # CPU Scheduling: Exercises
 
-Use `fcfs`, `sjf`, `srtf`, `round_robin` and `avg` from the lesson.
+These problems go with the [CPU Scheduling lesson](README.md). Try each one before opening its solution.
+
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+from collections import deque
+
+def metrics(procs, finish, first_run):
+    rows = {}
+    for name, arrival, burst, *_ in procs:
+        turnaround = finish[name] - arrival
+        rows[name] = {"finish": finish[name], "turnaround": turnaround,
+                      "waiting": turnaround - burst, "response": first_run[name] - arrival}
+    n = len(rows)
+    avg = lambda key: round(sum(r[key] for r in rows.values()) / n, 2)
+    return rows, {k: avg(k) for k in ("waiting", "turnaround", "response")}
+
+def round_robin(procs, quantum):
+    left = {p[0]: p[2] for p in procs}
+    pending = deque(sorted(procs, key=lambda p: p[1]))
+    queue, time, finish, first, gantt = deque(), 0, {}, {}, []
+    def admit():
+        while pending and pending[0][1] <= time:
+            queue.append(pending.popleft()[0])
+    admit()
+    while len(finish) < len(procs):
+        if not queue:
+            time = pending[0][1]; admit(); continue
+        name = queue.popleft()
+        first.setdefault(name, time)
+        run = min(quantum, left[name])
+        gantt.append((name, time, time + run)); time += run; left[name] -= run
+        admit()                                    # newcomers that arrived during the slice queue BEFORE the preempted process
+        if left[name] > 0:
+            queue.append(name)
+        else:
+            finish[name] = time
+    return gantt, *metrics(procs, finish, first)
+```
+
+</details>
+
+## Problems
 
 1. Compute by hand the average waiting time for FCFS and SJF on `P1(0,6) P2(0,8) P3(0,7) P4(0,3)` (arrival, burst). Verify with the simulator.
 2. Run Round Robin with `q = 1, 2, 4, 100` on `[("A",0,5),("B",0,3),("C",0,8)]`. What happens as `q` grows?
@@ -19,7 +62,12 @@ Use `fcfs`, `sjf`, `srtf`, `round_robin` and `avg` from the lesson.
 ```python
 jobs = [("A",0,5),("B",0,3),("C",0,8)]
 for q in (1, 2, 4, 100):
-    print(q, round(avg(round_robin(jobs, q)), 2))
+    _, _, averages = round_robin(jobs, q)                    # returns (gantt, per-process rows, averages)
+    print(q, averages["waiting"])
+# 1 6.67
+# 2 7.0
+# 4 6.33
+# 100 4.33
 ```
 
 **3.** `A(0,8)`, `B(1,4)`: non-preemptive SJF runs A to completion, so B waits 7 (average wait (0+7)/2 = 3.5). SRTF preempts at time 1 because B's 4 is less than A's remaining 7: B waits 0 and A waits 4 (average 2.0).

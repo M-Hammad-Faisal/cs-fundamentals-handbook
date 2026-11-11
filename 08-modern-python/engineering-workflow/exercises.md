@@ -1,8 +1,8 @@
 # Engineering Workflow: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Engineering Workflow lesson](README.md). Try each one before opening its solution.
 
-## Engineering Workflow
+## Problems
 
 1. Add a `--shout` flag to the CLI that upper-cases the greeting, with a test, and make sure `ruff check`, `mypy src` and `pytest` all pass.
 2. Add a CI step that fails the build if test coverage is below 90 percent (`pytest --cov=greeter --cov-fail-under=90`).
@@ -14,7 +14,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    # in cli.py, after parser.add_argument("--excited", ...):
    #     parser.add_argument("--shout", action="store_true")
    # and replace the print with:

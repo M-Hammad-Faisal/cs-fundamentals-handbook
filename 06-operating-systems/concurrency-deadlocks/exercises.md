@@ -1,5 +1,9 @@
 # Concurrency, Synchronization and Deadlocks: Exercises
 
+These problems go with the [Concurrency, Synchronization and Deadlocks lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Show a lost-update race using 4 threads incrementing a shared counter, then fix it with a lock. Why does the unsafe version fail even in CPython?
 2. Is this thread-safe? Explain and fix: `if key not in cache: cache[key] = compute(key)`.
 3. Write a bounded producer/consumer with `queue.Queue(maxsize=3)`, two producers and two consumers, that shuts down cleanly.

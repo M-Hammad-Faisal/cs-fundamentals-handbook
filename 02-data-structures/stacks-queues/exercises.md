@@ -1,6 +1,9 @@
 # Stacks and Queues: Exercises
 
+These problems go with the [Stacks and Queues lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. Check if a string of brackets `()[]{}` is balanced.
 2. Implement a **min-stack** supporting `push`, `pop`, `top` and `get_min` in `O(1)`.
 3. Implement a queue using two stacks.

@@ -1,10 +1,10 @@
 # PostgreSQL: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
-
-## PostgreSQL-Specific Features
+These problems go with the [PostgreSQL lesson](README.md). Try each one before opening its solution.
 
 (These need a PostgreSQL server; use the Docker command from the top.)
+
+## Problems
 
 1. Create a table `products(id, name, attrs jsonb)`, insert two rows with different attributes and query those where `attrs @> '{"color": "red"}'`. Add a GIN index and check with `EXPLAIN` whether it is used (you may need enough rows, or `SET enable_seqscan = off` to see the index choice).
 2. Write an upsert that counts logins per user in `logins(user_id primary key, n)`.

@@ -1,8 +1,19 @@
 # Threads, Processes and Futures: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Threads, Processes and Futures lesson](README.md). Try each one before opening its solution.
 
-## Threads, Processes and Futures in Practice
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+
+```
+
+</details>
+
+## Problems
 
 1. Write `fetch_all(urls, fetch, workers=8, timeout=1.0)` that returns `{url: result_or_exception}` using futures, never raising for a single failure.
 2. Re-run the counter demo with `threads=2` and `per_thread=5`. Does the unsafe version always lose updates with so little work? Why does that make races dangerous?
@@ -14,7 +25,7 @@ Try each problem before opening its solution. These are the practice problems of
 <details>
 <summary>Solutions</summary>
 
-1. ```python no-run
+1. ```python
    def fetch_all(urls, fetch, workers=8, timeout=1.0):
        out = {}
        with ThreadPoolExecutor(max_workers=workers) as pool:

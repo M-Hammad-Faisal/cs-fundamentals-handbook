@@ -1,6 +1,9 @@
 # Searching: One-Page Summary
 
-## Choose by data shape
+## Key facts
+
+### Choose by data shape
+
 | Data | Method | Time |
 |------|--------|------|
 | Unsorted | Linear | `O(n)` |
@@ -9,13 +12,15 @@
 | BST / B-tree | Descent | `O(log n)` |
 | Graph | BFS / DFS | `O(V + E)` |
 
-## Binary search
+### Binary search
+
 - Needs **sorted** data or a **monotonic predicate** and random access.
 - Template (half-open): `lo, hi = 0, n`; `while lo < hi`; `mid = (lo+hi)//2`; either `lo = mid + 1` or `hi = mid`.
 - `bisect_left` = first `>= x`; `bisect_right` = first `> x`. Count = right - left.
 - Use the upper mid `(lo+hi+1)//2` when assigning `lo = mid`.
 
-## Patterns
+### Patterns
+
 - **Search on the answer:** min capacity, min speed, split array, sqrt (monotonic feasibility check).
 - **Rotated array:** one half is always sorted.
 - **Peak element:** move toward the larger neighbour.
@@ -24,6 +29,7 @@
 - String search: KMP, Rabin-Karp, Boyer-Moore.
 
 ## Pitfalls
+
 - Off-by-one and infinite loops.
 - Using it on unsorted data.
 - Duplicates: decide first/last/any match.

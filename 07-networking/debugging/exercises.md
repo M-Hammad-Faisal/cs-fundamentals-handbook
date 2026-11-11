@@ -1,6 +1,10 @@
 # Network Debugging: Exercises
 
-Work through these after [Network debugging and packet capture](01-network-debugging-and-packet-capture.md). The code parts use only the standard library and run on one machine.
+These problems go with the [Network Debugging lesson](README.md). Try each one before opening its solution.
+
+The code parts use only the standard library and run on one machine.
+
+## Problems
 
 1. **Probe a port.** Write `probe(host, port, timeout=1.0)` returning `"open"`, `"refused"` or `"timeout"`. Test it against a port you open yourself and against a closed local port. What does each result tell you about *where* the problem is?
 2. **Internet checksum.** Implement the 16-bit one's-complement checksum used by IPv4, TCP and UDP, and check it on the IPv4 header `45 00 00 73 00 00 40 00 40 11 [checksum] c0 a8 00 01 c0 a8 00 c7`, where the real checksum is `0xb861`.

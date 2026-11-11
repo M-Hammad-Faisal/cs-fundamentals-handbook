@@ -1,8 +1,54 @@
 # Worked Problems: Exercises
 
-Try each problem before opening its solution. These are the practice problems of this topic's lessons, collected in one place.
+These problems go with the [Worked Problems lesson](README.md). Try each one before opening its solution.
 
-## Ten Worked Interview Problems
+<details>
+<summary>Setup code the solutions use (copied from the lessons)</summary>
+
+```python
+import random
+from collections import deque
+from string import ascii_lowercase
+from math import ceil
+
+def edit_distance(a, b):
+    prev = list(range(len(b) + 1))                        # row for i = 0
+    for i in range(1, len(a) + 1):
+        cur = [i] + [0] * len(b)
+        for j in range(1, len(b) + 1):
+            if a[i - 1] == b[j - 1]:
+                cur[j] = prev[j - 1]
+            else:
+                cur[j] = 1 + min(prev[j], cur[j - 1], prev[j - 1])
+        prev = cur
+    return prev[-1]
+
+def make_pair():
+    s = lambda: "".join(random.choice("abc") for _ in range(random.randint(0, 6)))
+    return s(), s()
+
+def lcs(a, b):
+    dp = [[0] * (len(b) + 1) for _ in range(len(a) + 1)]
+    for i in range(1, len(a) + 1):
+        for j in range(1, len(b) + 1):
+            dp[i][j] = dp[i - 1][j - 1] + 1 if a[i - 1] == b[j - 1] else max(dp[i - 1][j], dp[i][j - 1])
+    return dp[-1][-1]
+
+class Hourly:
+    def __init__(self, rate): self.rate = rate
+    def fee(self, minutes): return ceil(minutes / 60) * self.rate
+
+class ParkingLot:
+    def __init__(self, pricing: Pricing):
+        self.pricing = pricing
+    def checkout(self, minutes): return self.pricing.fee(minutes)
+```
+
+</details>
+
+## Problems
+
+### Ten Worked Interview Problems
 
 1. Apply the loop to **"Best Time to Buy and Sell Stock"** (one buy and one sell, maximize profit): brute force, bottleneck, one-pass solution, complexity.
 2. Which pattern solves **"minimum window substring"** and what changes compared with problem 2?
@@ -15,7 +61,7 @@ Try each problem before opening its solution. These are the practice problems of
 <summary>Solutions</summary>
 
 1. Brute force: all (buy, sell) pairs, `O(n^2)`. Bottleneck: for each sell day we scan all earlier days for the minimum. Fix: track the **lowest price so far** while scanning.
-   ```python no-run
+   ```python
    def max_profit(prices):
        lowest, best = float("inf"), 0
        for p in prices:
@@ -27,7 +73,7 @@ Try each problem before opening its solution. These are the practice problems of
    `O(n)` time, `O(1)` space.
 2. A sliding window with counts; the difference is the window must **contain** all required characters (shrink while still valid, to minimize), instead of **avoiding** duplicates.
 3. With repeated values `nums[lo] == nums[mid]` can occur on both sides, so you cannot tell which half is sorted: the standard fix is `lo += 1` in that case (worst case `O(n)`), e.g. `[1,1,1,1,0,1]` breaks the distinct-values version.
-4. ```python no-run
+4. ```python
    from collections import defaultdict
    def group_anagrams(words):
        groups = defaultdict(list)
@@ -41,7 +87,7 @@ Try each problem before opening its solution. These are the practice problems of
 
 </details>
 
-## Worked Problems, Part 2
+### Worked Problems, Part 2
 
 1. In Word Ladder, why do we mark a word `seen` when we enqueue it, not when we dequeue it?
 2. Modify `ladder_length` to return the actual shortest path.
@@ -55,7 +101,7 @@ Try each problem before opening its solution. These are the practice problems of
 <summary>Solutions</summary>
 
 1. Marking on enqueue guarantees each word enters the queue **once**; marking on dequeue lets the same word be queued many times by different neighbors, wasting time and memory (the distances stay correct, but the queue can blow up).
-2. ```python no-run
+2. ```python
    def ladder_path(begin, end, words):
        words = set(words)
        if end not in words:
@@ -79,11 +125,11 @@ Try each problem before opening its solution. These are the practice problems of
    print(ladder_path("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))      # ['hit', 'hot', 'dot', 'dog', 'cog']
    ```
 3. **BFS** on the grid: each move costs 1, so BFS gives the shortest path (use A* with Manhattan distance for speed on large grids).
-4. ```python no-run
+4. ```python
    print(edit_distance("kitten", "sitting"))                # 3
    ```
    Substitute k to s, substitute e to i, insert g at the end.
-5. ```python no-run
+5. ```python
    def lcs_edit(a, b): return len(a) + len(b) - 2 * lcs(a, b)
    for _ in range(200):
        x, y = make_pair()
@@ -99,7 +145,7 @@ Try each problem before opening its solution. These are the practice problems of
    print("identity holds")                                   # identity holds
    ```
    Intuition: keep the LCS characters, delete everything else from `a`, and insert everything else of `b`.
-6. ```python no-run
+6. ```python
    class WeekendSurcharge:
        def __init__(self, inner, extra): self.inner, self.extra = inner, extra
        def fee(self, minutes): return self.inner.fee(minutes) + self.extra

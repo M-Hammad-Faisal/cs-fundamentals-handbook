@@ -1,6 +1,25 @@
 # Python Internals: One-Page Summary
 
-## Questions worth remembering
+## Key facts
+
+- **Objects and names:** every value is an object with identity (`id`, `is`), type and value; a name is a label bound to an object, and assignment never copies.
+- **Memory:** reference counting frees an object the moment its count reaches zero; a cycle collector (`gc`) handles reference cycles; `weakref` refers without owning.
+- **Attribute lookup:** data descriptor on the type, then the instance `__dict__`, then non-data descriptors and class attributes, then `__getattr__`; functions are descriptors, which is how bound methods work, and `property` is a descriptor too.
+- **Classes are objects:** `type` builds them; `__init_subclass__` hooks subclass creation; `__slots__` removes the per-instance dict to save memory.
+- **Bytecode:** source is compiled to stack-machine bytecode (`dis.dis(f)` shows it) and run by the interpreter loop.
+- **Imports:** a module runs once and is cached in `sys.modules`; `sys.path` decides where to look; circular imports see half-built modules.
+- **The GIL:** one thread runs bytecode at a time in the standard build and is released during blocking I/O; free-threaded builds are available in newer versions.
+- **Interpreter pipeline:** tokenizer, parser, AST, then either a tree walker or compiled bytecode on a VM.
+
+## Pitfalls
+
+- Relying on `id`, small-integer caching or exact reference counts: they are implementation details.
+- Using `is` to compare values instead of identity.
+- Counting on `__del__` to run at a precise moment.
+- Mutable class attributes shared by all instances.
+- Reaching for a metaclass when `__init_subclass__` or a decorator would do.
+
+## Self-check
 
 - **What does it mean that variables are names bound to objects?** Assignment attaches a label to an object without copying; several names can refer to the same object, so mutation through one is visible through the others.
 - **When does CPython free an object, and what does the cycle collector add?** Immediately when its reference count reaches zero; the cycle collector finds groups of objects that only reference each other and frees them.
@@ -14,8 +33,6 @@
 - **What is the difference between a tree-walking interpreter and a bytecode VM?** A tree walker recursively evaluates nodes; a VM runs a flat list of simple instructions with a program counter and a stack, which is faster and easier to optimise.
 - **In postfix order, what is `2 + 3 * 4`?** `2 3 4 * +`.
 - **How do `while` loops become jumps?** The condition is tested at the top; a conditional jump leaves the loop when false; at the end of the body an unconditional jump returns to the test.
-
-Practice problems with solutions are in the **Practice** section of each lesson.
 
 [Lesson](README.md) · [Exercises](exercises.md)
 

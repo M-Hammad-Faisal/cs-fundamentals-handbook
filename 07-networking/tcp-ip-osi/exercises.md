@@ -1,5 +1,9 @@
 # The Network Stack: Exercises
 
+These problems go with the [The Network Stack lesson](README.md). Try each one before opening its solution.
+
+## Problems
+
 1. Split `10.0.0.0/24` into four equal subnets. List each network and its usable range.
 2. For `172.16.5.130/25`, give the network address, broadcast address and number of usable hosts.
 3. A packet to `10.1.2.3` matches routes `10.0.0.0/8` (gateway A) and `10.1.0.0/16` (gateway B). Which is used and why?

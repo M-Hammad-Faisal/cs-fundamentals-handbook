@@ -1,6 +1,9 @@
 # Searching: Exercises
 
+These problems go with the [Searching lesson](README.md). Try each one before opening its solution.
+
 ## Problems
+
 1. Implement iterative **binary search** returning the index or `-1`.
 2. Find the **first and last position** of a target in a sorted array with duplicates.
 3. Return the index where a target **would be inserted** to keep the array sorted.

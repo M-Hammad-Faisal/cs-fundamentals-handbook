@@ -1,5 +1,7 @@
 # Encapsulation and Abstraction: One-Page Summary
 
+## Key facts
+
 - **Encapsulation:** bundle data + behavior, control access, protect **invariants**. **Abstraction:** expose *what*, hide *how*.
 - **Python access:** `name` public, `_name` internal by convention, `__name` mangled to `_Class__name` (avoids subclass clashes; not security).
 - **Properties:** start with plain attributes; add `@property` / `@x.setter` later without breaking callers. Read-only = no setter. `cached_property` = compute once.
@@ -8,6 +10,14 @@
 - **Abstraction tools:** `ABC` + `@abstractmethod` (enforced at instantiation, shared template methods), `Protocol` (structural typing, no inheritance), plain duck typing.
 - **Depend on abstractions** so implementations (memory, SQLite, S3; Stripe, PayPal, fake) swap freely.
 - **Leaky abstractions** hide costs or failures; document them and keep abstractions small.
-- **Pitfalls:** exposing mutable internals, heavy getters, abstractions without a second implementation, giant base classes.
+
+## Pitfalls
+
+- Getter and setter pairs for every field, which expose the internals anyway.
+- Believing `_name` or `__name` enforces privacy: the underscore is a convention and name mangling only avoids clashes.
+- Returning internal mutable lists or dicts instead of copies or read-only views.
+- Properties that do slow work or have side effects.
+- Abstractions that mirror a single implementation, or that leak its details.
+- Also: exposing mutable internals, heavy getters, abstractions without a second implementation, giant base classes.
 
 [Lesson](README.md) · [Exercises](exercises.md)

@@ -1,12 +1,14 @@
 # Linked Lists: One-Page Summary
 
-## Facts
+## Key facts
+
 - Nodes hold a value and pointer(s). Types: singly, doubly, circular.
 - No random access: reaching index `i` is `O(n)`.
 - Insert/delete at a known position is `O(1)` (doubly linked, given the node).
 - Poor cache locality; arrays often win in practice.
 
-## Costs
+### Costs
+
 | Operation | Singly | Doubly |
 |-----------|--------|--------|
 | Head insert/delete | `O(1)` | `O(1)` |
@@ -14,7 +16,8 @@
 | Delete known node | `O(n)` | `O(1)` |
 | Search / index | `O(n)` | `O(n)` |
 
-## Patterns
+### Patterns
+
 - **Dummy head** removes head edge cases.
 - **Reverse:** save `next`, flip pointer, advance.
 - **Slow/fast pointers:** middle, cycle detection, cycle start, k-th from end.
@@ -22,6 +25,7 @@
 - **LRU cache:** hash map + doubly linked list.
 
 ## Pitfalls
+
 - Overwriting `next` before saving it.
 - Dereferencing `None`.
 - Forgetting to update `head`/`tail`.
