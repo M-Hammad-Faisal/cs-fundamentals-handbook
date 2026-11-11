@@ -132,7 +132,7 @@ Build a max-heap, then repeatedly move the maximum to the end. `O(n log n)` alwa
 
 `list.sort()` and `sorted()` use **Timsort**: a hybrid of merge sort and insertion sort that detects existing sorted "runs" in the data and merges them. It is stable, `O(n log n)` worst case, and `O(n)` on already sorted data.
 
-```python
+```python no-run
 sorted(items, key=lambda p: p.age)                # new list
 items.sort(key=lambda p: (p.dept, -p.salary))     # in place, multi-key
 sorted(words, key=str.lower, reverse=True)
@@ -198,7 +198,7 @@ def quickselect(a, k):                  # k is 0-based
 
 ### Sort by custom keys
 
-```python
+```python no-run
 people.sort(key=lambda p: (p["dept"], -p["salary"], p["name"]))
 ```
 

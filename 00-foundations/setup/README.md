@@ -126,7 +126,7 @@ if __name__ == "__main__":
     print(greet("world", excited=True))
 ```
 
-```python
+```python no-run
 # test_greeter.py  (pytest finds files named test_*.py)
 from greeter import greet
 

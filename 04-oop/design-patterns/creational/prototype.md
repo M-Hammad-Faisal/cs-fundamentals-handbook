@@ -12,7 +12,7 @@ Analogy: a **document template** or a **cell dividing**. You do not retype the c
 
 Creating an object is expensive or fiddly (many fields, a database lookup, a heavy setup), and you need many similar copies:
 
-```python
+```python no-run
 enemy1 = Enemy("goblin", hp=30, loot=["coin", "dagger"], ai=load_ai("goblin"), sprite=load("goblin.png"))
 enemy2 = Enemy("goblin", hp=30, loot=["coin", "dagger"], ai=load_ai("goblin"), sprite=load("goblin.png"))
 # repeated setup, repeated cost

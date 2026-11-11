@@ -104,7 +104,7 @@ Python 3.7+ guarantees that `dict` preserves **insertion order**.
 
 ## 3. Python toolkit
 
-```python
+```python no-run
 d = {"a": 1}
 d["b"] = 2
 d.get("z", 0)                    # safe lookup with default

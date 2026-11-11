@@ -12,7 +12,7 @@ Analogy: a **printing press with a case of type**. A book has 500,000 letters on
 
 You create huge numbers of similar objects and most of their data is identical:
 
-```python
+```python no-run
 class Tree:
     def __init__(self, x, y, species_name, texture_bytes, color):    # texture is 2 MB
         ...

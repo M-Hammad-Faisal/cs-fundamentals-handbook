@@ -222,7 +222,7 @@ for word in words:
     frequency[word] = frequency.get(word, 0) + 1
 
 top = sorted(frequency.items(), key=lambda pair: (-pair[1], pair[0]))[:3]
-print(top)                                       # [('it', 4), ('was', 4), ('of', 4)]
+print(top)                                       # [('it', 4), ('of', 4), ('the', 4)]
 print(len(words), len(set(words)))               # 23 11   (total words and unique words)
 ```
 

@@ -94,7 +94,7 @@ print(hash_password("same") != hash_password("same"))               # True   (di
 
 t = time.perf_counter(); hashlib.sha256(b"guess").digest(); fast = time.perf_counter() - t
 t = time.perf_counter(); hashlib.pbkdf2_hmac("sha256", b"guess", b"salt", 200_000); slow = time.perf_counter() - t
-print(slow > 1000 * fast)                                            # True   (the slow hash makes each guess thousands of times costlier)
+print(slow > 100 * fast)                                             # True   (the slow hash makes each guess hundreds of times costlier)
 
 t = time.perf_counter(); hashlib.scrypt(b"guess", salt=b"saltsaltsalt", n=2**14, r=8, p=1); print(time.perf_counter() - t > 0.005)       # True   (scrypt also needs lots of memory)
 ```

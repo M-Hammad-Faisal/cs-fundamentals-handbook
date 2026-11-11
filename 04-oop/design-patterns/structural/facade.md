@@ -12,7 +12,7 @@ Analogy: a **hotel concierge**. You say "dinner for two at 8, and a taxi". The c
 
 Doing one common task requires knowing and calling many classes in the right order:
 
-```python
+```python no-run
 decoder = VideoDecoder(); video = decoder.decode("movie.avi")
 video = Compressor().compress(video, quality="high")
 audio = AudioExtractor().extract("movie.avi")

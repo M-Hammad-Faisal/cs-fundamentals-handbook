@@ -120,7 +120,7 @@ def greet(name: str, excited: bool = False) -> str:
     return f"Hello, {name}{'!' if excited else '.'}"
 ```
 
-```python
+```python no-run
 # src/greeter/cli.py   (the entry point named in [project.scripts])
 import argparse
 from greeter import greet

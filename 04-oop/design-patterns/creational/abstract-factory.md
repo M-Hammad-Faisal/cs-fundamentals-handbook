@@ -12,7 +12,7 @@ It differs from [Factory Method](factory-method.md): that builds **one product**
 
 ## 2. The problem
 
-```python
+```python no-run
 if theme == "dark":
     button = DarkButton()
     checkbox = DarkCheckbox()

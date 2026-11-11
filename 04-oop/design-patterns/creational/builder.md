@@ -12,7 +12,7 @@ Analogy: ordering a **burger at a counter**: "bun, patty, no onions, extra chees
 
 A constructor with many optional parameters becomes unreadable and error-prone (the "telescoping constructor"):
 
-```python
+```python no-run
 pizza = Pizza("large", "thick", ("olives", "mushrooms"), True, False, 3, None, "well done")
 # What do True, False, 3 and None mean?
 ```

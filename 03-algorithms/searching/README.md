@@ -81,7 +81,7 @@ def upper_bound(a, target):                # first index with a[i] > target
 
 These match `bisect.bisect_left` and `bisect.bisect_right` in Python's standard library:
 
-```python
+```python no-run
 import bisect
 bisect.bisect_left(a, x)            # lower_bound
 bisect.bisect_right(a, x)           # upper_bound

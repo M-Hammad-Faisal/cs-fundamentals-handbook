@@ -98,7 +98,7 @@ class MinHeap:
 
 `heapq` provides a **min-heap** on a plain list.
 
-```python
+```python no-run
 import heapq
 
 h = []
@@ -118,7 +118,7 @@ heapq.heappushpop(h, x)       # push then pop, faster than separate calls
 
 `heapq` is min-only. Push negated values for a max-heap:
 
-```python
+```python no-run
 maxh = []
 heapq.heappush(maxh, -value)
 largest = -heapq.heappop(maxh)
@@ -128,7 +128,7 @@ largest = -heapq.heappop(maxh)
 
 Store `(priority, counter, item)` tuples. The counter breaks ties so Python never tries to compare the items themselves (which may not be comparable).
 
-```python
+```python no-run
 import itertools
 tasks = []
 counter = itertools.count()

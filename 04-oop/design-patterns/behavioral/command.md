@@ -12,7 +12,7 @@ Analogy: a **restaurant order slip**. The waiter writes your wish on a slip and 
 
 Calling methods directly means you cannot easily delay, repeat, record or reverse them:
 
-```python
+```python no-run
 editor.insert("Hello")      # done and gone: no history, no undo, no replay
 editor.delete_last(3)
 ```

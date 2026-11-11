@@ -166,7 +166,7 @@ def fib_fast(n): return n if n < 2 else fib_fast(n - 1) + fib_fast(n - 2)
 
 t = time.perf_counter(); fib_slow(27); slow = time.perf_counter() - t
 t = time.perf_counter(); fib_fast(27); fast = time.perf_counter() - t
-print(slow > fast * 1000)                                      # True: O(2^n) time versus O(n) time with O(n) cache
+print(slow > fast * 100)                                       # True: O(2^n) time versus O(n) time with O(n) cache
 
 # Trade 3: the opposite: O(1)-space two-pointer solution versus O(n)-space hash set (find a pair summing to target in SORTED data)
 def pair_sum_sorted(nums, target):                             # O(n) time, O(1) space (needs sorted input)

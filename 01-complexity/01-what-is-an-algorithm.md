@@ -178,7 +178,7 @@ steps = []
 a, b = 1071, 462
 while b:
     steps.append((a, b)); a, b = b, a % b
-print(steps)                                          # [(1071, 462), (462, 147), (147, 21), (21, 0)]
+print(steps)                                          # [(1071, 462), (462, 147), (147, 21)]
 ```
 
 Euclid's algorithm finishes in about `log(min(a, b))` steps: another example of **halving** ([logarithms](../00-foundations/math-for-cs/exponents-and-logarithms.md)).

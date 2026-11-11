@@ -115,7 +115,7 @@ except RuntimeError as e:
 
 Python imports a module **once** and caches it, so a module-level object is naturally shared:
 
-```python
+```python no-run
 # skip
 # settings.py
 DEBUG = False

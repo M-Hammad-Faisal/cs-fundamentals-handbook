@@ -430,7 +430,7 @@ Find the time complexity of each (assume `n = len(items)`), then verify with the
 5. ```python
    def g(n): return 0 if n == 0 else g(n - 1) + g(n - 1)
    ```
-6. ```python
+6. ```python no-run
    total = 0
    for x in items:
        total += sum(items)        # sum is O(n)

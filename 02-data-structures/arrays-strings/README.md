@@ -168,7 +168,7 @@ def max_subarray(nums):
 
 ### Immutability and building strings
 
-```python
+```python no-run
 # Slow: may copy the whole string each time -> O(n^2)
 s = ""
 for word in words:

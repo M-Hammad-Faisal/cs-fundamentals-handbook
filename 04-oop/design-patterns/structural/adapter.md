@@ -12,7 +12,7 @@ Analogy: a **travel plug adapter**. Your laptop has a UK plug, the wall has a US
 
 You depend on a class you cannot (or should not) change, perhaps a third-party library or legacy code, and its methods do not look like what your application expects:
 
-```python
+```python no-run
 sensor = LegacyThermometer()
 temperature = sensor.read_fahrenheit()   # your app expects sensor.read() in Celsius
 ```

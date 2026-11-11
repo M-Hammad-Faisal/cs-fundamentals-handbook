@@ -12,7 +12,7 @@ Analogy: a **receptionist** (or a bank cheque). You deal with the receptionist; 
 
 The real object is expensive, remote, sensitive, or needs extra handling every time, and you do not want every caller to deal with that:
 
-```python
+```python no-run
 gallery = [Image(f"{i}.png") for i in range(1000)]   # loads 1000 big files from disk, even if you only show 3
 ```
 

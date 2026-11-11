@@ -25,7 +25,7 @@ NoSQL is **not** "better than SQL". It trades some relational guarantees (joins,
 
 ### Key-value
 
-```python
+```python no-run
 # Conceptually a dictionary on a server; Redis adds data structures and expiry
 r.set("session:42", "{...}", ex=3600)      # expires in an hour
 r.incr("page_views:home")                  # atomic counter

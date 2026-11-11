@@ -12,7 +12,7 @@ Analogy: a **TV remote's "next channel" button**. You do not need to know how ch
 
 Each collection is traversed differently, and callers would need to know the internals:
 
-```python
+```python no-run
 for i in range(len(items)): ...      # works for lists, not for trees, files, or infinite streams
 node = tree.root                     # for a tree you must know left/right pointers and write a recursive walk
 ```
