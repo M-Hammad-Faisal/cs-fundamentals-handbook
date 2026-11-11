@@ -17,7 +17,7 @@ How applications store, find and protect their data. Every lesson here runs **en
 | 3 | Indexes and query plans | [lesson](indexes-query-plans/README.md) | [indexes lab](indexes-query-plans/01-indexes-lab.md) |
 | 4 | Transactions, ACID and isolation | [lesson](transactions-acid/README.md) | [transactions lab](transactions-acid/01-transactions-lab.md) |
 | 5 | NoSQL and choosing a database | [lesson](nosql/README.md) | [NoSQL lab](nosql/01-nosql-lab.md) |
-| 6 | PostgreSQL-specific features (**not executed**, see the lesson note) | [lesson](postgresql/README.md) | [PostgreSQL features](postgresql/01-postgresql-specific-features.md) |
+| 6 | PostgreSQL-specific features (run on PostgreSQL 18.6) | [lesson](postgresql/README.md) | [PostgreSQL features](postgresql/01-postgresql-specific-features.md) |
 
 Each topic folder also has `exercises.md` and a one-page `summary.md`.
 

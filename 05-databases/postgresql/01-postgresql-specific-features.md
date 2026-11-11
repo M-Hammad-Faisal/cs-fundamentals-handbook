@@ -1,6 +1,6 @@
 # PostgreSQL-Specific Features
 
-> **Verification status (read this first).** Every other lesson in this handbook was run and its output checked. **The SQL below was written from the PostgreSQL documentation and not executed**, because no PostgreSQL server was available when it was written. Output shown in comments is what the documented behaviour produces, but treat it as **unverified until you run it**. The easiest way is Docker: `docker run --rm -e POSTGRES_PASSWORD=pw -p 5432:5432 postgres:17`, then `psql -h localhost -U postgres`. If a result differs from this page, trust your server and please open an issue.
+> **Verification status.** The SQL on this page was run against **PostgreSQL 18.6** (the `postgres:18-alpine` Docker image) and its results checked. One real bug was found and fixed that way (`tags || 'vip'` fails; use `tags || ARRAY['vip']`). Query results match the comments below; the `EXPLAIN` plan in section 9 is illustrative, and PostgreSQL 18 adds extra lines such as `Index Searches`. To try it yourself: `docker run --rm -e POSTGRES_PASSWORD=pw -p 5432:5432 postgres:18`, then `psql -h localhost -U postgres`. If a result differs on your version, trust your server and open an issue.
 
 **Prerequisites:** [relational SQL](../relational-sql/README.md), [indexes and query plans](../indexes-query-plans/README.md), [transactions and ACID](../transactions-acid/README.md). **You will learn:** what makes PostgreSQL ("Postgres") different from the standard SQL you already know and from SQLite: its **richer data types**, `RETURNING` and **upserts**, **index types** for different workloads, how **MVCC** and `VACUUM` work, how to build a **job queue** safely, **`LISTEN/NOTIFY`**, reading **`EXPLAIN ANALYZE`**, and the `psql` client.
 
@@ -77,6 +77,10 @@ CREATE TABLE bookings (
     during tstzrange,
     EXCLUDE USING gist (room WITH =, during WITH &&)       -- no two rows may have the same room and overlapping times
 );
+
+INSERT INTO bookings VALUES (1, '[2026-03-01 09:00+00,2026-03-01 10:00+00)');   -- ok
+INSERT INTO bookings VALUES (1, '[2026-03-01 09:30+00,2026-03-01 10:30+00)');   -- ERROR: conflicting key value violates exclusion constraint "bookings_room_during_excl"
+INSERT INTO bookings VALUES (2, '[2026-03-01 09:30+00,2026-03-01 10:30+00)');   -- ok: different room
 ```
 
 The database itself then **refuses double bookings**, with no application race to get wrong: a feature few databases offer.
@@ -87,7 +91,7 @@ The database itself then **refuses double bookings**, with no application race t
 
 ```sql
 INSERT INTO users (email) VALUES ('bob@example.com') RETURNING id, created_at;
-UPDATE users SET tags = tags || 'vip' WHERE email = 'bob@example.com' RETURNING *;
+UPDATE users SET tags = tags || ARRAY['vip'] WHERE email = 'bob@example.com' RETURNING *;
 DELETE FROM users WHERE email = 'bob@example.com' RETURNING id;
 ```
 
