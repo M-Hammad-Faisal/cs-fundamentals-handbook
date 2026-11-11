@@ -19,7 +19,6 @@ What could come next, and the limits of what has been checked. Readers can ignor
 - **Output comments.** CI proves code runs, not that `# output` comments are right. `tools/check_outputs.py` is advisory and compares single-line `print(...)  # value` comments; moving it into CI needs an allow-list for prose and machine-dependent values.
 - **One page is skipped by the checker:** `05-databases/transactions-acid/README.md` (both blocks are fragments of the demo script). Everything else runs.
 - **Not executed:** the GitHub Actions and PyPI publishing workflows (checked only for valid YAML), the concurrent and `SERIALIZABLE` behaviour of the PostgreSQL lesson, and Wireshark. Timing figures are examples from one laptop.
-- **CI has not been observed running** the latest changes on GitHub (the checks were run locally and in a `python:3.14` container).
 
 ## Ideas for later
 
