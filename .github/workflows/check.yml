@@ -19,6 +19,8 @@ jobs:
           cache-dependency-path: tools/requirements-check.txt
       - name: Install packages used by some lessons
         run: pip install -r tools/requirements-check.txt
+      - name: Index, tracker and README are generated and up to date
+        run: python tools/build_index.py --check
       - name: Check relative links
         run: python tools/check_links.py
       - name: Run every code block

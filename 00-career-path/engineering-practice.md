@@ -1,6 +1,6 @@
-# Software Engineering Practice: Reading Code, Refactoring, Reviews, Design Docs and Estimates
+# Engineering Practice: Reading Code, Refactoring, Reviews, Design Docs and Estimates
 
-**Prerequisites:** [the career path](README.md), [Git and GitHub collaboration](../00-foundations/command-line-and-git/github-collaboration.md), [testing in depth](../08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md). **You will learn:** the working habits that separate a programmer who can solve exercises from an engineer teams trust: how to **read and map an unfamiliar codebase**, how to **refactor safely** (with a differential test that proves behaviour did not change), what good **commit messages, pull requests and code reviews** look like, how to write a short **design document**, how to **estimate** honestly with ranges, how to handle **technical debt and incidents**, and a **"what to learn next"** map. The code examples run offline.
+**Prerequisites:** [the career path](README.md), [Git and GitHub collaboration](../00-foundations/command-line-and-git/github-collaboration.md), [testing in depth](../08-modern-python/testing-in-depth/01-pytest-mocking-and-property-testing.md). **You will learn:** the working habits that separate a programmer who can solve exercises from an engineer teams trust: how to **read and map an unfamiliar codebase**, how to **refactor safely** (with a differential test that proves behaviour did not change), what good **commit messages, pull requests and code reviews** look like, how to write a short **design document**, how to **estimate** honestly with ranges, how to handle **technical debt and incidents**, and where to go next (see the [career path](README.md)). The code examples run offline.
 
 ## 1. In plain words
 
@@ -228,18 +228,7 @@ When production breaks: **stabilise first** (roll back, switch off the feature, 
 
 ## 9. What to learn next
 
-The handbook covers the shared foundation. Here are common directions, with where to go in the handbook and what to practise:
-
-| Direction | Handbook starting points | Build something |
-|-----------|--------------------------|-----------------|
-| **Backend and APIs** | [FastAPI](../08-modern-python/backend-with-fastapi/01-building-a-web-api-with-fastapi.md), [databases](../05-databases/README.md), [PostgreSQL](../05-databases/postgresql/README.md), [security](../10-security/README.md) | A REST service with auth, a database, tests and a Docker image deployed somewhere |
-| **Distributed systems and platform** | [distributed systems](../11-distributed-systems/README.md), [containers](../06-operating-systems/containers/01-containers-and-namespaces.md), [observability](../11-distributed-systems/observability/01-observability-logs-metrics-traces-slos.md) | A replicated key-value store; a service with metrics, tracing and an SLO dashboard |
-| **Data and machine learning** | [NumPy and pandas](../08-modern-python/data-with-numpy-pandas/01-numpy-and-pandas-essentials.md), [math for CS](../00-foundations/math-for-cs/README.md), [algorithms](../03-algorithms/README.md) | An analysis of a public dataset with reproducible code; later, scikit-learn then PyTorch |
-| **Security** | [security](../10-security/README.md), [TLS lab](../07-networking/tls-security/01-cryptography-and-tls-lab.md) | Capture-the-flag practice, a threat model of a project you own |
-| **Systems and performance** | [operating systems](../06-operating-systems/README.md), [CPU caches](../00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md), [internals](../08-modern-python/internals/01-python-data-model-and-internals.md), a language such as Go or Rust | A tiny database or an HTTP server from sockets |
-| **Interview preparation** | [interview playbook](../09-interview-playbook/README.md) | Timed practice problems and mock design interviews |
-
-Whatever you choose: **build projects, read other people's code, write about what you learn,** and ship things that real people use. A deployed project with tests, a README and a clear commit history teaches (and shows) more than any certificate.
+Which direction to take depends on the role you are aiming for. The [career path](README.md) has a table of roles that look strong for the next few years, each with the handbook parts to study and a first project to build. Whatever you choose: **build projects, read other people's code, write about what you learn,** and ship things that real people use. A deployed project with tests, a README and a clear commit history teaches (and shows) more than any certificate.
 
 ## 10. Common mistakes
 

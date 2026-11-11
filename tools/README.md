@@ -5,6 +5,8 @@ Small scripts that keep the handbook honest. They also run in CI (`.github/workf
 | Script | What it does |
 |--------|--------------|
 | `check_code_blocks.py` | Runs every ```` ```python ```` block on every page (each page in a fresh process, blocks in order, sharing one namespace). Pages with `# file: name.py` blocks are written to a temporary folder and tested with pytest. A block opened with ```` ```python no-run ```` is skipped. |
+| `build_index.py` | Regenerates `INDEX.md`, `revision/PROGRESS.md` (keeping your ticks) and the contents table and stats in `README.md` from the files on disk, so navigation never drifts. `--check` fails if they are stale. Run it after adding or renaming a page. |
+| `gen_summaries.py` | Creates a one-page `summary.md` (quick reference plus the self-check questions and answers) for any topic folder that lacks one. Never overwrites. |
 | `check_links.py` | Reports relative Markdown links that point to files that do not exist. |
 | `known-sketches.txt` | Pages deliberately skipped by the code checker, one per line, with the reason after `#`. |
 | `requirements-check.txt` | Third-party packages that a few lessons import (pytest, numpy, pandas, fastapi, sqlalchemy, ...). |

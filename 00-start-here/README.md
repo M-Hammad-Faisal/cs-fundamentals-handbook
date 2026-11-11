@@ -4,21 +4,25 @@ Welcome. This handbook teaches the core of computer science and professional Pyt
 
 ## 1. What is inside
 
+The [index](../INDEX.md) lists every topic and lesson in reading order. In short:
+
 | Part | Topic | What you get |
 |------|-------|--------------|
+| [Career path](../00-career-path/README.md) | Where the field is heading | Roles that look strong, what AI changes, learning maps for students and working engineers |
 | [00 Foundations](../00-foundations/README.md) | Setup, computer basics, math, Python fundamentals, command line and Git | The prerequisites, explained from scratch |
-| [00 Career path](../00-career-path/README.md) | What the profession looks like | Roles, skills, a plan |
-| [01 Complexity](../01-complexity/big-o/README.md) | Measuring how fast and how big | Big-O |
-| [02 Data structures](../02-data-structures/arrays-strings/README.md) | Arrays to graphs | Storing and organizing data |
+| [01 Complexity](../01-complexity/README.md) | Measuring how fast and how big | Big-O |
+| [02 Data structures](../02-data-structures/README.md) | Arrays to graphs | Storing and organizing data |
 | [03 Algorithms](../03-algorithms/README.md) | Sorting, searching, recursion, DP, greedy, graphs | Solving problems efficiently |
 | [04 Object-oriented design](../04-oop/README.md) | Classes, SOLID, 25 design patterns | Structuring larger programs |
-| [05 Databases](../05-databases/README.md) | SQL, indexes, transactions, schema design, NoSQL | Storing data reliably |
-| [06 Operating systems](../06-operating-systems/README.md) | Processes, scheduling, memory, concurrency, files | What runs under your code |
-| [07 Networking](../07-networking/README.md) | TCP/IP, DNS, HTTP, TLS, load balancing | How computers talk |
-| [08 Modern Python](../08-modern-python/README.md) | Typing, async, testing, packaging | Professional Python |
-| [09 Interview playbook](../09-interview-playbook/README.md) | Patterns, system design, behavioral | Turning knowledge into offers |
+| [05 Databases](../05-databases/README.md) | SQL, indexes, transactions, schema design, NoSQL, PostgreSQL | Storing data reliably |
+| [06 Operating systems](../06-operating-systems/README.md) | Processes, scheduling, memory, concurrency, files, containers | What runs under your code |
+| [07 Networking](../07-networking/README.md) | TCP/IP, DNS, HTTP, TLS, load balancing, APIs, debugging | How computers talk |
+| [08 Modern Python](../08-modern-python/README.md) | Typing, async, testing, packaging, FastAPI, databases, data | Professional Python |
+| [09 Interview playbook](../09-interview-playbook/README.md) | Patterns, worked problems, system design, behavioral | Turning knowledge into offers |
+| [10 Security](../10-security/README.md) | Threat modeling, authentication, web vulnerabilities, supply chain | Software that holds up against attackers |
+| [11 Distributed systems](../11-distributed-systems/README.md) | Failures, replication, consensus, sagas, storage, observability | How many machines stay correct |
 
-Also: the [glossary](../GLOSSARY.md) (every term in plain words), the [index](../INDEX.md) (status of every lesson), the [revision schedule](../revision/schedule.md) and the [progress tracker](../revision/PROGRESS.md).
+Also: the [glossary](../GLOSSARY.md) (every term in plain words), the [revision schedule](../revision/schedule.md) and the [progress tracker](../revision/PROGRESS.md).
 
 ## 2. How every lesson is built
 

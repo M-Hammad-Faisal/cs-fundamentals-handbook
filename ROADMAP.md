@@ -20,6 +20,8 @@ Where the handbook stands and what could come next. Readers can ignore this page
 - **Third-party packages:** a few lessons use `pytest`, `hypothesis`, `numpy`, `pandas`, `fastapi`, `sqlalchemy` (see `tools/requirements-check.txt`); everything else uses only the standard library, SQLite and the `openssl` command.
 - **Run for real, not just read:** PostgreSQL 18.6 in Docker (the PostgreSQL lesson); `tcpdump` on a generated capture (network debugging); a built wheel installed into a clean virtual environment, `ruff`, `mypy`, `pytest` and a Docker image build and run (engineering workflow); FastAPI through its `TestClient`; random-failure safety tests for the Raft simulator.
 - **Not executed:** the GitHub Actions and PyPI publishing workflows (checked only for valid YAML), the concurrent two-worker and `SERIALIZABLE` behaviour of the PostgreSQL lesson, and Wireshark (`tshark` was not available). Timing figures (speed-ups, latency ratios) are examples from one laptop and will differ on yours.
+- **Navigation is generated:** `tools/build_index.py` builds the index, progress tracker and README contents from the files on disk (one row per topic, same columns everywhere), and CI fails if they are stale.
+- **Practice and summaries:** every topic folder outside the five foundations tutorials has a `summary.md`; topics whose exercises live inside the lessons (their **Practice** sections) show "–" in the Exercises column of the index.
 - Links are checked across the whole repository (`tools/check_links.py`, 0 broken), and a privacy check was run before every push.
 
 ## Known gaps (honest list)
@@ -43,7 +45,7 @@ The original gap table is closed (every part has dedicated, run-and-checked less
 | 2 | Distributed systems | [Part 11](11-distributed-systems/README.md): failures and clocks; replication, quorums and consistent hashing; a Raft simulator with random-failure tests; idempotency, retries, sagas and the outbox; logs, queues, an LSM tree and Bloom filters; observability and SLOs | written |
 | 3 | System design depth | [Five more designs](09-interview-playbook/system-design-basics/02-five-more-designs.md); [caching failure modes and reliability](09-interview-playbook/system-design-basics/03-caching-failure-modes-and-reliability.md) | written |
 | 4 | Python depth | internals; a tiny interpreter; threads, processes and futures; testing in depth; FastAPI; SQLAlchemy; NumPy and pandas; CI, Docker and publishing; the standard library toolbox (see [modern Python](08-modern-python/README.md)) | written |
-| 5 | Other CS and engineering | [CPU caches](00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md); [software engineering practice and what to learn next](00-career-path/02-software-engineering-practice.md) | written |
+| 5 | Other CS and engineering | [CPU caches](00-foundations/computer-basics/cpu-caches-and-memory-hierarchy.md); [software engineering practice and what to learn next](00-career-path/engineering-practice.md) | written |
 | 6 | Structure | exercises and summaries for apis-realtime, containers and debugging; the automated check described above | done |
 
 Contributions and ideas for any of these are welcome.
