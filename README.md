@@ -11,7 +11,7 @@ It serves three readers at once:
 <!-- stats:start -->
 **416 pages, about 84,000 lines, 2,506 Python code blocks and 331 glossary terms.**
 <!-- stats:end -->
-The code in the lessons was run and the output comments were checked; `tools/check_code_blocks.py` re-runs the code in CI (see [ROADMAP.md](ROADMAP.md) for exactly what is and is not verified).
+The code in the lessons was run and the output comments were compared with real output when each lesson was written; `tools/check_code_blocks.py` re-runs the code in CI (see [ROADMAP.md](ROADMAP.md) for open items and what is not verified).
 
 ## Where to start
 
