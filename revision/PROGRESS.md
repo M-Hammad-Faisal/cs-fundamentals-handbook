@@ -217,6 +217,26 @@ Legend: **Read** = chapter read, **Ex** = exercises done, **R1** to **R5** = sch
 | [Behavioral interviews, hiring process and 12-week plan](../09-interview-playbook/behavioral-and-process/) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Ten Worked Interview Problems](../09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Lesson: [Worked Problems, Part 2](../09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [System Design, Part 2](../09-interview-playbook/system-design-basics/02-five-more-designs.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [System Design, Part 3](../09-interview-playbook/system-design-basics/03-caching-failure-modes-and-reliability.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 10 Security
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Lesson: [Authentication and Authorization](../10-security/authentication/01-authn-authz-sessions-jwt.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Secrets, Dependencies and Hardening](../10-security/secrets-and-supply-chain/01-secrets-dependencies-and-hardening.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Threat Modeling and Secure Python](../10-security/threat-modeling/01-threat-modeling-and-secure-python.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Common Web Vulnerabilities in Python](../10-security/web-vulnerabilities/01-owasp-top-ten-in-python.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+## 11 Distributed systems
+| Topic | Read | Ex | R1 | R2 | R3 | R4 | R5 |
+|-------|------|----|----|----|----|----|----|
+| Lesson: [Consensus and Raft](../11-distributed-systems/consensus/01-consensus-and-raft.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Failures, Time and Clocks in Distributed Systems](../11-distributed-systems/foundations/01-failures-time-and-clocks.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Logs, Queues and LSM Trees](../11-distributed-systems/messaging-storage/01-logs-queues-and-lsm-trees.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Observability](../11-distributed-systems/observability/01-observability-logs-metrics-traces-slos.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Replication, Quorums and Sharding](../11-distributed-systems/replication-sharding/01-replication-and-sharding.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Lesson: [Idempotency, Retries, Circuit Breakers, Sagas and the Outbox](../11-distributed-systems/transactions/01-idempotency-retries-and-sagas.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## Mistake log
 Write down anything you got wrong and the fix. Review weekly.

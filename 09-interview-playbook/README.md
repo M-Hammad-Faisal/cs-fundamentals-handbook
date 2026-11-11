@@ -5,7 +5,7 @@ Everything you need to turn the handbook's knowledge into offers: a method and p
 | # | Topic | Lesson |
 |---|-------|--------|
 | 1 | Problem-solving patterns (16 patterns with templates) | [lesson](problem-solving-patterns/README.md) · [exercises](problem-solving-patterns/exercises.md) · [summary](problem-solving-patterns/summary.md) |
-| 2 | System design basics (framework, estimation, building blocks, worked designs) | [lesson](system-design-basics/README.md) · [exercises](system-design-basics/exercises.md) · [summary](system-design-basics/summary.md) |
+| 2 | System design basics (framework, estimation, building blocks, worked designs) | [lesson](system-design-basics/README.md) · [part 2: five more designs](system-design-basics/02-five-more-designs.md) · [part 3: caching failures and reliability](system-design-basics/03-caching-failure-modes-and-reliability.md) · [exercises](system-design-basics/exercises.md) · [summary](system-design-basics/summary.md) |
 | 3 | Rapid-fire Python and CS questions | [lesson](python-and-cs-rapid-fire/README.md) · [exercises](python-and-cs-rapid-fire/exercises.md) · [summary](python-and-cs-rapid-fire/summary.md) |
 | 4 | Worked problems (ten full walkthroughs, tested against brute force) | [overview](worked-problems/README.md) · [ten worked problems](worked-problems/01-ten-worked-interview-problems.md) |
 | 5 | Behavioral interviews, hiring process and 12-week plan | [lesson](behavioral-and-process/README.md) · [exercises](behavioral-and-process/exercises.md) · [summary](behavioral-and-process/summary.md) |

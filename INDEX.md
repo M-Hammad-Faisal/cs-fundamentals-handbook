@@ -12,7 +12,7 @@ Each topic lives in its own folder with a quick-reference README, numbered detai
 | Page | Status |
 |------|--------|
 | [How to use this handbook, study methods and learning paths](00-start-here/README.md) | done |
-| [Glossary (271 terms in plain words)](GLOSSARY.md) | done |
+| [Glossary (308 terms in plain words)](GLOSSARY.md) | done |
 | [Roadmap, quality bar and verification status](ROADMAP.md) | done |
 
 ## 00 Foundations
@@ -215,8 +215,39 @@ Shared dataset for the SQL examples: [sample-data.sql](05-databases/sample-data.
 <!-- detailed-lessons:09 -->
 **Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
 
+- **System Design Basics:** [System Design, Part 2: Five More Designs](09-interview-playbook/system-design-basics/02-five-more-designs.md), [System Design, Part 3: Caching Failure Modes and Designing for Reliability](09-interview-playbook/system-design-basics/03-caching-failure-modes-and-reliability.md)
 - **Worked Problems:** [Ten Worked Interview Problems (with the Thinking, Not Just the Code)](09-interview-playbook/worked-problems/01-ten-worked-interview-problems.md), [Worked Problems, Part 2: Graphs, String DP and Design-Pattern Rounds](09-interview-playbook/worked-problems/02-graph-string-dp-and-design-rounds.md)
 <!-- detailed-lessons:09 -->
+
+## 10 Security
+| Topic | Lesson |
+|-------|--------|
+| Security: threat modeling, authentication, web vulnerabilities, secrets and supply chain | [part overview](10-security/README.md) |
+
+<!-- detailed-lessons:10 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Authentication and Authorization:** [Authentication and Authorization: Passwords, Sessions, JWT, OAuth](10-security/authentication/01-authn-authz-sessions-jwt.md)
+- **Secrets and Supply Chain:** [Secrets, Dependencies and Hardening](10-security/secrets-and-supply-chain/01-secrets-dependencies-and-hardening.md)
+- **Threat Modeling and Secure Python:** [Threat Modeling and Secure Python](10-security/threat-modeling/01-threat-modeling-and-secure-python.md)
+- **Web Vulnerabilities:** [Common Web Vulnerabilities in Python (OWASP-Style)](10-security/web-vulnerabilities/01-owasp-top-ten-in-python.md)
+<!-- detailed-lessons:10 -->
+
+## 11 Distributed systems
+| Topic | Lesson |
+|-------|--------|
+| Distributed systems: failures and clocks, replication, consensus, sagas, logs and LSM trees, observability | [part overview](11-distributed-systems/README.md) |
+
+<!-- detailed-lessons:11 -->
+**Detailed lessons** (step-by-step, with runnable labs, practice and self-checks):
+
+- **Consensus:** [Consensus and Raft: Agreeing Despite Failures](11-distributed-systems/consensus/01-consensus-and-raft.md)
+- **Foundations of Distributed Systems:** [Failures, Time and Clocks in Distributed Systems](11-distributed-systems/foundations/01-failures-time-and-clocks.md)
+- **Messaging and Storage:** [Logs, Queues and LSM Trees: How Distributed Data Is Stored and Moved](11-distributed-systems/messaging-storage/01-logs-queues-and-lsm-trees.md)
+- **Observability:** [Observability: Logs, Metrics, Traces and SLOs](11-distributed-systems/observability/01-observability-logs-metrics-traces-slos.md)
+- **Replication and Sharding:** [Replication, Quorums and Sharding](11-distributed-systems/replication-sharding/01-replication-and-sharding.md)
+- **Distributed Transactions and Reliability Patterns:** [Idempotency, Retries, Circuit Breakers, Sagas and the Outbox](11-distributed-systems/transactions/01-idempotency-retries-and-sagas.md)
+<!-- detailed-lessons:11 -->
 
 ## Revision tools
 | Page | Purpose |

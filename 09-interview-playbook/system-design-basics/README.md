@@ -10,6 +10,8 @@ This chapter gives you:
 3. the **building blocks** and the trade-offs of each,
 4. **worked designs** of classic problems with working mini-implementations.
 
+**Continue with:** [part 2, five more designs](02-five-more-designs.md) (rate limiter, notification service, payment ledger, autocomplete, file storage), [part 3, caching failure modes and reliability](03-caching-failure-modes-and-reliability.md), and the [distributed systems](../../11-distributed-systems/README.md) track for the theory behind replication, consensus and sagas.
+
 It builds on [networking](../../07-networking/tcp-ip-osi/README.md), [databases](../../05-databases/nosql/README.md) and [operating-systems concurrency](../../06-operating-systems/concurrency-deadlocks/README.md); revise those links when a term is new.
 
 ## 2. A framework for any design question (about 45 minutes)

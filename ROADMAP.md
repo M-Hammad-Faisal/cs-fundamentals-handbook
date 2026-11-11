@@ -35,4 +35,17 @@ Not yet written as dedicated lessons:
 | 09 Interview playbook | none (sixteen worked problems written, including graph, string DP and design-pattern rounds) |
 | All parts | none (each topic's `exercises.md` and `summary.md` now link to its detailed lessons; their own content predates those lessons and is still valid) |
 
+## Gap audit, November 2026 (Python-focused)
+
+An audit of the whole handbook found these areas thin or missing. Status is updated as each is written.
+
+| # | Area | What to add | Status |
+|---|------|-------------|--------|
+| 1 | Security | threat modeling and secure Python; authentication, sessions, JWT, OAuth; OWASP-style bugs (SSRF, path traversal, deserialization, access control); secrets, supply chain, hardening | in progress |
+| 2 | Distributed systems | failures, clocks; replication and sharding; consensus (Raft); idempotency, retries, sagas; logs, queues, LSM trees; observability | planned |
+| 3 | System design depth | five more designs; caching failure modes and reliability | planned |
+| 4 | Python depth | data model and internals; threads, processes, futures; testing in depth; web APIs with FastAPI; SQLAlchemy; NumPy and pandas; CI, Docker, publishing; stdlib toolbox | planned |
+| 5 | Other CS and engineering | tiny interpreter; CPU caches and memory hierarchy; software engineering practice; what to learn next | planned |
+| 6 | Structure | exercises and summaries for apis-realtime, containers, debugging; an automated check that runs every code block | planned |
+
 Contributions and ideas for any of these are welcome.
