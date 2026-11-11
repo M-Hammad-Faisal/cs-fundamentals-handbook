@@ -1,4 +1,4 @@
-# Relational Model and SQL: One-Page Summary
+# The Relational Model and SQL: One-Page Summary
 
 ## Model
 - Tables of rows and typed columns. **PK** identifies a row; **FK** references another table; **unique**, **composite**, **surrogate** vs **natural** keys.

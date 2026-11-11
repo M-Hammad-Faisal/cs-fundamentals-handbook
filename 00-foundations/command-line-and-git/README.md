@@ -13,3 +13,20 @@ Every developer lives in the terminal and in Git. These five lessons take you fr
 **Study tip:** do the lessons with a terminal open and a scratch folder. Make mistakes there on purpose (create conflicts, reset, recover with reflog) so nothing is scary on a real project.
 
 [Back to foundations](../README.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+## Quick reference
+
+| Question | Answer |
+|----------|--------|
+| What are the terminal, the shell and a command? | The terminal is the window, the shell is the program that interprets what you type, a command is a program you run by name. |
+| What do `pwd`, `ls`, `cd ..` do? | Show the current directory; list files; move up one folder. |
+| How does a pipe work? | The output of the left command is fed as input to the right command. |
+| What is the `PATH`? | The list of folders the shell searches to find a command by name. |
+| What is dangerous about `rm -r`? | It permanently deletes a folder and everything inside it, with no recycle bin. |
+
+Back to the [part overview](../README.md).

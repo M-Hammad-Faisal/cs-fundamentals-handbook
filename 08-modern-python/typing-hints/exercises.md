@@ -1,4 +1,4 @@
-# Type Hints: Exercises
+# Type Hints and Static Typing: Exercises
 
 1. Add type hints to this function and say what mypy would report for `average("abc")`:
    ```python

@@ -1,4 +1,4 @@
-# Inheritance and MRO: Exercises
+# Inheritance, Method Resolution Order and Multiple Inheritance: Exercises
 
 1. Model `Employee`, `Manager(Employee)` and `Engineer(Employee)` with a `salary()` method; managers get a bonus per report. Use `super()` and show polymorphic totals for a mixed list.
 2. Predict then verify the MRO and output:

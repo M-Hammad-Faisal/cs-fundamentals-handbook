@@ -1,6 +1,6 @@
 # Heaps and Priority Queues
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Binary heaps and heapsort](01-binary-heaps-and-heapsort.md): sift-up/down, heapify, `heapq`, heapsort
 2. [Priority queue applications](02-priority-queue-applications.md): top-k, running median, k-way merge, Dijkstra, Huffman
@@ -239,3 +239,10 @@ A trending-topics service processes millions of events but only needs the top 10
 7. To break ties between equal priorities so Python never has to compare the underlying objects, and to keep FIFO order among equals.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

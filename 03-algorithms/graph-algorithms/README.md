@@ -1,6 +1,6 @@
 # Advanced Graph Algorithms
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 Start with the [graphs lessons in Part 02](../../02-data-structures/graphs/README.md) (BFS/DFS, Dijkstra, topological sort, MST, union-find), then:
 
@@ -254,3 +254,10 @@ Laying cable, fibre or pipes to connect every site at minimal cost is an **MST**
 7. When every edge weight is 0 or 1: put 0-weight neighbours at the deque front and 1-weight at the back.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

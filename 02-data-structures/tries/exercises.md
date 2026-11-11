@@ -153,5 +153,7 @@ def max_xor(nums):
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Tries](01-tries.md)

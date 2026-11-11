@@ -1,6 +1,6 @@
 # NoSQL and Choosing a Database
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [NoSQL lab](01-nosql-lab.md): a key-value store with TTL and LRU, documents (embed vs reference), an inverted-index search engine, quorums and CAP
 
@@ -282,3 +282,10 @@ Millions of sensors or servers each send a reading every few seconds, producing 
 9. A partition that receives disproportionate traffic (a popular key or monotonically increasing key). Avoid it with well-distributed, high-cardinality partition keys, hashing, or key salting.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

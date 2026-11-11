@@ -4,21 +4,23 @@ An **algorithm** is a precise recipe for solving a problem. This part teaches th
 
 **Prerequisites:** [Part 01 complexity](../01-complexity/README.md) (Big-O) and [Part 02 data structures](../02-data-structures/README.md). Many algorithms here are built from those structures (heaps for Dijkstra, stacks for DFS, hash maps for counting).
 
-## Reading order
+## Topics in this part
 
-| # | Topic | Detailed lessons | The big idea |
-|---|-------|------------------|--------------|
-| 1 | [Sorting](sorting/README.md) | [elementary](sorting/01-sorting-basics-and-elementary-sorts.md), [merge and quick](sorting/02-merge-sort-and-quicksort.md), [linear-time and Timsort](sorting/03-linear-time-sorts-and-timsort.md) | put things in order; `n log n` is the comparison limit |
-| 2 | [Searching](searching/README.md) | [binary search](searching/01-linear-and-binary-search.md), [on the answer](searching/02-binary-search-on-the-answer.md) | halve the possibilities each step |
-| 3 | [Recursion and backtracking](recursion-backtracking/README.md) | [recursion](recursion-backtracking/01-recursion-fundamentals.md), [backtracking](recursion-backtracking/02-backtracking.md) | solve a smaller copy; try, undo, try again |
-| 4 | [Greedy](greedy/README.md) | [greedy algorithms](greedy/01-greedy-algorithms.md) | take the best-looking choice and never look back |
-| 4b | [Divide and conquer](divide-and-conquer/README.md) | [divide and conquer](divide-and-conquer/01-divide-and-conquer.md) | independent subproblems, the Master theorem |
-| 5 | [Dynamic programming](dynamic-programming/README.md) | [1D](dynamic-programming/01-dp-thinking-and-1d-problems.md), [two sequences and grids](dynamic-programming/02-dp-on-two-sequences-and-grids.md), [advanced](dynamic-programming/03-advanced-dp-patterns.md) | remember subproblem answers |
-| 6 | [Number theory](number-theory/README.md) | [number theory for programmers](number-theory/01-number-theory-for-programmers.md) | divisibility, remainders, primes |
-| 7 | [String algorithms](string-algorithms/README.md) | [matching, palindromes and suffix arrays](string-algorithms/01-string-matching-and-suffix-structures.md) | search and index text in near-linear time |
-| 8 | [Graph algorithms](graph-algorithms/README.md) | [all-pairs and A*](graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md), [connectivity and flow](graph-algorithms/02-connectivity-scc-and-flow.md) (plus the [graph lessons in Part 02](../02-data-structures/graphs/README.md)) | model relationships as vertices and edges |
+Read the topics in this order. Each has an overview, detailed lessons, exercises with solutions and a one-page summary (the full map is in the [index](../INDEX.md)).
 
-Each folder also has a quick-reference README, `exercises.md` and a one-page `summary.md`.
+<!-- topics:start -->
+| Topic | Lessons | Exercises | Summary |
+|-------|---------|-----------|---------|
+| Sorting | [overview](sorting/README.md)<br>[Sorting Basics and the Elementary Sorts](sorting/01-sorting-basics-and-elementary-sorts.md)<br>[Merge Sort and Quicksort](sorting/02-merge-sort-and-quicksort.md)<br>[Linear-Time Sorts, Timsort and Choosing a Sort](sorting/03-linear-time-sorts-and-timsort.md) | [ex](sorting/exercises.md) | [sum](sorting/summary.md) |
+| Searching | [overview](searching/README.md)<br>[Linear Search and Binary Search](searching/01-linear-and-binary-search.md)<br>[Binary Search on the Answer and Other Search Techniques](searching/02-binary-search-on-the-answer.md) | [ex](searching/exercises.md) | [sum](searching/summary.md) |
+| Recursion and Backtracking | [overview](recursion-backtracking/README.md)<br>[Recursion Fundamentals](recursion-backtracking/01-recursion-fundamentals.md)<br>[Backtracking](recursion-backtracking/02-backtracking.md) | [ex](recursion-backtracking/exercises.md) | [sum](recursion-backtracking/summary.md) |
+| Divide and Conquer | [overview](divide-and-conquer/README.md)<br>[Divide and Conquer](divide-and-conquer/01-divide-and-conquer.md) | [ex](divide-and-conquer/exercises.md) | [sum](divide-and-conquer/summary.md) |
+| Dynamic Programming | [overview](dynamic-programming/README.md)<br>[Dynamic Programming](dynamic-programming/01-dp-thinking-and-1d-problems.md)<br>[DP on Two Sequences, Grids and Knapsack](dynamic-programming/02-dp-on-two-sequences-and-grids.md)<br>[Advanced DP Patterns](dynamic-programming/03-advanced-dp-patterns.md) | [ex](dynamic-programming/exercises.md) | [sum](dynamic-programming/summary.md) |
+| Greedy Algorithms | [overview](greedy/README.md)<br>[Greedy Algorithms](greedy/01-greedy-algorithms.md) | [ex](greedy/exercises.md) | [sum](greedy/summary.md) |
+| Number Theory | [overview](number-theory/README.md)<br>[Number Theory for Programmers](number-theory/01-number-theory-for-programmers.md) | [ex](number-theory/exercises.md) | [sum](number-theory/summary.md) |
+| String Algorithms | [overview](string-algorithms/README.md)<br>[String Algorithms](string-algorithms/01-string-matching-and-suffix-structures.md) | [ex](string-algorithms/exercises.md) | [sum](string-algorithms/summary.md) |
+| Advanced Graph Algorithms | [overview](graph-algorithms/README.md)<br>[Shortest Paths Beyond Dijkstra](graph-algorithms/01-all-pairs-and-heuristic-shortest-paths.md)<br>[Connectivity, Strongly Connected Components, Bridges and Max Flow](graph-algorithms/02-connectivity-scc-and-flow.md) | [ex](graph-algorithms/exercises.md) | [sum](graph-algorithms/summary.md) |
+<!-- topics:end -->
 
 ## Which technique fits my problem?
 
@@ -47,4 +49,4 @@ Each folder also has a quick-reference README, `exercises.md` and a one-page `su
 
 Next: [Part 04: Object-oriented programming](../04-oop/README.md)
 
-Back to the [index](../INDEX.md).
+Back to the [handbook home](../README.md) · [index](../INDEX.md).

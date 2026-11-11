@@ -1,4 +1,4 @@
-# Inheritance and MRO: One-Page Summary
+# Inheritance, Method Resolution Order and Multiple Inheritance: One-Page Summary
 
 - **Inheritance** = is-a: reuse + specialization. Subclass can **extend**, **override**, or **override and call `super()`**. Two purposes: subtyping (strong) and code reuse (often better as composition).
 - **Five types:** single, multilevel (chain), hierarchical (one parent many children), multiple (many parents), hybrid (e.g. diamond).

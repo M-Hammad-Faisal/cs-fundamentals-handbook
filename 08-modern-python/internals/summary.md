@@ -17,4 +17,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [The Python Data Model and CPython Internals](01-python-data-model-and-internals.md) · [Build a Tiny Interpreter](02-build-a-tiny-interpreter.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [The Python Data Model and CPython Internals](01-python-data-model-and-internals.md) · [Build a Tiny Interpreter](02-build-a-tiny-interpreter.md)

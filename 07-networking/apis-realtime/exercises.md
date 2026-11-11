@@ -180,7 +180,7 @@ A captured request carries a valid signature forever unless the signature covers
 
 </details>
 
-<!-- go-deeper -->
-**Go deeper (detailed step-by-step lessons):** [REST APIs, SSE and WebSockets lab](01-rest-apis-and-websockets-lab.md)
+[Lesson](README.md) · [Summary](summary.md)
 
-[Back to APIs and real-time](README.md) · [Summary](summary.md)
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [REST APIs, Server-Sent Events and WebSockets](01-rest-apis-and-websockets-lab.md)

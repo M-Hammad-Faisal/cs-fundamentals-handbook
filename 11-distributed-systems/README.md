@@ -1,19 +1,23 @@
-# Distributed Systems
+# Part 11: Distributed Systems
 
 How systems made of many machines stay correct and available when networks fail and clocks disagree. Each lesson builds the idea in runnable Python (simulated networks, a Raft cluster, an LSM tree) so you can watch the failures happen and see the fix.
 
 **Prerequisites:** [networking](../07-networking/README.md), [operating systems](../06-operating-systems/README.md), [databases](../05-databases/README.md), and the [system design basics](../09-interview-playbook/system-design-basics/README.md) chapter.
 
-## Learning path
+## Topics in this part
 
-| # | Lesson | You will learn |
-|---|--------|----------------|
-| 1 | [Failures, time and clocks](foundations/01-failures-time-and-clocks.md) | partial failure, failure models, a simulated lossy network, why wall clocks fail, Lamport and vector clocks |
-| 2 | [Replication, quorums and sharding](replication-sharding/01-replication-and-sharding.md) | leader and followers, replication lag, `R + W > N` verified by brute force, range versus hash sharding, consistent hashing measured |
-| 3 | [Consensus and Raft](consensus/01-consensus-and-raft.md) | leader election, log replication, a working Raft simulator, crashes, partitions and a randomized safety test |
-| 4 | [Idempotency, retries, circuit breakers, sagas and the outbox](transactions/01-idempotency-retries-and-sagas.md) | idempotency keys, backoff with jitter, circuit breaker, saga compensation, transactional outbox, why 2PC blocks |
-| 5 | [Logs, queues and LSM trees](messaging-storage/01-logs-queues-and-lsm-trees.md) | append-only logs, delivery guarantees, partitions and consumer groups, an LSM tree, Bloom filters |
-| 6 | [Observability: logs, metrics, traces and SLOs](observability/01-observability-logs-metrics-traces-slos.md) | structured logs, percentiles, distributed tracing, SLIs, SLOs, error budgets and burn rates |
+Read the topics in this order. Each has an overview, detailed lessons, exercises with solutions and a one-page summary (the full map is in the [index](../INDEX.md)).
+
+<!-- topics:start -->
+| Topic | Lessons | Exercises | Summary |
+|-------|---------|-----------|---------|
+| Foundations of Distributed Systems | [overview](foundations/README.md)<br>[Failures, Time and Clocks in Distributed Systems](foundations/01-failures-time-and-clocks.md) | [ex](foundations/exercises.md) | [sum](foundations/summary.md) |
+| Replication and Sharding | [overview](replication-sharding/README.md)<br>[Replication, Quorums and Sharding](replication-sharding/01-replication-and-sharding.md) | [ex](replication-sharding/exercises.md) | [sum](replication-sharding/summary.md) |
+| Consensus | [overview](consensus/README.md)<br>[Consensus and Raft](consensus/01-consensus-and-raft.md) | [ex](consensus/exercises.md) | [sum](consensus/summary.md) |
+| Distributed Transactions and Reliability Patterns | [overview](transactions/README.md)<br>[Idempotency, Retries, Circuit Breakers, Sagas and the Outbox](transactions/01-idempotency-retries-and-sagas.md) | [ex](transactions/exercises.md) | [sum](transactions/summary.md) |
+| Messaging and Storage | [overview](messaging-storage/README.md)<br>[Logs, Queues and LSM Trees](messaging-storage/01-logs-queues-and-lsm-trees.md) | [ex](messaging-storage/exercises.md) | [sum](messaging-storage/summary.md) |
+| Observability | [overview](observability/README.md)<br>[Observability](observability/01-observability-logs-metrics-traces-slos.md) | [ex](observability/exercises.md) | [sum](observability/summary.md) |
+<!-- topics:end -->
 
 ## How the lessons connect
 
@@ -26,4 +30,4 @@ Failures and clocks (1) explain *why* you need copies and agreement. Replication
 - [Transactions and ACID](../05-databases/transactions-acid/README.md) and [NoSQL](../05-databases/nosql/README.md)
 - [Security](../10-security/README.md)
 
-Back to the [handbook home](../README.md).
+Back to the [handbook home](../README.md) · [index](../INDEX.md).

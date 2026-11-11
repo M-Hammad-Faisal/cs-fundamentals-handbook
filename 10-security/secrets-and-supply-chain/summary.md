@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Secrets, Dependencies and Hardening](01-secrets-dependencies-and-hardening.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Secrets, Dependencies and Hardening](01-secrets-dependencies-and-hardening.md)

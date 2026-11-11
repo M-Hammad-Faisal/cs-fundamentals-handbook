@@ -1,6 +1,6 @@
 # Concurrency, Synchronization and Deadlocks
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Race conditions and synchronization](01-race-conditions-and-synchronization.md): locks, semaphores, events, condition variables, producer-consumer, readers-writers
 2. [Deadlock](02-deadlock.md): Coffman conditions, lock ordering, detection, Banker's algorithm, dining philosophers
@@ -231,3 +231,10 @@ A worker pool of 50 threads crawls pages but the target allows 5 concurrent requ
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

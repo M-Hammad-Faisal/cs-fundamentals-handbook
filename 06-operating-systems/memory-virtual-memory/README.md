@@ -1,6 +1,6 @@
 # Memory Management and Virtual Memory
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 - [Paging and address translation](01-paging-and-address-translation.md): pages, frames, page tables, TLB, page faults, with a runnable MMU
 - [Page replacement algorithms](02-page-replacement-algorithms.md): FIFO, LRU, Optimal, Clock, Belady's anomaly, working sets, thrashing
@@ -191,3 +191,10 @@ Redis saves a snapshot by calling `fork`. Parent and child share all pages copy-
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

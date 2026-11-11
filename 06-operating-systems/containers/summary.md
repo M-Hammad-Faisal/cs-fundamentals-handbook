@@ -12,4 +12,4 @@
 [Lesson](README.md) · [Exercises](exercises.md)
 
 <!-- go-deeper -->
-**Go deeper (detailed step-by-step lessons):** [Containers, namespaces and cgroups](01-containers-and-namespaces.md) · Python: [engineering workflow with Docker](../../08-modern-python/engineering-workflow/01-ci-docker-pre-commit-and-publishing.md)
+**Go deeper (detailed step-by-step lessons):** [Containers, Namespaces and cgroups](01-containers-and-namespaces.md)

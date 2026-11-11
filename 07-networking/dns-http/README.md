@@ -1,6 +1,6 @@
 # DNS and HTTP
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 - [HTTP from scratch](01-http-from-scratch.md): raw requests, methods, status codes, headers, keep-alive, caching, cookies, and your own tiny server
 - [DNS in depth](02-dns-in-depth.md): the packet format, a toy DNS server over UDP, TTL caching, the resolution hierarchy
@@ -202,3 +202,10 @@ A mobile app POSTs a payment and the connection drops before the response arrive
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

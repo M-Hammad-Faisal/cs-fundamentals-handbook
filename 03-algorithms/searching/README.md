@@ -1,6 +1,6 @@
 # Searching
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Linear and binary search](01-linear-and-binary-search.md): invariants, boundaries, `bisect`, rotated arrays, matrices
 2. [Binary search on the answer](02-binary-search-on-the-answer.md): feasibility templates, classic problems, other searches
@@ -235,3 +235,10 @@ A B-tree index lets a database find one row among hundreds of millions by repeat
 7. Sorting costs `O(n log n)`, more than one `O(n)` scan; binary search only pays off when you search many times.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

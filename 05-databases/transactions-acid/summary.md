@@ -40,7 +40,7 @@ Cyclic waiting; the DB aborts a victim. Prevent with consistent lock order and s
 - Constraints are the last line of defence.
 - Retry serialization failures and deadlocks with idempotent code.
 
-[Lesson](README.md) · [Exercises](exercises.md) · [Demo](demo_transactions.py)
+[Lesson](README.md) · [Exercises](exercises.md)
 
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Transactions Lab](01-transactions-lab.md)

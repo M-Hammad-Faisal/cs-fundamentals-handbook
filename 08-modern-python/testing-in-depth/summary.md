@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Testing in Depth](01-pytest-mocking-and-property-testing.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Testing in Depth](01-pytest-mocking-and-property-testing.md)

@@ -1,6 +1,6 @@
 # Transactions, ACID and Isolation
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Transactions lab](01-transactions-lab.md): ACID with two real connections, isolation and snapshots, lost updates and three fixes, savepoints, durability, idempotency, isolation levels
 
@@ -222,3 +222,10 @@ Two users select the same seat simultaneously. With **pessimistic locking** (`SE
 10. A saga is a sequence of local transactions with compensating actions to undo them. Use it across services or databases where a blocking, coordinator-dependent 2PC is impractical, accepting eventual consistency.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -178,5 +178,7 @@ def letter_combinations(digits):
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Recursion Fundamentals](01-recursion-fundamentals.md) · [Backtracking](02-backtracking.md)

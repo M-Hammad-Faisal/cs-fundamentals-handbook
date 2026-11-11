@@ -84,5 +84,7 @@ def pay(conn, idempotency_key, order_id, amount):
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Transactions Lab](01-transactions-lab.md)

@@ -1,4 +1,4 @@
-# Dataclasses and Enums: Exercises
+# Dataclasses, NamedTuple and Enums: Exercises
 
 1. Convert this class to a dataclass and list what was generated:
    ```python

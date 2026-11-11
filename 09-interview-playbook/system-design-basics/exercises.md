@@ -161,3 +161,6 @@ Use: "definitely not present" answers avoid expensive lookups (for example block
 </details>
 
 [Lesson](README.md) · [Summary](summary.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [System Design, Part 2](02-five-more-designs.md) · [System Design, Part 3](03-caching-failure-modes-and-reliability.md)

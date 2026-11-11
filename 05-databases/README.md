@@ -1,25 +1,24 @@
-# Databases
+# Part 05: Databases
 
 How applications store, find and protect their data. Every lesson here runs **entirely on your computer** with Python's built-in `sqlite3` module (no server to install): you build tables, break them on purpose, measure indexes on 200 000 rows, run two connections against each other, and build a mini search engine and a replicated store.
 
 **Prerequisites:** [Python basics](../00-foundations/python-fundamentals/README.md) and [data structures](../02-data-structures/README.md) (hash tables and B-trees explain a lot of database behavior). The shared dataset used by several lessons is [sample-data.sql](sample-data.sql).
 
-## Start here
+## Topics in this part
 
-[What is a database? And how to model one (ER diagrams)](00-what-is-a-database-and-er-modeling.md): why databases exist, the modeling process, ER diagrams, turning them into tables, and enforcing the design with constraints.
+Read the topics in this order. Each has an overview, detailed lessons, exercises with solutions and a one-page summary (the full map is in the [index](../INDEX.md)).
 
-## Reading order
-
-| # | Topic | Quick reference | Hands-on labs |
-|---|-------|-----------------|---------------|
-| 1 | The relational model and SQL | [lesson](relational-sql/README.md) | [SQL first steps](relational-sql/01-sql-first-steps.md) · [aggregation and joins](relational-sql/02-aggregation-and-joins-lab.md) · [CTEs and window functions](relational-sql/03-ctes-and-window-functions-lab.md) |
-| 2 | Schema design and normalization | [lesson](normalization-schema-design/README.md) | [ER modeling](00-what-is-a-database-and-er-modeling.md) · [normalization lab](normalization-schema-design/01-normalization-lab.md) |
-| 3 | Indexes and query plans | [lesson](indexes-query-plans/README.md) | [indexes lab](indexes-query-plans/01-indexes-lab.md) |
-| 4 | Transactions, ACID and isolation | [lesson](transactions-acid/README.md) | [transactions lab](transactions-acid/01-transactions-lab.md) |
-| 5 | NoSQL and choosing a database | [lesson](nosql/README.md) | [NoSQL lab](nosql/01-nosql-lab.md) |
-| 6 | PostgreSQL-specific features (run on PostgreSQL 18.6) | [lesson](postgresql/README.md) | [PostgreSQL features](postgresql/01-postgresql-specific-features.md) |
-
-Each topic folder also has `exercises.md` and a one-page `summary.md`.
+<!-- topics:start -->
+| Topic | Lessons | Exercises | Summary |
+|-------|---------|-----------|---------|
+| What Is a Database | [lesson](00-what-is-a-database-and-er-modeling.md) | – | – |
+| The Relational Model and SQL | [overview](relational-sql/README.md)<br>[SQL First Steps](relational-sql/01-sql-first-steps.md)<br>[Aggregation and Joins Lab](relational-sql/02-aggregation-and-joins-lab.md)<br>[CTEs, Recursive Queries and Window Functions Lab](relational-sql/03-ctes-and-window-functions-lab.md) | [ex](relational-sql/exercises.md) | [sum](relational-sql/summary.md) |
+| Indexes and Query Plans | [overview](indexes-query-plans/README.md)<br>[Indexes Lab](indexes-query-plans/01-indexes-lab.md) | [ex](indexes-query-plans/exercises.md) | [sum](indexes-query-plans/summary.md) |
+| Transactions, ACID and Isolation | [overview](transactions-acid/README.md)<br>[Transactions Lab](transactions-acid/01-transactions-lab.md) | [ex](transactions-acid/exercises.md) | [sum](transactions-acid/summary.md) |
+| Normalization and Schema Design | [overview](normalization-schema-design/README.md)<br>[Normalization Lab](normalization-schema-design/01-normalization-lab.md) | [ex](normalization-schema-design/exercises.md) | [sum](normalization-schema-design/summary.md) |
+| NoSQL and Choosing a Database | [overview](nosql/README.md)<br>[NoSQL Lab](nosql/01-nosql-lab.md) | [ex](nosql/exercises.md) | [sum](nosql/summary.md) |
+| PostgreSQL | [overview](postgresql/README.md)<br>[PostgreSQL-Specific Features](postgresql/01-postgresql-specific-features.md) | [ex](postgresql/exercises.md) | [sum](postgresql/summary.md) |
+<!-- topics:end -->
 
 ## The five questions every database answers
 
@@ -59,4 +58,4 @@ LIMIT    n;                           -- how many
 - Use **atomic statements, locks or version checks** instead of read-then-write in application code.
 - Start with **PostgreSQL**; add specialized stores (cache, search, warehouse) when a measured need appears.
 
-Back to the [index](../INDEX.md).
+Back to the [handbook home](../README.md) · [index](../INDEX.md).

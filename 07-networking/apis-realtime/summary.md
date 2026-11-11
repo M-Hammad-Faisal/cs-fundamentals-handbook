@@ -12,4 +12,4 @@
 [Lesson](README.md) · [Exercises](exercises.md)
 
 <!-- go-deeper -->
-**Go deeper (detailed step-by-step lessons):** [REST APIs, SSE and WebSockets lab](01-rest-apis-and-websockets-lab.md) · Python: [building a web API with FastAPI](../../08-modern-python/backend-with-fastapi/01-building-a-web-api-with-fastapi.md)
+**Go deeper (detailed step-by-step lessons):** [REST APIs, Server-Sent Events and WebSockets](01-rest-apis-and-websockets-lab.md)

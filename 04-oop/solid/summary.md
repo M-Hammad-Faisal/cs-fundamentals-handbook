@@ -1,4 +1,4 @@
-# SOLID: One-Page Summary
+# SOLID Principles and Other Design Principles: One-Page Summary
 
 | | Principle | Smell | Fix |
 |--|-----------|-------|-----|

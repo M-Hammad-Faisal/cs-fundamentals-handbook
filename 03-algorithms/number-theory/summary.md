@@ -25,4 +25,7 @@ Used by: [hash tables](../../02-data-structures/hash-tables/01-hash-functions-an
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Number Theory for Programmers](01-number-theory-for-programmers.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Number Theory for Programmers](01-number-theory-for-programmers.md)

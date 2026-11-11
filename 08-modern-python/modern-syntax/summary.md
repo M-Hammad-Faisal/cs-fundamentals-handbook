@@ -1,4 +1,4 @@
-# Modern Python Features: One-Page Summary
+# Modern Python Language Features: One-Page Summary
 
 | Version | Know these |
 |---------|-----------|

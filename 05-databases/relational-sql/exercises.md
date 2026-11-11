@@ -1,4 +1,4 @@
-# Relational Model and SQL: Exercises
+# The Relational Model and SQL: Exercises
 
 Load [`../sample-data.sql`](../sample-data.sql) and write each query yourself before opening the solution. Tables: `departments`, `employees`, `customers`, `orders`, `order_items`.
 
@@ -138,6 +138,8 @@ CREATE TABLE payments (
 **18.** `name` is neither in `GROUP BY` nor inside an aggregate, so there is no single value to return for each group. Select only `department_id` and aggregates, or add `name` to `GROUP BY` (which changes the grouping). SQLite and MySQL (in lenient mode) may accept it and return an arbitrary row's value, which hides the bug.
 
 </details>
+
+[Lesson](README.md) · [Summary](summary.md)
 
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [SQL First Steps](01-sql-first-steps.md) · [Aggregation and Joins Lab](02-aggregation-and-joins-lab.md) · [CTEs, Recursive Queries and Window Functions Lab](03-ctes-and-window-functions-lab.md)

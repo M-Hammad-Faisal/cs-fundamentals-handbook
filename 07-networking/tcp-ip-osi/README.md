@@ -1,6 +1,6 @@
 # The Network Stack: OSI, TCP/IP, IP Addressing, TCP and UDP
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Packets, addressing and subnets](01-packets-addressing-and-subnets.md): build real IP/UDP/TCP headers, checksums, CIDR, subnetting, routing
 2. [Sockets lab: TCP and UDP](02-sockets-tcp-udp-lab.md): echo and chat servers, framing, UDP loss, timeouts, connection states
@@ -166,3 +166,10 @@ For a live call, a retransmitted audio packet arrives too late to be useful, and
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Failures, Time and Clocks in Distributed Systems](01-failures-time-and-clocks.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Failures, Time and Clocks in Distributed Systems](01-failures-time-and-clocks.md)

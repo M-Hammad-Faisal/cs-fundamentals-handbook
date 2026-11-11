@@ -285,3 +285,10 @@ A database client class keeps a `host`, `port` and open socket per instance, a c
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -20,4 +20,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [The Boot Process and Bootloaders](01-boot-process-and-bootloaders.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [The Boot Process and Bootloaders](01-boot-process-and-bootloaders.md)

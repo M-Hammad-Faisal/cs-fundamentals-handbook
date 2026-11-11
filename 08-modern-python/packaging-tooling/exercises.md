@@ -1,4 +1,4 @@
-# Packaging and Tooling: Exercises
+# Packaging, Environments and Developer Tooling: Exercises
 
 1. Create a virtual environment, install `requests` in it, and prove (with `sys.prefix` and `pip list`) that the system Python is unaffected.
 2. Turn a folder with `utils.py` into an installable package called `textkit` using the `src/` layout and a `pyproject.toml`; install it editable and import it from another directory.

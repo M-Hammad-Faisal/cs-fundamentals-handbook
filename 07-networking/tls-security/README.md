@@ -1,6 +1,6 @@
 # TLS and Security Basics
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Cryptography and TLS lab](01-cryptography-and-tls-lab.md): hashes, HMAC, password storage, Diffie-Hellman, RSA, a real TLS handshake, SQL injection, XSS, timing attacks
 
@@ -166,3 +166,10 @@ A payment provider sends your server a webhook. Anyone can POST to that URL, so 
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

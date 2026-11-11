@@ -2,9 +2,14 @@
 
 Beyond a simple `in` test: searching in linear time, finding palindromes and indexing a text so that many queries are fast.
 
-## Detailed lesson
+## Detailed lessons
 
 - [Matching, palindromes and suffix arrays](01-string-matching-and-suffix-structures.md): Rabin-Karp and rolling hashes, the Z-function, KMP's prefix function, Manacher's algorithm, suffix arrays and the LCP array
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
 
 ## Quick reference
 

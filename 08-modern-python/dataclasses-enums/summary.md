@@ -1,4 +1,4 @@
-# Dataclasses and Enums: One-Page Summary
+# Dataclasses, NamedTuple and Enums: One-Page Summary
 
 ## Dataclasses
 - `@dataclass` generates `__init__`, `__repr__`, `__eq__` from annotated fields.

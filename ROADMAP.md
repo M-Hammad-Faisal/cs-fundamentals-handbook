@@ -21,7 +21,7 @@ Where the handbook stands and what could come next. Readers can ignore this page
 - **Run for real, not just read:** PostgreSQL 18.6 in Docker (the PostgreSQL lesson); `tcpdump` on a generated capture (network debugging); a built wheel installed into a clean virtual environment, `ruff`, `mypy`, `pytest` and a Docker image build and run (engineering workflow); FastAPI through its `TestClient`; random-failure safety tests for the Raft simulator.
 - **Not executed:** the GitHub Actions and PyPI publishing workflows (checked only for valid YAML), the concurrent two-worker and `SERIALIZABLE` behaviour of the PostgreSQL lesson, and Wireshark (`tshark` was not available). Timing figures (speed-ups, latency ratios) are examples from one laptop and will differ on yours.
 - **Navigation is generated:** `tools/build_index.py` builds the index, progress tracker and README contents from the files on disk (one row per topic, same columns everywhere), and CI fails if they are stale.
-- **Practice and summaries:** every topic folder outside the five foundations tutorials has a `summary.md`; topics whose exercises live inside the lessons (their **Practice** sections) show "–" in the Exercises column of the index.
+- **Uniform topic folders:** every topic folder has `README.md`, `exercises.md` and `summary.md` in the same format (`tools/normalize_topics.py`). Where the exercises were collected from the lessons' Practice sections, their code blocks are marked `no-run` because the solutions were run inside the lesson that defines the code they use.
 - Links are checked across the whole repository (`tools/check_links.py`, 0 broken), and a privacy check was run before every push.
 
 ## Known gaps (honest list)

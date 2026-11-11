@@ -1,4 +1,4 @@
-# SOLID: Exercises
+# SOLID Principles and Other Design Principles: Exercises
 
 1. **SRP:** split this class and explain the reasons to change:
    ```python

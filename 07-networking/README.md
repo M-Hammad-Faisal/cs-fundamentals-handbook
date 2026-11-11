@@ -1,21 +1,24 @@
-# Networking
+# Part 07: Networking
 
 How computers talk to each other, from bits on a wire to a web page in your browser. Each topic has a short quick-reference lesson plus **hands-on labs that run entirely on your own computer** (sockets on `localhost`, a toy DNS server, a real local TLS handshake, a working load balancer): no internet access or special tools required beyond Python 3.10+ (the TLS lab also uses the `openssl` command).
 
 **Prerequisites:** [Part 06 operating systems](../06-operating-systems/README.md) (processes, threads, file descriptors) and basic Python.
 
-## Reading order
+## Topics in this part
 
-| # | Topic | Quick reference | Hands-on labs |
-|---|-------|-----------------|---------------|
-| 1 | The network stack: OSI, TCP/IP, IP addressing, TCP vs UDP | [lesson](tcp-ip-osi/README.md) | [packets, addressing and subnets](tcp-ip-osi/01-packets-addressing-and-subnets.md) · [sockets: TCP and UDP](tcp-ip-osi/02-sockets-tcp-udp-lab.md) |
-| 2 | DNS and HTTP | [lesson](dns-http/README.md) | [HTTP from scratch](dns-http/01-http-from-scratch.md) · [DNS in depth](dns-http/02-dns-in-depth.md) · [HTTP/2 and HTTP/3](dns-http/03-http2-and-http3-internals.md) · [Network debugging](debugging/01-network-debugging-and-packet-capture.md) |
-| 3 | TLS and security basics | [lesson](tls-security/README.md) | [cryptography and TLS lab](tls-security/01-cryptography-and-tls-lab.md) |
-| 4 | Load balancing, CDNs and resilience | [lesson](load-balancing-cdn/README.md) | [load balancing and resilience lab](load-balancing-cdn/01-load-balancing-and-resilience-lab.md) |
-| 5 | APIs and real-time communication | [overview](apis-realtime/README.md) | [REST, SSE and WebSockets lab](apis-realtime/01-rest-apis-and-websockets-lab.md) |
-| 6 | Routing | [overview](routing/README.md) | [routing protocols: distance vector, link state, BGP](routing/01-routing-protocols.md) |
+Read the topics in this order. Each has an overview, detailed lessons, exercises with solutions and a one-page summary (the full map is in the [index](../INDEX.md)).
 
-Each topic folder also has `exercises.md` and a one-page `summary.md`.
+<!-- topics:start -->
+| Topic | Lessons | Exercises | Summary |
+|-------|---------|-----------|---------|
+| The Network Stack | [overview](tcp-ip-osi/README.md)<br>[Packets, Addressing and Subnets](tcp-ip-osi/01-packets-addressing-and-subnets.md)<br>[Sockets Lab](tcp-ip-osi/02-sockets-tcp-udp-lab.md) | [ex](tcp-ip-osi/exercises.md) | [sum](tcp-ip-osi/summary.md) |
+| Routing | [overview](routing/README.md)<br>[Routing Protocols](routing/01-routing-protocols.md) | [ex](routing/exercises.md) | [sum](routing/summary.md) |
+| DNS and HTTP | [overview](dns-http/README.md)<br>[HTTP from Scratch](dns-http/01-http-from-scratch.md)<br>[DNS in Depth](dns-http/02-dns-in-depth.md)<br>[HTTP/2 and HTTP/3 Internals](dns-http/03-http2-and-http3-internals.md) | [ex](dns-http/exercises.md) | [sum](dns-http/summary.md) |
+| TLS and Security Basics | [overview](tls-security/README.md)<br>[Cryptography and TLS Lab](tls-security/01-cryptography-and-tls-lab.md) | [ex](tls-security/exercises.md) | [sum](tls-security/summary.md) |
+| Load Balancing, Proxies, CDNs and Resilience | [overview](load-balancing-cdn/README.md)<br>[Load Balancing and Resilience Lab](load-balancing-cdn/01-load-balancing-and-resilience-lab.md) | [ex](load-balancing-cdn/exercises.md) | [sum](load-balancing-cdn/summary.md) |
+| APIs and Real-Time Communication | [overview](apis-realtime/README.md)<br>[REST APIs, Server-Sent Events and WebSockets](apis-realtime/01-rest-apis-and-websockets-lab.md) | [ex](apis-realtime/exercises.md) | [sum](apis-realtime/summary.md) |
+| Network Debugging | [overview](debugging/README.md)<br>[Network Debugging and Packet Capture](debugging/01-network-debugging-and-packet-capture.md) | [ex](debugging/exercises.md) | [sum](debugging/summary.md) |
+<!-- topics:end -->
 
 ## The big picture: what happens when you open `https://example.com`
 
@@ -33,4 +36,4 @@ Every packet on the way is wrapped in headers (HTTP inside TLS inside TCP inside
 2. Use the real tools alongside: `dig`, `curl -v`, `ss`/`netstat`, `ping`, `traceroute`, browser DevTools (Network tab).
 3. Do the practice questions, then the check-yourself questions the next day.
 
-Back to the [index](../INDEX.md).
+Back to the [handbook home](../README.md) · [index](../INDEX.md).

@@ -21,4 +21,7 @@ Related: [packets and subnets](../tcp-ip-osi/01-packets-addressing-and-subnets.m
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Routing Protocols](01-routing-protocols.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Routing Protocols](01-routing-protocols.md)

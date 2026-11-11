@@ -17,3 +17,20 @@ A seven-lesson crash course for readers who have seen a little programming but w
 After this, continue with [command line and Git](../command-line-and-git/README.md), then the main parts of the handbook ([index](../../INDEX.md)). The [modern Python part](../../08-modern-python/README.md) is the advanced sequel.
 
 [Back to foundations](../README.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+## Quick reference
+
+| Question | Answer |
+|----------|--------|
+| What is a variable in Python? | A name that refers to a value (object) in memory. |
+| Name five basic types. | `int`, `float`, `str`, `bool`, `NoneType` (plus `list`, `dict`, `tuple`, `set`). |
+| Difference between `/`, `//` and `%`? | `/` true division (float), `//` floor division, `%` remainder. |
+| What does `input()` return? | A string, always. |
+| What is the difference between `=` and `==`? | `=` assigns a value to a name; `==` compares two values for equality. |
+
+Back to the [part overview](../README.md).

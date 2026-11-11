@@ -2,9 +2,14 @@
 
 Split a problem into independent smaller copies, solve them recursively, combine the answers.
 
-## Detailed lesson
+## Detailed lessons
 
 - [Divide and conquer](01-divide-and-conquer.md): the pattern, recurrences and the Master theorem (with a numeric check), maximum subarray, Karatsuba multiplication, closest pair of points, majority element, and how it differs from dynamic programming
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
 
 ## Quick reference
 

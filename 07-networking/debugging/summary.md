@@ -13,4 +13,4 @@
 [Lesson](README.md) · [Exercises](exercises.md)
 
 <!-- go-deeper -->
-**Go deeper (detailed step-by-step lessons):** [Network debugging and packet capture](01-network-debugging-and-packet-capture.md)
+**Go deeper (detailed step-by-step lessons):** [Network Debugging and Packet Capture](01-network-debugging-and-packet-capture.md)

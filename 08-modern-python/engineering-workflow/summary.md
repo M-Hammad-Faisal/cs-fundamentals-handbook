@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Engineering Workflow](01-ci-docker-pre-commit-and-publishing.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Engineering Workflow](01-ci-docker-pre-commit-and-publishing.md)

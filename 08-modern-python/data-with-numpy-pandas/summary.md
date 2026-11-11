@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [NumPy and pandas Essentials](01-numpy-and-pandas-essentials.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [NumPy and pandas Essentials](01-numpy-and-pandas-essentials.md)

@@ -1,4 +1,4 @@
-# Packaging and Tooling: One-Page Summary
+# Packaging, Environments and Developer Tooling: One-Page Summary
 
 - **Imports:** module = `.py`; package = directory (+ `__init__.py`); search via `sys.path`, cached in `sys.modules`; `__main__.py` for `python -m pkg`; avoid circular imports and `import *`.
 - **Virtual environments:** one per project (`python -m venv .venv` or `uv`); never commit `.venv`; never `sudo pip`.

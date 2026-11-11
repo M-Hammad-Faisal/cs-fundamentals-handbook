@@ -1,6 +1,6 @@
 # The Relational Model and SQL
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [SQL first steps](01-sql-first-steps.md): create, insert, select, filter, NULL, constraints, using SQLite from Python
 2. [Aggregation and joins lab](02-aggregation-and-joins-lab.md): GROUP BY/HAVING, inner/left/self joins, anti-joins, the join-multiplication pitfall
@@ -409,3 +409,10 @@ An e-commerce back end stores customers, orders and items in related tables. **F
 10. With a junction table holding foreign keys to both sides (such as `order_items`, linking orders and products).
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

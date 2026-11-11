@@ -1,6 +1,6 @@
 # CPU Scheduling
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [CPU scheduling hands-on simulator](01-scheduling-simulator.md): metrics, FCFS/SJF/SRTF/RR/priority, aging, MLFQ, CFS, with runnable code
 
@@ -148,3 +148,10 @@ A container with a CPU limit of `500m` is throttled by the kernel's bandwidth co
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

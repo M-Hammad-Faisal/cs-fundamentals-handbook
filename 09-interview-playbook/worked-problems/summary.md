@@ -17,4 +17,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Ten Worked Interview Problems (with the Thinking, Not Just the Code)](01-ten-worked-interview-problems.md) · [Worked Problems, Part 2](02-graph-string-dp-and-design-rounds.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Ten Worked Interview Problems](01-ten-worked-interview-problems.md) · [Worked Problems, Part 2](02-graph-string-dp-and-design-rounds.md)

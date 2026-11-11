@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [The Standard Library Toolbox](01-regex-datetime-subprocess-argparse.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [The Standard Library Toolbox](01-regex-datetime-subprocess-argparse.md)

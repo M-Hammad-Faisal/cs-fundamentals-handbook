@@ -165,6 +165,45 @@ def build_progress():
     return "\n".join(out) + "\n" + tail
 
 
+def part_table(key, folder):
+    part = ROOT / folder
+    rows = rows_for(part)
+    out = ["| Topic | Lessons | Exercises | Summary |", "|-------|---------|-----------|---------|"]
+
+    def rel_link(label, path):
+        return f"[{label}]({path.relative_to(part).as_posix()})"
+    for r in rows:
+        lessons = "<br>".join(rel_link(label, p) for label, p in r["lessons"])
+        ex = rel_link("ex", r["ex"]) if r["ex"] else "–"
+        sm = rel_link("sum", r["sum"]) if r["sum"] else "–"
+        out.append(f"| {r['title']} | {lessons} | {ex} | {sm} |")
+    return "\n".join(out)
+
+
+def build_part_readme(key, heading, folder):
+    path = ROOT / folder / "README.md"
+    text = path.read_text()
+    num = heading.split(" ", 1)[0]
+    title = heading.split(" ", 1)[1].title()
+    text = re.sub(r"\A# .*", f"# Part {num}: {title}", text, count=1)
+    # drop the older hand-written overview tables that the generated one replaces
+    for name in ("Reading order", "Learning path", "Suggested order", "Start here", "Going deeper: the professional Python track", "Topics in this part"):
+        text = re.sub(r"^## " + re.escape(name) + r"\n.*?(?=^## |\Z)", "", text, flags=re.S | re.M)
+    block = ("## Topics in this part\n\nRead the topics in this order. Each has an overview, detailed lessons, exercises with solutions and a one-page summary "
+             "(the full map is in the [index](../INDEX.md)).\n\n<!-- topics:start -->\n" + part_table(key, folder) + "\n<!-- topics:end -->\n\n")
+    m = re.search(r"^## ", text, re.M)
+    text = text[:m.start()] + block + text[m.start():] if m else text.rstrip("\n") + "\n\n" + block
+    head, _, rest = text.partition("## Topics in this part")                       # old hand-written tables in the intro are replaced by the generated one
+    head = re.sub(r"(?m)^\|.*\n", "", head)
+    head = re.sub(r"(?m)^Back to.*\n", "", head)
+    head = re.sub(r"\n{3,}", "\n\n", head)
+    text = head + "## Topics in this part" + rest
+    lines = text.rstrip("\n").split("\n")
+    while lines and (not lines[-1].strip() or lines[-1].startswith("Back to")):
+        lines.pop()
+    return "\n".join(lines) + "\n\nBack to the [handbook home](../README.md) · [index](../INDEX.md).\n"
+
+
 def stats():
     pages = lines = blocks = 0
     for f in ROOT.rglob("*.md"):
@@ -211,6 +250,9 @@ def main():
     readme = replace_between(readme, "<!-- contents:start -->", "<!-- contents:end -->", table)
     readme = replace_between(readme, "<!-- stats:start -->", "<!-- stats:end -->", summary)
     targets[ROOT / "README.md"] = readme
+    for key, heading, folder, _, _ in PARTS:
+        if key not in ("start", "career"):
+            targets[ROOT / folder / "README.md"] = build_part_readme(key, heading, folder)
     stale = [p for p, text in targets.items() if not p.exists() or p.read_text() != text]
     if check:
         for p in stale:

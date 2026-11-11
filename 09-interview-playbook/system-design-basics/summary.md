@@ -13,3 +13,6 @@
 **Pitfalls:** no numbers, jumping to microservices, ignoring failures/monitoring/consistency, name-dropping tech without trade-offs, designing everything instead of going deep.
 
 [Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [System Design, Part 2](02-five-more-designs.md) · [System Design, Part 3](03-caching-failure-modes-and-reliability.md)

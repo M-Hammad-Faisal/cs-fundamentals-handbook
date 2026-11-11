@@ -4,20 +4,22 @@ A **data structure** is a way of organizing data so the operations you need are 
 
 **Prerequisites:** [Part 00 foundations](../00-foundations/README.md) (Python, memory, recursion) and [Part 01 complexity](../01-complexity/README.md) (Big-O). If `O(n)` versus `O(log n)` is new to you, read Part 01 first.
 
-## Reading order
+## Topics in this part
 
-| # | Structure | Lessons | Core idea |
-|---|-----------|---------|-----------|
-| 1 | [Arrays and strings](arrays-strings/README.md) | [arrays and memory](arrays-strings/01-arrays-and-memory.md), [techniques](arrays-strings/02-array-techniques.md), [strings](arrays-strings/03-strings-in-depth.md) | contiguous memory, instant indexing |
-| 2 | [Linked lists](linked-lists/README.md) | [singly](linked-lists/01-singly-linked-list.md), [doubly and circular](linked-lists/02-doubly-and-circular.md), [techniques](linked-lists/03-linked-list-techniques.md) | nodes joined by pointers, cheap inserts |
-| 3 | [Stacks and queues](stacks-queues/README.md) | [stacks](stacks-queues/01-stacks.md), [queues](stacks-queues/02-queues-deques-priority-queues.md), [applications](stacks-queues/03-stack-and-queue-applications.md) | last-in-first-out and first-in-first-out |
-| 4 | [Hash tables](hash-tables/README.md) | [hashing](hash-tables/01-hash-functions-and-collisions.md), [implementing](hash-tables/02-implementing-hash-tables.md), [dict/set and Bloom filters](hash-tables/03-dict-set-internals-and-bloom-filters.md) | key to slot in `O(1)` |
-| 5 | [Trees](trees/README.md) | [traversals](trees/01-binary-trees-and-traversals.md), [BST](trees/02-binary-search-trees.md), [balanced](trees/03-balanced-trees-avl.md), [segment/Fenwick](trees/04-segment-and-fenwick-trees.md) | hierarchy, halving the search |
-| 6 | [Heaps](heaps/README.md) | [binary heaps](heaps/01-binary-heaps-and-heapsort.md), [applications](heaps/02-priority-queue-applications.md) | always know the minimum |
-| 7 | [Tries](tries/README.md) | [tries](tries/01-tries.md) | one character per step: prefix search |
-| 8 | [Graphs](graphs/README.md) | [BFS/DFS](graphs/01-graph-basics-bfs-dfs.md), [algorithms](graphs/02-graph-algorithms.md), [union-find](graphs/03-union-find.md) | things and their connections |
+Read the topics in this order. Each has an overview, detailed lessons, exercises with solutions and a one-page summary (the full map is in the [index](../INDEX.md)).
 
-Each folder also has a quick-reference README, an `exercises.md` and a one-page `summary.md`.
+<!-- topics:start -->
+| Topic | Lessons | Exercises | Summary |
+|-------|---------|-----------|---------|
+| Arrays and Strings | [overview](arrays-strings/README.md)<br>[Arrays](arrays-strings/01-arrays-and-memory.md)<br>[Working with Arrays](arrays-strings/02-array-techniques.md)<br>[Strings in Depth](arrays-strings/03-strings-in-depth.md) | [ex](arrays-strings/exercises.md) | [sum](arrays-strings/summary.md) |
+| Linked Lists | [overview](linked-lists/README.md)<br>[The Singly Linked List, Built from Scratch](linked-lists/01-singly-linked-list.md)<br>[Doubly Linked Lists, Circular Lists and the LRU Cache](linked-lists/02-doubly-and-circular.md)<br>[Linked-List Techniques and Classic Problems](linked-lists/03-linked-list-techniques.md) | [ex](linked-lists/exercises.md) | [sum](linked-lists/summary.md) |
+| Stacks and Queues | [overview](stacks-queues/README.md)<br>[Stacks](stacks-queues/01-stacks.md)<br>[Queues, Deques and Priority Queues](stacks-queues/02-queues-deques-priority-queues.md)<br>[Stack and Queue Applications](stacks-queues/03-stack-and-queue-applications.md) | [ex](stacks-queues/exercises.md) | [sum](stacks-queues/summary.md) |
+| Hash Tables | [overview](hash-tables/README.md)<br>[Hash Functions and Collisions](hash-tables/01-hash-functions-and-collisions.md)<br>[Implementing Hash Tables](hash-tables/02-implementing-hash-tables.md)<br>[Dict, Set, Hash-Map Patterns, Bloom Filters and Consistent Hashing](hash-tables/03-dict-set-internals-and-bloom-filters.md) | [ex](hash-tables/exercises.md) | [sum](hash-tables/summary.md) |
+| Trees | [overview](trees/README.md)<br>[Binary Trees and Traversals](trees/01-binary-trees-and-traversals.md)<br>[Binary Search Trees](trees/02-binary-search-trees.md)<br>[Balanced Trees](trees/03-balanced-trees-avl.md)<br>[Segment Trees and Fenwick Trees](trees/04-segment-and-fenwick-trees.md) | [ex](trees/exercises.md) | [sum](trees/summary.md) |
+| Heaps and Priority Queues | [overview](heaps/README.md)<br>[Binary Heaps and Heapsort](heaps/01-binary-heaps-and-heapsort.md)<br>[Priority Queue Applications](heaps/02-priority-queue-applications.md) | [ex](heaps/exercises.md) | [sum](heaps/summary.md) |
+| Tries | [overview](tries/README.md)<br>[Tries](tries/01-tries.md) | [ex](tries/exercises.md) | [sum](tries/summary.md) |
+| Graphs | [overview](graphs/README.md)<br>[Graph Basics](graphs/01-graph-basics-bfs-dfs.md)<br>[Graph Algorithms](graphs/02-graph-algorithms.md)<br>[Union-Find](graphs/03-union-find.md) | [ex](graphs/exercises.md) | [sum](graphs/summary.md) |
+<!-- topics:end -->
 
 ## Which structure should I use?
 
@@ -56,3 +58,5 @@ Each folder also has a quick-reference README, an `exercises.md` and a one-page 
 4. After each structure, solve three or four problems on a site like LeetCode or NeetCode to make the patterns stick.
 
 Next: [Part 03: Algorithms](../03-algorithms/README.md)
+
+Back to the [handbook home](../README.md) · [index](../INDEX.md).

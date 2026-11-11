@@ -218,3 +218,10 @@ print(tests.returncode, tests.stderr.strip().splitlines()[-1])         # 0 OK
 </details>
 
 [Back to foundations](../README.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

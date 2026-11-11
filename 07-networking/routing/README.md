@@ -2,9 +2,14 @@
 
 How routers learn where networks are, and how the internet's thousands of independent networks stay connected.
 
-## Detailed lesson
+## Detailed lessons
 
 - [Routing protocols: distance vector, link state and BGP](01-routing-protocols.md): RIP-style distance vector and count-to-infinity, OSPF-style link state with LSA flooding, BGP path-vector with customer/peer/provider policy, prefix hijacks and RPKI, all as verified simulations
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
 
 ## Quick reference
 

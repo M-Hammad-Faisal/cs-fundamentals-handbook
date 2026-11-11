@@ -271,3 +271,10 @@ The lesson: trading memory for speed (or sorting to enable a linear scan) is the
 8. `O(n²)` is about 10¹² operations, far too slow. `O(n log n)` is about 2 × 10⁷, which is fine.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

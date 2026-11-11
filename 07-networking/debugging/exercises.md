@@ -105,7 +105,7 @@ The segment starting at sequence 1100 was sent again 290 ms later, probably afte
 
 </details>
 
-<!-- go-deeper -->
-**Go deeper (detailed step-by-step lessons):** [Network debugging and packet capture](01-network-debugging-and-packet-capture.md)
+[Lesson](README.md) · [Summary](summary.md)
 
-[Back to network debugging](README.md) · [Summary](summary.md)
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Network Debugging and Packet Capture](01-network-debugging-and-packet-capture.md)

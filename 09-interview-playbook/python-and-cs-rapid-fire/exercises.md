@@ -1,4 +1,4 @@
-# Rapid-Fire Questions: Exercises
+# Rapid-Fire Python and CS Questions: Exercises
 
 ## A. Predict the output (then run it)
 

@@ -1,6 +1,6 @@
 # Stacks and Queues
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Stacks](01-stacks.md): array and linked stacks, brackets, undo/redo, DFS
 2. [Queues, deques and priority queues](02-queues-deques-priority-queues.md): ring buffer, `deque`, `heapq`, BFS
@@ -237,3 +237,10 @@ When a web request triggers slow work (sending emails, resizing images), the app
 7. It limits memory use and applies back-pressure, rejecting or slowing producers when consumers fall behind.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -5,8 +5,8 @@ Small scripts that keep the handbook honest. They also run in CI (`.github/workf
 | Script | What it does |
 |--------|--------------|
 | `check_code_blocks.py` | Runs every ```` ```python ```` block on every page (each page in a fresh process, blocks in order, sharing one namespace). Pages with `# file: name.py` blocks are written to a temporary folder and tested with pytest. A block opened with ```` ```python no-run ```` is skipped. |
-| `build_index.py` | Regenerates `INDEX.md`, `revision/PROGRESS.md` (keeping your ticks) and the contents table and stats in `README.md` from the files on disk, so navigation never drifts. `--check` fails if they are stale. Run it after adding or renaming a page. |
-| `gen_summaries.py` | Creates a one-page `summary.md` (quick reference plus the self-check questions and answers) for any topic folder that lacks one. Never overwrites. |
+| `build_index.py` | Regenerates `INDEX.md`, `revision/PROGRESS.md` (keeping your ticks), the contents table and stats in `README.md`, and the topics table of every part README from the files on disk, so navigation never drifts. `--check` fails if they are stale. Run `normalize_topics.py` and then this after adding or renaming a page. |
+| `normalize_topics.py` | Gives every topic folder the same pages in the same format: creates a missing `summary.md` (quick reference plus self-check questions and answers) and `exercises.md` (the Practice sections of its lessons, solutions collapsed), normalises titles and footers, and adds the standard sections to each topic README. Never overwrites hand-written content. `--check` fails if anything would change. |
 | `check_links.py` | Reports relative Markdown links that point to files that do not exist. |
 | `known-sketches.txt` | Pages deliberately skipped by the code checker, one per line, with the reason after `#`. |
 | `requirements-check.txt` | Third-party packages that a few lessons import (pytest, numpy, pandas, fastapi, sqlalchemy, ...). |

@@ -1,6 +1,6 @@
 # Recursion and Backtracking
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Recursion fundamentals](01-recursion-fundamentals.md): base case, call stack, memoization, tail calls, recursion to loops
 2. [Backtracking](02-backtracking.md): choose/explore/un-choose, subsets, permutations, N-Queens, Sudoku, pruning
@@ -296,3 +296,10 @@ Walking a directory tree (`os.walk`, `find`, `du`) is recursion: a directory's s
 8. When the depth might exceed the recursion limit (about 1000 in Python), or to reduce call overhead.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

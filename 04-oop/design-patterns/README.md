@@ -126,3 +126,10 @@ Start with the ones you will use most, then the rest:
 5. **Python is not Java.** First-class functions, modules, decorators and duck typing make many patterns shorter. The files show both.
 
 [Creational](creational/README.md) · [Structural](structural/README.md) · [Behavioral](behavioral/README.md) · [Back to OOP](../README.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

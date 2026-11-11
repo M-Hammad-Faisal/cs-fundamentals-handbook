@@ -1,4 +1,4 @@
-# Behavioral Interviews and Preparation: Exercises
+# Behavioral Interviews, the Hiring Process and Your Preparation Plan: Exercises
 
 1. Write your 60-second pitch using the present, past, future structure. Time yourself and trim to 75 seconds maximum.
 2. Write eight STAR stories (one per theme in the table). For each include one number and one lesson.

@@ -1,4 +1,4 @@
-# Behavioral, Process and Preparation: One-Page Summary
+# Behavioral Interviews, the Hiring Process and Your Preparation Plan: One-Page Summary
 
 - **Process:** resume screen > recruiter call > technical screen > take-home > onsite loop (coding, design, behavioral) > committee/references > offer. Run processes in parallel.
 - **Pitch (60-90 s):** present, past (with a number), future (why this company).

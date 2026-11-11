@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Logs, Queues and LSM Trees](01-logs-queues-and-lsm-trees.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Logs, Queues and LSM Trees](01-logs-queues-and-lsm-trees.md)

@@ -2,9 +2,14 @@
 
 The arithmetic of whole numbers: divisibility, remainders and primes. It underlies hashing, cryptography, random number generators and a large family of interview and contest problems.
 
-## Detailed lesson
+## Detailed lessons
 
 - [Number theory for programmers](01-number-theory-for-programmers.md): GCD and extended Euclid, modular arithmetic, fast exponentiation, modular inverses, sieve of Eratosthenes, Miller-Rabin, factorization, Euler's totient, `nCr` mod a prime, fast Fibonacci, the Chinese remainder theorem
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
 
 ## Quick reference
 

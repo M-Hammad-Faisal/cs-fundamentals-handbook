@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Common Web Vulnerabilities in Python (OWASP-Style)](01-owasp-top-ten-in-python.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Common Web Vulnerabilities in Python](01-owasp-top-ten-in-python.md)

@@ -1,4 +1,4 @@
-# Type Hints: One-Page Summary
+# Type Hints and Static Typing: One-Page Summary
 
 - **Hints are not enforced at runtime.** Checkers (mypy, pyright), IDEs and libraries (pydantic, FastAPI, dataclasses) read them. Gradual typing: add them piece by piece.
 - **Basics:** `int`, `list[str]`, `dict[str, int]`, `tuple[int, ...]`, `X | None` (not "optional argument"), `Callable[[A], R]`, `Any` (turns checking off), `Literal`, `Final`, `ClassVar`, `NewType`, `TypeAlias`, `Annotated`.

@@ -2,7 +2,7 @@
 
 A container is an ordinary process with a restricted view (namespaces) and restricted resources (cgroups), started from a layered image.
 
-## Detailed lesson
+## Detailed lessons
 
 - [Containers, namespaces and cgroups](01-containers-and-namespaces.md): namespaces, cgroups, real resource-limit experiments, a jail model, copy-on-write image layers with content addressing, Dockerfile and Docker commands, security
 

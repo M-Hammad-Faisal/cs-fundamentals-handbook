@@ -398,3 +398,10 @@ A function returns `User | None` from a lookup, and a caller does `find_user(id)
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

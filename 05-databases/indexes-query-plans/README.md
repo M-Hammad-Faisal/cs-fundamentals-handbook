@@ -1,6 +1,6 @@
 # Indexes and Query Plans
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Indexes lab](01-indexes-lab.md): measure a 4,000x speedup, read query plans, composite and covering indexes, why indexes get ignored, partial indexes, write costs
 
@@ -208,3 +208,10 @@ A service looks users up by email at login. In development with 1,000 users the 
 9. A clustered index determines the table's physical row order (one per table). A secondary index stores keys plus a pointer to the row, which can cost an extra lookup.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -1,6 +1,6 @@
 # Normalization and Schema Design
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Normalization lab](01-normalization-lab.md): see the update/insert/delete anomalies, find functional dependencies with SQL, decompose to 3NF, prove it is lossless, many-to-many, when to denormalize
 
@@ -266,3 +266,10 @@ A company's BI team does not query the normalized production database. They load
 9. It violates 1NF: you cannot index, join, constrain, or query individual values efficiently. Use a child table with one row per value.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -1,4 +1,4 @@
-# Iterators, Generators and Functional Tools: One-Page Summary
+# Iterators, Generators, Comprehensions and Functional Tools: One-Page Summary
 
 - **Comprehensions:** list `[x for x in xs if c]`, dict `{k: v ...}`, set `{...}`; max two loops or one condition for readability; own scope; walrus `:=` to avoid recomputation.
 - **Generators:** `yield` pauses and keeps state; calling returns an iterator; **lazy, constant memory, infinite OK, single use**. Generator expressions `(x for x in xs)`; `sum/any/all` accept them directly.

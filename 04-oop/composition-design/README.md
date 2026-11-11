@@ -364,3 +364,10 @@ A `Logger` does not subclass "file logger" and "network logger". It **has** a li
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

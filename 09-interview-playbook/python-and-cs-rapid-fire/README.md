@@ -341,3 +341,10 @@ Asked "what does `append_to(2)` return after `append_to(1)` with a mutable defau
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

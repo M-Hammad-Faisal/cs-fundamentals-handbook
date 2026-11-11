@@ -1,4 +1,4 @@
-# Modern Python Features: Exercises
+# Modern Python Language Features: Exercises
 
 1. Format a price list so that names are left-aligned in 10 columns and prices right-aligned with 2 decimals and thousands separators, using one f-string per row.
 2. Write `connect(host, port=5432, /, *, timeout=5, ssl=True)` and show which calls are valid or invalid.

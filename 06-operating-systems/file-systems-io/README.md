@@ -1,6 +1,6 @@
 # File Systems and I/O
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [File systems in depth](01-file-systems-in-depth.md): a runnable inode-based file system, links, permissions, durability (fsync, atomic rename, journaling), I/O models
 
@@ -198,3 +198,10 @@ A disk is full, so someone deletes a 50 GB log, but `df` still shows it full. Th
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Threat Modeling and Secure Python](01-threat-modeling-and-secure-python.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Threat Modeling and Secure Python](01-threat-modeling-and-secure-python.md)

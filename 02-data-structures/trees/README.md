@@ -1,6 +1,6 @@
 # Trees
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Binary trees and traversals](01-binary-trees-and-traversals.md): vocabulary, preorder/inorder/postorder/level-order, classic questions
 2. [Binary search trees](02-binary-search-trees.md): search, insert, delete, validation, range queries
@@ -300,3 +300,10 @@ Your folders and files form a tree: a path like `/home/user/docs/cv.pdf` is a wa
 7. Replace its value with the inorder successor (smallest value in the right subtree) or predecessor, then delete that successor node from the right subtree.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -1,4 +1,4 @@
-# Performance and Profiling: Exercises
+# Performance, Profiling and Memory: Exercises
 
 1. Use `timeit` to compare building a list of squares with a `for`/`append` loop, a list comprehension and `map`. Which wins, and by roughly how much?
 2. Profile this function with `cProfile`, find the bottleneck and fix it. Show both versions give the same answer:

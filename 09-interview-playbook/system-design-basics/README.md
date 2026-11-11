@@ -468,3 +468,10 @@ Sending email/SMS/push for orders is moved off the request path into a **queue**
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -1,4 +1,4 @@
-# Classes and Objects: Exercises
+# Classes and Objects in Depth: Exercises
 
 1. Without running it, predict the output, then explain:
    ```python

@@ -73,5 +73,7 @@ With an index on `id` it jumps straight to the next page.
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Indexes Lab](01-indexes-lab.md)

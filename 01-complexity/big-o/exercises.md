@@ -1,4 +1,4 @@
-# Big-O: Exercises
+# Big-O and Complexity Analysis: Exercises
 
 Try each one before opening the solution. Write the answer and the reasoning.
 
@@ -140,3 +140,5 @@ def fib_iter(n):                    # O(n) time, O(1) space
 **C4.** Resizes are rare and capacity grows geometrically, so the total copying across `n` appends is proportional to `n`. The cost per append averages out to `O(1)`.
 
 </details>
+
+[Lesson](README.md) · [Summary](summary.md)

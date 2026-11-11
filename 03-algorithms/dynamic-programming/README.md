@@ -1,6 +1,6 @@
 # Dynamic Programming
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [DP thinking and 1D problems](01-dp-thinking-and-1d-problems.md): memoization vs tabulation, the five-step method, stairs, robber, coins, LIS
 2. [DP on two sequences and grids](02-dp-on-two-sequences-and-grids.md): LCS, edit distance, knapsack, grid paths, reconstruction
@@ -273,3 +273,10 @@ Choosing which projects to fund within a budget, which items to load into a cont
 7. Divide and conquer has independent subproblems; DP's subproblems overlap, so results are cached. Greedy makes one irrevocable locally best choice, while DP considers all options for each state.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

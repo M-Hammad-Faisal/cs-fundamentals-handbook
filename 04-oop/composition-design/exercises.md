@@ -1,4 +1,4 @@
-# Composition and Object Design: Exercises
+# Composition, Delegation, Coupling and Object Design: Exercises
 
 1. A `Bird` base class has `fly()`. `Penguin` inherits it and raises an error. Redesign with composition so that flying is an optional capability.
 2. Model an `Employee` who can be a manager, an engineer, a part-timer, or combinations. Show the inheritance explosion, then implement it with composition (roles as parts).

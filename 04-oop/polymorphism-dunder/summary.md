@@ -1,4 +1,4 @@
-# Polymorphism and Dunder Methods: One-Page Summary
+# Polymorphism and the Python Data Model: One-Page Summary
 
 - **Polymorphism:** one interface, many implementations. Kinds: subtype (overriding, dynamic dispatch), duck typing, ad hoc (operator overloading, `singledispatch`), parametric (generics).
 - **Replace `if/elif` on type with overriding**; new subclasses require no client change (Open/Closed).

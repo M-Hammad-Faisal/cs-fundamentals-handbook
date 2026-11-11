@@ -26,7 +26,7 @@ Slower writes, more disk/memory, maintenance. Index for real queries; drop unuse
 ## Tips
 Index filter/join/sort columns (including foreign keys) · prefer covering indexes for hot queries · use keyset pagination over `OFFSET` · build indexes online in production (`CONCURRENTLY`).
 
-[Lesson](README.md) · [Exercises](exercises.md) · [Demo](demo_indexes.py)
+[Lesson](README.md) · [Exercises](exercises.md)
 
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Indexes Lab](01-indexes-lab.md)

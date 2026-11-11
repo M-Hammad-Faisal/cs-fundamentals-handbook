@@ -1,6 +1,6 @@
 # Sorting
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Sorting basics and elementary sorts](01-sorting-basics-and-elementary-sorts.md): vocabulary, stability, bubble, selection, insertion
 2. [Merge sort and quicksort](02-merge-sort-and-quicksort.md): divide and conquer, pivots, quickselect, inversions
@@ -278,3 +278,10 @@ A game leaderboard sorts scores, but only needs the **top 100** of millions: a h
 8. `items.sort(key=lambda p: (p.dept, -p.salary))`.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

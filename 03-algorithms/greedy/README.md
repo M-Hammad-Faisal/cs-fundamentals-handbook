@@ -1,6 +1,6 @@
 # Greedy Algorithms
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Greedy algorithms in depth](01-greedy-algorithms.md): exchange argument, interval scheduling, knapsack, jump game, and where greedy fails
 
@@ -197,3 +197,10 @@ A meeting-room booking system (or a cloud scheduler) picks the job that finishes
 6. A proof technique: take any optimal solution and show swapping in the greedy choice never makes it worse, so a greedy-first optimal solution exists.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

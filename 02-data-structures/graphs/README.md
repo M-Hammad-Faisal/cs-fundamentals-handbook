@@ -1,6 +1,6 @@
 # Graphs
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Graph basics, BFS and DFS](01-graph-basics-bfs-dfs.md): representations, traversals, grids, cycles
 2. [Graph algorithms](02-graph-algorithms.md): topological sort, Dijkstra, Bellman-Ford, Prim
@@ -321,3 +321,10 @@ Friend suggestions ("people you may know") come from BFS to depth 2 over the soc
 8. Words are vertices; connect two words that differ by one letter; BFS from the start word finds the shortest transformation sequence.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

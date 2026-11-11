@@ -82,5 +82,7 @@ print(ring_moved, mod_moved)     # roughly 2,000 (about 1/5) versus roughly 8,00
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [NoSQL Lab](01-nosql-lab.md)

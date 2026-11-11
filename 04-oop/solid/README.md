@@ -343,3 +343,10 @@ A `BillingService` imports the Stripe SDK directly, so every test hits (or monke
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

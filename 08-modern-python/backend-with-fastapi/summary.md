@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Building a Web API with FastAPI](01-building-a-web-api-with-fastapi.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Building a Web API with FastAPI](01-building-a-web-api-with-fastapi.md)

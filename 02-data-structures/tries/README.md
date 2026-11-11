@@ -1,6 +1,6 @@
 # Tries (Prefix Trees)
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Tries in depth](01-tries.md): insert/search/delete, autocomplete, word search, radix and bit tries
 
@@ -185,3 +185,10 @@ A router must find the **longest prefix match** for a destination IP among thous
 6. Bits are stored from most significant to least; for each number, walk the trie preferring the opposite bit at each level, which maximizes the XOR greedily.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

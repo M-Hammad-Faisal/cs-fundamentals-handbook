@@ -1,4 +1,4 @@
-# Polymorphism and Dunder Methods: Exercises
+# Polymorphism and the Python Data Model: Exercises
 
 1. Refactor this to remove the type checks using polymorphism:
    ```python

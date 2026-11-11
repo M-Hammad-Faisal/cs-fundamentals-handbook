@@ -1,6 +1,6 @@
 # Linked Lists
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Singly linked list](01-singly-linked-list.md): nodes, operations, traces
 2. [Doubly and circular lists](02-doubly-and-circular.md): sentinels, Josephus, LRU cache
@@ -213,3 +213,10 @@ A text editor's undo/redo stack and a music player's "previous/next" both walk a
 6. A hash map for `O(1)` lookup and a doubly linked list for `O(1)` reordering and eviction.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

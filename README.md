@@ -9,7 +9,7 @@ It serves three readers at once:
 - **An experienced engineer revising**: every topic has a one-page summary and runnable exercises, so you can skim, test yourself and fill gaps fast.
 
 <!-- stats:start -->
-**379 pages, about 76,000 lines, 2,245 Python code blocks and 331 glossary terms.**
+**416 pages, about 81,000 lines, 2,476 Python code blocks and 331 glossary terms.**
 <!-- stats:end -->
 The code in the lessons was run and the output comments were checked; `tools/check_code_blocks.py` re-runs the code in CI (see [ROADMAP.md](ROADMAP.md) for exactly what is and is not verified).
 

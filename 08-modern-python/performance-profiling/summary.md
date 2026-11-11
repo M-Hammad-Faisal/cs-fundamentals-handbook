@@ -1,4 +1,4 @@
-# Performance and Profiling: One-Page Summary
+# Performance, Profiling and Memory: One-Page Summary
 
 - **Workflow:** goal, measure (realistic data), find the hot spot, fix, re-measure, keep a benchmark. Never guess.
 - **Measure time:** `time.perf_counter` (durations), `timeit`/`python -m timeit` (comparisons; repeat, take the **min**), `cProfile` + `pstats` (`tottime` = own time, `cumtime` = with callees), `py-spy`, `line_profiler`, `scalene`, `pyinstrument`.

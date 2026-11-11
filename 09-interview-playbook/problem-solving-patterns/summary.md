@@ -1,4 +1,4 @@
-# Problem-Solving Patterns: One-Page Summary
+# Problem-Solving Patterns for Coding Interviews: One-Page Summary
 
 **Method (UMPIRE):** Understand (clarify, edge cases) > Match (pattern) > Plan (brute force, then better; state complexity) > Implement (clean, think aloud) > Review (trace examples, edges) > Evaluate (time, space, trade-offs).
 

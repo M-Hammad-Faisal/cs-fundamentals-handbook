@@ -1,6 +1,6 @@
 # Load Balancing, Proxies, CDNs and Resilience
 
-## Detailed lesson (start here if you are new)
+## Detailed lessons
 
 - [Load balancing and resilience lab](01-load-balancing-and-resilience-lab.md): a working reverse proxy, balancing strategies, health checks, retries, circuit breakers, rate limiters, CDN caching
 
@@ -202,3 +202,10 @@ A database slows for 10 s. Every client times out and immediately retries three 
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

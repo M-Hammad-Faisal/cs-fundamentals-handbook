@@ -1,4 +1,4 @@
-# Classes and Objects: One-Page Summary
+# Classes and Objects in Depth: One-Page Summary
 
 - **Everything is an object** with identity (`id`, `is`), type (`type`) and value (`==`). Names are references; assignment never copies.
 - **Class parts:** `__init__`, instance attributes (`self.x`), class attributes (shared), **instance / class / static methods** (`self`, `cls`, none). `@classmethod` constructors work with subclasses.

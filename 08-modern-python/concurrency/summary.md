@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Threads, Processes and Futures in Practice](01-threads-processes-and-futures.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Threads, Processes and Futures in Practice](01-threads-processes-and-futures.md)

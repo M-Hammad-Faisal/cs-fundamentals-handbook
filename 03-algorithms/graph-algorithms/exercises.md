@@ -197,5 +197,7 @@ def has_arbitrage(currencies, rates):          # rates[i][j] = units of j per 1 
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Shortest Paths Beyond Dijkstra](01-all-pairs-and-heuristic-shortest-paths.md) · [Connectivity, Strongly Connected Components, Bridges and Max Flow](02-connectivity-scc-and-flow.md)

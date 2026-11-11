@@ -86,7 +86,7 @@ Source code changes constantly and dependencies rarely. Copying only `requiremen
 
 </details>
 
-<!-- go-deeper -->
-**Go deeper (detailed step-by-step lessons):** [Containers, namespaces and cgroups](01-containers-and-namespaces.md)
+[Lesson](README.md) · [Summary](summary.md)
 
-[Back to containers](README.md) · [Summary](summary.md)
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Containers, Namespaces and cgroups](01-containers-and-namespaces.md)

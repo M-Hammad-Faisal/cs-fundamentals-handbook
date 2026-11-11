@@ -1,4 +1,4 @@
-# Big-O: One-Page Summary
+# Big-O and Complexity Analysis: One-Page Summary
 
 ## Definitions
 - **Big-O** `O(f(n))`: upper bound on growth. **Ω**: lower bound. **Θ**: tight bound.
@@ -38,3 +38,5 @@
 - Constants and I/O matter in real systems. Profile before optimizing.
 
 [Full chapter](README.md) · [Exercises](exercises.md)
+
+[Lesson](README.md) · [Exercises](exercises.md)

@@ -145,5 +145,7 @@ def reorganize_string(s):
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Binary Heaps and Heapsort](01-binary-heaps-and-heapsort.md) · [Priority Queue Applications](02-priority-queue-applications.md)

@@ -1,4 +1,4 @@
-# Composition and Object Design: One-Page Summary
+# Composition, Delegation, Coupling and Object Design: One-Page Summary
 
 - **Composition** (has-a) over inheritance (is-a): looser coupling, runtime swapping, small focused classes, narrow exposed API, no class explosion (2 + N, not 2 x N).
 - **Delegation:** forward calls to a held object; `__getattr__` forwards unknown names but **not dunders** (define those).

@@ -107,5 +107,7 @@ SELECT name FROM sub;
 
 </details>
 
+[Lesson](README.md) · [Summary](summary.md)
+
 <!-- go-deeper -->
 **Go deeper (detailed step-by-step lessons):** [Normalization Lab](01-normalization-lab.md)

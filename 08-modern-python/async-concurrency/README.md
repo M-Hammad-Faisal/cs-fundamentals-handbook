@@ -394,3 +394,10 @@ A FastAPI app (async) serves lots of light requests. One endpoint resizes images
 </details>
 
 [Exercises](exercises.md) · [Summary](summary.md)
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

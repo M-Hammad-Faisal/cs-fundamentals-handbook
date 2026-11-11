@@ -1,4 +1,4 @@
-# Problem-Solving Patterns: Exercises
+# Problem-Solving Patterns for Coding Interviews: Exercises
 
 For each exercise: **name the pattern first**, state brute-force and optimized complexity, then code it and test with edge cases. The functions from the lesson (`ListNode`, `TreeNode`, `UnionFind`, ...) are available.
 

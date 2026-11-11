@@ -11,4 +11,7 @@
 
 Practice problems with solutions are in the **Practice** section of each lesson.
 
-[Lesson](README.md) · [Idempotency, Retries, Circuit Breakers, Sagas and the Outbox](01-idempotency-retries-and-sagas.md)
+[Lesson](README.md) · [Exercises](exercises.md)
+
+<!-- go-deeper -->
+**Go deeper (detailed step-by-step lessons):** [Idempotency, Retries, Circuit Breakers, Sagas and the Outbox](01-idempotency-retries-and-sagas.md)

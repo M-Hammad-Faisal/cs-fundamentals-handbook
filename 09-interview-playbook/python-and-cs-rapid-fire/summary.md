@@ -1,4 +1,4 @@
-# Rapid-Fire Questions: One-Page Summary
+# Rapid-Fire Python and CS Questions: One-Page Summary
 
 **Answer shape:** definition (1 sentence) > how/why > example or trade-off. Stop; invite follow-ups. Never bluff.
 

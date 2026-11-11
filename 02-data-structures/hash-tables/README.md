@@ -1,6 +1,6 @@
 # Hash Tables
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Hash functions and collisions](01-hash-functions-and-collisions.md): hashing, the birthday paradox, load factor
 2. [Implementing hash tables](02-implementing-hash-tables.md): chaining, linear probing, tombstones, resizing
@@ -224,3 +224,10 @@ Hash indexes in databases map a column value to row locations in `O(1)`. In data
 7. To prevent attackers from crafting keys that all collide and degrade the table to `O(n)`.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).

@@ -1,6 +1,6 @@
 # Arrays and Strings
 
-## Detailed lessons (start here if you are new)
+## Detailed lessons
 
 1. [Arrays and memory](01-arrays-and-memory.md): addresses, static vs dynamic arrays, how `list` grows
 2. [Array techniques](02-array-techniques.md): two pointers, sliding window, prefix sums, Kadane, binary search
@@ -253,3 +253,10 @@ A metrics system shows "average requests per second over the last 5 minutes". Re
 7. At each element, either extend the current subarray or restart from this element, whichever is larger, and track the best seen.
 
 </details>
+
+## Practice and review
+
+- [Exercises](exercises.md) with solutions
+- [One-page summary](summary.md)
+
+Back to the [part overview](../README.md).
